@@ -65,8 +65,8 @@ end
     time_horizon::Int64 = 29 #time horizon
     n_deposits::Int64 = 4 # number of deposits
     alpha::Float64 = 0.5 # Parameter to control tradeoff between emissions and volume
-    exploration_cost_dle::Float64 = 500_000.0  # Exploration cost for DLE sites
-    exploration_cost_hard_rock::Float64 = 4_500_000.0  # Exploration cost for Hard Rock sites
+    exploration_cost_dle::Float64 = 1_200_000.0  # Exploration cost for DLE sites
+    exploration_cost_hard_rock::Float64 = 400_000.0  # Exploration cost for Hard Rock sites
     LCE_per_lithium = 5.323  # 1 t Li ≈ 5.323 t LCE
 
     # FIXED: Add emission scaling factor to balance scales between emissions and profit
@@ -80,34 +80,35 @@ end
     # Production parameters (deposits are in-situ Li metal tonnes)
     # output is NAMEPLATE Li t/yr per mine
     output::Float64 = 25_000.0  # Annual output per mine of Li
-    init_deposit_size_dle::Float64 = 130_000.0  # Smaller DLE deposits for more exploration
-    init_deposit_size_mining::Float64 = 868_780  # Larger mining deposits for more exploration 
+    # In-situ Li (t Li): LCE = deposit × recovery × LCE_per_lithium
+    init_deposit_size_dle::Float64 = 160_165   # → 682,050 t LCE sellable (recovery 0.80)
+    init_deposit_size_mining::Float64 = 1_237_427 # → 4,610,780 t LCE sellable (recovery 0.70)
     dle_uncertainty_factor::Float64 = 0.3  # Reduced to prevent negative deposits
     mining_uncertainty_factor::Float64 = 0.2 # Reduced to prevent negative deposits
 
     # Mining method for each deposit (true = DLE, false = hard rock mining)
     deposit_types::Vector{Bool} = [true, true, false, false]  # First two are DLE, last two Hard Rock Mining
     recovery::Vector{Float64} = [0.80, 0.80, 0.70, 0.70]    # Fraction of in‑situ Li recovered as saleable product
-    CO2_cost::Int64 = 100
+    CO2_cost::Int64 = 190 #according to EPA, average cost of CO2 capture and storage is $190/t CO2
 
     # Hard Rock mining parameters
     mining_CO2_emissions::Float64 = 6.25  # kg CO2 per tonne LCE (production only)
-    mining_capex::Int64 = 1_790_000_000    # $20M in total
-    mining_opex::Int64 = 5_000     # $4500 per ton operating cost
+    mining_capex::Int64 = 3_670_000_000    # Higher initial investment
+    mining_opex::Int64 = 5_173     #  Similar opeartinal costs per ton 
 
     # DLE parameters
     dle_CO2_emissions::Float64 = 4.1   # kg CO2 per tonne LCE (production only)
-    dle_capex::Int64 = 695_000_000       # Higher initial investment ($5000 per ton)
-    dle_opex::Int64 = 5_600        # Lower operating costs ($3500 per ton)
+    dle_capex::Int64 = 1_209_000_000       # Lower initial investment
+    dle_opex::Int64 = 5_694        # Similar operating costs per ton
     
     # Restoration parameters
     dle_restoration_cost::Int64 = 10_000_000  # Cost to restore depleted DLE mine
     mining_restoration_cost::Int64 = 20_000_000  # Cost to restore depleted mining mine
 
     #pricing model parameters
-    price_model_type::Int64 = 1  #different pricing models 1) static 2) linear, 3) exponential, 4) GBM, 6) Historical, 9) Dynamic Price, 10) State-Dependent
+    price_model_type::Int64 = 1  # 1 static, 2 linear, 3 exponential, 4 GBM, 6 historical
     hist_data::Dict{Int64, Tuple{Float64, Float64}} = lithium_data  # Historical data as (production, price) tuples by year
-    start_year::Int64 = 1995  #TODO-MANSUR check this Starting year for historical data
+    start_year::Int64 = 1995  # Starting year for historical data
     # Starting prices for each pricing model
     p₀_static::Float64 = 10_355.33    # Starting value for static pricing
     p₀_linear::Float64 = 2_381.38     # Starting value for linear pricing  
@@ -121,10 +122,6 @@ end
     # GBM (Geometric Brownian Motion) parameters
     gbm_drift::Float64 = 0.033      
     gbm_volatility::Float64 = 0.238 
-
-    #μ_drift::Float64 = 0.0     # drift for dynamic pricing models 
-    #β_action::Float64 = 0.01   # market-maker action sensitivity
-    #γ_state::Float64 = 0.01    # state-dependence sensitivity
 end
 
 # Helper function to get the appropriate starting price based on model type
@@ -137,10 +134,6 @@ function get_p₀(P::LiPOMDP)
         return P.p₀_exponential
     elseif P.price_model_type == 4
         return P.p₀_gbm
-    elseif P.price_model_type == 9
-        return P.p₀_fallback
-    elseif P.price_model_type == 10
-        return P.p₀_fallback
     else
         return P.p₀_fallback
     end

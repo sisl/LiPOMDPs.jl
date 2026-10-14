@@ -816,7 +816,7 @@ println("")
 # Create dynamic output filename based on planning and evaluation models
 planning_str = join(planning_price_models, "_")
 evaluation_str = join(evaluation_price_models, "_")
-output_file = "outputs/test_train_v14_results_new_params/results_p$(planning_str)_e$(evaluation_str).csv"
+output_file = "outputs/test_train_final_results/results_p$(planning_str)_e$(evaluation_str).csv"
 
 # Run the evaluation
 results = run_train_test_evaluation(

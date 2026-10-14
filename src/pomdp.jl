@@ -197,18 +197,10 @@ function update_price(P::LiPOMDP, s::State, a::Action, price_model_type=1)
     
     # 4. Geometric Brownian Motion (GBM) Pricing
     if P.price_model_type == 4
-        # GBM formula: S(t) = S(0) * exp((μ - σ²/2) * t + σ * W(t))
-        # where μ is drift, σ is volatility, W(t) is Wiener process
-        
-        # Time step (1 year)
-        Δt = 1.0
-        
-        # Wiener process increment: W(t+Δt) - W(t) ~ N(0, Δt)
+        # One-step GBM: S(t+Δt) = S(t) * exp((μ - σ²/2)Δt + σ dW), dW ~ N(0, Δt)
+        # Use current price in state; p₀ is only for initial price (initialstate)
         dW = rand(Normal(0, sqrt(Δt)))
-        
-        # GBM formula with multiplicative noise in the exponent
-        # Using configurable parameters from POMDP struct
-        new_price = p₀ * exp((P.gbm_drift - P.gbm_volatility^2/2) * Δt + P.gbm_volatility * dW)
+        new_price = s.price * exp((P.gbm_drift - P.gbm_volatility^2/2) * Δt + P.gbm_volatility * dW)
         
         return max(new_price, 1000.0)  # Ensure minimum price
     end
@@ -234,7 +226,7 @@ function update_price(P::LiPOMDP, s::State, a::Action, price_model_type=1)
             years_beyond = historical_year - last_year
             growth_factor = 1.05^years_beyond  # 5% annual growth
             extrapolated_price = last_price * growth_factor
-            noise = rand(Normal(0, extrapolated_price * 0.1))  # 15% noise for extrapolation
+            noise = rand(Normal(0, extrapolated_price * 0.1))  # 10% noise for extrapolation
             new_price = extrapolated_price + noise
             return max(new_price, 1000.0)
         end

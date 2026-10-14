@@ -1,0 +1,24 @@
+
+
+TEST 2: one-at-a-time POMCPOW hyperparameter sweep vs OneStepLookahead
+Original POMCPOW: (tree_queries = 10000, max_depth = 25, ucb_c = 1.0, enable_action_pw = true, k_action = 5.0, alpha_action = 0.5, k_observation = 3.0, alpha_observation = 0.3, rollout = :dynamic_profit)
+alphas=[0.5]  seeds=[1001, 1002, 1003, 1004]  planning=3  eval=6
+
+====================================================================================================
+α = 0.5   planning=3  eval=6  seeds=[1001, 1002, 1003, 1004]
+====================================================================================================
+  seed 1001
+    orig                         disc=  0.359  profit=$   17901M  emis=$ -0.95M  met= 58.5%  mines=2  (101s)
+    rollout=AlphaAware           disc=  0.294  profit=$   14974M  emis=$ -0.99M  met= 61.1%  mines=2  (97s)
+    ucb_c=0.3                    disc=  0.359  profit=$   17978M  emis=$ -0.99M  met= 61.0%  mines=2  (98s)
+    ucb_c=0.1                    disc=  0.357  profit=$   17978M  emis=$ -0.99M  met= 61.0%  mines=2  (98s)
+    k_action=10                  disc=  0.359  profit=$   17896M  emis=$ -0.95M  met= 58.5%  mines=2  (98s)
+    k_action=20                  disc=  0.359  profit=$   17896M  emis=$ -0.95M  met= 58.5%  mines=2  (99s)
+    max_depth=10                 disc=  0.408  profit=$   21060M  emis=$ -1.24M  met= 68.4%  mines=3  (71s)
+    queries=20000                disc=  0.408  profit=$   20985M  emis=$ -1.20M  met= 65.9%  mines=3  (201s)
+    OneStep                      disc=  0.338  profit=$   17973M  emis=$ -1.17M  met= 68.5%  mines=3  (17s)
+  seed 1002
+    orig                         disc=  0.244  profit=$   12404M  emis=$ -0.86M  met= 54.2%  mines=2  (99s)
+    rollout=AlphaAware           disc=  0.432  profit=$   21291M  emis=$ -0.94M  met= 59.7%  mines=2  (100s)
+    ucb_c=0.3                    disc=  0.235  profit=$   12045M  emis=$ -0.85M  met= 53.7%  mines=2  (98s)
+    ucb_c=0.1                    disc=  0.250  profit=$   12645M  emis=$ -0.86M  met= 54.2%  mines=2  (98s)
