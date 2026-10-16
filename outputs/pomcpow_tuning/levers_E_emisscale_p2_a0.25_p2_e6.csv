@@ -1,0 +1,9 @@
+test,config,alpha,seed,discounted_reward,profit,emission_cost,co2_tonnes,met_demand_pct,mines_opened,capex,explorations
+levers_E_emisscale_p2_a0.25,POMCPOW orig,0.25,2001,-0.0008987333729805013,-5.24e7,0.0,0.0,0.0,0,0.0,65
+levers_E_emisscale_p2_a0.25,OneStep,0.25,2001,-0.0007033992678795319,-4.04e7,0.0,0.0,0.0,0,0.0,51
+levers_E_emisscale_p2_a0.25,POMCPOW orig,0.25,2002,-0.0007672154786937413,-4.6e7,0.0,0.0,0.0,0,0.0,61
+levers_E_emisscale_p2_a0.25,OneStep,0.25,2002,-0.0007996007024542011,-4.6e7,0.0,0.0,0.0,0,0.0,55
+levers_E_emisscale_p2_a0.25,POMCPOW orig,0.25,2003,-0.000675533787782665,-4.0e7,0.0,0.0,0.0,0,0.0,52
+levers_E_emisscale_p2_a0.25,OneStep,0.25,2003,-0.0007696960994897975,-4.52e7,0.0,0.0,0.0,0,0.0,55
+levers_E_emisscale_p2_a0.25,POMCPOW orig,0.25,2004,-0.0006284560233946982,-3.76e7,0.0,0.0,0.0,0,0.0,50
+levers_E_emisscale_p2_a0.25,OneStep,0.25,2004,-0.0007401824824006331,-4.12e7,0.0,0.0,0.0,0,0.0,51

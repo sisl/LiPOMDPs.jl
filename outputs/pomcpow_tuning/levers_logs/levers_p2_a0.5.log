@@ -1,0 +1,176 @@
+
+
+LEVER TEST  planning=2  eval=6  α=0.5  seeds=[2001, 2002, 2003, 2004]  experiments=ABCDE
+Original POMCPOW: (tree_queries = 10000, max_depth = 25, ucb_c = 1.0, enable_action_pw = true, k_action = 5.0, alpha_action = 0.5, k_observation = 3.0, alpha_observation = 0.3, rollout = :dynamic_profit)
+
+### A: base model, solver levers
+
+====================================================================================================
+α = 0.5   planning=2  eval=6  seeds=[2001, 2002, 2003, 2004]
+====================================================================================================
+  seed 2001
+    POMCPOW orig                 disc=  0.239  profit=$   15030M  emis=$ -1.54M  met= 86.1%  mines=4  expl=34  (112s)
+    POMCPOW k_action=10          disc=  0.236  profit=$   15013M  emis=$ -1.56M  met= 87.6%  mines=4  expl=31  (108s)
+    POMCPOW heuristic            disc=  0.208  profit=$   12720M  emis=$ -1.41M  met= 83.0%  mines=3  expl=39  (112s)
+    POMCPOW heur+k10             disc=  0.237  profit=$   15018M  emis=$ -1.53M  met= 85.7%  mines=4  expl=39  (111s)
+    OneStep                      disc=  0.255  profit=$   15108M  emis=$ -1.46M  met= 79.3%  mines=4  expl=32  (17s)
+  seed 2002
+    POMCPOW orig                 disc=  0.326  profit=$   18837M  emis=$ -1.50M  met= 85.3%  mines=4  expl=36  (110s)
+    POMCPOW k_action=10          disc=  0.338  profit=$   18837M  emis=$ -1.50M  met= 85.3%  mines=4  expl=35  (112s)
+    POMCPOW heuristic            disc=  0.212  profit=$   13575M  emis=$ -1.55M  met= 87.5%  mines=4  expl=38  (110s)
+    POMCPOW heur+k10             disc=  0.338  profit=$   18839M  emis=$ -1.50M  met= 85.3%  mines=4  expl=32  (112s)
+    OneStep                      disc=  0.336  profit=$   18899M  emis=$ -1.60M  met= 84.8%  mines=4  expl=40  (15s)
+  seed 2003
+    POMCPOW orig                 disc=  0.145  profit=$    9982M  emis=$ -1.44M  met= 77.8%  mines=4  expl=33  (109s)
+    POMCPOW k_action=10          disc=  0.145  profit=$    9979M  emis=$ -1.44M  met= 77.8%  mines=4  expl=37  (110s)
+    POMCPOW heuristic            disc=  0.369  profit=$   22622M  emis=$ -1.87M  met= 91.9%  mines=3  expl=40  (111s)
+    POMCPOW heur+k10             disc=  0.233  profit=$   14805M  emis=$ -1.47M  met= 75.7%  mines=3  expl=42  (112s)
+    OneStep                      disc=  0.172  profit=$   10670M  emis=$ -1.32M  met= 72.8%  mines=4  expl=45  (16s)
+  seed 2004
+    POMCPOW orig                 disc=  0.110  profit=$    8756M  emis=$ -1.45M  met= 79.6%  mines=4  expl=40  (110s)
+    POMCPOW k_action=10          disc=  0.082  profit=$    8702M  emis=$ -1.61M  met= 86.1%  mines=4  expl=28  (108s)
+    POMCPOW heuristic            disc=  0.094  profit=$    8725M  emis=$ -1.55M  met= 83.8%  mines=4  expl=27  (110s)
+    POMCPOW heur+k10             disc=  0.249  profit=$   16211M  emis=$ -1.70M  met= 86.3%  mines=3  expl=48  (111s)
+    OneStep                      disc=  0.216  profit=$   14559M  emis=$ -1.52M  met= 82.2%  mines=4  expl=36  (14s)
+
+  Summary α=0.5
+  config                            disc    ±std   profit$M     emis$M    met%  mines  expl Δ vs OneStep
+  POMCPOW orig                     0.205   0.097      13151      -1.48    82.2   4.00  35.8    -0.040
+  POMCPOW k_action=10              0.200   0.111      13133      -1.53    84.2   4.00  32.8    -0.045
+  POMCPOW heuristic                0.221   0.113      14411      -1.60    86.6   3.50  36.0    -0.024
+  POMCPOW heur+k10                 0.264   0.050      16218      -1.55    83.3   3.50  40.2    +0.020
+  OneStep                          0.245   0.069      14809      -1.48    79.8   4.00  38.2    +0.000
+
+All alphas: mean discounted reward
+  config                        α=0.5  
+  POMCPOW orig                    0.205
+  POMCPOW k_action=10             0.200
+  POMCPOW heuristic               0.221
+  POMCPOW heur+k10                0.264
+  OneStep                         0.245
+
+CSV: outputs/pomcpow_tuning/levers_A_base_p2_a0.5_p2_e6.csv
+
+### B: exploration cost x50
+
+====================================================================================================
+α = 0.5   planning=2  eval=6  seeds=[2001, 2002, 2003, 2004]
+model overrides: (exploration_cost_dle = 6.0e7, exploration_cost_hard_rock = 2.0e7)
+====================================================================================================
+  seed 2001
+    POMCPOW orig                 disc=  0.213  profit=$   14474M  emis=$ -1.56M  met= 87.6%  mines=4  expl=22  (107s)
+    OneStep                      disc=  0.198  profit=$   14205M  emis=$ -1.71M  met= 81.9%  mines=4  expl=31  (14s)
+  seed 2002
+    POMCPOW orig                 disc=  0.175  profit=$   12491M  emis=$ -1.57M  met= 88.4%  mines=4  expl=27  (109s)
+    OneStep                      disc=  0.120  profit=$   10247M  emis=$ -1.55M  met= 87.3%  mines=4  expl=21  (8s)
+  seed 2003
+    POMCPOW orig                 disc=  0.103  profit=$    8705M  emis=$ -1.45M  met= 78.4%  mines=4  expl=24  (108s)
+    OneStep                      disc=  0.125  profit=$    9423M  emis=$ -1.32M  met= 72.8%  mines=4  expl=38  (16s)
+  seed 2004
+    POMCPOW orig                 disc=  0.076  profit=$    8176M  emis=$ -1.49M  met= 81.1%  mines=4  expl=19  (105s)
+    OneStep                      disc=  0.195  profit=$   13658M  emis=$ -1.69M  met= 85.5%  mines=4  expl=30  (13s)
+
+  Summary α=0.5
+  config                            disc    ±std   profit$M     emis$M    met%  mines  expl Δ vs OneStep
+  POMCPOW orig                     0.142   0.063      10962      -1.52    83.9   4.00  23.0    -0.018
+  OneStep                          0.160   0.043      11883      -1.57    81.9   4.00  30.0    +0.000
+
+All alphas: mean discounted reward
+  config                        α=0.5  
+  POMCPOW orig                    0.142
+  OneStep                         0.160
+
+CSV: outputs/pomcpow_tuning/levers_B_explcost_p2_a0.5_p2_e6.csv
+
+### C: exploration noise halved
+
+====================================================================================================
+α = 0.5   planning=2  eval=6  seeds=[2001, 2002, 2003, 2004]
+model overrides: (σ_obs_d_dle = 10000.0, σ_obs_d_hard_rock = 45000.0)
+====================================================================================================
+  seed 2001
+    POMCPOW orig                 disc=  0.239  profit=$   15028M  emis=$ -1.54M  met= 86.1%  mines=4  expl=38  (105s)
+    OneStep                      disc=  0.255  profit=$   15074M  emis=$ -1.45M  met= 80.3%  mines=4  expl=33  (15s)
+  seed 2002
+    POMCPOW orig                 disc=  0.339  profit=$   18807M  emis=$ -1.47M  met= 83.4%  mines=4  expl=34  (109s)
+    OneStep                      disc=  0.336  profit=$   18899M  emis=$ -1.60M  met= 84.8%  mines=4  expl=40  (15s)
+  seed 2003
+    POMCPOW orig                 disc=  0.384  profit=$   22190M  emis=$ -1.69M  met= 85.8%  mines=3  expl=47  (108s)
+    OneStep                      disc=  0.219  profit=$   13068M  emis=$ -1.38M  met= 74.6%  mines=4  expl=44  (16s)
+  seed 2004
+    POMCPOW orig                 disc=  0.154  profit=$   15076M  emis=$ -2.06M  met= 99.3%  mines=4  expl=31  (107s)
+    OneStep                      disc=  0.216  profit=$   14967M  emis=$ -1.44M  met= 79.0%  mines=4  expl=31  (15s)
+
+  Summary α=0.5
+  config                            disc    ±std   profit$M     emis$M    met%  mines  expl Δ vs OneStep
+  POMCPOW orig                     0.279   0.103      17775      -1.69    88.7   3.75  37.5    +0.022
+  OneStep                          0.256   0.056      15502      -1.47    79.7   4.00  37.0    +0.000
+
+All alphas: mean discounted reward
+  config                        α=0.5  
+  POMCPOW orig                    0.279
+  OneStep                         0.256
+
+CSV: outputs/pomcpow_tuning/levers_C_explnoise_p2_a0.5_p2_e6.csv
+
+### D: reward_scale 1e9 (disc rescaled to the 1e10 scale for comparison)
+
+====================================================================================================
+α = 0.5   planning=2  eval=6  seeds=[2001, 2002, 2003, 2004]
+model overrides: (reward_scale = 1.0e9,)
+====================================================================================================
+  seed 2001
+    POMCPOW orig                 disc=  0.239  profit=$   15031M  emis=$ -1.54M  met= 86.1%  mines=4  expl=35  (105s)
+    OneStep                      disc=  0.255  profit=$   15108M  emis=$ -1.46M  met= 79.3%  mines=4  expl=32  (15s)
+  seed 2002
+    POMCPOW orig                 disc=  0.337  profit=$   18827M  emis=$ -1.50M  met= 85.3%  mines=4  expl=47  (107s)
+    OneStep                      disc=  0.336  profit=$   18899M  emis=$ -1.60M  met= 84.8%  mines=4  expl=40  (14s)
+  seed 2003
+    POMCPOW orig                 disc=  0.220  profit=$   14774M  emis=$ -1.56M  met= 79.2%  mines=3  expl=44  (107s)
+    OneStep                      disc=  0.172  profit=$   10670M  emis=$ -1.32M  met= 72.8%  mines=4  expl=45  (16s)
+  seed 2004
+    POMCPOW orig                 disc=  0.233  profit=$   15214M  emis=$ -1.66M  met= 82.6%  mines=4  expl=45  (107s)
+    OneStep                      disc=  0.216  profit=$   14559M  emis=$ -1.52M  met= 82.2%  mines=4  expl=36  (14s)
+
+  Summary α=0.5
+  config                            disc    ±std   profit$M     emis$M    met%  mines  expl Δ vs OneStep
+  POMCPOW orig                     0.257   0.054      15962      -1.56    83.3   3.75  42.8    +0.013
+  OneStep                          0.245   0.069      14809      -1.48    79.8   4.00  38.2    +0.000
+
+All alphas: mean discounted reward
+  config                        α=0.5  
+  POMCPOW orig                    0.257
+  OneStep                         0.245
+
+CSV: outputs/pomcpow_tuning/levers_D_rewardscale_p2_a0.5_p2_e6.csv
+
+### E: emission_scale_factor 10_000
+
+====================================================================================================
+α = 0.5   planning=2  eval=6  seeds=[2001, 2002, 2003, 2004]
+model overrides: (emission_scale_factor = 10000.0,)
+====================================================================================================
+  seed 2001
+    POMCPOW orig                 disc= -0.042  profit=$   12118M  emis=$ -1.16M  met= 66.3%  mines=3  expl=45  (107s)
+    OneStep                      disc=  0.134  profit=$   19181M  emis=$ -1.13M  met= 63.7%  mines=3  expl=39  (17s)
+  seed 2002
+    POMCPOW orig                 disc=  0.104  profit=$   16775M  emis=$ -1.03M  met= 65.2%  mines=2  expl=47  (105s)
+    OneStep                      disc=  0.053  profit=$   15678M  emis=$ -1.14M  met= 68.2%  mines=3  expl=46  (16s)
+  seed 2003
+    POMCPOW orig                 disc= -0.121  profit=$    3843M  emis=$ -0.81M  met= 51.4%  mines=2  expl=48  (103s)
+    OneStep                      disc= -0.083  profit=$   10675M  emis=$ -1.22M  met= 68.4%  mines=4  expl=45  (16s)
+  seed 2004
+    POMCPOW orig                 disc= -0.025  profit=$   14462M  emis=$ -1.33M  met= 73.9%  mines=4  expl=39  (100s)
+    OneStep                      disc= -0.048  profit=$   11362M  emis=$ -1.12M  met= 65.3%  mines=3  expl=39  (15s)
+
+  Summary α=0.5
+  config                            disc    ±std   profit$M     emis$M    met%  mines  expl Δ vs OneStep
+  POMCPOW orig                    -0.021   0.094      11800      -1.08    64.2   2.75  44.8    -0.035
+  OneStep                          0.014   0.099      14224      -1.16    66.4   3.25  42.2    +0.000
+
+All alphas: mean discounted reward
+  config                        α=0.5  
+  POMCPOW orig                   -0.021
+  OneStep                         0.014
+
+CSV: outputs/pomcpow_tuning/levers_E_emisscale_p2_a0.5_p2_e6.csv

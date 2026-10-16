@@ -22,3 +22,54 @@ alphas=[0.5]  seeds=[1001, 1002, 1003, 1004]  planning=3  eval=6
     rollout=AlphaAware           disc=  0.432  profit=$   21291M  emis=$ -0.94M  met= 59.7%  mines=2  (100s)
     ucb_c=0.3                    disc=  0.235  profit=$   12045M  emis=$ -0.85M  met= 53.7%  mines=2  (98s)
     ucb_c=0.1                    disc=  0.250  profit=$   12645M  emis=$ -0.86M  met= 54.2%  mines=2  (98s)
+    k_action=10                  disc=  0.455  profit=$   23054M  emis=$ -1.11M  met= 62.7%  mines=3  (98s)
+    k_action=20                  disc=  0.455  profit=$   23054M  emis=$ -1.11M  met= 62.7%  mines=3  (100s)
+    max_depth=10                 disc=  0.234  profit=$   12043M  emis=$ -0.85M  met= 53.7%  mines=2  (71s)
+    queries=20000                disc=  0.244  profit=$   12411M  emis=$ -0.86M  met= 54.2%  mines=2  (199s)
+    OneStep                      disc=  0.421  profit=$   22585M  emis=$ -1.23M  met= 66.9%  mines=4  (16s)
+  seed 1003
+    orig                         disc=  0.204  profit=$   10582M  emis=$ -0.87M  met= 55.0%  mines=2  (98s)
+    rollout=AlphaAware           disc=  0.387  profit=$   19969M  emis=$ -1.18M  met= 67.6%  mines=3  (100s)
+    ucb_c=0.3                    disc=  0.266  profit=$   13488M  emis=$ -0.92M  met= 58.0%  mines=2  (99s)
+    ucb_c=0.1                    disc=  0.267  profit=$   13494M  emis=$ -0.92M  met= 58.0%  mines=2  (99s)
+    k_action=10                  disc=  0.388  profit=$   19914M  emis=$ -1.14M  met= 65.1%  mines=3  (100s)
+    k_action=20                  disc=  0.266  profit=$   13482M  emis=$ -0.92M  met= 58.0%  mines=2  (99s)
+    max_depth=10                 disc=  0.387  profit=$   19972M  emis=$ -1.18M  met= 67.6%  mines=3  (71s)
+    queries=20000                disc=  0.378  profit=$   20044M  emis=$ -1.25M  met= 67.6%  mines=3  (200s)
+    OneStep                      disc=  0.333  profit=$   17869M  emis=$ -1.10M  met= 64.1%  mines=4  (16s)
+  seed 1004
+    orig                         disc=  0.219  profit=$   11323M  emis=$ -0.87M  met= 55.8%  mines=2  (100s)
+    rollout=AlphaAware           disc=  0.231  profit=$   11665M  emis=$ -0.83M  met= 53.0%  mines=2  (100s)
+    ucb_c=0.3                    disc=  0.226  profit=$   11736M  emis=$ -0.94M  met= 60.4%  mines=2  (100s)
+    ucb_c=0.1                    disc=  0.230  profit=$   11724M  emis=$ -0.87M  met= 55.6%  mines=2  (96s)
+    k_action=10                  disc=  0.410  profit=$   21205M  emis=$ -1.15M  met= 64.4%  mines=3  (96s)
+    k_action=20                  disc=  0.270  profit=$   14386M  emis=$ -1.08M  met= 59.2%  mines=3  (96s)
+    max_depth=10                 disc=  0.332  profit=$   17633M  emis=$ -1.24M  met= 69.2%  mines=4  (68s)
+    queries=20000                disc=  0.281  profit=$   15013M  emis=$ -1.15M  met= 64.6%  mines=3  (193s)
+    OneStep                      disc=  0.410  profit=$   21189M  emis=$ -1.15M  met= 69.2%  mines=3  (16s)
+
+  Summary α=0.5
+  config                            disc    ±std   profit$M     emis$M    met%  mines Δ vs OneStep
+  orig                             0.256   0.070      13052      -0.89    55.9   2.00    -0.119
+  rollout=AlphaAware               0.336   0.091      16975      -0.99    60.3   2.25    -0.040
+  ucb_c=0.3                        0.272   0.061      13812      -0.92    58.3   2.00    -0.104
+  ucb_c=0.1                        0.276   0.056      13960      -0.91    57.2   2.00    -0.100
+  k_action=10                      0.403   0.041      20517      -1.09    62.7   2.75    +0.027
+  k_action=20                      0.337   0.089      17204      -1.01    59.6   2.50    -0.038
+  max_depth=10                     0.340   0.078      17677      -1.13    64.7   3.00    -0.035
+  queries=20000                    0.328   0.078      17113      -1.11    63.1   2.75    -0.048
+  OneStep                          0.376   0.047      19904      -1.16    67.2   3.50    +0.000
+
+All alphas: mean discounted reward
+  config                        α=0.5  
+  orig                            0.256
+  rollout=AlphaAware              0.336
+  ucb_c=0.3                       0.272
+  ucb_c=0.1                       0.276
+  k_action=10                     0.403
+  k_action=20                     0.337
+  max_depth=10                    0.340
+  queries=20000                   0.328
+  OneStep                         0.376
+
+CSV: outputs/pomcpow_tuning/hypertune_p3_e6.csv

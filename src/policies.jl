@@ -955,11 +955,10 @@ function POMDPs.action(policy::AlphaAwareRolloutPolicy, s::State)
 end
 
 function POMDPs.action(policy::AlphaAwareRolloutPolicy, b::LiBelief)
-    # Sample from belief distributions
     sampled_deposits = [rand(d) for d in b.deposits_distribution]
     sampled_price = rand(b.price_distribution)
     sampled_demand = rand(b.demand_distribution)
-    
+
     s = State(
         deposit = sampled_deposits,
         time = b.time,
@@ -968,9 +967,9 @@ function POMDPs.action(policy::AlphaAwareRolloutPolicy, b::LiBelief)
         total_mined = b.total_mined,
         have_opened = copy(b.have_opened),
         is_depleted = copy(b.is_depleted),
-        restored_mines = copy(b.restored_mines)
+        restored_mines = copy(b.restored_mines),
     )
-    
+
     return POMDPs.action(policy, s)
 end
 
@@ -1158,25 +1157,64 @@ function POMDPs.action(policy::OneStepLookaheadPolicy, s::State)
 end
 
 """
-Action from belief: sample a state and use state-based action selection.
+Rollout when the deposit is hidden. `s` is used only by the simulator.
+Later actions come from `action(rollout_policy, b)` on the updated belief,
+not from the true deposit.
+"""
+function simulate_rollout_belief(policy::OneStepLookaheadPolicy, b0::LiBelief, s::State, a::Action, updater, rng::AbstractRNG)
+    total = 0.0
+    disc = 1.0
+    sp, o, r = @gen(:sp, :o, :r)(policy.pomdp, s, a, rng)
+    total += r
+    isterminal(policy.pomdp, sp) && return total
+    b = update(updater, b0, a, o)
+    s = sp
+    remaining = Int(policy.pomdp.time_horizon - s.time + 1)
+    for _ in 1:remaining
+        disc *= policy.pomdp.γ
+        a = action(policy.rollout_policy, b)
+        sp, o, r = @gen(:sp, :o, :r)(policy.pomdp, s, a, rng)
+        total += disc * r
+        isterminal(policy.pomdp, sp) && break
+        b = update(updater, b, a, o)
+        s = sp
+    end
+    return total
+end
+
+"""
+Action from a belief. Feasible actions use opened/depleted flags only.
+Each rollout draws a hidden state for the simulator; the rollout policy
+never sees that state.
 """
 function POMDPs.action(policy::OneStepLookaheadPolicy, b::LiBelief)
-    # Sample from belief distributions
-    sampled_deposits = [rand(d) for d in b.deposits_distribution]
-    sampled_price = rand(b.price_distribution)
-    sampled_demand = rand(b.demand_distribution)
-    
-    # Create a representative state
-    s = State(
-        deposit = sampled_deposits,
+    n = policy.pomdp.n_deposits
+    s_flags = State(
+        deposit = zeros(n),
         time = b.time,
-        price = sampled_price,
-        company_demand = sampled_demand,
+        price = max(mean(b.price_distribution), 100.0),
+        company_demand = max(mean(b.demand_distribution), 0.0),
         total_mined = b.total_mined,
         have_opened = copy(b.have_opened),
         is_depleted = copy(b.is_depleted),
-        restored_mines = copy(b.restored_mines)
+        restored_mines = copy(b.restored_mines),
     )
-    
-    return POMDPs.action(policy, s)
+    feasible = generate_feasible_actions(policy, s_flags)
+    updater = LiBeliefUpdater(P=policy.pomdp)
+    best_action = feasible[1]
+    best_avg = -Inf
+    for (idx, a) in enumerate(feasible)
+        total = 0.0
+        for sim in 1:policy.n_rollouts
+            rng = Random.MersenneTwister(hash((b.time, idx, sim, :onestep)))
+            s = rand(rng, b)
+            total += simulate_rollout_belief(policy, b, s, a, updater, rng)
+        end
+        avg = total / policy.n_rollouts
+        if avg > best_avg
+            best_avg = avg
+            best_action = a
+        end
+    end
+    return best_action
 end

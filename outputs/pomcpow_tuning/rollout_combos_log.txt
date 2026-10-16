@@ -40,3 +40,96 @@ alphas=[0.25, 0.5, 0.75, 1.0]  seeds=[1001, 1002, 1003]  planning=3  eval=6
   seed 1001
     POMCPOW DynProfit+PW (orig)  disc=  0.359  profit=$   17901M  emis=$ -0.95M  met= 58.5%  mines=2  (97s)
     POMCPOW AlphaAware+PW        disc=  0.294  profit=$   14974M  emis=$ -0.99M  met= 61.1%  mines=2  (98s)
+    POMCPOW DynProfit+AllActs    disc=  0.354  profit=$   18012M  emis=$ -1.02M  met= 63.3%  mines=2  (88s)
+    POMCPOW AlphaAware+AllActs   disc=  0.359  profit=$   17973M  emis=$ -0.99M  met= 61.0%  mines=2  (88s)
+    OneStep                      disc=  0.338  profit=$   17973M  emis=$ -1.17M  met= 68.5%  mines=3  (15s)
+  seed 1002
+    POMCPOW DynProfit+PW (orig)  disc=  0.244  profit=$   12404M  emis=$ -0.86M  met= 54.2%  mines=2  (98s)
+    POMCPOW AlphaAware+PW        disc=  0.432  profit=$   21291M  emis=$ -0.94M  met= 59.7%  mines=2  (98s)
+    POMCPOW DynProfit+AllActs    disc=  0.432  profit=$   21294M  emis=$ -0.94M  met= 59.7%  mines=2  (86s)
+    POMCPOW AlphaAware+AllActs   disc=  0.322  profit=$   16997M  emis=$ -1.17M  met= 64.6%  mines=3  (85s)
+    OneStep                      disc=  0.421  profit=$   22585M  emis=$ -1.23M  met= 66.9%  mines=4  (15s)
+  seed 1003
+    POMCPOW DynProfit+PW (orig)  disc=  0.204  profit=$   10582M  emis=$ -0.87M  met= 55.0%  mines=2  (97s)
+    POMCPOW AlphaAware+PW        disc=  0.387  profit=$   19969M  emis=$ -1.18M  met= 67.6%  mines=3  (97s)
+    POMCPOW DynProfit+AllActs    disc=  0.387  profit=$   19969M  emis=$ -1.18M  met= 67.6%  mines=3  (86s)
+    POMCPOW AlphaAware+AllActs   disc=  0.266  profit=$   13483M  emis=$ -0.92M  met= 58.0%  mines=2  (86s)
+    OneStep                      disc=  0.333  profit=$   17869M  emis=$ -1.10M  met= 64.1%  mines=4  (15s)
+
+  Summary α=0.5
+  config                            disc    ±std   profit$M     emis$M    met%  mines Δ vs OneStep
+  POMCPOW DynProfit+PW (orig)      0.269   0.080      13629      -0.89    55.9   2.00    -0.095
+  POMCPOW AlphaAware+PW            0.371   0.071      18745      -1.04    62.8   2.33    +0.007
+  POMCPOW DynProfit+AllActs        0.391   0.039      19758      -1.05    63.5   2.33    +0.027
+  POMCPOW AlphaAware+AllActs       0.316   0.047      16151      -1.02    61.2   2.33    -0.048
+  OneStep                          0.364   0.049      19476      -1.17    66.5   3.67    +0.000
+
+====================================================================================================
+α = 0.75   planning=3  eval=6  seeds=[1001, 1002, 1003]
+====================================================================================================
+  seed 1001
+    POMCPOW DynProfit+PW (orig)  disc=  0.558  profit=$   17977M  emis=$ -0.99M  met= 61.0%  mines=2  (97s)
+    POMCPOW AlphaAware+PW        disc=  0.559  profit=$   17900M  emis=$ -0.95M  met= 58.5%  mines=2  (98s)
+    POMCPOW DynProfit+AllActs    disc=  0.452  profit=$   14834M  emis=$ -1.03M  met= 63.7%  mines=2  (86s)
+    POMCPOW AlphaAware+AllActs   disc=  0.562  profit=$   17903M  emis=$ -0.95M  met= 58.5%  mines=2  (87s)
+    OneStep                      disc=  0.535  profit=$   17974M  emis=$ -1.17M  met= 68.5%  mines=3  (14s)
+  seed 1002
+    POMCPOW DynProfit+PW (orig)  disc=  0.371  profit=$   12045M  emis=$ -0.85M  met= 53.7%  mines=2  (97s)
+    POMCPOW AlphaAware+PW        disc=  0.507  profit=$   17043M  emis=$ -1.17M  met= 68.5%  mines=3  (98s)
+    POMCPOW DynProfit+AllActs    disc=  0.513  profit=$   17093M  emis=$ -1.14M  met= 65.8%  mines=3  (86s)
+    POMCPOW AlphaAware+AllActs   disc=  0.515  profit=$   17096M  emis=$ -1.13M  met= 63.6%  mines=3  (86s)
+    OneStep                      disc=  0.660  profit=$   22585M  emis=$ -1.23M  met= 66.9%  mines=4  (15s)
+  seed 1003
+    POMCPOW DynProfit+PW (orig)  disc=  0.304  profit=$    9836M  emis=$ -0.80M  met= 50.3%  mines=2  (96s)
+    POMCPOW AlphaAware+PW        disc=  0.449  profit=$   15475M  emis=$ -1.30M  met= 72.1%  mines=4  (95s)
+    POMCPOW DynProfit+AllActs    disc=  0.305  profit=$    9824M  emis=$ -0.80M  met= 50.3%  mines=2  (84s)
+    POMCPOW AlphaAware+AllActs   disc=  0.421  profit=$   13485M  emis=$ -0.92M  met= 58.0%  mines=2  (85s)
+    OneStep                      disc=  0.436  profit=$   15455M  emis=$ -1.38M  met= 75.1%  mines=4  (13s)
+
+  Summary α=0.75
+  config                            disc    ±std   profit$M     emis$M    met%  mines Δ vs OneStep
+  POMCPOW DynProfit+PW (orig)      0.411   0.132      13286      -0.88    55.0   2.00    -0.133
+  POMCPOW AlphaAware+PW            0.505   0.055      16806      -1.14    66.4   3.00    -0.039
+  POMCPOW DynProfit+AllActs        0.423   0.107      13917      -0.99    59.9   2.33    -0.120
+  POMCPOW AlphaAware+AllActs       0.499   0.072      16161      -1.00    60.0   2.33    -0.044
+  OneStep                          0.544   0.113      18671      -1.26    70.2   3.67    +0.000
+
+====================================================================================================
+α = 1.0   planning=3  eval=6  seeds=[1001, 1002, 1003]
+====================================================================================================
+  seed 1001
+    POMCPOW DynProfit+PW (orig)  disc=  0.764  profit=$   17983M  emis=$ -0.99M  met= 61.0%  mines=2  (94s)
+    POMCPOW AlphaAware+PW        disc=  0.764  profit=$   17983M  emis=$ -0.99M  met= 61.0%  mines=2  (96s)
+    POMCPOW DynProfit+AllActs    disc=  0.455  profit=$   10699M  emis=$ -0.87M  met= 54.0%  mines=2  (85s)
+    POMCPOW AlphaAware+AllActs   disc=  0.455  profit=$   10699M  emis=$ -0.87M  met= 54.0%  mines=2  (86s)
+    OneStep                      disc=  0.731  profit=$   17974M  emis=$ -1.17M  met= 68.5%  mines=3  (15s)
+  seed 1002
+    POMCPOW DynProfit+PW (orig)  disc=  0.847  profit=$   19925M  emis=$ -0.97M  met= 61.1%  mines=2  (96s)
+    POMCPOW AlphaAware+PW        disc=  0.847  profit=$   19929M  emis=$ -0.97M  met= 61.1%  mines=2  (97s)
+    POMCPOW DynProfit+AllActs    disc=  0.510  profit=$   12047M  emis=$ -0.85M  met= 53.7%  mines=2  (85s)
+    POMCPOW AlphaAware+AllActs   disc=  0.510  profit=$   12047M  emis=$ -0.85M  met= 53.7%  mines=2  (85s)
+    OneStep                      disc=  0.913  profit=$   22537M  emis=$ -1.19M  met= 71.4%  mines=4  (15s)
+  seed 1003
+    POMCPOW DynProfit+PW (orig)  disc=  0.418  profit=$    9780M  emis=$ -0.76M  met= 48.1%  mines=2  (96s)
+    POMCPOW AlphaAware+PW        disc=  0.619  profit=$   15477M  emis=$ -1.30M  met= 72.1%  mines=4  (96s)
+    POMCPOW DynProfit+AllActs    disc=  0.571  profit=$   14960M  emis=$ -1.50M  met= 83.6%  mines=4  (82s)
+    POMCPOW AlphaAware+AllActs   disc=  0.571  profit=$   14960M  emis=$ -1.50M  met= 83.6%  mines=4  (82s)
+    OneStep                      disc=  0.603  profit=$   15455M  emis=$ -1.38M  met= 75.1%  mines=4  (14s)
+
+  Summary α=1.0
+  config                            disc    ±std   profit$M     emis$M    met%  mines Δ vs OneStep
+  POMCPOW DynProfit+PW (orig)      0.677   0.227      15896      -0.90    56.7   2.00    -0.072
+  POMCPOW AlphaAware+PW            0.744   0.115      17796      -1.08    64.7   2.67    -0.005
+  POMCPOW DynProfit+AllActs        0.512   0.058      12569      -1.07    63.7   2.67    -0.237
+  POMCPOW AlphaAware+AllActs       0.512   0.058      12569      -1.07    63.7   2.67    -0.237
+  OneStep                          0.749   0.156      18655      -1.25    71.7   3.67    +0.000
+
+All alphas: mean discounted reward
+  config                        α=0.25   α=0.5    α=0.75   α=1.0  
+  POMCPOW DynProfit+PW (orig)     0.155    0.269    0.411    0.677
+  POMCPOW AlphaAware+PW           0.137    0.371    0.505    0.744
+  POMCPOW DynProfit+AllActs       0.154    0.391    0.423    0.512
+  POMCPOW AlphaAware+AllActs      0.165    0.316    0.499    0.512
+  OneStep                         0.156    0.364    0.544    0.749
+
+CSV: outputs/pomcpow_tuning/rollout_combos_p3_e6.csv

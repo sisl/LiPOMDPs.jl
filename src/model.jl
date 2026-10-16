@@ -53,25 +53,25 @@ end
 
 @with_kw mutable struct LiPOMDP <: POMDP{State,Action,Observation}
     #Observation parameters
-    σ_obs_d_dle::Float64 = 60_000.0 # Observation noise for DLE deposits (sites 1&2)
-    σ_obs_d_hard_rock::Float64 = 150_000.0 # Observation noise for Hard Rock deposits (sites 3&4)
+    σ_obs_d_dle::Float64 = 20_000.0 # Observation noise for DLE deposits (sites 1&2)
+    σ_obs_d_hard_rock::Float64 = 90_000.0 # Observation noise for Hard Rock deposits (sites 3&4)
     σ_obs_p::Float64 = 500.0 # Standard deviation of the observation noise for price
     σ_obs_demand::Float64 = 100.0  # Standard deviation for demand observation noise (reduced for lower error)
 
     price_init_std::Float64 = 1000.0   # Initial price uncertainty
     demand_init_std::Float64 = 500.0   # Initial demand uncertainty (reduced for lower error)
 
-    γ::Float64 = 0.97 #discounted reward
+    γ::Float64 = 0.90 # discounted reward (aligned with LiPOMDP_belief_copy)
     time_horizon::Int64 = 29 #time horizon
     n_deposits::Int64 = 4 # number of deposits
     alpha::Float64 = 0.5 # Parameter to control tradeoff between emissions and volume
-    exploration_cost_dle::Float64 = 1_200_000.0  # Exploration cost for DLE sites
-    exploration_cost_hard_rock::Float64 = 400_000.0  # Exploration cost for Hard Rock sites
+    exploration_cost_dle::Float64 = 6_000_000.0  # Exploration cost for DLE sites
+    exploration_cost_hard_rock::Float64 = 1_762_000.0  # Exploration cost for Hard Rock sites
     LCE_per_lithium = 5.323  # 1 t Li ≈ 5.323 t LCE
 
     # FIXED: Add emission scaling factor to balance scales between emissions and profit
     emission_scale_factor::Float64 = 1000 # Scale emissions up to balance with profit scale (increased from 3.0)
-    reward_scale::Float64 = 10_000_000_000.0  # Manual reward scaling parameter (divide by this to normalize rewards)
+    reward_scale::Float64 = 1_000_000_000.0  # Manual reward scaling parameter (divide by this to normalize rewards)
 
     # Add market parameters
     market_share_target::Float64 = 0.30  # Target 30% of global market
@@ -81,10 +81,10 @@ end
     # output is NAMEPLATE Li t/yr per mine
     output::Float64 = 25_000.0  # Annual output per mine of Li
     # In-situ Li (t Li): LCE = deposit × recovery × LCE_per_lithium
-    init_deposit_size_dle::Float64 = 160_165   # → 682,050 t LCE sellable (recovery 0.80)
-    init_deposit_size_mining::Float64 = 1_237_427 # → 4,610,780 t LCE sellable (recovery 0.70)
-    dle_uncertainty_factor::Float64 = 0.3  # Reduced to prevent negative deposits
-    mining_uncertainty_factor::Float64 = 0.2 # Reduced to prevent negative deposits
+    init_deposit_size_dle::Float64 = 133_348   # → 567,850 t LCE sellable (recovery 0.80)
+    init_deposit_size_mining::Float64 = 587_336 # → 2,188,474 t LCE sellable (recovery 0.70)
+    dle_uncertainty_factor::Float64 = 1.18 # Reduced to prevent negative deposits
+    mining_uncertainty_factor::Float64 = 1.61 # Reduced to prevent negative deposits
 
     # Mining method for each deposit (true = DLE, false = hard rock mining)
     deposit_types::Vector{Bool} = [true, true, false, false]  # First two are DLE, last two Hard Rock Mining
@@ -93,12 +93,12 @@ end
 
     # Hard Rock mining parameters
     mining_CO2_emissions::Float64 = 6.25  # kg CO2 per tonne LCE (production only)
-    mining_capex::Int64 = 3_670_000_000    # Higher initial investment
-    mining_opex::Int64 = 5_173     #  Similar opeartinal costs per ton 
+    mining_capex::Int64 = 1_512_000_000
+    mining_opex::Int64 = 4_818
 
     # DLE parameters
     dle_CO2_emissions::Float64 = 4.1   # kg CO2 per tonne LCE (production only)
-    dle_capex::Int64 = 1_209_000_000       # Lower initial investment
+    dle_capex::Int64 = 895_000_000
     dle_opex::Int64 = 5_694        # Similar operating costs per ton
     
     # Restoration parameters

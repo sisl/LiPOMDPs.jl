@@ -41,9 +41,38 @@ const ORIGINAL_POMCPOW = (
     rollout           = :dynamic_profit,   # FORollout(DynamicProfitMaximizerPolicy)
 )
 
-"""Build a POMCPOW planner. Keyword overrides are applied on top of ORIGINAL_POMCPOW."""
-function make_pomcpow(pomdp::LiPOMDP; kwargs...)
+const DO_NOTHING = Action(site=[1, 2, 3, 4], type=[0, 0, 0, 0])
+
+"""
+Action proposer for POMCPOW progressive widening.
+
+The default proposer draws uniformly from the 256 joint actions, so the first few
+actions tried at every node are almost always meaningless combinations. This one
+proposes, in order: the AlphaAware heuristic action for a state sampled from the
+node belief, then "do nothing", then uniform random actions.
+"""
+function heuristic_action_generator(pomdp::LiPOMDP; rng::AbstractRNG=MersenneTwister(11))
+    heur = AlphaAwareRolloutPolicy(pomdp)
+    return function (p, b, h)
+        s = rand(rng, b)
+        tried = h.tree.tried[h.node]
+        if isempty(tried)
+            return action(heur, s)
+        elseif length(tried) == 1 && h.tree.a_labels[tried[1]] != DO_NOTHING
+            return DO_NOTHING
+        else
+            return rand(rng, actions(p, s))
+        end
+    end
+end
+
+"""Build a POMCPOW planner. Keyword overrides are applied on top of ORIGINAL_POMCPOW.
+`next_action = :random` (POMCPOW default) or `:heuristic` (see heuristic_action_generator)."""
+function make_pomcpow(pomdp::LiPOMDP; next_action::Symbol=:random, kwargs...)
     cfg = merge(ORIGINAL_POMCPOW, (; kwargs...))
+    gen = next_action == :heuristic ? heuristic_action_generator(pomdp) :
+          next_action == :random    ? POMCPOW.RandomActionGenerator(MersenneTwister(11)) :
+          error("unknown next_action $next_action")
 
     est = if cfg.rollout == :dynamic_profit
         FORollout(DynamicProfitMaximizerPolicy(pomdp))
@@ -65,6 +94,7 @@ function make_pomcpow(pomdp::LiPOMDP; kwargs...)
         k_observation     = cfg.k_observation,
         alpha_observation = cfg.alpha_observation,
         estimate_value    = est,
+        next_action       = gen,
         rng               = MersenneTwister(7),
     )
     return solve(solver, pomdp)
@@ -81,10 +111,11 @@ function run_scenario(policy, planning::LiPOMDP, evaluation::LiPOMDP, updater, s
     b, s = b0, s0
 
     disc = 0.0; profit = 0.0; emis = 0.0; co2 = 0.0
-    production = 0.0; demand = 0.0; capex = 0.0
+    production = 0.0; demand = 0.0; capex = 0.0; explores = 0
 
     for t in 1:planning.time_horizon
         a = action(policy, b)
+        explores += count(==(1), a.type)
 
         # Common random numbers for the environment step
         Random.seed!(hash((scenario_seed, t)))
@@ -115,22 +146,28 @@ function run_scenario(policy, planning::LiPOMDP, evaluation::LiPOMDP, updater, s
 
     return (disc=disc, profit=profit, emis=emis, co2=co2,
             met=(demand > 0 ? 100 * production / demand : 0.0),
-            mines=count(s.have_opened), capex=capex)
+            mines=count(s.have_opened), capex=capex, explores=explores)
 end
 
 # -----------------------------------------------------------------------------
 # Full comparison across configs × alphas × seeds
 # configs :: Vector{Pair{String, Function}}  where f(pomdp) -> policy
 # -----------------------------------------------------------------------------
+"""
+`model_kwargs` are extra LiPOMDP keyword overrides applied to BOTH the planning and the
+evaluation POMDP (e.g. `(exploration_cost_dle=6e7,)`). Discounted rewards are multiplied
+by `reward_rescale` before reporting so runs with a different `reward_scale` stay comparable.
+"""
 function run_comparison(test_name::String, configs, planning_model::Int, eval_model::Int,
                         alphas::Vector{Float64}, seeds::Vector{Int};
                         horizon::Int=29, baseline::String="OneStep",
-                        output_dir::String="outputs/pomcpow_tuning")
+                        output_dir::String="outputs/pomcpow_tuning",
+                        model_kwargs::NamedTuple=(;), reward_rescale::Float64=1.0)
 
     mkpath(output_dir)
     csv_path = joinpath(output_dir, "$(test_name)_p$(planning_model)_e$(eval_model).csv")
     io = open(csv_path, "w")
-    println(io, "test,config,alpha,seed,discounted_reward,profit,emission_cost,co2_tonnes,met_demand_pct,mines_opened,capex")
+    println(io, "test,config,alpha,seed,discounted_reward,profit,emission_cost,co2_tonnes,met_demand_pct,mines_opened,capex,explorations")
 
     names = first.(configs)
     results = Dict{Tuple{String,Float64}, Vector{NamedTuple}}()
@@ -138,10 +175,11 @@ function run_comparison(test_name::String, configs, planning_model::Int, eval_mo
     for α in alphas
         println("\n", "="^100)
         println("α = $α   planning=$planning_model  eval=$eval_model  seeds=$seeds")
+        isempty(model_kwargs) || println("model overrides: $model_kwargs")
         println("="^100)
 
-        planning   = LiPOMDP(price_model_type=planning_model, time_horizon=horizon, alpha=α)
-        evaluation = LiPOMDP(price_model_type=eval_model,     time_horizon=horizon, alpha=α)
+        planning   = LiPOMDP(; price_model_type=planning_model, time_horizon=horizon, alpha=α, model_kwargs...)
+        evaluation = LiPOMDP(; price_model_type=eval_model,     time_horizon=horizon, alpha=α, model_kwargs...)
         updater    = LiBeliefUpdater(P=evaluation)
 
         policies = [name => f(planning) for (name, f) in configs]
@@ -154,10 +192,11 @@ function run_comparison(test_name::String, configs, planning_model::Int, eval_mo
             for (name, pol) in policies
                 t0 = time()
                 m = run_scenario(pol, planning, evaluation, updater, seed)
+                m = merge(m, (disc = m.disc * reward_rescale,))
                 push!(results[(name, α)], m)
-                @printf("    %-28s disc=%7.3f  profit=\$%8.0fM  emis=\$%6.2fM  met=%5.1f%%  mines=%d  (%.0fs)\n",
-                        name, m.disc, m.profit/1e6, m.emis/1e6, m.met, m.mines, time()-t0)
-                println(io, join([test_name, name, α, seed, m.disc, m.profit, m.emis, m.co2, m.met, m.mines, m.capex], ","))
+                @printf("    %-28s disc=%7.3f  profit=\$%8.0fM  emis=\$%6.2fM  met=%5.1f%%  mines=%d  expl=%2d  (%.0fs)\n",
+                        name, m.disc, m.profit/1e6, m.emis/1e6, m.met, m.mines, m.explores, time()-t0)
+                println(io, join([test_name, name, α, seed, m.disc, m.profit, m.emis, m.co2, m.met, m.mines, m.capex, m.explores], ","))
                 flush(io)
             end
         end
@@ -181,17 +220,18 @@ end
 
 function print_summary(α, names, results, baseline)
     println("\n  Summary α=$α")
-    @printf("  %-28s %9s %7s %10s %10s %7s %6s %9s\n",
-            "config", "disc", "±std", "profit\$M", "emis\$M", "met%", "mines", "Δ vs $baseline")
+    @printf("  %-28s %9s %7s %10s %10s %7s %6s %5s %9s\n",
+            "config", "disc", "±std", "profit\$M", "emis\$M", "met%", "mines", "expl", "Δ vs $baseline")
     base = haskey(results, (baseline, α)) ? getfield.(results[(baseline, α)], :disc) : nothing
     for name in names
         rs = results[(name, α)]
         d  = getfield.(rs, :disc)
         Δ  = base === nothing ? NaN : mean(d .- base)
-        @printf("  %-28s %9.3f %7.3f %10.0f %10.2f %7.1f %6.2f %+9.3f\n",
+        @printf("  %-28s %9.3f %7.3f %10.0f %10.2f %7.1f %6.2f %5.1f %+9.3f\n",
                 name, mean(d), length(d) > 1 ? std(d) : 0.0,
                 mean(getfield.(rs, :profit))/1e6, mean(getfield.(rs, :emis))/1e6,
-                mean(getfield.(rs, :met)), mean(getfield.(rs, :mines)), Δ)
+                mean(getfield.(rs, :met)), mean(getfield.(rs, :mines)),
+                mean(getfield.(rs, :explores)), Δ)
     end
 end
 

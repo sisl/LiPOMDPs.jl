@@ -1,0 +1,120 @@
+
+
+TEST 3: stage-2 POMCPOW tuning from k_action=10 vs OneStepLookahead
+Original POMCPOW: (tree_queries = 10000, max_depth = 25, ucb_c = 1.0, enable_action_pw = true, k_action = 5.0, alpha_action = 0.5, k_observation = 3.0, alpha_observation = 0.3, rollout = :dynamic_profit)
+alphas=[0.25, 0.75]  seeds=[1001, 1002, 1003, 1004]  planning=3  eval=6
+
+====================================================================================================
+α = 0.25   planning=3  eval=6  seeds=[1001, 1002, 1003, 1004]
+====================================================================================================
+  seed 1001
+    k10                          disc=  0.157  profit=$   17900M  emis=$ -0.95M  met= 58.5%  mines=2  (98s)
+    k10+AlphaAware               disc=  0.157  profit=$   17899M  emis=$ -0.95M  met= 58.5%  mines=2  (97s)
+    k10+depth10                  disc=  0.160  profit=$   17910M  emis=$ -0.91M  met= 56.3%  mines=2  (70s)
+    k10+queries20k               disc=  0.158  profit=$   17898M  emis=$ -0.95M  met= 58.5%  mines=2  (199s)
+    k10+alpha_action=0.7         disc=  0.157  profit=$   17900M  emis=$ -0.95M  met= 58.5%  mines=2  (98s)
+    k10+ucb_c=0.3                disc=  0.158  profit=$   17898M  emis=$ -0.95M  met= 58.5%  mines=2  (99s)
+    k10+k_obs=5                  disc=  0.160  profit=$   17913M  emis=$ -0.91M  met= 56.3%  mines=2  (98s)
+    OneStep                      disc=  0.103  profit=$   13992M  emis=$ -1.09M  met= 63.3%  mines=3  (16s)
+  seed 1002
+    k10                          disc=  0.193  profit=$   21356M  emis=$ -0.98M  met= 61.9%  mines=2  (99s)
+    k10+AlphaAware               disc=  0.105  profit=$   12639M  emis=$ -0.86M  met= 54.2%  mines=2  (99s)
+    k10+depth10                  disc=  0.195  profit=$   21221M  emis=$ -0.91M  met= 57.3%  mines=2  (71s)
+    k10+queries20k               disc=  0.193  profit=$   21364M  emis=$ -0.98M  met= 61.9%  mines=2  (200s)
+    k10+alpha_action=0.7         disc=  0.193  profit=$   21356M  emis=$ -0.98M  met= 61.9%  mines=2  (100s)
+    k10+ucb_c=0.3                disc=  0.195  profit=$   21216M  emis=$ -0.91M  met= 57.3%  mines=2  (98s)
+    k10+k_obs=5                  disc=  0.194  profit=$   21291M  emis=$ -0.94M  met= 59.7%  mines=2  (98s)
+    OneStep                      disc=  0.225  profit=$   24474M  emis=$ -0.93M  met= 51.2%  mines=3  (16s)
+  seed 1003
+    k10                          disc=  0.114  profit=$   13342M  emis=$ -0.84M  met= 53.2%  mines=2  (99s)
+    k10+AlphaAware               disc=  0.114  profit=$   13337M  emis=$ -0.84M  met= 53.2%  mines=2  (98s)
+    k10+depth10                  disc=  0.167  profit=$   19905M  emis=$ -1.14M  met= 65.1%  mines=3  (72s)
+    k10+queries20k               disc=  0.113  profit=$   13427M  emis=$ -0.88M  met= 55.5%  mines=2  (201s)
+    k10+alpha_action=0.7         disc=  0.114  profit=$   13342M  emis=$ -0.84M  met= 53.2%  mines=2  (99s)
+    k10+ucb_c=0.3                disc=  0.164  profit=$   19943M  emis=$ -1.19M  met= 69.8%  mines=3  (100s)
+    k10+k_obs=5                  disc=  0.114  profit=$   13336M  emis=$ -0.84M  met= 53.2%  mines=2  (98s)
+    OneStep                      disc=  0.141  profit=$   17871M  emis=$ -1.10M  met= 64.1%  mines=4  (15s)
+  seed 1004
+    k10                          disc=  0.085  profit=$   10607M  emis=$ -0.78M  met= 50.2%  mines=2  (99s)
+    k10+AlphaAware               disc=  0.085  profit=$   10610M  emis=$ -0.78M  met= 50.2%  mines=2  (99s)
+    k10+depth10                  disc=  0.096  profit=$   11669M  emis=$ -0.83M  met= 53.0%  mines=2  (72s)
+    k10+queries20k               disc=  0.095  profit=$   11719M  emis=$ -0.87M  met= 55.6%  mines=2  (201s)
+    k10+alpha_action=0.7         disc=  0.085  profit=$   10607M  emis=$ -0.78M  met= 50.2%  mines=2  (100s)
+    k10+ucb_c=0.3                disc=  0.179  profit=$   21198M  emis=$ -1.16M  met= 69.2%  mines=3  (100s)
+    k10+k_obs=5                  disc=  0.096  profit=$   11672M  emis=$ -0.83M  met= 53.0%  mines=2  (99s)
+    OneStep                      disc=  0.178  profit=$   21189M  emis=$ -1.15M  met= 69.2%  mines=3  (15s)
+
+  Summary α=0.25
+  config                            disc    ±std   profit$M     emis$M    met%  mines Δ vs OneStep
+  k10                              0.137   0.047      15801      -0.89    56.0   2.00    -0.025
+  k10+AlphaAware                   0.115   0.030      13621      -0.86    54.0   2.00    -0.047
+  k10+depth10                      0.155   0.042      17676      -0.95    57.9   2.25    -0.007
+  k10+queries20k                   0.140   0.044      16102      -0.92    57.9   2.00    -0.022
+  k10+alpha_action=0.7             0.137   0.047      15801      -0.89    56.0   2.00    -0.025
+  k10+ucb_c=0.3                    0.174   0.017      20063      -1.05    63.7   2.50    +0.012
+  k10+k_obs=5                      0.141   0.044      16053      -0.88    55.6   2.00    -0.021
+  OneStep                          0.162   0.052      19382      -1.07    62.0   3.25    +0.000
+
+====================================================================================================
+α = 0.75   planning=3  eval=6  seeds=[1001, 1002, 1003, 1004]
+====================================================================================================
+  seed 1001
+    k10                          disc=  0.556  profit=$   18015M  emis=$ -1.02M  met= 63.3%  mines=2  (98s)
+    k10+AlphaAware               disc=  0.562  profit=$   17900M  emis=$ -0.95M  met= 58.5%  mines=2  (97s)
+    k10+depth10                  disc=  0.641  profit=$   21066M  emis=$ -1.24M  met= 68.4%  mines=3  (72s)
+    k10+queries20k               disc=  0.558  profit=$   17981M  emis=$ -0.99M  met= 61.0%  mines=2  (202s)
+    k10+alpha_action=0.7         disc=  0.556  profit=$   18015M  emis=$ -1.02M  met= 63.3%  mines=2  (100s)
+    k10+ucb_c=0.3                disc=  0.556  profit=$   18012M  emis=$ -1.02M  met= 63.3%  mines=2  (100s)
+    k10+k_obs=5                  disc=  0.496  profit=$   15893M  emis=$ -0.92M  met= 57.0%  mines=2  (100s)
+    OneStep                      disc=  0.535  profit=$   17974M  emis=$ -1.17M  met= 68.5%  mines=3  (15s)
+  seed 1002
+    k10                          disc=  0.671  profit=$   21358M  emis=$ -0.98M  met= 61.9%  mines=2  (100s)
+    k10+AlphaAware               disc=  0.597  profit=$   21144M  emis=$ -1.70M  met= 88.7%  mines=4  (98s)
+    k10+depth10                  disc=  0.736  profit=$   24141M  emis=$ -1.20M  met= 70.1%  mines=3  (72s)
+    k10+queries20k               disc=  0.369  profit=$   12012M  emis=$ -0.89M  met= 56.4%  mines=2  (201s)
+    k10+alpha_action=0.7         disc=  0.671  profit=$   21358M  emis=$ -0.98M  met= 61.9%  mines=2  (100s)
+    k10+ucb_c=0.3                disc=  0.512  profit=$   17088M  emis=$ -1.14M  met= 65.8%  mines=3  (100s)
+    k10+k_obs=5                  disc=  0.384  profit=$   12400M  emis=$ -0.86M  met= 54.2%  mines=2  (99s)
+    OneStep                      disc=  0.660  profit=$   22585M  emis=$ -1.23M  met= 66.9%  mines=4  (15s)
+  seed 1003
+    k10                          disc=  0.451  profit=$   15491M  emis=$ -1.30M  met= 72.1%  mines=4  (99s)
+    k10+AlphaAware               disc=  0.458  profit=$   15527M  emis=$ -1.25M  met= 69.2%  mines=4  (100s)
+    k10+depth10                  disc=  0.455  profit=$   15522M  emis=$ -1.25M  met= 69.2%  mines=4  (71s)
+    k10+queries20k               disc=  0.608  profit=$   19973M  emis=$ -1.18M  met= 67.6%  mines=3  (202s)
+    k10+alpha_action=0.7         disc=  0.451  profit=$   15491M  emis=$ -1.30M  met= 72.1%  mines=4  (99s)
+    k10+ucb_c=0.3                disc=  0.422  profit=$   13492M  emis=$ -0.92M  met= 58.0%  mines=2  (101s)
+    k10+k_obs=5                  disc=  0.520  profit=$   17256M  emis=$ -1.18M  met= 67.7%  mines=3  (99s)
+    OneStep                      disc=  0.436  profit=$   15455M  emis=$ -1.38M  met= 75.1%  mines=4  (14s)
+  seed 1004
+    k10                          disc=  0.352  profit=$   11579M  emis=$ -1.02M  met= 65.5%  mines=2  (100s)
+    k10+AlphaAware               disc=  0.430  profit=$   14382M  emis=$ -1.07M  met= 61.9%  mines=3  (99s)
+    k10+depth10                  disc=  0.521  profit=$   17619M  emis=$ -1.28M  met= 71.7%  mines=4  (72s)
+    k10+queries20k               disc=  0.449  profit=$   15017M  emis=$ -1.15M  met= 64.6%  mines=3  (200s)
+    k10+alpha_action=0.7         disc=  0.430  profit=$   14374M  emis=$ -1.08M  met= 59.2%  mines=3  (100s)
+    k10+ucb_c=0.3                disc=  0.365  profit=$   11756M  emis=$ -0.90M  met= 57.9%  mines=2  (100s)
+    k10+k_obs=5                  disc=  0.350  profit=$   11320M  emis=$ -0.87M  met= 55.8%  mines=2  (99s)
+    OneStep                      disc=  0.642  profit=$   21189M  emis=$ -1.15M  met= 69.2%  mines=3  (15s)
+
+  Summary α=0.75
+  config                            disc    ±std   profit$M     emis$M    met%  mines Δ vs OneStep
+  k10                              0.507   0.137      16611      -1.08    65.7   2.50    -0.061
+  k10+AlphaAware                   0.512   0.080      17238      -1.24    69.5   3.25    -0.056
+  k10+depth10                      0.588   0.125      19587      -1.24    69.8   3.50    +0.020
+  k10+queries20k                   0.496   0.108      16245      -1.05    62.4   2.50    -0.072
+  k10+alpha_action=0.7             0.527   0.111      17309      -1.10    64.1   2.75    -0.041
+  k10+ucb_c=0.3                    0.464   0.086      15087      -1.00    61.2   2.25    -0.105
+  k10+k_obs=5                      0.437   0.083      14217      -0.96    58.7   2.25    -0.131
+  OneStep                          0.568   0.104      19301      -1.23    69.9   3.50    +0.000
+
+All alphas: mean discounted reward
+  config                        α=0.25   α=0.75 
+  k10                             0.137    0.507
+  k10+AlphaAware                  0.115    0.512
+  k10+depth10                     0.155    0.588
+  k10+queries20k                  0.140    0.496
+  k10+alpha_action=0.7            0.137    0.527
+  k10+ucb_c=0.3                   0.174    0.464
+  k10+k_obs=5                     0.141    0.437
+  OneStep                         0.162    0.568
+
+CSV: outputs/pomcpow_tuning/stage2_b_p3_e6.csv
