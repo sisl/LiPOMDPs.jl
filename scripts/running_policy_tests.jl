@@ -258,11 +258,7 @@ function evaluate_policy_simple(planning_pomdp::LiPOMDP, evaluation_pomdp::LiPOM
                 deposit_beliefs = []
                 for site in 1:length(b.deposits_distribution)
                     dist = b.deposits_distribution[site]
-                    if isa(dist, LogNormal)
-                        push!(deposit_beliefs, Dict("μ" => dist.μ, "σ" => dist.σ))
-                    else
-                        push!(deposit_beliefs, Dict("μ" => mean(dist), "σ" => std(dist)))
-                    end
+                    push!(deposit_beliefs, Dict("μ" => mean(dist), "σ" => std(dist)))
                 end
                 push!(belief_evolution_data["deposits"], deposit_beliefs)
                 

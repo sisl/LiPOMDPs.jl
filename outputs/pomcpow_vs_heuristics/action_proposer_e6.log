@@ -1,0 +1,282 @@
+The latest version of Julia in the `release` channel is 1.13.2+0.x64.linux.gnu. You currently have `1.12.1+0.x64.linux.gnu` installed. Run:
+
+  juliaup update
+
+in your terminal shell to install Julia 1.13.2+0.x64.linux.gnu and update the `release` channel to that version.
+ACTION PROPOSER TEST  planning=[2, 3, 6]  eval=6  α=[0.5, 1.0]  seeds=10  threads=32
+  [1/240] 2 min  p2 α=0.50 OneStepLookahead seed=4005  disc=0.330 expl=1
+  [2/240] 3 min  p2 α=1.00 OneStepLookahead seed=4009  disc=0.826 expl=0
+  [3/240] 3 min  p2 α=1.00 OneStepLookahead seed=4002  disc=0.926 expl=1
+  [4/240] 3 min  p6 α=0.50 OneStepLookahead seed=4007  disc=0.533 expl=7
+  [5/240] 3 min  p3 α=1.00 OneStepLookahead seed=4003  disc=1.029 expl=5
+  [6/240] 3 min  p3 α=1.00 OneStepLookahead seed=4010  disc=1.279 expl=3
+  [7/240] 3 min  p3 α=0.50 OneStepLookahead seed=4006  disc=0.671 expl=4
+  [8/240] 4 min  p6 α=1.00 OneStepLookahead seed=4004  disc=1.391 expl=5
+  [9/240] 5 min  p2 α=0.50 OneStepLookahead seed=4006  disc=0.568 expl=2
+  [10/240] 5 min  p2 α=1.00 OneStepLookahead seed=4010  disc=1.028 expl=0
+  [11/240] 5 min  p2 α=1.00 OneStepLookahead seed=4003  disc=0.870 expl=2
+  [12/240] 6 min  p3 α=0.50 OneStepLookahead seed=4007  disc=0.533 expl=7
+  [13/240] 6 min  p3 α=1.00 OneStepLookahead seed=4004  disc=1.318 expl=5
+  [14/240] 6 min  p6 α=0.50 OneStepLookahead seed=4008  disc=0.612 expl=6
+  [15/240] 7 min  p6 α=0.50 OneStepLookahead seed=4001  disc=0.578 expl=6
+  [16/240] 7 min  p2 α=0.50 OneStepLookahead seed=4007  disc=0.440 expl=2
+  [17/240] 7 min  p2 α=0.50 POMCPOW random seed=4001  disc=0.146 expl=27
+  [18/240] 7 min  p6 α=1.00 OneStepLookahead seed=4005  disc=0.926 expl=6
+  [19/240] 7 min  p2 α=0.50 POMCPOW heuristic seed=4005  disc=0.086 expl=28
+  [20/240] 8 min  p2 α=0.50 POMCPOW random seed=4009  disc=0.338 expl=27
+  [21/240] 8 min  p3 α=0.50 POMCPOW heuristic seed=4001  disc=0.313 expl=46
+  [22/240] 8 min  p2 α=1.00 POMCPOW heuristic seed=4003  disc=0.408 expl=32
+  [23/240] 8 min  p2 α=0.50 POMCPOW sparse_explore seed=4001  disc=0.149 expl=22
+  [24/240] 8 min  p3 α=0.50 POMCPOW random seed=4005  disc=0.446 expl=40
+  [25/240] 8 min  p2 α=1.00 POMCPOW random seed=4007  disc=0.846 expl=27
+  [26/240] 8 min  p3 α=0.50 POMCPOW heuristic seed=4009  disc=0.449 expl=49
+  [27/240] 8 min  p3 α=1.00 POMCPOW random seed=4003  disc=0.888 expl=40
+  [28/240] 8 min  p2 α=0.50 POMCPOW sparse_explore seed=4009  disc=0.338 expl=29
+  [29/240] 8 min  p3 α=1.00 POMCPOW heuristic seed=4007  disc=1.068 expl=48
+  [30/240] 8 min  p2 α=1.00 OneStepLookahead seed=4004  disc=0.752 expl=2
+  [31/240] 8 min  p3 α=0.50 POMCPOW sparse_explore seed=4010  disc=0.569 expl=34
+  [32/240] 8 min  p3 α=0.50 OneStepLookahead seed=4001  disc=0.361 expl=6
+  [33/240] 8 min  p2 α=1.00 POMCPOW sparse_explore seed=4006  disc=1.118 expl=27
+  [34/240] 8 min  p3 α=0.50 POMCPOW sparse_explore seed=4003  disc=0.430 expl=40
+  [35/240] 8 min  p3 α=1.00 POMCPOW sparse_explore seed=4007  disc=1.111 expl=32
+  [36/240] 8 min  p6 α=0.50 POMCPOW random seed=4009  disc=0.459 expl=48
+  [37/240] 8 min  p6 α=0.50 POMCPOW heuristic seed=4005  disc=0.445 expl=41
+  [38/240] 9 min  p6 α=0.50 POMCPOW sparse_explore seed=4004  disc=0.630 expl=37
+  [39/240] 9 min  p6 α=0.50 POMCPOW random seed=4001  disc=0.556 expl=41
+  [40/240] 9 min  p2 α=0.50 OneStepLookahead seed=4008  disc=0.473 expl=1
+  [41/240] 9 min  p6 α=1.00 POMCPOW sparse_explore seed=4001  disc=1.221 expl=36
+  [42/240] 9 min  p3 α=1.00 OneStepLookahead seed=4005  disc=0.996 expl=3
+  [43/240] 9 min  p3 α=0.50 OneStepLookahead seed=4008  disc=0.526 expl=4
+  [44/240] 9 min  p6 α=0.50 OneStepLookahead seed=4009  disc=0.473 expl=7
+  [45/240] 9 min  p6 α=1.00 POMCPOW heuristic seed=4003  disc=1.052 expl=46
+  [46/240] 9 min  p6 α=1.00 POMCPOW random seed=4007  disc=1.099 expl=46
+  [47/240] 9 min  p6 α=1.00 POMCPOW sparse_explore seed=4008  disc=1.286 expl=36
+  [48/240] 10 min  p6 α=0.50 OneStepLookahead seed=4002  disc=0.532 expl=6
+  [49/240] 11 min  p6 α=1.00 OneStepLookahead seed=4006  disc=1.449 expl=4
+  [50/240] 11 min  p2 α=1.00 OneStepLookahead seed=4005  disc=0.785 expl=1
+  [51/240] 11 min  p3 α=0.50 OneStepLookahead seed=4002  disc=0.481 expl=3
+  [52/240] 12 min  p2 α=0.50 OneStepLookahead seed=4009  disc=0.358 expl=0
+  [53/240] 12 min  p3 α=1.00 OneStepLookahead seed=4006  disc=1.436 expl=5
+  [54/240] 12 min  p3 α=0.50 OneStepLookahead seed=4009  disc=0.465 expl=4
+  [55/240] 13 min  p6 α=0.50 OneStepLookahead seed=4010  disc=0.561 expl=7
+  [56/240] 13 min  p2 α=1.00 OneStepLookahead seed=4006  disc=1.246 expl=3
+  [57/240] 13 min  p6 α=0.50 OneStepLookahead seed=4003  disc=0.460 expl=6
+  [58/240] 14 min  p6 α=1.00 OneStepLookahead seed=4007  disc=1.068 expl=3
+  [59/240] 14 min  p3 α=0.50 OneStepLookahead seed=4003  disc=0.470 expl=3
+  [60/240] 14 min  p2 α=0.50 OneStepLookahead seed=4010  disc=0.446 expl=0
+  [61/240] 15 min  p2 α=0.50 POMCPOW heuristic seed=4006  disc=0.302 expl=26
+  [62/240] 15 min  p2 α=0.50 POMCPOW random seed=4002  disc=0.351 expl=29
+  [63/240] 15 min  p3 α=0.50 POMCPOW random seed=4006  disc=0.600 expl=44
+  [64/240] 15 min  p2 α=0.50 POMCPOW sparse_explore seed=4010  disc=0.397 expl=31
+  [65/240] 15 min  p3 α=0.50 POMCPOW heuristic seed=4002  disc=0.447 expl=30
+  [66/240] 15 min  p2 α=0.50 POMCPOW random seed=4010  disc=0.462 expl=40
+  [67/240] 15 min  p2 α=1.00 POMCPOW random seed=4008  disc=0.512 expl=39
+  [68/240] 15 min  p3 α=1.00 OneStepLookahead seed=4007  disc=1.136 expl=3
+  [69/240] 16 min  p2 α=1.00 OneStepLookahead seed=4007  disc=0.962 expl=2
+  [70/240] 16 min  p3 α=0.50 OneStepLookahead seed=4010  disc=0.607 expl=3
+  [71/240] 16 min  p3 α=1.00 POMCPOW random seed=4004  disc=1.259 expl=43
+  [72/240] 16 min  p3 α=0.50 POMCPOW sparse_explore seed=4004  disc=0.562 expl=40
+  [73/240] 16 min  p3 α=0.50 POMCPOW heuristic seed=4010  disc=0.542 expl=38
+  [74/240] 16 min  p2 α=1.00 POMCPOW heuristic seed=4004  disc=1.053 expl=38
+  [75/240] 16 min  p2 α=0.50 POMCPOW sparse_explore seed=4002  disc=0.314 expl=28
+  [76/240] 16 min  p3 α=1.00 POMCPOW heuristic seed=4008  disc=1.200 expl=37
+  [77/240] 16 min  p3 α=1.00 POMCPOW sparse_explore seed=4001  disc=0.782 expl=30
+  [78/240] 16 min  p2 α=1.00 POMCPOW sparse_explore seed=4007  disc=0.798 expl=36
+  [79/240] 16 min  p3 α=1.00 POMCPOW sparse_explore seed=4008  disc=1.238 expl=36
+  [80/240] 16 min  p6 α=1.00 OneStepLookahead seed=4001  disc=1.203 expl=5
+  [81/240] 16 min  p6 α=1.00 OneStepLookahead seed=4008  disc=1.125 expl=3
+  [82/240] 17 min  p6 α=0.50 OneStepLookahead seed=4004  disc=0.646 expl=6
+  [83/240] 17 min  p2 α=1.00 OneStepLookahead seed=4001  disc=0.590 expl=1
+  [84/240] 17 min  p3 α=0.50 OneStepLookahead seed=4004  disc=0.611 expl=6
+  [85/240] 18 min  p6 α=0.50 POMCPOW heuristic seed=4006  disc=0.645 expl=45
+  [86/240] 18 min  p6 α=0.50 POMCPOW random seed=4010  disc=0.581 expl=43
+  [87/240] 18 min  p6 α=0.50 POMCPOW random seed=4002  disc=0.516 expl=51
+  [88/240] 18 min  p6 α=0.50 POMCPOW sparse_explore seed=4005  disc=0.463 expl=35
+  [89/240] 18 min  p6 α=1.00 POMCPOW sparse_explore seed=4009  disc=0.937 expl=36
+  [90/240] 18 min  p6 α=1.00 POMCPOW heuristic seed=4004  disc=1.347 expl=36
+  [91/240] 18 min  p2 α=1.00 OneStepLookahead seed=4008  disc=1.078 expl=1
+  [92/240] 18 min  p6 α=1.00 POMCPOW sparse_explore seed=4002  disc=0.980 expl=29
+  [93/240] 18 min  p3 α=1.00 OneStepLookahead seed=4008  disc=1.271 expl=3
+  [94/240] 19 min  p3 α=1.00 OneStepLookahead seed=4001  disc=1.296 expl=5
+  [95/240] 19 min  p6 α=1.00 POMCPOW random seed=4008  disc=1.208 expl=42
+  [96/240] 20 min  p6 α=1.00 OneStepLookahead seed=4009  disc=1.003 expl=3
+  [97/240] 20 min  p6 α=1.00 OneStepLookahead seed=4002  disc=1.128 expl=5
+  [98/240] 20 min  p3 α=0.50 OneStepLookahead seed=4005  disc=0.450 expl=5
+  [99/240] 20 min  p6 α=0.50 OneStepLookahead seed=4005  disc=0.480 expl=5
+  [100/240] 21 min  p3 α=1.00 OneStepLookahead seed=4009  disc=1.014 expl=1
+  [101/240] 21 min  p3 α=1.00 OneStepLookahead seed=4002  disc=1.034 expl=2
+  [102/240] 22 min  p2 α=1.00 POMCPOW random seed=4009  disc=0.620 expl=28
+  [103/240] 22 min  p2 α=0.50 POMCPOW random seed=4003  disc=0.153 expl=38
+  [104/240] 22 min  p2 α=1.00 POMCPOW sparse_explore seed=4001  disc=0.315 expl=20
+  [105/240] 22 min  p2 α=0.50 POMCPOW heuristic seed=4007  disc=0.354 expl=32
+  [106/240] 22 min  p2 α=1.00 POMCPOW random seed=4001  disc=0.385 expl=28
+  [107/240] 22 min  p3 α=0.50 POMCPOW heuristic seed=4003  disc=0.400 expl=41
+  [108/240] 22 min  p3 α=0.50 POMCPOW random seed=4007  disc=0.488 expl=50
+  [109/240] 23 min  p6 α=1.00 OneStepLookahead seed=4010  disc=1.188 expl=4
+  [110/240] 23 min  p3 α=1.00 POMCPOW heuristic seed=4001  disc=0.701 expl=34
+  [111/240] 23 min  p6 α=1.00 OneStepLookahead seed=4003  disc=1.103 expl=5
+  [112/240] 23 min  p3 α=1.00 POMCPOW random seed=4005  disc=0.921 expl=37
+  [113/240] 23 min  p3 α=0.50 POMCPOW sparse_explore seed=4005  disc=0.403 expl=40
+  [114/240] 23 min  p2 α=1.00 POMCPOW heuristic seed=4005  disc=0.269 expl=34
+  [115/240] 23 min  p2 α=0.50 POMCPOW sparse_explore seed=4003  disc=0.353 expl=36
+  [116/240] 23 min  p3 α=1.00 POMCPOW sparse_explore seed=4002  disc=1.138 expl=32
+  [117/240] 23 min  p3 α=1.00 POMCPOW heuristic seed=4009  disc=0.965 expl=40
+  [118/240] 23 min  p6 α=0.50 OneStepLookahead seed=4006  disc=0.669 expl=9
+  [119/240] 23 min  p3 α=1.00 POMCPOW sparse_explore seed=4009  disc=0.985 expl=33
+  [120/240] 23 min  p2 α=1.00 POMCPOW sparse_explore seed=4008  disc=0.919 expl=21
+  [121/240] 25 min  p6 α=1.00 POMCPOW random seed=4001  disc=0.787 expl=37
+  [122/240] 25 min  p6 α=0.50 POMCPOW sparse_explore seed=4006  disc=0.648 expl=34
+  [123/240] 25 min  p6 α=0.50 POMCPOW heuristic seed=4007  disc=0.459 expl=42
+  [124/240] 25 min  p6 α=0.50 POMCPOW random seed=4003  disc=0.476 expl=39
+  [125/240] 26 min  p6 α=1.00 POMCPOW heuristic seed=4005  disc=1.012 expl=38
+  [126/240] 26 min  p6 α=1.00 POMCPOW sparse_explore seed=4003  disc=0.991 expl=31
+  [127/240] 26 min  p6 α=1.00 POMCPOW sparse_explore seed=4010  disc=1.246 expl=35
+  [128/240] 26 min  p6 α=1.00 POMCPOW random seed=4009  disc=0.961 expl=50
+  [129/240] 28 min  p2 α=1.00 POMCPOW random seed=4010  disc=1.068 expl=30
+  [130/240] 28 min  p2 α=0.50 POMCPOW heuristic seed=4008  disc=0.472 expl=35
+  [131/240] 28 min  p2 α=1.00 POMCPOW random seed=4002  disc=0.685 expl=35
+  [132/240] 28 min  p2 α=0.50 POMCPOW random seed=4004  disc=0.258 expl=34
+  [133/240] 28 min  p2 α=0.50 OneStepLookahead seed=4001  disc=0.269 expl=0
+  [134/240] 28 min  p2 α=1.00 POMCPOW sparse_explore seed=4002  disc=0.813 expl=34
+  [135/240] 28 min  p3 α=0.50 POMCPOW random seed=4008  disc=0.555 expl=42
+  [136/240] 28 min  p3 α=0.50 POMCPOW heuristic seed=4004  disc=0.580 expl=39
+  [137/240] 28 min  p3 α=1.00 POMCPOW random seed=4006  disc=1.298 expl=42
+  [138/240] 29 min  p3 α=1.00 POMCPOW heuristic seed=4002  disc=0.995 expl=31
+  [139/240] 29 min  p3 α=0.50 POMCPOW sparse_explore seed=4006  disc=0.610 expl=35
+  [140/240] 29 min  p2 α=1.00 POMCPOW heuristic seed=4006  disc=0.707 expl=42
+  [141/240] 29 min  p3 α=1.00 POMCPOW sparse_explore seed=4003  disc=0.934 expl=35
+  [142/240] 29 min  p3 α=1.00 POMCPOW heuristic seed=4010  disc=1.215 expl=37
+  [143/240] 29 min  p2 α=0.50 POMCPOW sparse_explore seed=4004  disc=0.487 expl=31
+  [144/240] 29 min  p3 α=1.00 POMCPOW sparse_explore seed=4010  disc=1.223 expl=42
+  [145/240] 30 min  p2 α=1.00 POMCPOW sparse_explore seed=4009  disc=0.622 expl=33
+  [146/240] 30 min  p2 α=0.50 OneStepLookahead seed=4002  disc=0.408 expl=1
+  [147/240] 32 min  p6 α=0.50 POMCPOW sparse_explore seed=4007  disc=0.512 expl=44
+  [148/240] 32 min  p6 α=1.00 POMCPOW random seed=4002  disc=1.037 expl=37
+  [149/240] 32 min  p6 α=0.50 POMCPOW heuristic seed=4008  disc=0.516 expl=47
+  [150/240] 33 min  p6 α=0.50 POMCPOW random seed=4004  disc=0.616 expl=37
+  [151/240] 33 min  p6 α=1.00 POMCPOW heuristic seed=4006  disc=1.397 expl=34
+  [152/240] 33 min  p2 α=0.50 OneStepLookahead seed=4003  disc=0.401 expl=2
+  [153/240] 33 min  p6 α=1.00 POMCPOW random seed=4010  disc=1.227 expl=50
+  [154/240] 33 min  p6 α=1.00 POMCPOW sparse_explore seed=4004  disc=1.276 expl=30
+  [155/240] 33 min  p3 α=0.50 POMCPOW random seed=4001  disc=0.316 expl=38
+  [156/240] 34 min  p2 α=0.50 POMCPOW random seed=4005  disc=0.082 expl=27
+  [157/240] 34 min  p2 α=1.00 POMCPOW random seed=4003  disc=0.344 expl=31
+  [158/240] 34 min  p3 α=0.50 POMCPOW sparse_explore seed=4007  disc=0.510 expl=33
+  [159/240] 34 min  p2 α=0.50 POMCPOW heuristic seed=4009  disc=0.252 expl=33
+  [160/240] 34 min  p3 α=0.50 POMCPOW random seed=4009  disc=0.441 expl=38
+  [161/240] 34 min  p3 α=1.00 POMCPOW random seed=4007  disc=0.967 expl=44
+  [162/240] 35 min  p3 α=0.50 POMCPOW heuristic seed=4005  disc=0.410 expl=40
+  [163/240] 35 min  p2 α=1.00 POMCPOW sparse_explore seed=4003  disc=0.658 expl=34
+  [164/240] 35 min  p3 α=1.00 POMCPOW heuristic seed=4003  disc=0.974 expl=41
+  [165/240] 35 min  p2 α=0.50 OneStepLookahead seed=4004  disc=0.322 expl=2
+  [166/240] 35 min  p2 α=1.00 POMCPOW heuristic seed=4007  disc=0.791 expl=34
+  [167/240] 35 min  p2 α=0.50 POMCPOW sparse_explore seed=4005  disc=0.098 expl=28
+  [168/240] 36 min  p3 α=1.00 POMCPOW sparse_explore seed=4004  disc=1.256 expl=36
+  [169/240] 36 min  p6 α=0.50 POMCPOW heuristic seed=4001  disc=0.573 expl=43
+  [170/240] 36 min  p2 α=1.00 POMCPOW sparse_explore seed=4010  disc=0.925 expl=26
+  [171/240] 36 min  p6 α=0.50 POMCPOW sparse_explore seed=4001  disc=0.560 expl=39
+  [172/240] 38 min  p2 α=0.50 POMCPOW heuristic seed=4001  disc=0.127 expl=24
+  [173/240] 38 min  p6 α=0.50 POMCPOW sparse_explore seed=4008  disc=0.563 expl=39
+  [174/240] 39 min  p3 α=0.50 POMCPOW random seed=4002  disc=0.451 expl=36
+  [175/240] 39 min  p6 α=0.50 POMCPOW heuristic seed=4009  disc=0.463 expl=40
+  [176/240] 39 min  p6 α=1.00 POMCPOW random seed=4003  disc=1.020 expl=36
+  [177/240] 39 min  p6 α=0.50 POMCPOW random seed=4005  disc=0.454 expl=40
+  [178/240] 39 min  p3 α=0.50 POMCPOW sparse_explore seed=4008  disc=0.527 expl=33
+  [179/240] 40 min  p2 α=0.50 POMCPOW random seed=4006  disc=0.580 expl=36
+  [180/240] 40 min  p6 α=1.00 POMCPOW heuristic seed=4007  disc=0.957 expl=43
+  [181/240] 40 min  p2 α=1.00 POMCPOW random seed=4004  disc=1.018 expl=42
+  [182/240] 40 min  p6 α=1.00 POMCPOW sparse_explore seed=4005  disc=1.032 expl=31
+  [183/240] 40 min  p3 α=1.00 POMCPOW random seed=4008  disc=1.124 expl=37
+  [184/240] 40 min  p2 α=0.50 POMCPOW heuristic seed=4010  disc=0.377 expl=42
+  [185/240] 40 min  p3 α=0.50 POMCPOW random seed=4010  disc=0.583 expl=41
+  [186/240] 41 min  p3 α=1.00 POMCPOW heuristic seed=4004  disc=1.188 expl=40
+  [187/240] 41 min  p3 α=0.50 POMCPOW heuristic seed=4006  disc=0.652 expl=42
+  [188/240] 41 min  p2 α=1.00 POMCPOW sparse_explore seed=4004  disc=0.988 expl=22
+  [189/240] 41 min  p2 α=1.00 POMCPOW heuristic seed=4008  disc=0.531 expl=25
+  [190/240] 41 min  p2 α=0.50 POMCPOW sparse_explore seed=4006  disc=0.554 expl=37
+  [191/240] 41 min  p3 α=1.00 POMCPOW sparse_explore seed=4005  disc=0.914 expl=38
+  [192/240] 42 min  p3 α=0.50 POMCPOW sparse_explore seed=4001  disc=0.323 expl=34
+  [193/240] 42 min  p6 α=0.50 POMCPOW heuristic seed=4002  disc=0.451 expl=47
+  [194/240] 43 min  p6 α=0.50 POMCPOW sparse_explore seed=4002  disc=0.527 expl=42
+  [195/240] 43 min  p2 α=0.50 POMCPOW heuristic seed=4002  disc=0.306 expl=35
+  [196/240] 45 min  p3 α=0.50 POMCPOW sparse_explore seed=4009  disc=0.452 expl=37
+  [197/240] 45 min  p3 α=0.50 POMCPOW random seed=4003  disc=0.422 expl=46
+  [198/240] 45 min  p6 α=0.50 POMCPOW sparse_explore seed=4009  disc=0.451 expl=33
+  [199/240] 46 min  p2 α=1.00 POMCPOW random seed=4005  disc=0.281 expl=32
+  [200/240] 46 min  p2 α=0.50 POMCPOW random seed=4007  disc=0.333 expl=36
+  [201/240] 46 min  p3 α=1.00 POMCPOW random seed=4001  disc=0.698 expl=31
+  [202/240] 46 min  p3 α=1.00 POMCPOW random seed=4009  disc=0.963 expl=34
+  [203/240] 46 min  p2 α=1.00 POMCPOW heuristic seed=4001  disc=0.431 expl=27
+  [204/240] 46 min  p6 α=0.50 POMCPOW heuristic seed=4010  disc=0.593 expl=40
+  [205/240] 46 min  p6 α=0.50 POMCPOW random seed=4006  disc=0.642 expl=37
+  [206/240] 46 min  p6 α=1.00 POMCPOW sparse_explore seed=4006  disc=1.385 expl=35
+  [207/240] 46 min  p3 α=1.00 POMCPOW heuristic seed=4005  disc=0.915 expl=43
+  [208/240] 46 min  p6 α=1.00 POMCPOW random seed=4004  disc=1.308 expl=44
+  [209/240] 47 min  p2 α=1.00 POMCPOW heuristic seed=4009  disc=0.761 expl=36
+  [210/240] 47 min  p3 α=0.50 POMCPOW heuristic seed=4007  disc=0.509 expl=42
+  [211/240] 47 min  p2 α=1.00 POMCPOW sparse_explore seed=4005  disc=0.224 expl=31
+  [212/240] 47 min  p6 α=1.00 POMCPOW heuristic seed=4008  disc=1.254 expl=50
+  [213/240] 47 min  p2 α=0.50 POMCPOW sparse_explore seed=4007  disc=0.342 expl=30
+  [214/240] 47 min  p3 α=1.00 POMCPOW sparse_explore seed=4006  disc=1.319 expl=38
+  [215/240] 48 min  p3 α=0.50 POMCPOW sparse_explore seed=4002  disc=0.450 expl=35
+  [216/240] 48 min  p2 α=0.50 POMCPOW heuristic seed=4003  disc=0.331 expl=39
+  [217/240] 49 min  p6 α=0.50 POMCPOW heuristic seed=4003  disc=0.462 expl=42
+  [218/240] 49 min  p6 α=0.50 POMCPOW sparse_explore seed=4003  disc=0.485 expl=36
+  [219/240] 50 min  p3 α=0.50 POMCPOW random seed=4004  disc=0.578 expl=45
+  [220/240] 50 min  p2 α=1.00 POMCPOW random seed=4006  disc=0.689 expl=40
+  [221/240] 51 min  p2 α=0.50 POMCPOW random seed=4008  disc=0.279 expl=38
+  [222/240] 51 min  p3 α=1.00 POMCPOW random seed=4002  disc=0.953 expl=41
+  [223/240] 51 min  p3 α=1.00 POMCPOW random seed=4010  disc=1.225 expl=46
+  [224/240] 51 min  p2 α=1.00 POMCPOW heuristic seed=4002  disc=0.773 expl=36
+  [225/240] 51 min  p6 α=0.50 POMCPOW sparse_explore seed=4010  disc=0.592 expl=36
+  [226/240] 51 min  p3 α=1.00 POMCPOW heuristic seed=4006  disc=1.313 expl=42
+  [227/240] 51 min  p2 α=1.00 POMCPOW heuristic seed=4010  disc=0.844 expl=31
+  [228/240] 51 min  p3 α=0.50 POMCPOW heuristic seed=4008  disc=0.533 expl=43
+  [229/240] 52 min  p6 α=1.00 POMCPOW heuristic seed=4001  disc=1.255 expl=35
+  [230/240] 52 min  p2 α=0.50 POMCPOW sparse_explore seed=4008  disc=0.385 expl=23
+  [231/240] 52 min  p6 α=1.00 POMCPOW random seed=4005  disc=0.989 expl=39
+  [232/240] 52 min  p6 α=0.50 POMCPOW random seed=4007  disc=0.518 expl=44
+  [233/240] 52 min  p6 α=1.00 POMCPOW sparse_explore seed=4007  disc=1.101 expl=32
+  [234/240] 52 min  p6 α=1.00 POMCPOW heuristic seed=4009  disc=0.967 expl=38
+  [235/240] 52 min  p2 α=0.50 POMCPOW heuristic seed=4004  disc=0.470 expl=38
+  [236/240] 53 min  p6 α=0.50 POMCPOW heuristic seed=4004  disc=0.613 expl=37
+  [237/240] 54 min  p6 α=1.00 POMCPOW heuristic seed=4002  disc=1.003 expl=41
+  [238/240] 54 min  p6 α=1.00 POMCPOW random seed=4006  disc=1.377 expl=43
+  [239/240] 54 min  p6 α=0.50 POMCPOW random seed=4008  disc=0.586 expl=41
+  [240/240] 55 min  p6 α=1.00 POMCPOW heuristic seed=4010  disc=1.236 expl=43
+240 episodes in 55 min
+
+Mean discounted reward [explorations]; Δ = POMCPOW variant − OneStepLookahead, paired ± SE
+p2 α=0.50
+  POMCPOW random             0.298  [ 33.2 expl]   Δ  -0.103 ± 0.031
+  POMCPOW heuristic          0.308  [ 33.2 expl]   Δ  -0.094 ± 0.037
+  POMCPOW sparse_explore     0.342  [ 29.5 expl]   Δ  -0.060 ± 0.032
+  OneStepLookahead           0.402  [  1.1 expl]
+p2 α=1.00
+  POMCPOW random             0.645  [ 33.2 expl]   Δ  -0.261 ± 0.089
+  POMCPOW heuristic          0.657  [ 33.5 expl]   Δ  -0.249 ± 0.085
+  POMCPOW sparse_explore     0.738  [ 28.4 expl]   Δ  -0.168 ± 0.062
+  OneStepLookahead           0.906  [  1.3 expl]
+p3 α=0.50
+  POMCPOW random             0.488  [ 42.0 expl]   Δ  -0.029 ± 0.009
+  POMCPOW heuristic          0.483  [ 41.0 expl]   Δ  -0.034 ± 0.007
+  POMCPOW sparse_explore     0.484  [ 36.1 expl]   Δ  -0.034 ± 0.006
+  OneStepLookahead           0.517  [  4.5 expl]
+p3 α=1.00
+  POMCPOW random             1.029  [ 39.5 expl]   Δ  -0.151 ± 0.052
+  POMCPOW heuristic          1.054  [ 39.3 expl]   Δ  -0.127 ± 0.053
+  POMCPOW sparse_explore     1.090  [ 35.2 expl]   Δ  -0.091 ± 0.051
+  OneStepLookahead           1.181  [  3.5 expl]
+p6 α=0.50
+  POMCPOW random             0.540  [ 42.1 expl]   Δ  -0.014 ± 0.006
+  POMCPOW heuristic          0.522  [ 42.4 expl]   Δ  -0.032 ± 0.013
+  POMCPOW sparse_explore     0.543  [ 37.5 expl]   Δ  -0.011 ± 0.007
+  OneStepLookahead           0.554  [  6.5 expl]
+p6 α=1.00
+  POMCPOW random             1.101  [ 42.4 expl]   Δ  -0.057 ± 0.045
+  POMCPOW heuristic          1.148  [ 40.4 expl]   Δ  -0.010 ± 0.027
+  POMCPOW sparse_explore     1.146  [ 33.1 expl]   Δ  -0.013 ± 0.033
+  OneStepLookahead           1.158  [  4.3 expl]
+
+CSV: outputs/pomcpow_vs_heuristics/action_proposer_e6.csv
+exit 0

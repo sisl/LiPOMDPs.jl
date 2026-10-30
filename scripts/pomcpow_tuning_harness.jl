@@ -39,9 +39,9 @@ const ORIGINAL_POMCPOW = (
     k_observation     = 3.0,
     alpha_observation = 0.3,
     rollout           = :dynamic_profit,   # FORollout(DynamicProfitMaximizerPolicy)
+    final_criterion   = :maxq,             # root action: :maxq (highest Q, POMCPOW default) or :visits (most tried)
 )
 
-const DO_NOTHING = Action(site=[1, 2, 3, 4], type=[0, 0, 0, 0])
 
 """
 Action proposer for POMCPOW progressive widening.
@@ -66,18 +66,55 @@ function heuristic_action_generator(pomdp::LiPOMDP; rng::AbstractRNG=MersenneTwi
     end
 end
 
+"""
+Action proposer that keeps uniform random proposals but drops each "explore" flag with
+probability 1 - `p_explore`. Uniform proposals put an explore on most of the 256 joint
+actions, so the tree spends its widening budget on paid exploration it never learns to avoid.
+"""
+function sparse_explore_action_generator(pomdp::LiPOMDP; p_explore::Float64=0.1, rng::AbstractRNG=MersenneTwister(11))
+    return function (p, b, h)
+        a = rand(rng, actions(p, rand(rng, b)))
+        types = [t == 1 && rand(rng) > p_explore ? 0 : t for t in a.type]
+        return Action(site=copy(a.site), type=types)
+    end
+end
+
+include(joinpath(@__DIR__, "pomcpow_components.jl"))   # valid_random / timing_first proposers, mean_path_estimator
+include(joinpath(@__DIR__, "pomcpow_exploration_controls.jl"))
+
 """Build a POMCPOW planner. Keyword overrides are applied on top of ORIGINAL_POMCPOW.
-`next_action = :random` (POMCPOW default) or `:heuristic` (see heuristic_action_generator)."""
-function make_pomcpow(pomdp::LiPOMDP; next_action::Symbol=:random, kwargs...)
+`next_action = :random` (POMCPOW default), `:valid_random` (valid actions only, see
+valid_random_action_generator), `:timing_first` (TimingAware action, then do-nothing, then valid
+random), `:heuristic` (see heuristic_action_generator), `:sparse_explore` (see
+sparse_explore_action_generator) or `:info_gated` (see info_gated_action_generator).
+`init = :mean_path` initialises new action nodes with the mean-path "a then TimingAware" value and
+`init_n` pseudo-visits (see mean_path_prior); `:zero` is POMCPOW's default.
+`rollout = :timing` (one stochastic TimingAware rollout per leaf), `:mean_path` (certainty-equivalent
+leaf value: TimingAware followed on the noise-free price/demand path, `mean_path_value`),
+`:dynamic_profit`, `:alpha_aware` or `:zero`. `final_criterion = :maxq`, `:visits` or `:cheapest`
+(CheapestNearBest with 2% tolerance)."""
+function make_pomcpow(pomdp::LiPOMDP; next_action::Symbol=:random, init::Symbol=:zero, init_n::Int=10, explore_p::Float64=0.1, open_tol::Float64=0.05, kwargs...)
     cfg = merge(ORIGINAL_POMCPOW, (; kwargs...))
-    gen = next_action == :heuristic ? heuristic_action_generator(pomdp) :
-          next_action == :random    ? POMCPOW.RandomActionGenerator(MersenneTwister(11)) :
+    init_V, init_N = init == :mean_path ? mean_path_prior(pomdp; n0=init_n) :
+                     init == :zero      ? (0.0, 0) : error("unknown init $init")
+    gen = next_action == :heuristic      ? heuristic_action_generator(pomdp) :
+          next_action == :valid_random   ? valid_random_action_generator(pomdp) :
+          next_action == :timing_first   ? timing_first_action_generator(pomdp) :
+          next_action == :timing_tree    ? timing_tree_action_generator(pomdp) :
+          next_action == :timing_tree_single ? timing_tree_single_action_generator(pomdp) :
+          next_action == :sparse_explore ? sparse_explore_action_generator(pomdp; p_explore=explore_p) :
+          next_action == :info_gated     ? info_gated_action_generator(pomdp) :
+          next_action == :random         ? POMCPOW.RandomActionGenerator(MersenneTwister(11)) :
           error("unknown next_action $next_action")
 
     est = if cfg.rollout == :dynamic_profit
         FORollout(DynamicProfitMaximizerPolicy(pomdp))
     elseif cfg.rollout == :alpha_aware
         FORollout(AlphaAwareRolloutPolicy(pomdp))
+    elseif cfg.rollout == :timing
+        FORollout(TimingAwarePolicy(pomdp))
+    elseif cfg.rollout == :mean_path
+        mean_path_estimator(pomdp)
     elseif cfg.rollout == :zero
         0
     else
@@ -94,13 +131,20 @@ function make_pomcpow(pomdp::LiPOMDP; next_action::Symbol=:random, kwargs...)
         k_observation     = cfg.k_observation,
         alpha_observation = cfg.alpha_observation,
         estimate_value    = est,
+        final_criterion   = cfg.final_criterion == :visits   ? POMCPOW.MaxTries() :
+                            cfg.final_criterion == :cheapest ? CheapestNearBest(0.02) :
+                            cfg.final_criterion == :fewer_opens ? FewerOpensNearBest(open_tol) : POMCPOW.MaxQ(),
         next_action       = gen,
+        init_V            = init_V,
+        init_N            = init_N,
         rng               = MersenneTwister(7),
     )
     return solve(solver, pomdp)
 end
 
 make_onestep(pomdp::LiPOMDP) = OneStepLookaheadPolicy(pomdp, n_rollouts=30, debug=false)
+make_onestep_timing(pomdp::LiPOMDP) = OneStepLookaheadPolicy(pomdp, n_rollouts=30, debug=false,
+                                                             rollout_policy=TimingAwarePolicy(pomdp))
 
 # -----------------------------------------------------------------------------
 # One paired scenario
@@ -126,8 +170,9 @@ function run_scenario(policy, planning::LiPOMDP, evaluation::LiPOMDP, updater, s
         e     = compute_emissions(evaluation, s, a)
         prod, _ = calculate_total_production(evaluation, s)
 
+        a_exec = LiPOMDPs.effective_action(evaluation, s.have_opened, a)   # refused over-budget opens cost nothing
         for site in 1:evaluation.n_deposits
-            if a.type[site] == 2 && !s.have_opened[site]
+            if a_exec.type[site] == 2 && !s.have_opened[site]
                 capex += evaluation.deposit_types[site] ? evaluation.dle_capex : evaluation.mining_capex
             end
         end

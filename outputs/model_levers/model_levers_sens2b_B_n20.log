@@ -1,0 +1,15 @@
+The latest version of Julia in the `release` channel is 1.13.2+0.x64.linux.gnu. You currently have `1.12.0+0.x64.linux.gnu` installed. Run:
+
+  juliaup update
+
+in your terminal shell to install Julia 1.13.2+0.x64.linux.gnu and update the `release` channel to that version.
+240 episodes on 40 threads
+done in 18 min
+
+===== variant rec17_22
+  cell                POMCPOW      TA  OSL-TA         PC−TA ± SE      PC−OSL ± SE   expl PC/OSL
+  p4 α=0.5               1.573   1.480   1.648     +0.093 ± 0.072   -0.075 ± 0.034   49/20
+  p4 α=1.0               3.382   3.149   3.432     +0.234 ± 0.148   -0.050 ± 0.096   50/20
+  p6 α=0.5               1.672   1.301   1.698     +0.371 ± 0.057   -0.025 ± 0.018   49/12
+  p6 α=1.0               3.544   2.802   3.658     +0.742 ± 0.131   -0.114 ± 0.040   48/14
+  POOLED: PC−TA +0.360 ± 0.060   PC−OSL-TA -0.066 ± 0.028

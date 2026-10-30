@@ -1,0 +1,1 @@
+POMCPOW q=30000 c=1(unscaled) kobs=6.0 aobs=0.4 final=maxq

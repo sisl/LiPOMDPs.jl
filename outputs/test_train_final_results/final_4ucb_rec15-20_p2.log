@@ -1,0 +1,1940 @@
+The latest version of Julia in the `release` channel is 1.13.2+0.x64.linux.gnu. You currently have `1.12.1+0.x64.linux.gnu` installed. Run:
+
+  juliaup update
+
+in your terminal shell to install Julia 1.13.2+0.x64.linux.gnu and update the `release` channel to that version.
+🧪 TRAIN/TEST SPLIT EVALUATION
+============================================================
+Running train/test evaluation...
+Policies: ["POMCPOW", "POMCPOW_Depth1", "OneStepLookahead_AlphaAware", "OneStepLookahead_TimingAware", "DynamicProfitMaximizer", "ExploreOnly", "OneMineProfitMaximization", "OneMineEmissionMinimization", "DynamicEmissionMinimizer", "RandomHeuristicPolicy", "TimingAware"]
+Planning models: [2]
+Evaluation models: [6]
+Alpha values: [0.0, 0.25, 0.5, 0.75, 1.0]
+Train/Test split: 25/50
+
+🚀 TRAIN/TEST SPLIT POLICY EVALUATION
+================================================================================
+Testing policies with proper train/test split to avoid overfitting
+Different price models for planning vs evaluation
+Using ALPHA values for multi-objective optimization
+================================================================================
+Configuration:
+  • Training simulations per policy: 25
+  • Testing simulations per policy: 50
+  • Time horizon: 31
+  • Planning price models: [2]
+  • Evaluation price models: [6]
+  • Policies: ["POMCPOW", "POMCPOW_Depth1", "OneStepLookahead_AlphaAware", "OneStepLookahead_TimingAware", "DynamicProfitMaximizer", "ExploreOnly", "OneMineProfitMaximization", "OneMineEmissionMinimization", "DynamicEmissionMinimizer", "RandomHeuristicPolicy", "TimingAware"]
+  • Alpha values: [0.0, 0.25, 0.5, 0.75, 1.0]
+  • POMCPOW rollout: TimingAwarePolicy
+
+Running 55 configurations on 16 threads
+
+[5/55] Testing POMCPOW with α=0.75...
+  Planning model: Type 2, Evaluation model: Type 6
+
+[11/55] Testing OneStepLookahead_AlphaAware with α=0.0...
+  Planning model: Type 2, Evaluation model: Type 6
+
+[12/55] Testing OneStepLookahead_AlphaAware with α=0.25...
+  Planning model: Type 2, Evaluation model: Type 6
+
+[3/55] Testing POMCPOW with α=0.25...
+
+[7/55] Testing POMCPOW_Depth1 with α=0.25...
+  Planning model: Type 2, Evaluation model: Type 6
+
+[6/55] Testing POMCPOW_Depth1 with α=0.0...
+[13/55] Testing OneStepLookahead_AlphaAware with α=0.5...  Planning model: Type 2, Evaluation model: Type 6
+
+
+[2/55] Testing POMCPOW with α=0.5...
+[1/55] Testing POMCPOW with α=0.0...
+
+[8/55] Testing POMCPOW_Depth1 with α=0.5...
+  Planning model: Type 2, Evaluation model: Type 6
+
+[10/55] Testing POMCPOW_Depth1 with α=1.0...
+
+
+[9/55] Testing POMCPOW_Depth1 with α=0.75...
+  Planning model: Type 2, Evaluation model: Type 6  Planning model: Type 2, Evaluation model: Type 6
+  Planning model: Type 2, Evaluation model: Type 6  Planning model: Type 2, Evaluation model: Type 6
+
+
+[16/55] Testing OneStepLookahead_TimingAware with α=0.0...
+
+[15/55] Testing OneStepLookahead_AlphaAware with α=1.0...
+
+  Planning model: Type 2, Evaluation model: Type 6
+
+[14/55] Testing OneStepLookahead_AlphaAware with α=0.75...
+
+  Planning model: Type 2, Evaluation model: Type 6
+  Planning model: Type 2, Evaluation model: Type 6
+  Planning model: Type 2, Evaluation model: Type 6
+  Planning model: Type 2, Evaluation model: Type 6
+
+[4/55] Testing POMCPOW with α=1.0...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+
+  🧪 Testing Phase: 50 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+  📚 Training Results:
+    ✓ Profit: $25108.36M ± 5239.16M
+    ✓ Profit: $25109.64M ± 5239.53M
+    ✓ Emissions: $-2408.55M ± 207.4M
+    ✓ Emissions: $-2408.94M ± 207.7M
+    ✓ Discounted Reward: -0.3 ± 0.89
+    ✓ Discounted Reward: -0.35 ± 0.67
+    ✓ Met Demand: 76.8%
+    ✓ Exploration Cost: $8.58M
+    ✓ CAPEX: $4552.0M
+    ✓ OPEX: $11025.41M
+    ✓ Met Demand: 76.8%
+    ✓ Exploration Cost: $8.71M
+    ✓ CAPEX: $4552.0M
+    ✓ OPEX: $11026.0M
+    ✓ Cost per Tonne: $6749.04
+  🧪 Testing Results:
+    ✓ Cost per Tonne: $6748.47
+  🧪 Testing Results:
+    ✓ Profit: $24023.6M ± 5977.14M
+    ✓ Profit: $23963.14M ± 6112.82M
+    ✓ Emissions: $-2362.13M ± 241.18M
+    ✓ Emissions: $-2362.28M ± 237.77M
+    ✓ Discounted Reward: -0.64 ± 1.01
+    ✓ Discounted Reward: -0.59 ± 0.76
+    ✓ Met Demand: 75.8%
+    ✓ Met Demand: 75.7%
+    ✓ Exploration Cost: $7.65M
+    ✓ CAPEX: $4552.0M
+    ✓ Exploration Cost: $7.44M
+    ✓ OPEX: $10871.26M
+    ✓ CAPEX: $4552.0M
+    ✓ Cost per Tonne: $7061.66
+  🔍 Overfitting Analysis:
+    ✓ OPEX: $10895.8M
+    ✓ Profit Overfitting: $1146.49M
+    ✓ Cost per Tonne: $7028.53
+  🔍 Overfitting Analysis:
+    ✓ Emission Overfitting: $-46.66M
+    ✓ Profit Overfitting: $1084.77M
+    ✓ Reward Overfitting: 0.25
+    ✓ Emission Overfitting: $-46.42M
+    ✓ Reward Overfitting: 0.35
+    ✅ No significant overfitting detected
+    ✅ No significant overfitting detected
+
+[17/55] Testing OneStepLookahead_TimingAware with α=0.25...
+
+[18/55] Testing OneStepLookahead_TimingAware with α=0.5...
+  Planning model: Type 2, Evaluation model: Type 6
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $25109.64M ± 5239.53M
+    ✓ Emissions: $-2408.94M ± 207.7M
+    ✓ Discounted Reward: -0.4 ± 0.44
+    ✓ Met Demand: 76.8%
+    ✓ Exploration Cost: $8.58M
+    ✓ CAPEX: $4552.0M
+    ✓ OPEX: $11025.41M
+    ✓ Cost per Tonne: $6748.47
+  🧪 Testing Results:
+    ✓ Profit: $24230.56M ± 5911.05M
+    ✓ Emissions: $-2350.68M ± 246.32M
+    ✓ Discounted Reward: -0.43 ± 0.58
+    ✓ Met Demand: 75.6%
+    ✓ Exploration Cost: $7.73M
+    ✓ CAPEX: $4534.76M
+    ✓ OPEX: $10874.79M
+    ✓ Cost per Tonne: $7002.18
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $879.08M
+    ✓ Emission Overfitting: $-58.26M
+    ✓ Reward Overfitting: 0.03
+    ✅ No significant overfitting detected
+
+[19/55] Testing OneStepLookahead_TimingAware with α=0.75...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $18307.61M ± 7348.14M
+    ✓ Emissions: $-2001.19M ± 393.38M
+    ✓ Discounted Reward: -0.44 ± 0.06
+    ✓ Met Demand: 68.0%
+    ✓ Exploration Cost: $44.2M
+    ✓ CAPEX: $4310.64M
+    ✓ OPEX: $9952.84M
+    ✓ Cost per Tonne: $7192.14
+  🧪 Testing Results:
+    ✓ Profit: $18285.74M ± 7924.27M
+    ✓ Emissions: $-1976.25M ± 441.91M
+    ✓ Discounted Reward: -0.44 ± 0.07
+    ✓ Met Demand: 67.2%
+    ✓ Exploration Cost: $43.07M
+    ✓ CAPEX: $4319.26M
+    ✓ OPEX: $9840.75M
+    ✓ Cost per Tonne: $7295.16
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $21.87M
+    ✓ Emission Overfitting: $-24.94M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+
+[20/55] Testing OneStepLookahead_TimingAware with α=1.0...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $0.0M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🧪 Testing Results:
+    ✓ Profit: $0.0M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $0.0M
+    ✓ Emission Overfitting: $0.0M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+
+[21/55] Testing DynamicProfitMaximizer with α=0.0...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $14276.55M ± 5735.61M
+    ✓ Emissions: $-1704.77M ± 164.31M
+    ✓ Discounted Reward: -0.41 ± 0.02
+    ✓ Met Demand: 62.0%
+    ✓ Exploration Cost: $0.56M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $9260.04M
+    ✓ Cost per Tonne: $7280.2
+  🧪 Testing Results:
+    ✓ Profit: $15143.61M ± 7156.4M
+    ✓ Emissions: $-1681.93M ± 226.8M
+    ✓ Discounted Reward: -0.4 ± 0.03
+    ✓ Met Demand: 62.2%
+    ✓ Exploration Cost: $0.95M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $9332.19M
+    ✓ Cost per Tonne: $7280.22
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-867.06M
+    ✓ Emission Overfitting: $-22.84M
+    ✓ Reward Overfitting: -0.01
+    ✅ No significant overfitting detected
+
+[22/55] Testing DynamicProfitMaximizer with α=0.25...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $14276.55M ± 5735.61M
+    ✓ Emissions: $-1704.77M ± 164.31M
+    ✓ Discounted Reward: -0.67 ± 0.19
+    ✓ Met Demand: 62.0%
+    ✓ Exploration Cost: $0.56M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $9260.04M
+    ✓ Cost per Tonne: $7280.2
+  🧪 Testing Results:
+    ✓ Profit: $15143.61M ± 7156.4M
+    ✓ Emissions: $-1681.93M ± 226.8M
+    ✓ Discounted Reward: -0.65 ± 0.23
+    ✓ Met Demand: 62.2%
+    ✓ Exploration Cost: $0.95M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $9332.19M
+    ✓ Cost per Tonne: $7280.22
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-867.06M
+    ✓ Emission Overfitting: $-22.84M
+    ✓ Reward Overfitting: -0.02
+    ✅ No significant overfitting detected
+
+[23/55] Testing DynamicProfitMaximizer with α=0.5...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $14276.55M ± 5735.61M
+    ✓ Emissions: $-1704.77M ± 164.31M
+    ✓ Discounted Reward: -0.93 ± 0.38
+    ✓ Met Demand: 62.0%
+    ✓ Exploration Cost: $0.56M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $9260.04M
+    ✓ Cost per Tonne: $7280.2
+  🧪 Testing Results:
+    ✓ Profit: $15143.61M ± 7156.4M
+    ✓ Emissions: $-1681.93M ± 226.8M
+    ✓ Discounted Reward: -0.9 ± 0.49
+    ✓ Met Demand: 62.2%
+    ✓ Exploration Cost: $0.95M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $9332.19M
+    ✓ Cost per Tonne: $7280.22
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-867.06M
+    ✓ Emission Overfitting: $-22.84M
+    ✓ Reward Overfitting: -0.04
+    ✅ No significant overfitting detected
+
+[24/55] Testing DynamicProfitMaximizer with α=0.75...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $14276.55M ± 5735.61M
+    ✓ Emissions: $-1704.77M ± 164.31M
+    ✓ Discounted Reward: -1.2 ± 0.58
+    ✓ Met Demand: 62.0%
+    ✓ Exploration Cost: $0.56M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $9260.04M
+    ✓ Cost per Tonne: $7280.2
+  🧪 Testing Results:
+    ✓ Profit: $15143.61M ± 7156.4M
+    ✓ Emissions: $-1681.93M ± 226.8M
+    ✓ Discounted Reward: -1.15 ± 0.75
+    ✓ Met Demand: 62.2%
+    ✓ Exploration Cost: $0.95M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $9332.19M
+    ✓ Cost per Tonne: $7280.22
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-867.06M
+    ✓ Emission Overfitting: $-22.84M
+    ✓ Reward Overfitting: -0.05
+    ✅ No significant overfitting detected
+
+[25/55] Testing DynamicProfitMaximizer with α=1.0...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $0.0M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🧪 Testing Results:
+    ✓ Profit: $0.0M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $0.0M
+    ✓ Emission Overfitting: $0.0M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+
+[26/55] Testing ExploreOnly with α=0.0...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $0.0M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🧪 Testing Results:
+    ✓ Profit: $0.0M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $0.0M
+    ✓ Emission Overfitting: $0.0M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+
+[27/55] Testing ExploreOnly with α=0.25...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $14276.55M ± 5735.61M
+    ✓ Emissions: $-1704.77M ± 164.31M
+    ✓ Discounted Reward: -1.46 ± 0.78
+    ✓ Met Demand: 62.0%
+    ✓ Exploration Cost: $0.56M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $9260.04M
+    ✓ Cost per Tonne: $7280.2
+  🧪 Testing Results:
+    ✓ Profit: $15143.61M ± 7156.4M
+    ✓ Emissions: $-1681.93M ± 226.8M
+    ✓ Discounted Reward: -1.39 ± 1.0
+    ✓ Met Demand: 62.2%
+    ✓ Exploration Cost: $0.95M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $9332.19M
+    ✓ Cost per Tonne: $7280.22
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-867.06M
+    ✓ Emission Overfitting: $-22.84M
+    ✓ Reward Overfitting: -0.07
+    ✅ No significant overfitting detected
+
+[28/55] Testing ExploreOnly with α=0.5...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $-321.35M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $321.35M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🧪 Testing Results:
+    ✓ Profit: $-321.35M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $321.35M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $0.0M
+    ✓ Emission Overfitting: $0.0M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+
+[29/55] Testing ExploreOnly with α=0.75...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $-321.35M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: -0.03 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $321.35M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🧪 Testing Results:
+    ✓ Profit: $-321.35M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: -0.03 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $321.35M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $0.0M
+    ✓ Emission Overfitting: $0.0M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+
+[30/55] Testing ExploreOnly with α=1.0...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $-321.35M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: -0.06 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $321.35M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🧪 Testing Results:
+    ✓ Profit: $-321.35M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: -0.06 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $321.35M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $0.0M
+    ✓ Emission Overfitting: $0.0M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+
+[31/55] Testing OneMineProfitMaximization with α=0.0...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $-321.35M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: -0.1 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $321.35M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🧪 Testing Results:
+    ✓ Profit: $-321.35M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: -0.1 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $321.35M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $0.0M
+    ✓ Emission Overfitting: $0.0M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+
+[32/55] Testing OneMineProfitMaximization with α=0.25...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $-321.35M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: -0.13 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $321.35M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🧪 Testing Results:
+    ✓ Profit: $-321.35M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: -0.13 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $321.35M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $0.0M
+    ✓ Emission Overfitting: $0.0M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+
+[33/55] Testing OneMineProfitMaximization with α=0.5...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $13812.61M ± 5169.19M
+    ✓ Emissions: $-1898.05M ± 225.46M
+    ✓ Discounted Reward: -0.27 ± 0.18
+    ✓ Met Demand: 55.4%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1661.0M
+    ✓ OPEX: $7700.87M
+    ✓ Cost per Tonne: $5659.4
+  🧪 Testing Results:
+    ✓ Profit: $13547.74M ± 7446.51M
+    ✓ Emissions: $-1860.77M ± 365.14M
+    ✓ Discounted Reward: -0.31 ± 0.33
+    ✓ Met Demand: 54.3%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1661.0M
+    ✓ OPEX: $7549.63M
+    ✓ Cost per Tonne: $5947.42
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $264.87M
+    ✓ Emission Overfitting: $-37.28M
+    ✓ Reward Overfitting: 0.04
+    ✅ No significant overfitting detected
+
+[34/55] Testing OneMineProfitMaximization with α=0.75...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $13812.61M ± 5169.19M
+    ✓ Emissions: $-1898.05M ± 225.46M
+    ✓ Discounted Reward: -0.51 ± 0.03
+    ✓ Met Demand: 55.4%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1661.0M
+    ✓ OPEX: $7700.87M
+    ✓ Cost per Tonne: $5659.4
+  🧪 Testing Results:
+    ✓ Profit: $13547.74M ± 7446.51M
+    ✓ Emissions: $-1860.77M ± 365.14M
+    ✓ Discounted Reward: -0.5 ± 0.06
+    ✓ Met Demand: 54.3%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1661.0M
+    ✓ OPEX: $7549.63M
+    ✓ Cost per Tonne: $5947.42
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $264.87M
+    ✓ Emission Overfitting: $-37.28M
+    ✓ Reward Overfitting: -0.01
+    ✅ No significant overfitting detected
+
+[35/55] Testing OneMineProfitMaximization with α=1.0...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $13812.61M ± 5169.19M
+    ✓ Emissions: $-1898.05M ± 225.46M
+    ✓ Discounted Reward: -0.03 ± 0.39
+    ✓ Met Demand: 55.4%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1661.0M
+    ✓ OPEX: $7700.87M
+    ✓ Cost per Tonne: $5659.4
+  🧪 Testing Results:
+    ✓ Profit: $13547.74M ± 7446.51M
+    ✓ Emissions: $-1860.77M ± 365.14M
+    ✓ Discounted Reward: -0.12 ± 0.72
+    ✓ Met Demand: 54.3%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1661.0M
+    ✓ OPEX: $7549.63M
+    ✓ Cost per Tonne: $5947.42
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $264.87M
+    ✓ Emission Overfitting: $-37.28M
+    ✓ Reward Overfitting: 0.09
+    ✅ No significant overfitting detected
+
+[36/55] Testing OneMineEmissionMinimization with α=0.0...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $13812.61M ± 5169.19M
+    ✓ Emissions: $-1898.05M ± 225.46M
+    ✓ Discounted Reward: 0.21 ± 0.6
+    ✓ Met Demand: 55.4%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1661.0M
+    ✓ OPEX: $7700.87M
+    ✓ Cost per Tonne: $5659.4
+  🧪 Testing Results:
+    ✓ Profit: $13547.74M ± 7446.51M
+    ✓ Emissions: $-1860.77M ± 365.14M
+    ✓ Discounted Reward: 0.07 ± 1.11
+    ✓ Met Demand: 54.3%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1661.0M
+    ✓ OPEX: $7549.63M
+    ✓ Cost per Tonne: $5947.42
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $264.87M
+    ✓ Emission Overfitting: $-37.28M
+    ✓ Reward Overfitting: 0.14
+    ✅ No significant overfitting detected
+
+[37/55] Testing OneMineEmissionMinimization with α=0.25...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $13812.61M ± 5169.19M
+    ✓ Emissions: $-1898.05M ± 225.46M
+    ✓ Discounted Reward: 0.45 ± 0.81
+    ✓ Met Demand: 55.4%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1661.0M
+    ✓ OPEX: $7700.87M
+    ✓ Cost per Tonne: $5659.4
+  🧪 Testing Results:
+    ✓ Profit: $13547.74M ± 7446.51M
+    ✓ Emissions: $-1860.77M ± 365.14M
+    ✓ Discounted Reward: 0.27 ± 1.5
+    ✓ Met Demand: 54.3%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1661.0M
+    ✓ OPEX: $7549.63M
+    ✓ Cost per Tonne: $5947.42
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $264.87M
+    ✓ Emission Overfitting: $-37.28M
+    ✓ Reward Overfitting: 0.19
+    ✅ No significant overfitting detected
+
+[38/55] Testing OneMineEmissionMinimization with α=0.5...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations  📚 Training Phase: 25 simulations
+
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $-550.65M ± 3201.07M
+    ✓ Emissions: $-413.6M ± 219.03M
+    ✓ Discounted Reward: -0.19 ± 0.05
+    ✓ Met Demand: 18.4%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2885.65M
+    ✓ Cost per Tonne: $7609.12
+  🧪 Testing Results:
+    ✓ Profit: $-755.61M ± 1503.3M
+    ✓ Emissions: $-421.13M ± 218.02M
+    ✓ Discounted Reward: -0.2 ± 0.06
+    ✓ Met Demand: 18.7%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2938.2M
+    ✓ Cost per Tonne: $7440.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $204.97M
+    ✓ Emission Overfitting: $7.53M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+
+[39/55] Testing OneMineEmissionMinimization with α=0.75...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $-550.65M ± 3201.07M
+    ✓ Emissions: $-413.6M ± 219.03M
+    ✓ Discounted Reward: -0.46 ± 0.12
+    ✓ Met Demand: 18.4%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2885.65M
+    ✓ Cost per Tonne: $7609.12
+  🧪 Testing Results:
+    ✓ Profit: $-755.61M ± 1503.3M
+    ✓ Emissions: $-421.13M ± 218.02M
+    ✓ Discounted Reward: -0.46 ± 0.07
+    ✓ Met Demand: 18.7%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2938.2M
+    ✓ Cost per Tonne: $7440.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $204.97M
+    ✓ Emission Overfitting: $7.53M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+
+[40/55] Testing OneMineEmissionMinimization with α=1.0...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $-550.65M ± 3201.07M
+    ✓ Emissions: $-413.6M ± 219.03M
+    ✓ Discounted Reward: -0.72 ± 0.28
+    ✓ Met Demand: 18.4%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2885.65M
+    ✓ Cost per Tonne: $7609.12
+  🧪 Testing Results:
+    ✓ Profit: $-755.61M ± 1503.3M
+    ✓ Emissions: $-421.13M ± 218.02M
+    ✓ Discounted Reward: -0.73 ± 0.19
+    ✓ Met Demand: 18.7%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2938.2M
+    ✓ Cost per Tonne: $7440.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $204.97M
+    ✓ Emission Overfitting: $7.53M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+
+[41/55] Testing DynamicEmissionMinimizer with α=0.0...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $-550.65M ± 3201.07M
+    ✓ Emissions: $-413.6M ± 219.03M
+    ✓ Discounted Reward: -0.99 ± 0.43
+    ✓ Met Demand: 18.4%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2885.65M
+    ✓ Cost per Tonne: $7609.12
+  🧪 Testing Results:
+    ✓ Profit: $-755.61M ± 1503.3M
+    ✓ Emissions: $-421.13M ± 218.02M
+    ✓ Discounted Reward: -0.99 ± 0.3
+    ✓ Met Demand: 18.7%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2938.2M
+    ✓ Cost per Tonne: $7440.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $204.97M
+    ✓ Emission Overfitting: $7.53M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+
+[42/55] Testing DynamicEmissionMinimizer with α=0.25...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $-550.65M ± 3201.07M
+    ✓ Emissions: $-413.6M ± 219.03M
+    ✓ Discounted Reward: -1.25 ± 0.59
+    ✓ Met Demand: 18.4%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2885.65M
+    ✓ Cost per Tonne: $7609.12
+  🧪 Testing Results:
+    ✓ Profit: $-755.61M ± 1503.3M
+    ✓ Emissions: $-421.13M ± 218.02M
+    ✓ Discounted Reward: -1.26 ± 0.42
+    ✓ Met Demand: 18.7%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2938.2M
+    ✓ Cost per Tonne: $7440.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $204.97M
+    ✓ Emission Overfitting: $7.53M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+
+[43/55] Testing DynamicEmissionMinimizer with α=0.5...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $8770.41M ± 6657.24M
+    ✓ Emissions: $-1193.22M ± 288.74M
+    ✓ Discounted Reward: -0.24 ± 0.47
+    ✓ Met Demand: 47.1%
+    ✓ Exploration Cost: $10.75M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $7185.63M
+    ✓ Cost per Tonne: $8130.05
+  🧪 Testing Results:
+    ✓ Profit: $10074.97M ± 7328.86M
+    ✓ Emissions: $-1240.46M ± 279.79M
+    ✓ Discounted Reward: -0.17 ± 0.51
+    ✓ Met Demand: 49.2%
+    ✓ Exploration Cost: $10.93M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $7516.35M
+    ✓ Cost per Tonne: $8060.95
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-1304.56M
+    ✓ Emission Overfitting: $47.24M
+    ✓ Reward Overfitting: -0.06
+    ✅ No significant overfitting detected
+
+[44/55] Testing DynamicEmissionMinimizer with α=0.75...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $8770.41M ± 6657.24M
+    ✓ Emissions: $-1193.22M ± 288.74M
+    ✓ Discounted Reward: -0.27 ± 0.21
+    ✓ Met Demand: 47.1%
+    ✓ Exploration Cost: $10.75M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $7185.63M
+  📚 Training Results:
+    ✓ Profit: $8770.41M ± 6657.24M
+    ✓ Cost per Tonne: $8130.05
+  🧪 Testing Results:
+    ✓ Emissions: $-1193.22M ± 288.74M
+    ✓ Profit: $10074.97M ± 7328.86M
+    ✓ Discounted Reward: -0.3 ± 0.06
+    ✓ Emissions: $-1240.46M ± 279.79M
+    ✓ Met Demand: 47.1%
+    ✓ Discounted Reward: -0.24 ± 0.24
+    ✓ Exploration Cost: $10.75M
+    ✓ CAPEX: $4121.0M
+    ✓ Met Demand: 49.2%
+    ✓ OPEX: $7185.63M
+    ✓ Exploration Cost: $10.93M
+    ✓ Cost per Tonne: $8130.05
+  🧪 Testing Results:
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $7516.35M
+    ✓ Profit: $10074.97M ± 7328.86M
+    ✓ Cost per Tonne: $8060.95
+  🔍 Overfitting Analysis:
+    ✓ Emissions: $-1240.46M ± 279.79M
+    ✓ Profit Overfitting: $-1304.56M
+    ✓ Discounted Reward: -0.32 ± 0.05
+    ✓ Emission Overfitting: $47.24M
+    ✓ Met Demand: 49.2%
+    ✓ Reward Overfitting: -0.03
+    ✓ Exploration Cost: $10.93M
+    ✅ No significant overfitting detected
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $7516.35M
+    ✓ Cost per Tonne: $8060.95
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-1304.56M
+    ✓ Emission Overfitting: $47.24M
+    ✓ Reward Overfitting: 0.01
+    ✅ No significant overfitting detected
+
+[45/55] Testing DynamicEmissionMinimizer with α=1.0...
+  Planning model: Type 2, Evaluation model: Type 6
+
+[46/55] Testing RandomHeuristicPolicy with α=0.0...
+  📚 Training Phase: 25 simulations
+  Planning model: Type 2, Evaluation model: Type 6
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $8770.41M ± 6657.24M
+    ✓ Emissions: $-1193.22M ± 288.74M
+    ✓ Discounted Reward: -0.2 ± 0.72
+    ✓ Met Demand: 47.1%
+    ✓ Exploration Cost: $10.75M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $7185.63M
+    ✓ Cost per Tonne: $8130.05
+  🧪 Testing Results:
+    ✓ Profit: $10074.97M ± 7328.86M
+    ✓ Emissions: $-1240.46M ± 279.79M
+    ✓ Discounted Reward: -0.1 ± 0.79
+    ✓ Met Demand: 49.2%
+    ✓ Exploration Cost: $10.93M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $7516.35M
+    ✓ Cost per Tonne: $8060.95
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-1304.56M
+    ✓ Emission Overfitting: $47.24M
+    ✓ Reward Overfitting: -0.1
+    ✅ No significant overfitting detected
+
+[47/55] Testing RandomHeuristicPolicy with α=0.25...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $8770.41M ± 6657.24M
+    ✓ Emissions: $-1193.22M ± 288.74M
+    ✓ Discounted Reward: -0.17 ± 0.98
+    ✓ Met Demand: 47.1%
+    ✓ Exploration Cost: $10.75M
+    ✓ CAPEX: $4121.0M
+
+[4149015] signal 15: Terminated
+in expression starting at /home/edmondsa/LiPOMDPs.jl/scripts/final_results_best_pomcpow.jl:856
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3626
+unknown function (ip: 0x75791ea9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x75791eb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3626
+unknown function (ip: 0x75791ea9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x75791eb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3626
+unknown function (ip: 0x75791ea9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x75791eb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3626
+unknown function (ip: 0x75791ea9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x75791eb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3626
+unknown function (ip: 0x75791ea9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x75791eb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3626
+unknown function (ip: 0x75791ea9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x75791eb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3626
+unknown function (ip: 0x75791ea9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x75791eb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3626
+unknown function (ip: 0x75791ea9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x75791eb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3626
+unknown function (ip: 0x75791ea9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x75791eb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3626
+unknown function (ip: 0x75791ea9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x75791eb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3626
+unknown function (ip: 0x75791ea9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x75791eb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3626
+unknown function (ip: 0x75791ea9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x75791eb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3626
+unknown function (ip: 0x75791ea9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x75791eb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3626
+unknown function (ip: 0x75791ea9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x75791eb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3626
+unknown function (ip: 0x75791ea9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x75791eb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+ijl_task_get_next at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/scheduler.c:523
+poptask at ./task.jl:1187
+wait at ./task.jl:1199
+task_done_hook at ./task.jl:839
+jfptr_task_done_hook_36828.1 at /home/edmondsa/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+jl_finish_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:345
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1260
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+ijl_task_get_next at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/scheduler.c:523
+poptask at ./task.jl:1187
+wait at ./task.jl:1199
+task_done_hook at ./task.jl:839
+jfptr_task_done_hook_36828.1 at /home/edmondsa/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+jl_finish_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:345
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1260
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+ijl_task_get_next at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/scheduler.c:523
+poptask at ./task.jl:1187
+wait at ./task.jl:1199
+task_done_hook at ./task.jl:839
+jfptr_task_done_hook_36828.1 at /home/edmondsa/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+jl_finish_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:345
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1260
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+ijl_task_get_next at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/scheduler.c:523
+poptask at ./task.jl:1187
+wait at ./task.jl:1199
+task_done_hook at ./task.jl:839
+jfptr_task_done_hook_36828.1 at /home/edmondsa/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+jl_finish_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:345
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1260
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+ijl_gc_small_alloc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:774
+Action at /home/edmondsa/.julia/packages/Parameters/MK0O4/src/Parameters.jl:505 [inlined]
+_ at /home/edmondsa/.julia/packages/Parameters/MK0O4/src/Parameters.jl:493 [inlined]
+Action at /home/edmondsa/.julia/packages/Parameters/MK0O4/src/Parameters.jl:493 [inlined]
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:734
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:765
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:783 [inlined]
+next_action at /home/edmondsa/.julia/packages/MCTS/MAjYv/src/action_gen.jl:12 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:16
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+#evaluate_policy_train_test_split#35 at /home/edmondsa/LiPOMDPs.jl/scripts/final_results_best_pomcpow.jl:391
+unknown function (ip: 0x75786238bf81) at (unknown file)
+unknown function (ip: 0x75786237e0d9) at (unknown file)
+unknown function (ip: 0x75786237e0a0) at (unknown file)
+evaluate_policy_train_test_split at /home/edmondsa/LiPOMDPs.jl/scripts/final_results_best_pomcpow.jl:140
+unknown function (ip: 0x75786237dfc0) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/final_results_best_pomcpow.jl:609 [inlined]
+#57 at ./threadingconstructs.jl:233
+unknown function (ip: 0x75786232c0c1) at (unknown file)
+unknown function (ip: 0x75786231a9c9) at (unknown file)
+unknown function (ip: 0x75786231a994) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x75786231a860) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+ijl_gc_small_alloc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:774
+vcat at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/usr/share/julia/stdlib/v1.12/SparseArrays/src/sparsevector.jl:1279 [inlined]
+obs_weight at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:1019
+push_weighted! at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/beliefs.jl:32
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:87
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+#evaluate_policy_train_test_split#35 at /home/edmondsa/LiPOMDPs.jl/scripts/final_results_best_pomcpow.jl:391
+unknown function (ip: 0x75786238bf81) at (unknown file)
+unknown function (ip: 0x75786237e0d9) at (unknown file)
+unknown function (ip: 0x75786237e0a0) at (unknown file)
+evaluate_policy_train_test_split at /home/edmondsa/LiPOMDPs.jl/scripts/final_results_best_pomcpow.jl:140
+unknown function (ip: 0x75786237dfc0) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/final_results_best_pomcpow.jl:609 [inlined]
+#57 at ./threadingconstructs.jl:233
+unknown function (ip: 0x75786232c0c1) at (unknown file)
+unknown function (ip: 0x75786231a9c9) at (unknown file)
+unknown function (ip: 0x75786231a994) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x75786231a860) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+ijl_task_get_next at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/scheduler.c:523
+poptask at ./task.jl:1187
+wait at ./task.jl:1199
+task_done_hook at ./task.jl:839
+jfptr_task_done_hook_36828.1 at /home/edmondsa/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+jl_finish_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:345
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1260
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+ijl_task_get_next at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/scheduler.c:523
+poptask at ./task.jl:1187
+wait at ./task.jl:1199
+task_done_hook at ./task.jl:839
+jfptr_task_done_hook_36828.1 at /home/edmondsa/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+jl_finish_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:345
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1260
+unknown function (ip: (nil)) at (unknown file)
+__madvise at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+jl_gc_free_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-pages.c:199
+gc_free_pages at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1319
+gc_sweep_pool at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1451 [inlined]
+_jl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3189
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3461
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+ijl_gc_small_alloc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:774
+Array at ./boot.jl:648 [inlined]
+Array at ./boot.jl:660 [inlined]
+deepcopy_internal at ./deepcopy.jl:127
+unknown function (ip: 0x7578623965b6) at (unknown file)
+deepcopy_internal at ./deepcopy.jl:69
+deepcopy at ./deepcopy.jl:29 [inlined]
+transition_core at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:630
+sample_transition at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:586
+gen at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:696
+gen at /home/edmondsa/.julia/packages/POMDPTools/4nD6N/src/ModelTools/underlying_mdp.jl:37 [inlined]
+macro expansion at /home/edmondsa/.julia/packages/POMDPs/iRiVb/src/gen_impl.jl:23 [inlined]
+genout at /home/edmondsa/.julia/packages/POMDPs/iRiVb/src/gen_impl.jl:19 [inlined]
+#simulate##2 at /home/edmondsa/.julia/packages/POMDPs/iRiVb/src/generative.jl:67 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMDPTools/4nD6N/src/Simulators/rollout.jl:143
+simulate at /home/edmondsa/.julia/packages/POMDPTools/4nD6N/src/Simulators/rollout.jl:157 [inlined]
+rollout at /home/edmondsa/.julia/packages/BasicPOMCP/yUpIz/src/rollout.jl:96 [inlined]
+estimate_value at /home/edmondsa/.julia/packages/BasicPOMCP/yUpIz/src/rollout.jl:41 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:82
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+#evaluate_policy_train_test_split#35 at /home/edmondsa/LiPOMDPs.jl/scripts/final_results_best_pomcpow.jl:391
+unknown function (ip: 0x75786238bf81) at (unknown file)
+unknown function (ip: 0x75786237e0d9) at (unknown file)
+unknown function (ip: 0x75786237e0a0) at (unknown file)
+evaluate_policy_train_test_split at /home/edmondsa/LiPOMDPs.jl/scripts/final_results_best_pomcpow.jl:140
+unknown function (ip: 0x75786237dfc0) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/final_results_best_pomcpow.jl:609 [inlined]
+#57 at ./threadingconstructs.jl:233
+unknown function (ip: 0x75786232c0c1) at (unknown file)
+unknown function (ip: 0x75786231a9c9) at (unknown file)
+unknown function (ip: 0x75786231a994) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x75786231a860) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+jl_gc_small_alloc_noinline at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:783 [inlined]
+jl_gc_alloc_ at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:797
+jl_alloc_genericmemory_unchecked at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/genericmemory.c:41
+GenericMemory at ./boot.jl:588 [inlined]
+copy at ./genericmemory.jl:179
+unknown function (ip: 0x757862396712) at (unknown file)
+_deepcopy_memory_t at ./deepcopy.jl:104
+deepcopy_internal at ./deepcopy.jl:99 [inlined]
+deepcopy_internal at ./deepcopy.jl:137
+deepcopy_internal at ./deepcopy.jl:128
+unknown function (ip: 0x7578623965b6) at (unknown file)
+deepcopy_internal at ./deepcopy.jl:69
+deepcopy at ./deepcopy.jl:29 [inlined]
+transition_core at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:630
+sample_transition at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:586
+gen at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:696
+gen at /home/edmondsa/.julia/packages/POMDPTools/4nD6N/src/ModelTools/underlying_mdp.jl:37 [inlined]
+macro expansion at /home/edmondsa/.julia/packages/POMDPs/iRiVb/src/gen_impl.jl:23 [inlined]
+genout at /home/edmondsa/.julia/packages/POMDPs/iRiVb/src/gen_impl.jl:19 [inlined]
+#simulate##2 at /home/edmondsa/.julia/packages/POMDPs/iRiVb/src/generative.jl:67 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMDPTools/4nD6N/src/Simulators/rollout.jl:143
+simulate at /home/edmondsa/.julia/packages/POMDPTools/4nD6N/src/Simulators/rollout.jl:157 [inlined]
+rollout at /home/edmondsa/.julia/packages/BasicPOMCP/yUpIz/src/rollout.jl:96 [inlined]
+estimate_value at /home/edmondsa/.julia/packages/BasicPOMCP/yUpIz/src/rollout.jl:41 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:82
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+#evaluate_policy_train_test_split#35 at /home/edmondsa/LiPOMDPs.jl/scripts/final_results_best_pomcpow.jl:391
+unknown function (ip: 0x75786238bf81) at (unknown file)
+unknown function (ip: 0x75786237e0d9) at (unknown file)
+unknown function (ip: 0x75786237e0a0) at (unknown file)
+evaluate_policy_train_test_split at /home/edmondsa/LiPOMDPs.jl/scripts/final_results_best_pomcpow.jl:140
+unknown function (ip: 0x75786237dfc0) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/final_results_best_pomcpow.jl:609 [inlined]
+#57 at ./threadingconstructs.jl:233
+unknown function (ip: 0x75786232c0c1) at (unknown file)
+unknown function (ip: 0x75786231a9c9) at (unknown file)
+unknown function (ip: 0x75786231a994) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x75786231a860) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+ijl_task_get_next at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/scheduler.c:523
+poptask at ./task.jl:1187
+wait at ./task.jl:1199
+task_done_hook at ./task.jl:839
+jfptr_task_done_hook_36828.1 at /home/edmondsa/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+jl_finish_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:345
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1260
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+ijl_task_get_next at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/scheduler.c:523
+poptask at ./task.jl:1187
+wait at ./task.jl:1199
+task_done_hook at ./task.jl:839
+jfptr_task_done_hook_36828.1 at /home/edmondsa/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+jl_finish_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:345
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1260
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+ijl_task_get_next at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/scheduler.c:523
+poptask at ./task.jl:1187
+wait at ./task.jl:1199
+task_done_hook at ./task.jl:839
+jfptr_task_done_hook_36828.1 at /home/edmondsa/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+jl_finish_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:345
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1260
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+ijl_gc_small_alloc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:774
+Array at ./boot.jl:648 [inlined]
+vect at ./array.jl:161 [inlined]
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:734
+actions at /home/edmondsa/.julia/packages/POMDPs/iRiVb/src/space.jl:32 [inlined]
+next_action at /home/edmondsa/.julia/packages/MCTS/MAjYv/src/action_gen.jl:12 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:18
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+#evaluate_policy_train_test_split#35 at /home/edmondsa/LiPOMDPs.jl/scripts/final_results_best_pomcpow.jl:391
+unknown function (ip: 0x75786238bf81) at (unknown file)
+unknown function (ip: 0x75786237e0d9) at (unknown file)
+unknown function (ip: 0x75786237e0a0) at (unknown file)
+evaluate_policy_train_test_split at /home/edmondsa/LiPOMDPs.jl/scripts/final_results_best_pomcpow.jl:140
+unknown function (ip: 0x75786237dfc0) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/final_results_best_pomcpow.jl:609 [inlined]
+#57 at ./threadingconstructs.jl:233
+unknown function (ip: 0x75786232c0c1) at (unknown file)
+unknown function (ip: 0x75786231a9c9) at (unknown file)
+unknown function (ip: 0x75786231a994) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x75786231a860) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+ijl_task_get_next at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/scheduler.c:523
+poptask at ./task.jl:1187
+wait at ./task.jl:1199
+task_done_hook at ./task.jl:839
+jfptr_task_done_hook_36828.1 at /home/edmondsa/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+jl_finish_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:345
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1260
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+ijl_task_get_next at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/scheduler.c:523
+poptask at ./task.jl:1187
+wait at ./task.jl:1199
+task_done_hook at ./task.jl:839
+jfptr_task_done_hook_36828.1 at /home/edmondsa/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+jl_finish_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:345
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1260
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x75791ea98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+ijl_task_get_next at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/scheduler.c:523
+poptask at ./task.jl:1187
+wait at ./task.jl:1199
+#wait#398 at ./condition.jl:141
+wait at ./condition.jl:136 [inlined]
+_wait at ./task.jl:312
+threading_run at ./threadingconstructs.jl:191
+unknown function (ip: 0x757862315e85) at (unknown file)
+macro expansion at ./threadingconstructs.jl:213 [inlined]
+#run_train_test_evaluation#36 at /home/edmondsa/LiPOMDPs.jl/scripts/final_results_best_pomcpow.jl:585
+run_train_test_evaluation at /home/edmondsa/LiPOMDPs.jl/scripts/final_results_best_pomcpow.jl:534
+unknown function (ip: 0x757862311e7b) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+do_call at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/interpreter.c:123
+eval_value at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/interpreter.c:243
+eval_stmt_value at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/interpreter.c:194 [inlined]
+eval_body at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/interpreter.c:707
+jl_interpret_toplevel_thunk at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/interpreter.c:898
+jl_toplevel_eval_flex at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/toplevel.c:1035
+jl_toplevel_eval_flex at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/toplevel.c:975
+ijl_toplevel_eval at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/toplevel.c:1047
+ijl_toplevel_eval_in at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/toplevel.c:1092
+eval at ./boot.jl:489
+include_string at ./loading.jl:2842
+_include at ./loading.jl:2902
+include at ./Base.jl:306
+exec_options at ./client.jl:317
+_start at ./client.jl:550
+jfptr__start_31204.1 at /home/edmondsa/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+true_main at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/jlapi.c:971
+jl_repl_entrypoint at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/jlapi.c:1139
+main at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/cli/loader_exe.c:58
+unknown function (ip: 0x75791ea2a1c9) at /lib/x86_64-linux-gnu/libc.so.6
+__libc_start_main at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+unknown function (ip: 0x4010b8) at /workspace/srcdir/glibc-2.17/csu/../sysdeps/x86_64/start.S
+unknown function (ip: (nil)) at (unknown file)
+Allocations: 472332625509 (Pool: 472332618893; Big: 6616); GC: 15069
+    ✓ OPEX: $7185.63M
+    ✓ Cost per Tonne: $8130.05
+  🧪 Testing Results:
+    ✓ Profit: $10074.97M ± 7328.86M
+    ✓ Emissions: $-1240.46M ± 279.79M
+    ✓ Discounted Reward: -0.03 ± 1.06
+    ✓ Met Demand: 49.2%
+    ✓ Exploration Cost: $10.93M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $7516.35M
+    ✓ Cost per Tonne: $8060.95
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-1304.56M
+    ✓ Emission Overfitting: $47.24M
+    ✓ Reward Overfitting: -0.13
+    ✅ No significant overfitting detected
+
+[48/55] Testing RandomHeuristicPolicy with α=0.5...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $18787.94M ± 8372.11M
+    ✓ Emissions: $-2047.1M ± 442.72M
+    ✓ Discounted Reward: -0.58 ± 0.21
+    ✓ Met Demand: 68.4%
+    ✓ Exploration Cost: $34.68M
+    ✓ CAPEX: $4345.12M
+    ✓ OPEX: $9961.14M
+    ✓ Cost per Tonne: $7216.62
+  🧪 Testing Results:
+    ✓ Profit: $17457.03M ± 8219.85M
+    ✓ Emissions: $-1917.34M ± 417.83M
+    ✓ Discounted Reward: -0.63 ± 0.24
+    ✓ Met Demand: 66.1%
+    ✓ Exploration Cost: $29.06M
+    ✓ CAPEX: $4293.4M
+    ✓ OPEX: $9715.69M
+    ✓ Cost per Tonne: $7375.79
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $1330.91M
+    ✓ Emission Overfitting: $-129.76M
+    ✓ Reward Overfitting: 0.05
+    ✅ No significant overfitting detected
+
+[49/55] Testing RandomHeuristicPolicy with α=0.75...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $18787.94M ± 8372.11M
+    ✓ Emissions: $-2047.1M ± 442.72M
+    ✓ Discounted Reward: -0.45 ± 0.07
+    ✓ Met Demand: 68.4%
+    ✓ Exploration Cost: $34.68M
+    ✓ CAPEX: $4345.12M
+    ✓ OPEX: $9961.14M
+    ✓ Cost per Tonne: $7216.62
+  🧪 Testing Results:
+    ✓ Profit: $17457.03M ± 8219.85M
+    ✓ Emissions: $-1917.34M ± 417.83M
+    ✓ Discounted Reward: -0.43 ± 0.06
+    ✓ Met Demand: 66.1%
+    ✓ Exploration Cost: $29.06M
+    ✓ CAPEX: $4293.4M
+    ✓ OPEX: $9715.69M
+    ✓ Cost per Tonne: $7375.79
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $1330.91M
+    ✓ Emission Overfitting: $-129.76M
+    ✓ Reward Overfitting: -0.02
+    ✅ No significant overfitting detected
+
+[50/55] Testing RandomHeuristicPolicy with α=1.0...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $18787.94M ± 8372.11M
+    ✓ Emissions: $-2047.1M ± 442.72M
+    ✓ Discounted Reward: -0.72 ± 0.46
+    ✓ Met Demand: 68.4%
+    ✓ Exploration Cost: $34.68M
+    ✓ CAPEX: $4345.12M
+    ✓ OPEX: $9961.14M
+    ✓ Cost per Tonne: $7216.62
+  🧪 Testing Results:
+    ✓ Profit: $17457.03M ± 8219.85M
+    ✓ Emissions: $-1917.34M ± 417.83M
+    ✓ Discounted Reward: -0.83 ± 0.52
+    ✓ Met Demand: 66.1%
+    ✓ Exploration Cost: $29.06M
+    ✓ CAPEX: $4293.4M
+    ✓ OPEX: $9715.69M
+    ✓ Cost per Tonne: $7375.79
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $1330.91M
+    ✓ Emission Overfitting: $-129.76M
+    ✓ Reward Overfitting: 0.11
+    ✅ No significant overfitting detected
+
+[51/55] Testing TimingAware with α=0.0...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $18787.94M ± 8372.11M
+    ✓ Emissions: $-2047.1M ± 442.72M
+    ✓ Discounted Reward: -0.85 ± 0.72
+    ✓ Met Demand: 68.4%
+    ✓ Exploration Cost: $34.68M
+    ✓ CAPEX: $4345.12M
+    ✓ OPEX: $9961.14M
+    ✓ Cost per Tonne: $7216.62
+  🧪 Testing Results:
+    ✓ Profit: $17457.03M ± 8219.85M
+    ✓ Emissions: $-1917.34M ± 417.83M
+    ✓ Discounted Reward: -1.03 ± 0.81
+    ✓ Met Demand: 66.1%
+    ✓ Exploration Cost: $29.06M
+    ✓ CAPEX: $4293.4M
+    ✓ OPEX: $9715.69M
+    ✓ Cost per Tonne: $7375.79
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $1330.91M
+    ✓ Emission Overfitting: $-129.76M
+    ✓ Reward Overfitting: 0.18
+    ✅ No significant overfitting detected
+
+[52/55] Testing TimingAware with α=0.25...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $18787.94M ± 8372.11M
+    ✓ Emissions: $-2047.1M ± 442.72M
+    ✓ Discounted Reward: -0.99 ± 0.98
+    ✓ Met Demand: 68.4%
+    ✓ Exploration Cost: $34.68M
+    ✓ CAPEX: $4345.12M
+    ✓ OPEX: $9961.14M
+    ✓ Cost per Tonne: $7216.62
+  🧪 Testing Results:
+    ✓ Profit: $17457.03M ± 8219.85M
+    ✓ Emissions: $-1917.34M ± 417.83M
+    ✓ Discounted Reward: -1.23 ± 1.09
+    ✓ Met Demand: 66.1%
+    ✓ Exploration Cost: $29.06M
+    ✓ CAPEX: $4293.4M
+    ✓ OPEX: $9715.69M
+    ✓ Cost per Tonne: $7375.79
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $1330.91M
+    ✓ Emission Overfitting: $-129.76M
+    ✓ Reward Overfitting: 0.24
+    ✅ No significant overfitting detected
+
+[53/55] Testing TimingAware with α=0.5...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $0.0M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🧪 Testing Results:
+    ✓ Profit: $0.0M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $0.0M
+    ✓ Emission Overfitting: $0.0M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+
+[54/55] Testing TimingAware with α=0.75...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $30347.2M ± 3840.48M
+    ✓ Emissions: $-2255.79M ± 232.82M
+    ✓ Discounted Reward: 0.53 ± 0.11
+    ✓ Met Demand: 74.0%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $4310.64M
+    ✓ OPEX: $10714.69M
+    ✓ Cost per Tonne: $6843.58
+  🧪 Testing Results:
+    ✓ Profit: $30693.05M ± 5572.55M
+    ✓ Emissions: $-2319.2M ± 238.52M
+    ✓ Discounted Reward: 0.51 ± 0.2
+    ✓ Met Demand: 75.2%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $4379.6M
+    ✓ OPEX: $10851.33M
+    ✓ Cost per Tonne: $7158.68
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-345.85M
+    ✓ Emission Overfitting: $63.41M
+    ✓ Reward Overfitting: 0.03
+    ✅ No significant overfitting detected
+
+[55/55] Testing TimingAware with α=1.0...
+  Planning model: Type 2, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $30488.77M ± 3830.62M
+    ✓ Emissions: $-2313.24M ± 233.62M
+    ✓ Discounted Reward: 1.43 ± 0.23
+    ✓ Met Demand: 75.5%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $4327.88M
+    ✓ OPEX: $10910.27M
+    ✓ Cost per Tonne: $6819.45
+  🧪 Testing Results:
+    ✓ Profit: $30582.27M ± 5824.37M
+    ✓ Emissions: $-2361.56M ± 250.42M
+    ✓ Discounted Reward: 1.36 ± 0.45
+    ✓ Met Demand: 76.3%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $4388.22M
+    ✓ OPEX: $10990.29M
+    ✓ Cost per Tonne: $7137.42
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-93.5M
+    ✓ Emission Overfitting: $48.32M
+    ✓ Reward Overfitting: 0.07
+    ✅ No significant overfitting detected
+  📚 Training Results:
+    ✓ Profit: $30790.03M ± 4061.12M
+    ✓ Emissions: $-2379.65M ± 240.72M
+    ✓ Discounted Reward: 2.33 ± 0.38
+    ✓ Met Demand: 77.2%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $4345.12M
+    ✓ OPEX: $11141.05M
+    ✓ Cost per Tonne: $6744.4
+  🧪 Testing Results:
+    ✓ Profit: $30696.59M ± 5780.83M
+    ✓ Emissions: $-2407.87M ± 250.79M
+    ✓ Discounted Reward: 2.2 ± 0.72
+    ✓ Met Demand: 77.5%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $4396.84M
+    ✓ OPEX: $11160.63M
+    ✓ Cost per Tonne: $7099.91
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $93.44M
+    ✓ Emission Overfitting: $28.22M
+    ✓ Reward Overfitting: 0.13
+    ✅ No significant overfitting detected
+  📚 Training Results:
+    ✓ Profit: $30790.03M ± 4061.12M
+    ✓ Emissions: $-2379.65M ± 240.72M
+    ✓ Discounted Reward: 3.25 ± 0.51
+    ✓ Met Demand: 77.2%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $4345.12M
+    ✓ OPEX: $11141.05M
+    ✓ Cost per Tonne: $6744.4
+  🧪 Testing Results:
+    ✓ Profit: $30871.3M ± 5774.37M
+    ✓ Emissions: $-2428.7M ± 246.05M
+    ✓ Discounted Reward: 3.09 ± 0.97
+    ✓ Met Demand: 77.9%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $4414.08M
+    ✓ OPEX: $11195.35M
+    ✓ Cost per Tonne: $7100.53
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-81.27M
+    ✓ Emission Overfitting: $49.05M
+    ✓ Reward Overfitting: 0.15
+    ✅ No significant overfitting detected
+  📚 Training Results:
+    ✓ Profit: $0.0M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🧪 Testing Results:
+    ✓ Profit: $0.0M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $0.0M
+    ✓ Emission Overfitting: $0.0M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+  📚 Training Results:
+    ✓ Profit: $24938.96M ± 4546.03M
+    ✓ Emissions: $-2395.13M ± 209.83M
+    ✓ Discounted Reward: -0.37 ± 0.17
+    ✓ Met Demand: 75.7%
+    ✓ Exploration Cost: $10.26M
+    ✓ CAPEX: $4552.0M
+    ✓ OPEX: $10835.78M
+    ✓ Cost per Tonne: $6827.24
+  🧪 Testing Results:
+    ✓ Profit: $25037.69M ± 5374.81M
+    ✓ Emissions: $-2312.54M ± 244.61M
+    ✓ Discounted Reward: -0.28 ± 0.36
+    ✓ Met Demand: 74.9%
+    ✓ Exploration Cost: $9.64M
+    ✓ CAPEX: $4526.14M
+    ✓ OPEX: $10795.67M
+    ✓ Cost per Tonne: $6997.57
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-98.73M
+    ✓ Emission Overfitting: $-82.6M
+    ✓ Reward Overfitting: -0.09
+    ✅ No significant overfitting detected
+  📚 Training Results:
+    ✓ Profit: $14455.04M ± 7788.31M
+    ✓ Emissions: $-1548.57M ± 189.65M
+    ✓ Discounted Reward: -0.32 ± 0.06
+    ✓ Met Demand: 57.4%
+    ✓ Exploration Cost: $10.33M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $8611.76M
+    ✓ Cost per Tonne: $7664.69
+  🧪 Testing Results:
+    ✓ Profit: $12998.81M ± 10087.38M
+    ✓ Emissions: $-1255.98M ± 622.54M
+    ✓ Discounted Reward: -0.25 ± 0.13
+    ✓ Met Demand: 46.5%
+    ✓ Exploration Cost: $13.82M
+    ✓ CAPEX: $3379.22M
+    ✓ OPEX: $6975.06M
+    ✓ Cost per Tonne: $7549.58
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $1456.23M
+    ✓ Emission Overfitting: $-292.59M
+    ✓ Reward Overfitting: -0.07
+    ⚠️  WARNING: Potential overfitting detected!
+  📚 Training Results:
+    ✓ Profit: $33677.19M ± 3486.14M
+    ✓ Emissions: $-2655.42M ± 222.94M
+    ✓ Discounted Reward: 2.42 ± 0.37
+    ✓ Met Demand: 84.2%
+    ✓ Exploration Cost: $34.35M
+    ✓ CAPEX: $4483.04M
+    ✓ OPEX: $12062.96M
+    ✓ Cost per Tonne: $6437.15
+  🧪 Testing Results:
+    ✓ Profit: $34365.16M ± 3988.91M
+    ✓ Emissions: $-2639.61M ± 251.55M
+    ✓ Discounted Reward: 2.54 ± 0.4
+    ✓ Met Demand: 84.6%
+    ✓ Exploration Cost: $31.29M
+    ✓ CAPEX: $4448.56M
+    ✓ OPEX: $12150.05M
+    ✓ Cost per Tonne: $6417.82
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-687.97M
+    ✓ Emission Overfitting: $-15.81M
+    ✓ Reward Overfitting: -0.12
+    ✅ No significant overfitting detected
+  📚 Training Results:
+    ✓ Profit: $33675.16M ± 3347.69M
+    ✓ Emissions: $-2632.18M ± 214.92M
+    ✓ Discounted Reward: 1.48 ± 0.23
+    ✓ Met Demand: 83.5%
+    ✓ Exploration Cost: $31.8M
+    ✓ CAPEX: $4483.04M
+    ✓ OPEX: $11953.83M
+    ✓ Cost per Tonne: $6459.38
+  🧪 Testing Results:
+    ✓ Profit: $34395.97M ± 3666.44M
+    ✓ Emissions: $-2607.28M ± 238.68M
+    ✓ Discounted Reward: 1.56 ± 0.24
+    ✓ Met Demand: 83.9%
+    ✓ Exploration Cost: $31.55M
+    ✓ CAPEX: $4431.32M
+    ✓ OPEX: $12065.37M
+    ✓ Cost per Tonne: $6393.38
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-720.81M
+    ✓ Emission Overfitting: $-24.9M
+    ✓ Reward Overfitting: -0.08
+    ✅ No significant overfitting detected
+  📚 Training Results:
+    ✓ Profit: $33499.16M ± 3528.15M
+    ✓ Emissions: $-2676.15M ± 196.81M
+    ✓ Discounted Reward: 3.36 ± 0.49
+    ✓ Met Demand: 84.5%
+    ✓ Exploration Cost: $32.64M
+    ✓ CAPEX: $4500.28M
+    ✓ OPEX: $12086.29M
+    ✓ Cost per Tonne: $6448.62
+  🧪 Testing Results:
+    ✓ Profit: $34577.95M ± 3734.35M
+    ✓ Emissions: $-2641.08M ± 229.43M
+    ✓ Discounted Reward: 3.57 ± 0.52
+    ✓ Met Demand: 84.7%
+    ✓ Exploration Cost: $30.7M
+    ✓ CAPEX: $4439.94M
+    ✓ OPEX: $12167.19M
+    ✓ Cost per Tonne: $6395.7
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-1078.79M
+    ✓ Emission Overfitting: $-35.07M
+    ✓ Reward Overfitting: -0.22
+    ✅ No significant overfitting detected
+  📚 Training Results:
+    ✓ Profit: $33833.64M ± 3341.21M
+    ✓ Emissions: $-2541.09M ± 246.61M
+    ✓ Discounted Reward: 0.56 ± 0.12
+    ✓ Met Demand: 81.7%
+    ✓ Exploration Cost: $34.86M
+    ✓ CAPEX: $4448.56M
+    ✓ OPEX: $11750.81M
+    ✓ Cost per Tonne: $6462.53
+  🧪 Testing Results:
+    ✓ Profit: $34591.97M ± 4483.32M
+    ✓ Emissions: $-2495.32M ± 267.5M
+    ✓ Discounted Reward: 0.61 ± 0.14
+    ✓ Met Demand: 81.5%
+    ✓ Exploration Cost: $33.63M
+    ✓ CAPEX: $4388.22M
+    ✓ OPEX: $11777.58M
+    ✓ Cost per Tonne: $6411.25
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-758.33M
+    ✓ Emission Overfitting: $-45.78M
+    ✓ Reward Overfitting: -0.05
+    ✅ No significant overfitting detected
+  📚 Training Results:
+    ✓ Profit: $0.0M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🧪 Testing Results:
+    ✓ Profit: $0.0M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $0.0M
+    ✓ Emission Overfitting: $0.0M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected

@@ -1,0 +1,30 @@
+The latest version of Julia in the `release` channel is 1.13.2+0.x64.linux.gnu. You currently have `1.12.1+0.x64.linux.gnu` installed. Run:
+
+  juliaup update
+
+in your terminal shell to install Julia 1.13.2+0.x64.linux.gnu and update the `release` channel to that version.
+200 episodes on 24 threads, queries=10000, seeds=[1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020]
+done in 43 min
+
+planning p4, α=0.5  (seeds 1001–1020; evaluation model 6)
+  config                  disc        Δ vs TA    Δ vs OSL-TA   expl  mines  mean open year per site (0 = never)
+  PC base 10k c4         1.738  +0.066 ±0.050  -0.011 ±0.034   46.2   2.95  20.6 19.8 13.0 14.5  (313s/ep)
+  PC 30k c4              1.735  +0.063 ±0.043  -0.014 ±0.045   48.4   3.00  21.9 20.1 14.3 14.2  (921s/ep)
+  PC 10k c2              1.668  -0.004 ±0.067  -0.081 ±0.055   49.1   3.00  21.6 16.4 14.1 16.6  (289s/ep)
+  TA                     1.673  +0.000 ±0.000  -0.077 ±0.046    0.0   3.00  26.2  4.2 21.7 19.6  (0s/ep)
+  OSL-TA                 1.749  +0.077 ±0.046  +0.000 ±0.000   14.1   3.00  21.4 18.9 15.4 15.4  (16s/ep)
+
+planning p4, α=1.0  (seeds 1001–1020; evaluation model 6)
+  config                  disc        Δ vs TA    Δ vs OSL-TA   expl  mines  mean open year per site (0 = never)
+  PC base 10k c4         3.549  +0.007 ±0.160  -0.135 ±0.164   46.5   3.00  19.5 20.1 12.6 13.4  (306s/ep)
+  PC 30k c4              3.657  +0.116 ±0.127  -0.027 ±0.126   46.9   3.00  22.2 19.3 13.1 12.7  (884s/ep)
+  PC 10k c2              3.484  -0.058 ±0.142  -0.201 ±0.127   46.6   3.00  18.9 19.4 12.7 13.2  (266s/ep)
+  TA                     3.542  +0.000 ±0.000  -0.143 ±0.105    0.0   3.00  26.1  4.2 19.7 19.5  (0s/ep)
+  OSL-TA                 3.684  +0.143 ±0.105  +0.000 ±0.000   14.6   3.00  22.8 13.6 14.9 15.4  (15s/ep)
+
+POOLED over all cells × seeds (paired):
+  PC base 10k c4       mean 2.644   Δ vs TA +0.036 ± 0.083   Δ vs OSL-TA -0.073 ± 0.083
+  PC 30k c4            mean 2.696   Δ vs TA +0.089 ± 0.066   Δ vs OSL-TA -0.020 ± 0.066
+  PC 10k c2            mean 2.576   Δ vs TA -0.031 ± 0.077   Δ vs OSL-TA -0.141 ± 0.069
+  TA                   mean 2.607   Δ vs TA +0.000 ± 0.000   Δ vs OSL-TA -0.110 ± 0.057
+  OSL-TA               mean 2.717   Δ vs TA +0.110 ± 0.057   Δ vs OSL-TA +0.000 ± 0.000

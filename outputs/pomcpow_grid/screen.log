@@ -1,0 +1,1786 @@
+The latest version of Julia in the `release` channel is 1.13.2+0.x64.linux.gnu. You currently have `1.12.1+0.x64.linux.gnu` installed. Run:
+
+  juliaup update
+
+in your terminal shell to install Julia 1.13.2+0.x64.linux.gnu and update the `release` channel to that version.
+
+[4019232] signal 15: Terminated
+in expression starting at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:180
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:971
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:911
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+push_lf_back at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.h:161 [inlined]
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:952
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:911
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+push_lf_back at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.h:161 [inlined]
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:952
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:978 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:911
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:911
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_update_page_fragmentation_data at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:828 [inlined]
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:951
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:920
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:911
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_update_page_fragmentation_data at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:828 [inlined]
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:951
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:911
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:978 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:911
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:931
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+try_pop_lf_back at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.h:177 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1268
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_update_page_fragmentation_data at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:828 [inlined]
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:951
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:911
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:914
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:920
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:911
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:875
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:920
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:971
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:911
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:911
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:911
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:917
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:971
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:911
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:920
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:927
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:911
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:920
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_alloc_map_set at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.h:299 [inlined]
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:956
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:911
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+push_lf_back at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.h:161 [inlined]
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:952
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:911
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+jl_parallel_gc_threadfun at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3638
+unknown function (ip: 0x7acf9ba9cb83) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: 0x7acf9bb29ecb) at /lib/x86_64-linux-gnu/libc.so.6
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+jl_gc_small_alloc_noinline at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:783 [inlined]
+jl_gc_alloc_ at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:797
+jl_alloc_genericmemory_unchecked at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/genericmemory.c:41
+GenericMemory at ./boot.jl:588 [inlined]
+copy at ./genericmemory.jl:179
+unknown function (ip: 0x7ace1254aec2) at (unknown file)
+_deepcopy_memory_t at ./deepcopy.jl:104
+deepcopy_internal at ./deepcopy.jl:99 [inlined]
+deepcopy_internal at ./deepcopy.jl:137
+unknown function (ip: 0x7ace1254ad08) at (unknown file)
+unknown function (ip: 0x7ace1254a889) at (unknown file)
+unknown function (ip: 0x7ace1254a83d) at (unknown file)
+deepcopy_internal at ./deepcopy.jl:128
+unknown function (ip: 0x7ace1254a786) at (unknown file)
+deepcopy_internal at ./deepcopy.jl:69
+deepcopy at ./deepcopy.jl:29 [inlined]
+transition_core at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:630
+mean_transition at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:606
+mean_path_value at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:621
+#mean_path_estimator##0 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:19 [inlined]
+estimate_value at /home/edmondsa/.julia/packages/BasicPOMCP/yUpIz/src/rollout.jl:37 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:82
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+ijl_gc_small_alloc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:774
+Array at ./boot.jl:648 [inlined]
+Array at ./boot.jl:670 [inlined]
+vect at ./array.jl:158 [inlined]
+observation at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:288
+obs_weight at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:1016
+POWNodeBelief at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/beliefs.jl:9
+unknown function (ip: 0x7ace1254c862) at (unknown file)
+unknown function (ip: 0x7ace1254c6a9) at (unknown file)
+unknown function (ip: 0x7ace1254c661) at (unknown file)
+POWNodeBelief at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/beliefs.jl:16 [inlined]
+init_node_sr_belief at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/beliefs.jl:29
+unknown function (ip: 0x7ace1254c523) at (unknown file)
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:58
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+jl_gc_small_alloc_noinline at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:783 [inlined]
+jl_gc_alloc_ at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:797
+ijl_new_bits at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/datatype.c:1139
+ijl_get_nth_field at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/datatype.c:1838
+ijl_get_nth_field_checked at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/datatype.c:1854
+deepcopy_internal at ./deepcopy.jl:67
+deepcopy at ./deepcopy.jl:29 [inlined]
+transition_core at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:630
+mean_transition at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:606
+mean_path_value at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:621
+#mean_path_estimator##0 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:19 [inlined]
+estimate_value at /home/edmondsa/.julia/packages/BasicPOMCP/yUpIz/src/rollout.jl:37 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:82
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+ijl_gc_small_alloc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:774
+GenericMemory at ./boot.jl:588 [inlined]
+Array at ./boot.jl:647 [inlined]
+vect at ./array.jl:161 [inlined]
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:734
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:765
+#19 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:49
+next_action at /home/edmondsa/.julia/packages/MCTS/MAjYv/src/action_gen.jl:14 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:16
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+ijl_gc_small_alloc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:774
+GenericMemory at ./boot.jl:588 [inlined]
+Array at ./boot.jl:647 [inlined]
+vect at ./array.jl:161 [inlined]
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:734
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:765
+#19 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:49
+next_action at /home/edmondsa/.julia/packages/MCTS/MAjYv/src/action_gen.jl:14 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:16
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+jl_gc_small_alloc_noinline at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:783 [inlined]
+jl_gc_alloc_ at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:797
+ijl_new_bits at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/datatype.c:1139
+ijl_get_nth_field at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/datatype.c:1838
+ijl_get_nth_field_checked at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/datatype.c:1854
+jl_f_getfield at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/builtins.c:1051
+getindex at ./namedtuple.jl:166 [inlined]
+macro expansion at /home/edmondsa/.julia/packages/POMDPs/iRiVb/src/gen_impl.jl:37 [inlined]
+genout at /home/edmondsa/.julia/packages/POMDPs/iRiVb/src/gen_impl.jl:19 [inlined]
+#simulate##2 at /home/edmondsa/.julia/packages/POMDPs/iRiVb/src/generative.jl:67 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:73
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+ijl_gc_small_alloc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:774
+IdDict at ./iddict.jl:31 [inlined]
+IdDict at ./iddict.jl:49 [inlined]
+deepcopy at ./deepcopy.jl:29 [inlined]
+transition_core at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:630
+mean_transition at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:606
+mean_path_value at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:621
+#mean_path_estimator##0 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:19 [inlined]
+estimate_value at /home/edmondsa/.julia/packages/BasicPOMCP/yUpIz/src/rollout.jl:37 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:82
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+jl_gc_small_alloc_noinline at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:783 [inlined]
+jl_gc_alloc_ at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:797
+jl_alloc_genericmemory_unchecked at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/genericmemory.c:41
+GenericMemory at ./boot.jl:588 [inlined]
+Array at ./boot.jl:647 [inlined]
+Array at ./boot.jl:660 [inlined]
+zeros at ./array.jl:595 [inlined]
+zeros at ./array.jl:591 [inlined]
+timing_action at /home/edmondsa/LiPOMDPs.jl/src/policies.jl:1051
+action at /home/edmondsa/LiPOMDPs.jl/src/policies.jl:1058
+mean_path_value at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:619
+#mean_path_estimator##0 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:19 [inlined]
+estimate_value at /home/edmondsa/.julia/packages/BasicPOMCP/yUpIz/src/rollout.jl:37 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:82
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+jl_gc_small_alloc_noinline at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:783 [inlined]
+jl_gc_alloc_ at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:797
+jl_alloc_genericmemory_unchecked at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/genericmemory.c:41
+GenericMemory at ./boot.jl:588 [inlined]
+array_new_memory at ./array.jl:1067 [inlined]
+#_growend!##0 at ./array.jl:1148
+_growend! at ./array.jl:1131 [inlined]
+_push! at ./array.jl:1289 [inlined]
+push! at ./array.jl:1286 [inlined]
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:734
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:765
+#19 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:49
+next_action at /home/edmondsa/.julia/packages/MCTS/MAjYv/src/action_gen.jl:14 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:16
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+jl_gc_small_alloc_noinline at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:783 [inlined]
+jl_gc_alloc_ at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:797
+arg_tuple at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/builtins.c:940
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+jl_f__apply_iterate at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/builtins.c:868
+product_distribution at /home/edmondsa/.julia/packages/Distributions/RTt4y/src/product.jl:236
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+jl_f__apply_iterate at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/builtins.c:868
+observation at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:337
+obs_weight at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:1016
+push_weighted! at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/beliefs.jl:32
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:87
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+jl_gc_small_alloc_noinline at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:783 [inlined]
+jl_gc_alloc_ at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:797
+jl_alloc_genericmemory_unchecked at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/genericmemory.c:41
+GenericMemory at ./boot.jl:588 [inlined]
+copy at ./genericmemory.jl:179
+unknown function (ip: 0x7ace1254a462) at (unknown file)
+_deepcopy_memory_t at ./deepcopy.jl:104
+deepcopy_internal at ./deepcopy.jl:99 [inlined]
+deepcopy_internal at ./deepcopy.jl:137
+unknown function (ip: 0x7ace1254a298) at (unknown file)
+unknown function (ip: 0x7ace12549e39) at (unknown file)
+unknown function (ip: 0x7ace12549ded) at (unknown file)
+deepcopy_internal at ./deepcopy.jl:128
+unknown function (ip: 0x7ace12549d36) at (unknown file)
+deepcopy_internal at ./deepcopy.jl:69
+deepcopy at ./deepcopy.jl:29 [inlined]
+transition_core at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:630
+mean_transition at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:606
+mean_path_value at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:621
+#mean_path_estimator##0 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:19 [inlined]
+estimate_value at /home/edmondsa/.julia/packages/BasicPOMCP/yUpIz/src/rollout.jl:37 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:82
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+ijl_gc_small_alloc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:774
+unknown function (ip: 0x7ace1254a7ff) at (unknown file)
+deepcopy_internal at ./deepcopy.jl:128
+unknown function (ip: 0x7ace1254a786) at (unknown file)
+deepcopy_internal at ./deepcopy.jl:69
+deepcopy at ./deepcopy.jl:29 [inlined]
+transition_core at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:630
+sample_transition at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:586
+gen at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:696
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:0
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+gc_sweep_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:911
+gc_sweep_pool_page at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:981 [inlined]
+gc_sweep_pool_parallel at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1273
+gc_sweep_pool at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:1392 [inlined]
+_jl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3189
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3461
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+jl_gc_small_alloc_noinline at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:783 [inlined]
+jl_gc_alloc_ at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:797
+ijl_box_uint64 at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/datatype.c:1528
+hash at /home/edmondsa/LiPOMDPs.jl/src/model.jl:27
+unknown function (ip: 0x7ace12549959) at (unknown file)
+hash at ./tuple.jl:580
+unknown function (ip: 0x7ace125496b9) at (unknown file)
+hash at ./tuple.jl:580
+hash at ./hashing.jl:28 [inlined]
+hashindex at ./dict.jl:128 [inlined]
+ht_keyindex at ./dict.jl:242
+haskey at ./dict.jl:548 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:20
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+jl_gc_small_alloc_noinline at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:783 [inlined]
+jl_gc_alloc_ at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:797
+ijl_new_bits at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/datatype.c:1139
+ijl_get_nth_field at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/datatype.c:1838
+ijl_get_nth_field_checked at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/datatype.c:1854
+deepcopy_internal at ./deepcopy.jl:67
+deepcopy at ./deepcopy.jl:29 [inlined]
+transition_core at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:630
+mean_transition at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:606
+mean_path_value at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:621
+#mean_path_estimator##0 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:19 [inlined]
+estimate_value at /home/edmondsa/.julia/packages/BasicPOMCP/yUpIz/src/rollout.jl:37 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:82
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+jl_gc_small_alloc_noinline at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:783 [inlined]
+jl_gc_alloc_ at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:797
+ijl_new_bits at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/datatype.c:1139
+ijl_get_nth_field at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/datatype.c:1838
+jl_f__apply_iterate at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/builtins.c:780
+product_distribution at /home/edmondsa/.julia/packages/Distributions/RTt4y/src/product.jl:236
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+jl_f__apply_iterate at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/builtins.c:868
+observation at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:337
+gen at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:698
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:0
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+ijl_gc_small_alloc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:774
+GenericMemory at ./boot.jl:588 [inlined]
+Array at ./boot.jl:647 [inlined]
+vect at ./array.jl:161 [inlined]
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:734
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:765
+#19 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:49
+next_action at /home/edmondsa/.julia/packages/MCTS/MAjYv/src/action_gen.jl:14 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:18
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+ijl_gc_small_alloc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:774
+unknown function (ip: 0x7ace1254a7ff) at (unknown file)
+deepcopy_internal at ./deepcopy.jl:128
+unknown function (ip: 0x7ace1254a786) at (unknown file)
+deepcopy_internal at ./deepcopy.jl:69
+deepcopy at ./deepcopy.jl:29 [inlined]
+transition_core at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:630
+mean_transition at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:606
+mean_path_value at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:621
+#mean_path_estimator##0 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:19 [inlined]
+estimate_value at /home/edmondsa/.julia/packages/BasicPOMCP/yUpIz/src/rollout.jl:37 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:82
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+ijl_gc_small_alloc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:774
+Array at ./boot.jl:648 [inlined]
+Array at ./boot.jl:660 [inlined]
+deepcopy_internal at ./deepcopy.jl:127
+unknown function (ip: 0x7ace1254a786) at (unknown file)
+deepcopy_internal at ./deepcopy.jl:69
+deepcopy at ./deepcopy.jl:29 [inlined]
+transition_core at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:630
+sample_transition at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:586
+gen at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:696
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:0
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+ijl_gc_small_alloc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:774
+Array at ./boot.jl:648 [inlined]
+Array at ./boot.jl:660 [inlined]
+deepcopy_internal at ./deepcopy.jl:127
+unknown function (ip: 0x7ace12549d36) at (unknown file)
+deepcopy_internal at ./deepcopy.jl:69
+deepcopy at ./deepcopy.jl:29 [inlined]
+transition_core at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:630
+mean_transition at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:606
+mean_path_value at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:621
+#mean_path_estimator##0 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:19 [inlined]
+estimate_value at /home/edmondsa/.julia/packages/BasicPOMCP/yUpIz/src/rollout.jl:37 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:82
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+jl_gc_small_alloc_noinline at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:783 [inlined]
+jl_gc_alloc_ at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:797
+jl_alloc_genericmemory_unchecked at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/genericmemory.c:41
+GenericMemory at ./boot.jl:588 [inlined]
+copy at ./array.jl:354 [inlined]
+effective_action at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:53
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:771
+#19 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:49
+next_action at /home/edmondsa/.julia/packages/MCTS/MAjYv/src/action_gen.jl:14 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:18
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+ijl_gc_small_alloc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:774
+GenericMemory at ./boot.jl:588 [inlined]
+Array at ./boot.jl:647 [inlined]
+vect at ./array.jl:161 [inlined]
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:734
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:765
+#19 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:49
+next_action at /home/edmondsa/.julia/packages/MCTS/MAjYv/src/action_gen.jl:14 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:16
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+ijl_gc_small_alloc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:774
+unknown function (ip: 0x7ace1254b197) at (unknown file)
+product_distribution at /home/edmondsa/.julia/packages/Distributions/RTt4y/src/product.jl:236
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+jl_f__apply_iterate at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/builtins.c:868
+observation at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:337
+gen at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:698
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:0
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+jl_gc_small_alloc_noinline at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:783 [inlined]
+jl_gc_alloc_ at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:797
+ijl_new_structv at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/datatype.c:1639
+NamedTuple at ./boot.jl:792 [inlined]
+gen at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:700
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:0
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+ijl_gc_small_alloc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:774
+Array at ./boot.jl:648 [inlined]
+vect at ./array.jl:161 [inlined]
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:734
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:765
+#19 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:49
+next_action at /home/edmondsa/.julia/packages/MCTS/MAjYv/src/action_gen.jl:14 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:18
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+ijl_gc_small_alloc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:774
+Array at ./boot.jl:648 [inlined]
+vect at ./array.jl:161 [inlined]
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:734
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:765
+#19 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:49
+next_action at /home/edmondsa/.julia/packages/MCTS/MAjYv/src/action_gen.jl:14 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:16
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+ijl_gc_small_alloc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:774
+unknown function (ip: 0x7ace12549daf) at (unknown file)
+deepcopy_internal at ./deepcopy.jl:128
+unknown function (ip: 0x7ace12549d36) at (unknown file)
+deepcopy_internal at ./deepcopy.jl:69
+deepcopy at ./deepcopy.jl:29 [inlined]
+transition_core at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:630
+mean_transition at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:606
+mean_path_value at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:621
+#mean_path_estimator##0 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:19 [inlined]
+estimate_value at /home/edmondsa/.julia/packages/BasicPOMCP/yUpIz/src/rollout.jl:37 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:82
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+jl_gc_small_alloc_noinline at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:783 [inlined]
+jl_gc_alloc_ at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:797
+arg_tuple at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/builtins.c:940
+__cat_offset! at ./abstractarray.jl:1868
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+jl_f__apply_iterate at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/builtins.c:868
+__cat at ./abstractarray.jl:1866
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+jl_f__apply_iterate at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/builtins.c:868
+_cat_t at ./abstractarray.jl:1859
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+jl_f__apply_iterate at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/builtins.c:868
+typed_vcat at ./abstractarray.jl:2000
+vcat at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/usr/share/julia/stdlib/v1.12/SparseArrays/src/sparsevector.jl:1279 [inlined]
+obs_weight at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:1019
+push_weighted! at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/beliefs.jl:32
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:87
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+jl_gc_small_alloc_noinline at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:783 [inlined]
+jl_gc_alloc_ at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:797
+jl_alloc_genericmemory_unchecked at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/genericmemory.c:41
+GenericMemory at ./boot.jl:588 [inlined]
+copy at ./genericmemory.jl:179
+unknown function (ip: 0x7ace1254aec2) at (unknown file)
+_deepcopy_memory_t at ./deepcopy.jl:104
+deepcopy_internal at ./deepcopy.jl:99 [inlined]
+deepcopy_internal at ./deepcopy.jl:137
+unknown function (ip: 0x7ace1254ad08) at (unknown file)
+unknown function (ip: 0x7ace1254a889) at (unknown file)
+unknown function (ip: 0x7ace1254a83d) at (unknown file)
+deepcopy_internal at ./deepcopy.jl:128
+unknown function (ip: 0x7ace1254a786) at (unknown file)
+deepcopy_internal at ./deepcopy.jl:69
+deepcopy at ./deepcopy.jl:29 [inlined]
+transition_core at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:630
+mean_transition at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:606
+mean_path_value at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:621
+#mean_path_estimator##0 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:19 [inlined]
+estimate_value at /home/edmondsa/.julia/packages/BasicPOMCP/yUpIz/src/rollout.jl:37 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:82
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+jl_gc_small_alloc_noinline at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:783 [inlined]
+jl_gc_alloc_ at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:797
+ijl_new_struct_uninit at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/datatype.c:1720
+deepcopy_internal at ./deepcopy.jl:63
+deepcopy at ./deepcopy.jl:29 [inlined]
+transition_core at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:630
+mean_transition at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:606
+mean_path_value at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:621
+#mean_path_estimator##0 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:19 [inlined]
+estimate_value at /home/edmondsa/.julia/packages/BasicPOMCP/yUpIz/src/rollout.jl:37 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:82
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+ijl_gc_small_alloc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:774
+GenericMemory at ./boot.jl:588 [inlined]
+Array at ./boot.jl:647 [inlined]
+vect at ./array.jl:161 [inlined]
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:734
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:765
+#19 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:49
+next_action at /home/edmondsa/.julia/packages/MCTS/MAjYv/src/action_gen.jl:14 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:18
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+jl_gc_small_alloc_noinline at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:783 [inlined]
+jl_gc_alloc_ at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:797
+jl_alloc_genericmemory_unchecked at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/genericmemory.c:41
+GenericMemory at ./boot.jl:588 [inlined]
+Array at ./boot.jl:647 [inlined]
+Array at ./boot.jl:660 [inlined]
+zeros at ./array.jl:595 [inlined]
+zeros at ./array.jl:591 [inlined]
+timing_action at /home/edmondsa/LiPOMDPs.jl/src/policies.jl:1051
+action at /home/edmondsa/LiPOMDPs.jl/src/policies.jl:1058
+mean_path_value at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:619
+#mean_path_estimator##0 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:19 [inlined]
+estimate_value at /home/edmondsa/.julia/packages/BasicPOMCP/yUpIz/src/rollout.jl:37 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:82
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+jl_gc_small_alloc_noinline at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:783 [inlined]
+jl_gc_alloc_ at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:797
+arg_tuple at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/builtins.c:940
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+jl_f__apply_iterate at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/builtins.c:868
+product_distribution at /home/edmondsa/.julia/packages/Distributions/RTt4y/src/product.jl:236
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+jl_f__apply_iterate at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/builtins.c:868
+observation at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:337
+obs_weight at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:1016
+POWNodeBelief at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/beliefs.jl:9
+unknown function (ip: 0x7ace1254c862) at (unknown file)
+unknown function (ip: 0x7ace1254c6a9) at (unknown file)
+unknown function (ip: 0x7ace1254c661) at (unknown file)
+POWNodeBelief at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/beliefs.jl:16 [inlined]
+init_node_sr_belief at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/beliefs.jl:29
+unknown function (ip: 0x7ace1254c523) at (unknown file)
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:58
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+ijl_gc_small_alloc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:774
+get at ./iddict.jl:92 [inlined]
+in at ./iddict.jl:182 [inlined]
+haskey at ./abstractdict.jl:19 [inlined]
+deepcopy_internal at ./deepcopy.jl:133
+unknown function (ip: 0x7ace1254ad08) at (unknown file)
+unknown function (ip: 0x7ace1254a889) at (unknown file)
+unknown function (ip: 0x7ace1254a83d) at (unknown file)
+deepcopy_internal at ./deepcopy.jl:128
+unknown function (ip: 0x7ace1254a786) at (unknown file)
+deepcopy_internal at ./deepcopy.jl:69
+deepcopy at ./deepcopy.jl:29 [inlined]
+transition_core at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:630
+mean_transition at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:606
+mean_path_value at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:621
+#mean_path_estimator##0 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:19 [inlined]
+estimate_value at /home/edmondsa/.julia/packages/BasicPOMCP/yUpIz/src/rollout.jl:37 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:82
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+ijl_gc_small_alloc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:774
+GenericMemory at ./boot.jl:588 [inlined]
+Array at ./boot.jl:647 [inlined]
+vect at ./array.jl:161 [inlined]
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:734
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:765
+#19 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:49
+next_action at /home/edmondsa/.julia/packages/MCTS/MAjYv/src/action_gen.jl:14 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:18
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+ijl_gc_small_alloc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:774
+Array at ./boot.jl:648 [inlined]
+getindex at ./array.jl:405 [inlined]
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:726
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:765
+#19 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:49
+next_action at /home/edmondsa/.julia/packages/MCTS/MAjYv/src/action_gen.jl:14 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:16
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+jl_gc_small_alloc_noinline at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:783 [inlined]
+jl_gc_alloc_ at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:797
+arg_tuple at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/builtins.c:940
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+jl_f__apply_iterate at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/builtins.c:868
+product_distribution at /home/edmondsa/.julia/packages/Distributions/RTt4y/src/product.jl:236
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+jl_f__apply_iterate at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/builtins.c:868
+observation at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:337
+gen at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:698
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:0
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+ijl_gc_small_alloc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:774
+Array at ./boot.jl:648 [inlined]
+vect at ./array.jl:161 [inlined]
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:734
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:765
+#19 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:49
+next_action at /home/edmondsa/.julia/packages/MCTS/MAjYv/src/action_gen.jl:14 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:16
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+jl_gc_small_alloc_noinline at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:783 [inlined]
+jl_gc_alloc_ at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:797
+jl_alloc_genericmemory_unchecked at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/genericmemory.c:41
+GenericMemory at ./boot.jl:588 [inlined]
+array_new_memory at ./array.jl:1067 [inlined]
+#_growend!##0 at ./array.jl:1148
+_growend! at ./array.jl:1131 [inlined]
+_push! at ./array.jl:1289 [inlined]
+push! at ./array.jl:1286 [inlined]
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:734
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:765
+#19 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:49
+next_action at /home/edmondsa/.julia/packages/MCTS/MAjYv/src/action_gen.jl:14 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:16
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+ijl_gc_small_alloc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:774
+Action at /home/edmondsa/.julia/packages/Parameters/MK0O4/src/Parameters.jl:505 [inlined]
+_ at /home/edmondsa/.julia/packages/Parameters/MK0O4/src/Parameters.jl:493 [inlined]
+Action at /home/edmondsa/.julia/packages/Parameters/MK0O4/src/Parameters.jl:493 [inlined]
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:734
+actions at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:765
+#19 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:49
+next_action at /home/edmondsa/.julia/packages/MCTS/MAjYv/src/action_gen.jl:14 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:18
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+jl_safepoint_wait_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:268
+jl_safepoint_start_gc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/safepoint.c:203
+ijl_gc_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:3419
+maybe_collect at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:349 [inlined]
+jl_gc_small_alloc_inner at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:725 [inlined]
+ijl_gc_small_alloc at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/gc-stock.c:774
+Array at ./boot.jl:648 [inlined]
+Array at ./boot.jl:660 [inlined]
+deepcopy_internal at ./deepcopy.jl:127
+unknown function (ip: 0x7ace12549d36) at (unknown file)
+deepcopy_internal at ./deepcopy.jl:69
+deepcopy at ./deepcopy.jl:29 [inlined]
+transition_core at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:630
+mean_transition at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:606
+mean_path_value at /home/edmondsa/LiPOMDPs.jl/src/pomdp.jl:621
+#mean_path_estimator##0 at /home/edmondsa/LiPOMDPs.jl/scripts/pomcpow_components.jl:19 [inlined]
+estimate_value at /home/edmondsa/.julia/packages/BasicPOMCP/yUpIz/src/rollout.jl:37 [inlined]
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:82
+simulate at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/solver2.jl:90
+search at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:78
+#action_info#13 at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:34
+action_info at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:27 [inlined]
+action at /home/edmondsa/.julia/packages/POMCPOW/6Cfo0/src/planner2.jl:44 [inlined]
+run_detail at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:81
+unknown function (ip: 0x7ace1256b0a3) at (unknown file)
+macro expansion at /home/edmondsa/LiPOMDPs.jl/scripts/test_pomcpow_grid.jl:108 [inlined]
+#run_stage##14 at ./threadingconstructs.jl:233
+unknown function (ip: 0x7ace12519c96) at (unknown file)
+unknown function (ip: 0x7ace125186b9) at (unknown file)
+unknown function (ip: 0x7ace1251868a) at (unknown file)
+#threading_run##0 at ./threadingconstructs.jl:177
+unknown function (ip: 0x7ace12518575) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+unknown function (ip: 0x7acf9ba98e4f) at /lib/x86_64-linux-gnu/libc.so.6
+pthread_cond_wait at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+ijl_task_get_next at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/scheduler.c:523
+poptask at ./task.jl:1187
+wait at ./task.jl:1199
+#wait#398 at ./condition.jl:141
+wait at ./condition.jl:136 [inlined]
+#start_gc_msgs_task##2 at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/usr/share/julia/stdlib/v1.12/Distributed/src/remotecall.jl:281 [inlined]
+lock at ./lock.jl:335
+lock at ./condition.jl:80 [inlined]
+#start_gc_msgs_task##0 at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/usr/share/julia/stdlib/v1.12/Distributed/src/remotecall.jl:279
+unknown function (ip: 0x7ace1251534f) at (unknown file)
+jl_apply at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/julia.h:2391 [inlined]
+start_task at /cache/build/tester-amdci4-14/julialang/julia-release-1-dot-12/src/task.c:1249
+unknown function (ip: (nil)) at (unknown file)
+Allocations: 114621939210 (Pool: 114621938856; Big: 354); GC: 2589

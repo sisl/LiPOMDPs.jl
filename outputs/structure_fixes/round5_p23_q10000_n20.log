@@ -1,0 +1,46 @@
+The latest version of Julia in the `release` channel is 1.13.2+0.x64.linux.gnu. You currently have `1.12.0+0.x64.linux.gnu` installed. Run:
+
+  juliaup update
+
+in your terminal shell to install Julia 1.13.2+0.x64.linux.gnu and update the `release` channel to that version.
+400 episodes on 56 threads, queries=10000, seeds=[1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020]
+done in 40 min
+
+planning p2, α=0.5  (seeds 1001–1020; evaluation model 6)
+  config                  disc        Δ vs TA    Δ vs OSL-TA   expl  mines  mean open year per site (0 = never)
+  PC base d25            1.547  +0.104 ±0.051  +0.098 ±0.023   40.8   3.00  15.4 16.2 13.4 13.5  (522s/ep)
+  PC base d27            1.565  +0.122 ±0.054  +0.116 ±0.032   41.6   3.00  15.4 12.7 15.3 15.4  (533s/ep)
+  PC base d27 cheap      1.596  +0.153 ±0.045  +0.147 ±0.026   14.2   3.00  16.6 15.1 12.9 14.8  (530s/ep)
+  TA                     1.443  +0.000 ±0.000  -0.006 ±0.046    0.0   3.00  25.8  8.1 10.0 16.1  (0s/ep)
+  OSL-TA                 1.450  +0.006 ±0.046  +0.000 ±0.000   12.5   3.00  20.0 10.1 12.8 13.1  (42s/ep)
+
+planning p2, α=1.0  (seeds 1001–1020; evaluation model 6)
+  config                  disc        Δ vs TA    Δ vs OSL-TA   expl  mines  mean open year per site (0 = never)
+  PC base d25            3.497  +0.225 ±0.103  +0.187 ±0.053   42.7   3.00  15.6 12.9 13.8 15.2  (523s/ep)
+  PC base d27            3.453  +0.182 ±0.103  +0.144 ±0.045   43.0   3.00  12.8 15.4 13.9 14.8  (529s/ep)
+  PC base d27 cheap      3.470  +0.198 ±0.107  +0.160 ±0.058   26.9   3.00  18.4 10.1 13.4 14.8  (530s/ep)
+  TA                     3.272  +0.000 ±0.000  -0.038 ±0.105    0.0   3.00  25.9  6.8  9.0 17.2  (0s/ep)
+  OSL-TA                 3.309  +0.038 ±0.105  +0.000 ±0.000   11.4   3.00  22.6  7.9 10.9 13.6  (41s/ep)
+
+planning p3, α=0.5  (seeds 1001–1020; evaluation model 6)
+  config                  disc        Δ vs TA    Δ vs OSL-TA   expl  mines  mean open year per site (0 = never)
+  PC base d25            1.718  -0.045 ±0.029  +0.034 ±0.020   45.4   3.00  19.6 12.8 17.3 16.6  (534s/ep)
+  PC base d27            1.713  -0.050 ±0.032  +0.029 ±0.021   46.8   3.00  22.1 11.3 15.8 16.9  (539s/ep)
+  PC base d27 cheap      1.714  -0.048 ±0.024  +0.030 ±0.023   24.7   3.00  19.8  8.7 16.9 20.1  (543s/ep)
+  TA                     1.762  +0.000 ±0.000  +0.078 ±0.027    0.0   3.00  26.9  0.0 18.0 22.9  (0s/ep)
+  OSL-TA                 1.684  -0.078 ±0.027  +0.000 ±0.000   16.1   3.00  14.8 14.5 17.3 19.3  (58s/ep)
+
+planning p3, α=1.0  (seeds 1001–1020; evaluation model 6)
+  config                  disc        Δ vs TA    Δ vs OSL-TA   expl  mines  mean open year per site (0 = never)
+  PC base d25            3.718  -0.098 ±0.053  +0.095 ±0.038   44.3   3.00  17.0 14.1 16.8 17.2  (538s/ep)
+  PC base d27            3.685  -0.131 ±0.063  +0.062 ±0.056   45.7   3.00  18.1 14.4 15.4 17.7  (536s/ep)
+  PC base d27 cheap      3.725  -0.091 ±0.059  +0.102 ±0.046   37.5   3.00  22.4 10.6 16.4 16.2  (347s/ep)
+  TA                     3.816  +0.000 ±0.000  +0.194 ±0.047    0.0   3.00  26.9  0.0 17.0 22.9  (0s/ep)
+  OSL-TA                 3.622  -0.194 ±0.047  +0.000 ±0.000   13.9   3.00  14.7 14.7 16.9 17.1  (49s/ep)
+
+POOLED over all cells × seeds (paired):
+  PC base d25          mean 2.620   Δ vs TA +0.047 ± 0.035   Δ vs OSL-TA +0.104 ± 0.019
+  PC base d27          mean 2.604   Δ vs TA +0.031 ± 0.036   Δ vs OSL-TA +0.088 ± 0.021
+  PC base d27 cheap    mean 2.626   Δ vs TA +0.053 ± 0.035   Δ vs OSL-TA +0.110 ± 0.021
+  TA                   mean 2.573   Δ vs TA +0.000 ± 0.000   Δ vs OSL-TA +0.057 ± 0.033
+  OSL-TA               mean 2.516   Δ vs TA -0.057 ± 0.033   Δ vs OSL-TA +0.000 ± 0.000

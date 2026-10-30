@@ -11,10 +11,11 @@ import LiPOMDPs: calculate_total_production, compute_costs, compute_emissions
 
 const PGFPLOTSX_PRIMED = Ref(false)
 
-const PLANNING_PRICE_MODELS = [1,2,3,4]
+const PLANNING_PRICE_MODELS = length(ARGS) >= 1 ? parse.(Int, split(ARGS[1], ",")) : [1, 2, 3, 4, 6]
 const EVALUATION_PRICE_MODEL = 6
 const ALPHA = 0.5
-const TIME_HORIZON = 29
+const TIME_HORIZON = LiPOMDP().time_horizon   # model default (1995–2025)
+const OUTPUT_DIR = "outputs/belief_timeline"
 const N_STEPS = TIME_HORIZON
 const HEURISTIC = "DynamicProfitMaximizer" # e.g. "ExploreOnly", "RandomHeuristicPolicy", "OneStepLookahead"
 
@@ -24,17 +25,16 @@ const SEED_MODE = "test" # "train", "test", or "custom"
 const SEED_INDEX = 1     # i in (i + 1000) or (i + 2000)
 const CUSTOM_SEED = 42
 
+# Same POMCPOW setup as scripts/final_results_best_pomcpow.jl
 const POMCPOW_CONFIG = Dict(
-    "tree_queries" => 15000,
+    "tree_queries" => 10_000,
     "max_depth" => 25,
-    "ucb_c" => 1.0,
+    "ucb_c" => 4.0,
     "enable_action_pw" => true,
     "k_action" => 5.0,
     "alpha_action" => 0.5,
     "k_observation" => 3.0,
     "alpha_observation" => 0.3,
-    "eps" => 0.01,
-    "max_time" => 2.0
 )
 
 const ACTION_COLORS = Dict(
@@ -56,10 +56,10 @@ const ACTION_MARKERS = Dict(
 )
 
 const DEPOSIT_LABELS = [
-    "DLE mine #1",
-    "DLE mine #2",
-    "Hard rock mine #1",
-    "Hard rock mine #2"
+    "DLE #1",
+    "DLE #2",
+    "Mineral ore #1",
+    "Mineral ore #2"
 ]
 
 const DEPOSIT_COLORS = [
@@ -105,33 +105,36 @@ function resolve_seed()
     end
 end
 
-function simulate_policy(planning_pomdp::LiPOMDP, evaluation_pomdp::LiPOMDP, policy, n_steps::Int; initial_state=nothing, initial_belief=nothing)
-    if initial_state === nothing || initial_belief === nothing
-        s, b = create_initial_belief(planning_pomdp)
-    else
-        s, b = initial_state, initial_belief
-    end
-    updater = LiBeliefUpdater(P=evaluation_pomdp)
+# The agent filters with its own (planning) model, as in final_results_best_pomcpow.jl. Each step's
+# environment noise comes from (seed, t), so every policy faces the same price/demand draws.
+function simulate_policy(planning_pomdp::LiPOMDP, evaluation_pomdp::LiPOMDP, policy, n_steps::Int, seed::Int;
+                         initial_state, initial_belief)
+    s, b = initial_state, initial_belief
+    updater = LiBeliefUpdater(P=planning_pomdp)
 
-    states = State[]
+    prev_states = State[]   # state the action was taken in (used for costs and rewards)
+    states = State[]        # state after the step (plotted)
     beliefs = LiBelief[]
-    actions = Action[]
+    actions = Action[]      # executed actions: opens refused by the capital budget are removed
     rewards = Float64[]
 
-    for _ in 1:n_steps
+    for t in 1:n_steps
         a = POMDPs.action(policy, b)
-        sp, o, r = gen(evaluation_pomdp, s, a, Random.GLOBAL_RNG)
+        Random.seed!(hash((seed, t)))
+        sp, o, r = gen(evaluation_pomdp, s, a, MersenneTwister(hash((seed, t, :env))))
         b = update(updater, b, a, o)
 
-        push!(actions, a)
+        push!(prev_states, s)
+        push!(actions, LiPOMDPs.effective_action(evaluation_pomdp, s.have_opened, a))
         push!(states, sp)
         push!(beliefs, b)
         push!(rewards, r)
 
         s = sp
+        isterminal(evaluation_pomdp, sp) && break
     end
 
-    return (states=states, beliefs=beliefs, actions=actions, rewards=rewards)
+    return (prev_states=prev_states, states=states, beliefs=beliefs, actions=actions, rewards=rewards)
 end
 
 function action_status(a::Action, s::State, site::Int)
@@ -210,6 +213,9 @@ function add_legend!(p)    scatter!(p, [NaN], [NaN], marker=ACTION_MARKERS[:expl
         markercolor=ACTION_COLORS[:restore], markerstrokecolor=:black, markerstrokewidth=0.08, label="RESTORE")
     scatter!(p, [NaN], [NaN], marker=ACTION_MARKERS[:true_reserves], markersize=2.5,
         markercolor=ACTION_COLORS[:true_reserves], markerstrokecolor=:black, markerstrokewidth=0.08, label="TRUE RESERVES")
+    scatter!(p, [NaN], [NaN], marker=:rect, markersize=4,
+        markercolor=DEPOSIT_COLORS[1], markeralpha=0.55, markerstrokecolor=DEPOSIT_COLORS[1],
+        markerstrokewidth=0.7, label="BELIEF")
 end
 
 function summarize_metrics(pomdp::LiPOMDP, result)
@@ -220,7 +226,7 @@ function summarize_metrics(pomdp::LiPOMDP, result)
     total_demand = 0.0
     total_production = 0.0
 
-    for (t, (s, a, r)) in enumerate(zip(result.states, result.actions, result.rewards))
+    for (t, (s, a, r)) in enumerate(zip(result.prev_states, result.actions, result.rewards))
         costs = compute_costs(pomdp, s, a)
         emissions = compute_emissions(pomdp, s, a)
         current_production, _ = calculate_total_production(pomdp, s)
@@ -247,12 +253,13 @@ end
 
 function format_metrics(metrics::Dict)
     disc_reward = round(metrics["discounted_reward"], digits=2)
-    profit_m = round(metrics["total_profit"] / 1e6, digits=1)
+    profit_m = round(metrics["total_profit"] / 1e6, digits=0)
     emission_m = round(metrics["total_emission_cost"] / 1e6, digits=1)
     met_pct = round(metrics["met_demand_pct"], digits=1)
     return "Time Period\n\nDisc. Reward: $(disc_reward)\nProfit: $(profit_m)M USD\nEmissions: $(emission_m)M USD\nMet demand: $(met_pct)%"
 end
 
+mkpath(OUTPUT_DIR)
 seed = resolve_seed()
 Random.seed!(seed)
 println("Using seed: $seed ($(SEED_MODE) sim index $(SEED_INDEX))")
@@ -274,8 +281,6 @@ for planning_price_model in PLANNING_PRICE_MODELS
     initial_state, initial_belief = create_initial_belief(planning_pomdp)
 
     pomcpow_solver = POMCPOWSolver(
-        eps = POMCPOW_CONFIG["eps"],
-        max_time = POMCPOW_CONFIG["max_time"],
         max_depth = POMCPOW_CONFIG["max_depth"],
         tree_queries = POMCPOW_CONFIG["tree_queries"],
         criterion = MaxUCB(POMCPOW_CONFIG["ucb_c"]),
@@ -283,18 +288,20 @@ for planning_price_model in PLANNING_PRICE_MODELS
         k_action = POMCPOW_CONFIG["k_action"],
         alpha_action = POMCPOW_CONFIG["alpha_action"],
         k_observation = POMCPOW_CONFIG["k_observation"],
-        alpha_observation = POMCPOW_CONFIG["alpha_observation"]
+        alpha_observation = POMCPOW_CONFIG["alpha_observation"],
+        estimate_value = FORollout(TimingAwarePolicy(planning_pomdp)),
+        final_criterion = POMCPOW.MaxQ()
     )
     pomcpow_policy = solve(pomcpow_solver, planning_pomdp)
 
     # Deep copy initial state/belief for each simulation since State is mutable
-    pomcpow_results = simulate_policy(planning_pomdp, evaluation_pomdp, pomcpow_policy, N_STEPS; initial_state=deepcopy(initial_state), initial_belief=deepcopy(initial_belief))
-    explore_results = simulate_policy(planning_pomdp, evaluation_pomdp, ExploreOnlyPolicy(planning_pomdp), N_STEPS; initial_state=deepcopy(initial_state), initial_belief=deepcopy(initial_belief))
+    pomcpow_results = simulate_policy(planning_pomdp, evaluation_pomdp, pomcpow_policy, N_STEPS, seed; initial_state=deepcopy(initial_state), initial_belief=deepcopy(initial_belief))
+    explore_results = simulate_policy(planning_pomdp, evaluation_pomdp, ExploreOnlyPolicy(planning_pomdp), N_STEPS, seed; initial_state=deepcopy(initial_state), initial_belief=deepcopy(initial_belief))
     onemine_results = simulate_policy(
         planning_pomdp,
         evaluation_pomdp,
         ProfitMaximizerPolicy(planning_pomdp, debug=false, top_k=1, times=[1]),
-        N_STEPS;
+        N_STEPS, seed;
         initial_state=deepcopy(initial_state),
         initial_belief=deepcopy(initial_belief)
     )
@@ -302,7 +309,7 @@ for planning_price_model in PLANNING_PRICE_MODELS
         planning_pomdp,
         evaluation_pomdp,
         DynamicProfitMaximizerPolicy(planning_pomdp, debug=false),
-        N_STEPS;
+        N_STEPS, seed;
         initial_state=deepcopy(initial_state),
         initial_belief=deepcopy(initial_belief)
     )
@@ -341,7 +348,7 @@ function build_plot(policy_entries, n_sites, policy_metrics)
             idx = (site - 1) * 4 + col
             p = layout_plot[idx]
 
-            for t in 1:N_STEPS
+            for t in eachindex(result.states)
                 dist = result.beliefs[t].deposits_distribution[site]
                 add_belief_violin!(p, dist, t, y_max, DEPOSIT_COLORS[site])
 
@@ -369,7 +376,7 @@ function build_plot(policy_entries, n_sites, policy_metrics)
                 end for v in y_tick_values]
             
             # X-axis ticks: 0, 5, 10, 15, 20, 25
-            x_tick_values = [0, 5, 10, 15, 20, 25]
+            x_tick_values = collect(0:5:N_STEPS)
             x_tick_labels = string.(x_tick_values)
             
             # Larger bottom margin for bottom row subplots to accommodate metrics text
@@ -434,8 +441,8 @@ function build_plot(policy_entries, n_sites, policy_metrics)
     plot!(legend_plot,
         legend=:bottom,
         legendtitle="",  # No legend title
-        legend_columns=6,
-        legendfont=font(16),  # Bigger font for legend
+        legend_columns=7,
+        legendfont=font(14),
         legend_title_font=font(0.1),  # Minimal title font to remove title area padding
         legend_title_position=:top,  # Position title at top (even though empty)
         legend_column_gap=0.0001,  # Minimal spacing between columns
@@ -479,7 +486,7 @@ function build_plot_tex(policy_entries, n_sites, policy_metrics)
             idx = (site - 1) * 4 + col
             p = layout_plot[idx]
 
-            for t in 1:N_STEPS
+            for t in eachindex(result.states)
                 dist = result.beliefs[t].deposits_distribution[site]
                 add_belief_violin!(p, dist, t, y_max, DEPOSIT_COLORS[site])
 
@@ -508,7 +515,7 @@ function build_plot_tex(policy_entries, n_sites, policy_metrics)
                 end for v in y_tick_values]
             
             # X-axis ticks: 0, 5, 10, 15, 20, 25
-            x_tick_values = [0, 5, 10, 15, 20, 25]
+            x_tick_values = collect(0:5:N_STEPS)
             x_tick_labels = string.(x_tick_values)
             
             plot!(p,
@@ -520,7 +527,7 @@ function build_plot_tex(policy_entries, n_sites, policy_metrics)
                 gridalpha=0.2,
                 legend=show_legend ? :bottom : false,
                 legendtitle="",  # No legend title
-                legend_columns=show_legend ? 6 : 1,
+                legend_columns=show_legend ? 7 : 1,
                 legendfont=show_legend ? font(16) : font(8),  # Bigger font for legend
                 legend_title_font=show_legend ? font(1) : font(8),  # Minimal title font since no title
                 legend_column_gap=show_legend ? 0.0001 : 0,  # Minimal spacing between columns
@@ -564,7 +571,7 @@ end
     savefig(init_plot, "pgfplotsx_init.tex")
     rm("pgfplotsx_init.tex"; force=true)
     plot_layout_tex = build_plot_tex(policy_entries, planning_pomdp.n_deposits, policy_metrics)
-    tex_path = "belief_action_timeline_comparison_p$(planning_price_model)_e$(EVALUATION_PRICE_MODEL)_v1.tex"
+    tex_path = joinpath(OUTPUT_DIR, "belief_action_timeline_comparison_p$(planning_price_model)_e$(EVALUATION_PRICE_MODEL).tex")
     try
         savefig(plot_layout_tex, tex_path)
         if filesize(tex_path) < 1000
@@ -579,7 +586,7 @@ end
     # Save PDF (vector) after TeX export
     gr()
     plot_layout = build_plot(policy_entries, planning_pomdp.n_deposits, policy_metrics)
-    pdf_path = "belief_action_timeline_comparison_p$(planning_price_model)_e$(EVALUATION_PRICE_MODEL)_v1.pdf"
+    pdf_path = joinpath(OUTPUT_DIR, "belief_action_timeline_comparison_p$(planning_price_model)_e$(EVALUATION_PRICE_MODEL).pdf")
     savefig(plot_layout, pdf_path)
     println("Saved plot to $(pdf_path)")
 end

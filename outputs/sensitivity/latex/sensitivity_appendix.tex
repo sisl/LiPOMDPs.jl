@@ -1,0 +1,30 @@
+\begin{table}[H]
+\centering
+\caption{Sensitivity of discounted reward to the remaining model inputs ($\alpha=0.5$)}
+\label{tab:sensitivity_appendix}
+\renewcommand{\arraystretch}{1.1}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}llrrrrrrl@{}}
+\toprule
+Parameter & Level & POMCPOW & OSL & Timing-Aware & Dyn.\ Profit & $\Delta$ POMCPOW & POMCPOW $-$ OSL & Best \\
+\midrule
+Baseline              &               & \textbf{1.876} & 1.846 & 1.591 & $-0.875$ &            & $+0.031 \pm 0.037$ & POMCPOW \\
+\addlinespace
+OPEX                  & $\times 0.75$ & \textbf{2.010} & 1.927 & 1.713 & $-0.581$ & $+7.1\%$   & $+0.083 \pm 0.041$ & POMCPOW \\
+                      & $\times 1.25$ & \textbf{1.765} & 1.717 & 1.480 & $-1.170$ & $-5.9\%$   & $+0.048 \pm 0.030$ & POMCPOW \\
+Carbon cost$^{a}$     & $\times 0.5$  & \textbf{1.944} & 1.892 & 1.646 & $-0.778$ & $+3.6\%$   & $+0.052 \pm 0.042$ & POMCPOW \\
+                      & $\times 2$    & \textbf{1.785} & 1.732 & 1.492 & $-1.073$ & $-4.9\%$   & $+0.053 \pm 0.031$ & POMCPOW \\
+Observation noise     & $\times 0.5$  & \textbf{1.895} & 1.840 & 1.591 & $-0.875$ & $+1.0\%$   & $+0.056 \pm 0.034$ & POMCPOW \\
+                      & $\times 2$    & \textbf{1.894} & 1.762 & 1.592 & $-0.875$ & $+1.0\%$   & $+0.133 \pm 0.037$ & POMCPOW \\
+Discount factor$^{a}$ & 0.90          & \textbf{0.861} & 0.848 & 0.729 & $-1.447$ & $-54.1\%$  & $+0.013 \pm 0.012$ & POMCPOW \\
+                      & 0.95          & 3.701 & \textbf{3.736} & 3.181 & $+0.225$ & $+97.2\%$  & $-0.035 \pm 0.108$ & OSL \\
+Deposit size          & $\times 0.75$ & 1.848 & \textbf{1.851} & 1.737 & $-1.023$ & $-1.5\%$   & $-0.003 \pm 0.038$ & OSL \\
+                      & $\times 1.25$ & \textbf{1.903} & 1.901 & 1.738 & $-0.693$ & $+1.4\%$   & $+0.002 \pm 0.026$ & POMCPOW \\
+\bottomrule
+\end{tabular}%
+}
+\par\smallskip
+\begin{minipage}{\textwidth}
+\footnotesize \textit{Note:} Historical planning and evaluation, 20 held-out paired scenarios; same procedure and columns as Table~\ref{tab:sensitivity}. The highest reward in each row is in bold. OSL is One-Step Lookahead with Timing-Aware rollouts (5 rollouts per action). $^{a}$These inputs change the objective itself; compare rankings rather than absolute rewards.
+\end{minipage}
+\end{table}

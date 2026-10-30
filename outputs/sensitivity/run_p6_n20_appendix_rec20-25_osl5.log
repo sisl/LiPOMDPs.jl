@@ -1,0 +1,903 @@
+The latest version of Julia in the `release` channel is 1.13.2+0.x64.linux.gnu. You currently have `1.12.1+0.x64.linux.gnu` installed. Run:
+
+  juliaup update
+
+in your terminal shell to install Julia 1.13.2+0.x64.linux.gnu and update the `release` channel to that version.
+SENSITIVITY  11 settings × 4 policies × 20 seeds = 880 episodes  planning=6 eval=6 α=0.5 queries=10000 threads=60
+  [1/880] 6 min  OPEX ×1.25  POMCPOW seed=2001  disc=1.833
+  [2/880] 7 min  OPEX ×0.75  POMCPOW seed=2001  disc=1.969
+  [3/880] 7 min  OPEX ×1.25  POMCPOW seed=2009  disc=1.971
+  [4/880] 7 min  OPEX ×0.75  POMCPOW seed=2017  disc=2.345
+  [5/880] 7 min  OPEX ×0.75  POMCPOW seed=2014  disc=1.844
+  [6/880] 7 min  OPEX ×0.75  POMCPOW seed=2010  disc=2.053
+  [7/880] 7 min  OPEX ×0.75  POMCPOW seed=2006  disc=1.960
+  [8/880] 7 min  OPEX ×0.75  POMCPOW seed=2013  disc=2.174
+  [9/880] 7 min  OPEX ×0.75  POMCPOW seed=2015  disc=1.404
+  [10/880] 7 min  OPEX ×1.25  POMCPOW seed=2002  disc=2.293
+  [11/880] 7 min  OPEX ×1.25  POMCPOW seed=2011  disc=1.726
+  [12/880] 7 min  OPEX ×1.25  POMCPOW seed=2006  disc=1.689
+  [13/880] 7 min  Baseline   POMCPOW seed=2002  disc=2.432
+  [14/880] 7 min  OPEX ×1.25  POMCPOW seed=2015  disc=1.370
+  [15/880] 7 min  Baseline   POMCPOW seed=2006  disc=1.843
+  [16/880] 7 min  OPEX ×1.25  POMCPOW seed=2013  disc=1.513
+  [17/880] 7 min  OPEX ×1.25  POMCPOW seed=2010  disc=1.846
+  [18/880] 7 min  OPEX ×1.25  POMCPOW seed=2004  disc=1.874
+  [19/880] 7 min  Baseline   POMCPOW seed=2009  disc=2.094
+  [20/880] 7 min  OPEX ×0.75  POMCPOW seed=2002  disc=2.544
+  [21/880] 7 min  OPEX ×0.75  POMCPOW seed=2008  disc=1.835
+  [22/880] 7 min  OPEX ×1.25  POMCPOW seed=2007  disc=1.866
+  [23/880] 7 min  OPEX ×1.25  POMCPOW seed=2005  disc=1.453
+  [24/880] 7 min  OPEX ×1.25  POMCPOW seed=2018  disc=1.958
+  [25/880] 7 min  OPEX ×0.75  POMCPOW seed=2007  disc=2.122
+  [26/880] 7 min  Baseline   POMCPOW seed=2010  disc=1.928
+  [27/880] 7 min  Baseline   POMCPOW seed=2001  disc=2.055
+  [28/880] 7 min  OPEX ×1.25  POMCPOW seed=2019  disc=1.962
+  [29/880] 7 min  Baseline   POMCPOW seed=2015  disc=1.274
+  [30/880] 8 min  OPEX ×1.25  POMCPOW seed=2016  disc=2.026
+  [31/880] 8 min  OPEX ×0.75  POMCPOW seed=2009  disc=2.200
+  [32/880] 8 min  OPEX ×0.75  POMCPOW seed=2018  disc=2.201
+  [33/880] 8 min  Baseline   POMCPOW seed=2005  disc=1.602
+  [34/880] 8 min  OPEX ×0.75  POMCPOW seed=2020  disc=1.506
+  [35/880] 8 min  OPEX ×0.75  POMCPOW seed=2011  disc=1.996
+  [36/880] 8 min  OPEX ×0.75  POMCPOW seed=2019  disc=2.128
+  [37/880] 8 min  Baseline   POMCPOW seed=2018  disc=2.041
+  [38/880] 8 min  Baseline   POMCPOW seed=2020  disc=1.418
+  [39/880] 8 min  Baseline   POMCPOW seed=2012  disc=1.822
+  [40/880] 8 min  OPEX ×0.75  POMCPOW seed=2003  disc=1.847
+  [41/880] 8 min  OPEX ×0.75  POMCPOW seed=2016  disc=2.264
+  [42/880] 8 min  OPEX ×0.75  POMCPOW seed=2005  disc=1.759
+  [43/880] 8 min  OPEX ×1.25  POMCPOW seed=2014  disc=1.581
+  [44/880] 8 min  OPEX ×1.25  POMCPOW seed=2017  disc=2.173
+  [45/880] 8 min  OPEX ×1.25  POMCPOW seed=2008  disc=1.555
+  [46/880] 8 min  Baseline   POMCPOW seed=2008  disc=1.684
+  [47/880] 8 min  Baseline   POMCPOW seed=2004  disc=1.907
+  [48/880] 8 min  OPEX ×1.25  POMCPOW seed=2020  disc=1.347
+  [49/880] 8 min  Baseline   POMCPOW seed=2003  disc=1.683
+  [50/880] 8 min  Baseline   POMCPOW seed=2016  disc=2.146
+  [51/880] 8 min  Baseline   POMCPOW seed=2007  disc=2.012
+  [52/880] 8 min  OPEX ×1.25  POMCPOW seed=2003  disc=1.632
+  [53/880] 8 min  OPEX ×0.75  POMCPOW seed=2004  disc=2.114
+  [54/880] 8 min  Baseline   POMCPOW seed=2013  disc=1.681
+  [55/880] 8 min  OPEX ×0.75  POMCPOW seed=2012  disc=1.990
+  [56/880] 8 min  Baseline   POMCPOW seed=2014  disc=1.654
+  [57/880] 8 min  Baseline   POMCPOW seed=2017  disc=2.252
+  [58/880] 8 min  Baseline   POMCPOW seed=2011  disc=1.862
+  [59/880] 8 min  Baseline   POMCPOW seed=2019  disc=2.082
+  [60/880] 9 min  OPEX ×1.25  POMCPOW seed=2012  disc=1.695
+  [61/880] 13 min  Carbon cost ×0.5  POMCPOW seed=2001  disc=2.006
+  [62/880] 14 min  Carbon cost ×0.5  POMCPOW seed=2006  disc=1.873
+  [63/880] 14 min  Carbon cost ×0.5  POMCPOW seed=2003  disc=1.707
+  [64/880] 14 min  Carbon cost ×2  POMCPOW seed=2001  disc=1.833
+  [65/880] 14 min  Carbon cost ×0.5  POMCPOW seed=2010  disc=1.933
+  [66/880] 14 min  Carbon cost ×0.5  POMCPOW seed=2004  disc=2.048
+  [67/880] 14 min  Carbon cost ×0.5  POMCPOW seed=2002  disc=2.507
+  [68/880] 14 min  Carbon cost ×0.5  POMCPOW seed=2013  disc=1.824
+  [69/880] 14 min  Carbon cost ×0.5  POMCPOW seed=2009  disc=2.140
+  [70/880] 14 min  Carbon cost ×2  POMCPOW seed=2008  disc=1.587
+  [71/880] 14 min  Carbon cost ×2  POMCPOW seed=2010  disc=1.862
+  [72/880] 14 min  Carbon cost ×0.5  POMCPOW seed=2017  disc=2.380
+  [73/880] 14 min  Carbon cost ×0.5  POMCPOW seed=2008  disc=1.733
+  [74/880] 15 min  Carbon cost ×2  POMCPOW seed=2013  disc=1.929
+  [75/880] 15 min  Carbon cost ×0.5  POMCPOW seed=2015  disc=1.309
+  [76/880] 15 min  Carbon cost ×0.5  POMCPOW seed=2014  disc=1.758
+  [77/880] 15 min  Carbon cost ×2  POMCPOW seed=2007  disc=1.887
+  [78/880] 15 min  Carbon cost ×0.5  POMCPOW seed=2011  disc=1.900
+  [79/880] 15 min  Carbon cost ×0.5  POMCPOW seed=2005  disc=1.649
+  [80/880] 15 min  Carbon cost ×0.5  POMCPOW seed=2007  disc=2.060
+  [81/880] 15 min  Carbon cost ×0.5  POMCPOW seed=2019  disc=2.109
+  [82/880] 15 min  Carbon cost ×2  POMCPOW seed=2003  disc=1.624
+  [83/880] 15 min  Observation noise ×0.5  POMCPOW seed=2003  disc=1.699
+  [84/880] 15 min  Carbon cost ×2  POMCPOW seed=2009  disc=1.962
+  [85/880] 15 min  Carbon cost ×2  POMCPOW seed=2002  disc=2.250
+  [86/880] 15 min  Observation noise ×0.5  POMCPOW seed=2006  disc=1.822
+  [87/880] 15 min  Carbon cost ×2  POMCPOW seed=2011  disc=1.723
+  [88/880] 15 min  Carbon cost ×2  POMCPOW seed=2015  disc=1.228
+  [89/880] 15 min  Carbon cost ×2  POMCPOW seed=2004  disc=1.899
+  [90/880] 15 min  Observation noise ×0.5  POMCPOW seed=2011  disc=1.862
+  [91/880] 15 min  Observation noise ×0.5  POMCPOW seed=2009  disc=2.087
+  [92/880] 15 min  Carbon cost ×2  POMCPOW seed=2020  disc=1.369
+  [93/880] 15 min  Observation noise ×0.5  POMCPOW seed=2004  disc=1.995
+  [94/880] 15 min  Carbon cost ×2  POMCPOW seed=2018  disc=1.902
+  [95/880] 15 min  Observation noise ×0.5  POMCPOW seed=2002  disc=2.349
+  [96/880] 15 min  Carbon cost ×0.5  POMCPOW seed=2018  disc=2.131
+  [97/880] 15 min  Carbon cost ×2  POMCPOW seed=2019  disc=1.947
+  [98/880] 15 min  Carbon cost ×2  POMCPOW seed=2014  disc=1.569
+  [99/880] 15 min  Carbon cost ×0.5  POMCPOW seed=2016  disc=2.219
+  [100/880] 15 min  Carbon cost ×2  POMCPOW seed=2012  disc=1.728
+  [101/880] 15 min  Observation noise ×0.5  POMCPOW seed=2007  disc=1.924
+  [102/880] 15 min  Carbon cost ×0.5  POMCPOW seed=2012  disc=1.882
+  [103/880] 15 min  Carbon cost ×2  POMCPOW seed=2017  disc=2.188
+  [104/880] 15 min  Observation noise ×0.5  POMCPOW seed=2001  disc=1.840
+  [105/880] 15 min  Carbon cost ×2  POMCPOW seed=2006  disc=1.743
+  [106/880] 15 min  Observation noise ×0.5  POMCPOW seed=2014  disc=1.701
+  [107/880] 15 min  Observation noise ×0.5  POMCPOW seed=2016  disc=2.139
+  [108/880] 15 min  Observation noise ×0.5  POMCPOW seed=2005  disc=1.602
+  [109/880] 16 min  Carbon cost ×2  POMCPOW seed=2005  disc=1.498
+  [110/880] 16 min  Carbon cost ×2  POMCPOW seed=2016  disc=2.025
+  [111/880] 16 min  Observation noise ×0.5  POMCPOW seed=2017  disc=2.254
+  [112/880] 16 min  Observation noise ×0.5  POMCPOW seed=2008  disc=1.648
+  [113/880] 16 min  Carbon cost ×0.5  POMCPOW seed=2020  disc=1.448
+  [114/880] 16 min  Observation noise ×0.5  POMCPOW seed=2013  disc=2.035
+  [115/880] 16 min  Observation noise ×0.5  POMCPOW seed=2015  disc=1.271
+  [116/880] 16 min  Observation noise ×0.5  POMCPOW seed=2012  disc=1.815
+  [117/880] 16 min  Observation noise ×0.5  POMCPOW seed=2010  disc=1.867
+  [118/880] 16 min  Observation noise ×0.5  POMCPOW seed=2018  disc=2.059
+  [119/880] 16 min  Observation noise ×0.5  POMCPOW seed=2019  disc=2.081
+  [120/880] 17 min  Observation noise ×0.5  POMCPOW seed=2020  disc=1.419
+  [121/880] 20 min  Observation noise ×2  POMCPOW seed=2001  disc=1.976
+  [122/880] 21 min  Observation noise ×2  POMCPOW seed=2005  disc=1.575
+  [123/880] 21 min  Observation noise ×2  POMCPOW seed=2003  disc=1.726
+  [124/880] 21 min  Observation noise ×2  POMCPOW seed=2004  disc=1.716
+  [125/880] 21 min  Observation noise ×2  POMCPOW seed=2008  disc=1.694
+  [126/880] 21 min  Discount factor 0.95  POMCPOW seed=2002  disc=4.862
+  [127/880] 21 min  Observation noise ×2  POMCPOW seed=2020  disc=1.405
+  [128/880] 21 min  Observation noise ×2  POMCPOW seed=2002  disc=2.398
+  [129/880] 22 min  Observation noise ×2  POMCPOW seed=2012  disc=1.821
+  [130/880] 22 min  Observation noise ×2  POMCPOW seed=2006  disc=1.841
+  [131/880] 22 min  Discount factor 0.90  POMCPOW seed=2005  disc=0.714
+  [132/880] 22 min  Discount factor 0.90  POMCPOW seed=2012  disc=0.817
+  [133/880] 22 min  Observation noise ×2  POMCPOW seed=2010  disc=1.939
+  [134/880] 22 min  Discount factor 0.95  POMCPOW seed=2001  disc=3.732
+  [135/880] 22 min  Observation noise ×2  POMCPOW seed=2018  disc=1.976
+  [136/880] 22 min  Observation noise ×2  POMCPOW seed=2013  disc=2.079
+  [137/880] 22 min  Observation noise ×2  POMCPOW seed=2007  disc=2.006
+  [138/880] 22 min  Discount factor 0.90  POMCPOW seed=2002  disc=1.087
+  [139/880] 22 min  Observation noise ×2  POMCPOW seed=2016  disc=2.145
+  [140/880] 22 min  Discount factor 0.90  POMCPOW seed=2001  disc=0.850
+  [141/880] 22 min  Observation noise ×2  POMCPOW seed=2014  disc=1.710
+  [142/880] 22 min  Discount factor 0.95  POMCPOW seed=2003  disc=3.356
+  [143/880] 22 min  Observation noise ×2  POMCPOW seed=2009  disc=2.089
+  [144/880] 22 min  Observation noise ×2  POMCPOW seed=2019  disc=2.070
+  [145/880] 22 min  Observation noise ×2  POMCPOW seed=2011  disc=1.848
+  [146/880] 22 min  Discount factor 0.90  POMCPOW seed=2011  disc=0.821
+  [147/880] 22 min  Discount factor 0.90  POMCPOW seed=2013  disc=0.931
+  [148/880] 22 min  Discount factor 0.90  POMCPOW seed=2010  disc=0.900
+  [149/880] 22 min  Observation noise ×2  POMCPOW seed=2015  disc=1.276
+  [150/880] 22 min  Discount factor 0.90  POMCPOW seed=2003  disc=0.801
+  [151/880] 22 min  Discount factor 0.90  POMCPOW seed=2018  disc=0.954
+  [152/880] 22 min  Discount factor 0.90  POMCPOW seed=2009  disc=0.977
+  [153/880] 23 min  Discount factor 0.90  POMCPOW seed=2014  disc=0.766
+  [154/880] 23 min  Observation noise ×2  POMCPOW seed=2017  disc=2.354
+  [155/880] 23 min  Discount factor 0.95  POMCPOW seed=2006  disc=3.732
+  [156/880] 23 min  Discount factor 0.90  POMCPOW seed=2015  disc=0.562
+  [157/880] 23 min  Discount factor 0.95  POMCPOW seed=2008  disc=3.473
+  [158/880] 23 min  Discount factor 0.90  POMCPOW seed=2006  disc=0.836
+  [159/880] 23 min  Discount factor 0.95  POMCPOW seed=2004  disc=3.814
+  [160/880] 23 min  Discount factor 0.90  POMCPOW seed=2007  disc=0.877
+  [161/880] 23 min  Discount factor 0.90  POMCPOW seed=2017  disc=1.114
+  [162/880] 23 min  Discount factor 0.95  POMCPOW seed=2014  disc=3.462
+  [163/880] 23 min  Discount factor 0.90  POMCPOW seed=2004  disc=0.897
+  [164/880] 23 min  Discount factor 0.95  POMCPOW seed=2013  disc=4.190
+  [165/880] 23 min  Discount factor 0.95  POMCPOW seed=2012  disc=3.731
+  [166/880] 23 min  Discount factor 0.95  POMCPOW seed=2018  disc=4.122
+  [167/880] 23 min  Discount factor 0.95  POMCPOW seed=2007  disc=3.996
+  [168/880] 23 min  Baseline   OneStepLookahead_TimingAware seed=2001  disc=1.734
+  [169/880] 23 min  Discount factor 0.95  POMCPOW seed=2019  disc=3.915
+  [170/880] 23 min  Discount factor 0.90  POMCPOW seed=2016  disc=0.967
+  [171/880] 23 min  Discount factor 0.90  POMCPOW seed=2008  disc=0.757
+  [172/880] 23 min  Discount factor 0.95  POMCPOW seed=2009  disc=3.860
+  [173/880] 23 min  Baseline   OneStepLookahead_TimingAware seed=2003  disc=1.475
+  [174/880] 23 min  Discount factor 0.95  POMCPOW seed=2011  disc=3.801
+  [175/880] 23 min  Discount factor 0.95  POMCPOW seed=2010  disc=3.715
+  [176/880] 23 min  Discount factor 0.90  POMCPOW seed=2019  disc=0.936
+  [177/880] 23 min  Baseline   OneStepLookahead_TimingAware seed=2002  disc=2.477
+  [178/880] 23 min  Baseline   OneStepLookahead_TimingAware seed=2004  disc=1.749
+  [179/880] 23 min  Discount factor 0.90  POMCPOW seed=2020  disc=0.668
+  [180/880] 23 min  Baseline   OneStepLookahead_TimingAware seed=2005  disc=1.652
+  [181/880] 23 min  Baseline   OneStepLookahead_TimingAware seed=2010  disc=1.764
+  [182/880] 23 min  Discount factor 0.95  POMCPOW seed=2005  disc=3.280
+  [183/880] 23 min  Baseline   OneStepLookahead_TimingAware seed=2007  disc=2.068
+  [184/880] 24 min  Baseline   OneStepLookahead_TimingAware seed=2006  disc=1.920
+  [185/880] 24 min  Baseline   OneStepLookahead_TimingAware seed=2013  disc=2.066
+  [186/880] 24 min  Discount factor 0.95  POMCPOW seed=2015  disc=2.970
+  [187/880] 24 min  Baseline   OneStepLookahead_TimingAware seed=2008  disc=1.477
+  [188/880] 24 min  Baseline   OneStepLookahead_TimingAware seed=2009  disc=1.916
+  [189/880] 24 min  Baseline   OneStepLookahead_TimingAware seed=2011  disc=1.866
+  [190/880] 24 min  Baseline   OneStepLookahead_TimingAware seed=2014  disc=1.762
+  [191/880] 24 min  Baseline   OneStepLookahead_TimingAware seed=2012  disc=1.888
+  [192/880] 24 min  Baseline   OneStepLookahead_TimingAware seed=2016  disc=1.955
+  [193/880] 24 min  Baseline   OneStepLookahead_TimingAware seed=2015  disc=1.547
+  [194/880] 24 min  Baseline   OneStepLookahead_TimingAware seed=2017  disc=2.236
+  [195/880] 24 min  Discount factor 0.95  POMCPOW seed=2017  disc=4.592
+  [196/880] 24 min  Baseline   OneStepLookahead_TimingAware seed=2018  disc=1.832
+  [197/880] 24 min  OPEX ×0.75  OneStepLookahead_TimingAware seed=2001  disc=1.885
+  [198/880] 24 min  Baseline   OneStepLookahead_TimingAware seed=2019  disc=2.058
+  [199/880] 24 min  OPEX ×0.75  OneStepLookahead_TimingAware seed=2003  disc=1.704
+  [200/880] 24 min  OPEX ×0.75  OneStepLookahead_TimingAware seed=2002  disc=2.520
+  [201/880] 24 min  OPEX ×0.75  OneStepLookahead_TimingAware seed=2009  disc=1.915
+  [202/880] 24 min  OPEX ×0.75  OneStepLookahead_TimingAware seed=2004  disc=1.854
+  [203/880] 24 min  OPEX ×0.75  OneStepLookahead_TimingAware seed=2006  disc=2.012
+  [204/880] 24 min  Baseline   OneStepLookahead_TimingAware seed=2020  disc=1.476
+  [205/880] 24 min  OPEX ×0.75  OneStepLookahead_TimingAware seed=2007  disc=2.195
+  [206/880] 24 min  OPEX ×0.75  OneStepLookahead_TimingAware seed=2010  disc=1.898
+  [207/880] 24 min  OPEX ×0.75  OneStepLookahead_TimingAware seed=2008  disc=1.503
+  [208/880] 24 min  OPEX ×0.75  OneStepLookahead_TimingAware seed=2011  disc=2.036
+  [209/880] 24 min  OPEX ×0.75  OneStepLookahead_TimingAware seed=2005  disc=1.794
+  [210/880] 24 min  OPEX ×0.75  OneStepLookahead_TimingAware seed=2013  disc=2.164
+  [211/880] 24 min  OPEX ×0.75  OneStepLookahead_TimingAware seed=2018  disc=1.933
+  [212/880] 24 min  OPEX ×0.75  OneStepLookahead_TimingAware seed=2017  disc=2.278
+  [213/880] 24 min  OPEX ×0.75  OneStepLookahead_TimingAware seed=2012  disc=1.971
+  [214/880] 24 min  OPEX ×0.75  OneStepLookahead_TimingAware seed=2016  disc=2.113
+  [215/880] 24 min  OPEX ×0.75  OneStepLookahead_TimingAware seed=2015  disc=1.663
+  [216/880] 24 min  OPEX ×0.75  OneStepLookahead_TimingAware seed=2019  disc=2.070
+  [217/880] 24 min  Discount factor 0.95  POMCPOW seed=2016  disc=4.374
+  [218/880] 24 min  OPEX ×0.75  OneStepLookahead_TimingAware seed=2014  disc=1.869
+  [219/880] 24 min  OPEX ×1.25  OneStepLookahead_TimingAware seed=2001  disc=1.657
+  [220/880] 24 min  OPEX ×0.75  OneStepLookahead_TimingAware seed=2020  disc=1.605
+  [221/880] 24 min  OPEX ×1.25  OneStepLookahead_TimingAware seed=2002  disc=2.209
+  [222/880] 24 min  OPEX ×1.25  OneStepLookahead_TimingAware seed=2003  disc=1.561
+  [223/880] 24 min  OPEX ×1.25  OneStepLookahead_TimingAware seed=2005  disc=1.471
+  [224/880] 24 min  OPEX ×1.25  OneStepLookahead_TimingAware seed=2008  disc=1.337
+  [225/880] 24 min  OPEX ×1.25  OneStepLookahead_TimingAware seed=2004  disc=1.615
+  [226/880] 24 min  OPEX ×1.25  OneStepLookahead_TimingAware seed=2007  disc=1.928
+  [227/880] 24 min  OPEX ×1.25  OneStepLookahead_TimingAware seed=2006  disc=1.794
+  [228/880] 24 min  OPEX ×1.25  OneStepLookahead_TimingAware seed=2011  disc=1.672
+  [229/880] 24 min  OPEX ×1.25  OneStepLookahead_TimingAware seed=2010  disc=1.586
+  [230/880] 24 min  OPEX ×1.25  OneStepLookahead_TimingAware seed=2012  disc=1.721
+  [231/880] 24 min  OPEX ×1.25  OneStepLookahead_TimingAware seed=2009  disc=1.980
+  [232/880] 24 min  OPEX ×1.25  OneStepLookahead_TimingAware seed=2013  disc=1.878
+  [233/880] 25 min  OPEX ×1.25  OneStepLookahead_TimingAware seed=2018  disc=1.742
+  [234/880] 25 min  Discount factor 0.95  POMCPOW seed=2020  disc=2.592
+  [235/880] 25 min  OPEX ×1.25  OneStepLookahead_TimingAware seed=2016  disc=1.914
+  [236/880] 25 min  OPEX ×1.25  OneStepLookahead_TimingAware seed=2014  disc=1.476
+  [237/880] 25 min  OPEX ×1.25  OneStepLookahead_TimingAware seed=2015  disc=1.393
+  [238/880] 25 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2001  disc=1.843
+  [239/880] 25 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2003  disc=1.603
+  [240/880] 25 min  OPEX ×1.25  OneStepLookahead_TimingAware seed=2017  disc=2.372
+  [241/880] 25 min  OPEX ×1.25  OneStepLookahead_TimingAware seed=2019  disc=2.002
+  [242/880] 25 min  OPEX ×1.25  OneStepLookahead_TimingAware seed=2020  disc=1.413
+  [243/880] 25 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2002  disc=2.296
+  [244/880] 25 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2009  disc=1.956
+  [245/880] 25 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2006  disc=1.954
+  [246/880] 25 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2005  disc=1.709
+  [247/880] 25 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2010  disc=1.813
+  [248/880] 25 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2004  disc=1.824
+  [249/880] 25 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2007  disc=2.131
+  [250/880] 25 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2008  disc=1.460
+  [251/880] 25 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2011  disc=1.956
+  [252/880] 25 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2019  disc=1.961
+  [253/880] 25 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2018  disc=2.053
+  [254/880] 25 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2016  disc=2.051
+  [255/880] 25 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2012  disc=1.944
+  [256/880] 25 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2001  disc=1.640
+  [257/880] 25 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2017  disc=2.563
+  [258/880] 25 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2013  disc=2.080
+  [259/880] 25 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2015  disc=1.582
+  [260/880] 25 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2014  disc=1.801
+  [261/880] 25 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2003  disc=1.544
+  [262/880] 25 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2020  disc=1.457
+  [263/880] 25 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2004  disc=1.648
+  [264/880] 25 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2002  disc=2.130
+  [265/880] 25 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2009  disc=1.886
+  [266/880] 25 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2008  disc=1.381
+  [267/880] 25 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2005  disc=1.504
+  [268/880] 25 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2007  disc=1.937
+  [269/880] 25 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2010  disc=1.632
+  [270/880] 25 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2006  disc=1.810
+  [271/880] 25 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2016  disc=1.853
+  [272/880] 25 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2012  disc=1.760
+  [273/880] 25 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2015  disc=1.471
+  [274/880] 25 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2017  disc=2.122
+  [275/880] 25 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2011  disc=1.767
+  [276/880] 25 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2014  disc=1.495
+  [277/880] 25 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2013  disc=1.908
+  [278/880] 25 min  Observation noise ×0.5  OneStepLookahead_TimingAware seed=2001  disc=1.676
+  [279/880] 25 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2019  disc=1.881
+  [280/880] 25 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2018  disc=1.642
+  [281/880] 26 min  Observation noise ×0.5  OneStepLookahead_TimingAware seed=2003  disc=1.701
+  [282/880] 26 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2020  disc=1.411
+  [283/880] 26 min  Observation noise ×0.5  OneStepLookahead_TimingAware seed=2002  disc=2.489
+  [284/880] 26 min  Observation noise ×0.5  OneStepLookahead_TimingAware seed=2005  disc=1.650
+  [285/880] 26 min  Observation noise ×0.5  OneStepLookahead_TimingAware seed=2004  disc=1.866
+  [286/880] 26 min  Observation noise ×0.5  OneStepLookahead_TimingAware seed=2006  disc=1.925
+  [287/880] 26 min  Observation noise ×0.5  OneStepLookahead_TimingAware seed=2008  disc=1.434
+  [288/880] 26 min  Observation noise ×0.5  OneStepLookahead_TimingAware seed=2007  disc=2.071
+  [289/880] 26 min  Observation noise ×0.5  OneStepLookahead_TimingAware seed=2018  disc=1.843
+  [290/880] 26 min  Observation noise ×0.5  OneStepLookahead_TimingAware seed=2013  disc=2.063
+  [291/880] 26 min  Observation noise ×0.5  OneStepLookahead_TimingAware seed=2017  disc=2.194
+  [292/880] 26 min  Observation noise ×0.5  OneStepLookahead_TimingAware seed=2012  disc=1.891
+  [293/880] 26 min  Observation noise ×0.5  OneStepLookahead_TimingAware seed=2009  disc=2.200
+  [294/880] 26 min  Observation noise ×0.5  OneStepLookahead_TimingAware seed=2010  disc=2.016
+  [295/880] 26 min  Observation noise ×0.5  OneStepLookahead_TimingAware seed=2011  disc=1.900
+  [296/880] 26 min  Observation noise ×2  OneStepLookahead_TimingAware seed=2001  disc=1.786
+  [297/880] 26 min  Observation noise ×0.5  OneStepLookahead_TimingAware seed=2014  disc=1.745
+  [298/880] 26 min  Observation noise ×0.5  OneStepLookahead_TimingAware seed=2019  disc=2.059
+  [299/880] 26 min  Observation noise ×0.5  OneStepLookahead_TimingAware seed=2016  disc=1.992
+  [300/880] 26 min  Observation noise ×0.5  OneStepLookahead_TimingAware seed=2015  disc=1.560
+  [301/880] 26 min  Observation noise ×0.5  OneStepLookahead_TimingAware seed=2020  disc=1.490
+  [302/880] 26 min  Observation noise ×2  OneStepLookahead_TimingAware seed=2003  disc=1.593
+  [303/880] 26 min  Observation noise ×2  OneStepLookahead_TimingAware seed=2002  disc=2.448
+  [304/880] 26 min  Observation noise ×2  OneStepLookahead_TimingAware seed=2009  disc=1.854
+  [305/880] 26 min  Observation noise ×2  OneStepLookahead_TimingAware seed=2004  disc=1.663
+  [306/880] 26 min  Observation noise ×2  OneStepLookahead_TimingAware seed=2006  disc=1.728
+  [307/880] 26 min  Observation noise ×2  OneStepLookahead_TimingAware seed=2007  disc=1.766
+  [308/880] 26 min  Observation noise ×2  OneStepLookahead_TimingAware seed=2005  disc=1.640
+  [309/880] 26 min  Observation noise ×2  OneStepLookahead_TimingAware seed=2017  disc=2.165
+  [310/880] 26 min  Observation noise ×2  OneStepLookahead_TimingAware seed=2016  disc=1.882
+  [311/880] 26 min  Observation noise ×2  OneStepLookahead_TimingAware seed=2018  disc=1.891
+  [312/880] 26 min  Observation noise ×2  OneStepLookahead_TimingAware seed=2010  disc=1.746
+  [313/880] 26 min  Observation noise ×2  OneStepLookahead_TimingAware seed=2011  disc=1.787
+  [314/880] 26 min  Observation noise ×2  OneStepLookahead_TimingAware seed=2012  disc=1.749
+  [315/880] 26 min  Observation noise ×2  OneStepLookahead_TimingAware seed=2014  disc=1.594
+  [316/880] 26 min  Observation noise ×2  OneStepLookahead_TimingAware seed=2008  disc=1.480
+  [317/880] 26 min  Observation noise ×2  OneStepLookahead_TimingAware seed=2013  disc=1.960
+  [318/880] 26 min  Observation noise ×2  OneStepLookahead_TimingAware seed=2019  disc=2.000
+  [319/880] 26 min  Observation noise ×2  OneStepLookahead_TimingAware seed=2020  disc=1.420
+  [320/880] 26 min  Observation noise ×2  OneStepLookahead_TimingAware seed=2015  disc=1.172
+  [321/880] 26 min  Discount factor 0.90  OneStepLookahead_TimingAware seed=2001  disc=0.957
+  [322/880] 27 min  Discount factor 0.90  OneStepLookahead_TimingAware seed=2002  disc=1.121
+  [323/880] 27 min  Discount factor 0.90  OneStepLookahead_TimingAware seed=2003  disc=0.782
+  [324/880] 27 min  Discount factor 0.90  OneStepLookahead_TimingAware seed=2004  disc=0.828
+  [325/880] 27 min  Discount factor 0.90  OneStepLookahead_TimingAware seed=2005  disc=0.715
+  [326/880] 27 min  Discount factor 0.90  OneStepLookahead_TimingAware seed=2007  disc=0.936
+  [327/880] 27 min  Discount factor 0.90  OneStepLookahead_TimingAware seed=2006  disc=0.870
+  [328/880] 27 min  Discount factor 0.95  OneStepLookahead_TimingAware seed=2001  disc=3.674
+  [329/880] 27 min  Discount factor 0.90  OneStepLookahead_TimingAware seed=2014  disc=0.721
+  [330/880] 27 min  Discount factor 0.90  OneStepLookahead_TimingAware seed=2011  disc=0.846
+  [331/880] 27 min  Discount factor 0.90  OneStepLookahead_TimingAware seed=2009  disc=1.003
+  [332/880] 27 min  Discount factor 0.90  OneStepLookahead_TimingAware seed=2012  disc=0.777
+  [333/880] 27 min  Discount factor 0.90  OneStepLookahead_TimingAware seed=2008  disc=0.641
+  [334/880] 27 min  Discount factor 0.90  OneStepLookahead_TimingAware seed=2010  disc=0.846
+  [335/880] 27 min  Discount factor 0.90  OneStepLookahead_TimingAware seed=2013  disc=0.896
+  [336/880] 27 min  Discount factor 0.90  OneStepLookahead_TimingAware seed=2015  disc=0.668
+  [337/880] 27 min  Discount factor 0.95  OneStepLookahead_TimingAware seed=2003  disc=3.284
+  [338/880] 27 min  Discount factor 0.95  OneStepLookahead_TimingAware seed=2002  disc=4.230
+  [339/880] 27 min  Discount factor 0.90  OneStepLookahead_TimingAware seed=2018  disc=0.972
+  [340/880] 27 min  Discount factor 0.90  OneStepLookahead_TimingAware seed=2019  disc=0.901
+  [341/880] 27 min  Discount factor 0.95  OneStepLookahead_TimingAware seed=2009  disc=3.582
+  [342/880] 27 min  Discount factor 0.90  OneStepLookahead_TimingAware seed=2020  disc=0.657
+  [343/880] 27 min  Discount factor 0.90  OneStepLookahead_TimingAware seed=2016  disc=0.991
+  [344/880] 27 min  Discount factor 0.90  OneStepLookahead_TimingAware seed=2017  disc=1.130
+  [345/880] 27 min  Discount factor 0.95  OneStepLookahead_TimingAware seed=2016  disc=3.548
+  [346/880] 27 min  Discount factor 0.95  OneStepLookahead_TimingAware seed=2004  disc=3.615
+  [347/880] 27 min  Discount factor 0.95  OneStepLookahead_TimingAware seed=2005  disc=3.235
+  [348/880] 27 min  Discount factor 0.95  OneStepLookahead_TimingAware seed=2006  disc=3.809
+  [349/880] 27 min  Discount factor 0.95  OneStepLookahead_TimingAware seed=2010  disc=3.812
+  [350/880] 27 min  Discount factor 0.95  OneStepLookahead_TimingAware seed=2018  disc=4.048
+  [351/880] 27 min  Discount factor 0.95  OneStepLookahead_TimingAware seed=2019  disc=3.812
+  [352/880] 27 min  Discount factor 0.95  OneStepLookahead_TimingAware seed=2011  disc=3.804
+  [353/880] 27 min  Discount factor 0.95  OneStepLookahead_TimingAware seed=2007  disc=4.064
+  [354/880] 27 min  Discount factor 0.95  OneStepLookahead_TimingAware seed=2008  disc=3.062
+  [355/880] 27 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2003  disc=1.567
+  [356/880] 27 min  Discount factor 0.95  OneStepLookahead_TimingAware seed=2012  disc=3.864
+  [357/880] 27 min  Discount factor 0.95  OneStepLookahead_TimingAware seed=2013  disc=4.323
+  [358/880] 27 min  Discount factor 0.95  OneStepLookahead_TimingAware seed=2014  disc=3.550
+  [359/880] 27 min  Discount factor 0.95  OneStepLookahead_TimingAware seed=2017  disc=5.111
+  [360/880] 27 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2001  disc=2.110
+  [361/880] 27 min  Discount factor 0.95  OneStepLookahead_TimingAware seed=2015  disc=3.179
+  [362/880] 27 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2004  disc=1.869
+  [363/880] 27 min  Discount factor 0.95  OneStepLookahead_TimingAware seed=2020  disc=2.989
+  [364/880] 27 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2002  disc=2.449
+  [365/880] 27 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2005  disc=1.639
+  [366/880] 27 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2006  disc=1.791
+  [367/880] 27 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2007  disc=1.611
+  [368/880] 27 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2010  disc=1.709
+  [369/880] 28 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2008  disc=1.723
+  [370/880] 28 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2011  disc=1.743
+  [371/880] 28 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2009  disc=2.031
+  [372/880] 28 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2016  disc=1.788
+  [373/880] 28 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2012  disc=1.856
+  [374/880] 28 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2013  disc=2.091
+  [375/880] 28 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2014  disc=1.383
+  [376/880] 28 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2001  disc=1.789
+  [377/880] 28 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2019  disc=1.898
+  [378/880] 28 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2015  disc=1.381
+  [379/880] 28 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2018  disc=2.027
+  [380/880] 28 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2017  disc=2.495
+  [381/880] 28 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2003  disc=1.724
+  [382/880] 28 min  Baseline   TimingAware seed=2001  disc=1.135
+  [383/880] 28 min  Baseline   TimingAware seed=2002  disc=2.503
+  [384/880] 28 min  Baseline   TimingAware seed=2003  disc=1.573
+  [385/880] 28 min  Baseline   TimingAware seed=2004  disc=1.643
+  [386/880] 28 min  Baseline   TimingAware seed=2005  disc=1.265
+  [387/880] 28 min  Baseline   TimingAware seed=2006  disc=1.800
+  [388/880] 28 min  Baseline   TimingAware seed=2007  disc=1.799
+  [389/880] 28 min  Baseline   TimingAware seed=2008  disc=1.387
+  [390/880] 28 min  Baseline   TimingAware seed=2009  disc=2.127
+  [391/880] 28 min  Baseline   TimingAware seed=2010  disc=1.650
+  [392/880] 28 min  Baseline   TimingAware seed=2011  disc=1.806
+  [393/880] 28 min  Baseline   TimingAware seed=2012  disc=1.472
+  [394/880] 28 min  Baseline   TimingAware seed=2013  disc=1.434
+  [395/880] 28 min  Baseline   TimingAware seed=2014  disc=1.499
+  [396/880] 28 min  Baseline   TimingAware seed=2015  disc=0.038
+  [397/880] 28 min  Baseline   TimingAware seed=2016  disc=2.198
+  [398/880] 28 min  Baseline   TimingAware seed=2017  disc=2.117
+  [399/880] 28 min  Baseline   TimingAware seed=2018  disc=2.023
+  [400/880] 28 min  Baseline   TimingAware seed=2019  disc=2.058
+  [401/880] 28 min  Baseline   TimingAware seed=2020  disc=0.282
+  [402/880] 28 min  OPEX ×0.75  TimingAware seed=2001  disc=1.257
+  [403/880] 28 min  OPEX ×0.75  TimingAware seed=2002  disc=2.584
+  [404/880] 28 min  OPEX ×0.75  TimingAware seed=2003  disc=1.707
+  [405/880] 28 min  OPEX ×0.75  TimingAware seed=2004  disc=1.771
+  [406/880] 28 min  OPEX ×0.75  TimingAware seed=2005  disc=1.407
+  [407/880] 28 min  OPEX ×0.75  TimingAware seed=2006  disc=1.951
+  [408/880] 28 min  OPEX ×0.75  TimingAware seed=2007  disc=1.960
+  [409/880] 28 min  OPEX ×0.75  TimingAware seed=2008  disc=1.566
+  [410/880] 28 min  OPEX ×0.75  TimingAware seed=2009  disc=1.876
+  [411/880] 28 min  OPEX ×0.75  TimingAware seed=2010  disc=1.781
+  [412/880] 28 min  OPEX ×0.75  TimingAware seed=2011  disc=1.958
+  [413/880] 28 min  OPEX ×0.75  TimingAware seed=2012  disc=1.648
+  [414/880] 28 min  OPEX ×0.75  TimingAware seed=2013  disc=1.603
+  [415/880] 28 min  OPEX ×0.75  TimingAware seed=2014  disc=1.658
+  [416/880] 28 min  OPEX ×0.75  TimingAware seed=2015  disc=0.209
+  [417/880] 28 min  OPEX ×0.75  TimingAware seed=2016  disc=2.279
+  [418/880] 28 min  OPEX ×0.75  TimingAware seed=2017  disc=2.232
+  [419/880] 28 min  OPEX ×0.75  TimingAware seed=2018  disc=2.148
+  [420/880] 28 min  OPEX ×0.75  TimingAware seed=2019  disc=2.197
+  [421/880] 28 min  OPEX ×0.75  TimingAware seed=2020  disc=0.460
+  [422/880] 28 min  OPEX ×1.25  TimingAware seed=2001  disc=1.013
+  [423/880] 28 min  OPEX ×1.25  TimingAware seed=2002  disc=2.362
+  [424/880] 28 min  OPEX ×1.25  TimingAware seed=2003  disc=1.443
+  [425/880] 28 min  OPEX ×1.25  TimingAware seed=2004  disc=1.518
+  [426/880] 28 min  OPEX ×1.25  TimingAware seed=2005  disc=1.125
+  [427/880] 28 min  OPEX ×1.25  TimingAware seed=2006  disc=1.650
+  [428/880] 28 min  OPEX ×1.25  TimingAware seed=2007  disc=1.655
+  [429/880] 28 min  OPEX ×1.25  TimingAware seed=2008  disc=1.235
+  [430/880] 28 min  OPEX ×1.25  TimingAware seed=2009  disc=2.000
+  [431/880] 28 min  OPEX ×1.25  TimingAware seed=2010  disc=1.524
+  [432/880] 28 min  OPEX ×1.25  TimingAware seed=2011  disc=1.661
+  [433/880] 28 min  OPEX ×1.25  TimingAware seed=2012  disc=1.311
+  [434/880] 28 min  OPEX ×1.25  TimingAware seed=2013  disc=1.312
+  [435/880] 28 min  OPEX ×1.25  TimingAware seed=2014  disc=1.359
+  [436/880] 28 min  OPEX ×1.25  TimingAware seed=2015  disc=-0.024
+  [437/880] 28 min  OPEX ×1.25  TimingAware seed=2016  disc=2.072
+  [438/880] 28 min  OPEX ×1.25  TimingAware seed=2017  disc=2.406
+  [439/880] 28 min  OPEX ×1.25  TimingAware seed=2018  disc=1.890
+  [440/880] 28 min  OPEX ×1.25  TimingAware seed=2019  disc=1.916
+  [441/880] 28 min  OPEX ×1.25  TimingAware seed=2020  disc=0.174
+  [442/880] 28 min  Carbon cost ×0.5  TimingAware seed=2001  disc=1.180
+  [443/880] 28 min  Carbon cost ×0.5  TimingAware seed=2002  disc=2.567
+  [444/880] 28 min  Carbon cost ×0.5  TimingAware seed=2003  disc=1.624
+  [445/880] 28 min  Carbon cost ×0.5  TimingAware seed=2004  disc=1.694
+  [446/880] 28 min  Carbon cost ×0.5  TimingAware seed=2005  disc=1.315
+  [447/880] 28 min  Carbon cost ×0.5  TimingAware seed=2006  disc=1.852
+  [448/880] 28 min  Carbon cost ×0.5  TimingAware seed=2007  disc=1.866
+  [449/880] 28 min  Carbon cost ×0.5  TimingAware seed=2008  disc=1.450
+  [450/880] 28 min  Carbon cost ×0.5  TimingAware seed=2009  disc=2.187
+  [451/880] 28 min  Carbon cost ×0.5  TimingAware seed=2010  disc=1.704
+  [452/880] 28 min  Carbon cost ×0.5  TimingAware seed=2011  disc=1.860
+  [453/880] 28 min  Carbon cost ×0.5  TimingAware seed=2012  disc=1.532
+  [454/880] 28 min  Carbon cost ×0.5  TimingAware seed=2013  disc=1.481
+  [455/880] 28 min  Carbon cost ×0.5  TimingAware seed=2014  disc=1.566
+  [456/880] 28 min  Carbon cost ×0.5  TimingAware seed=2015  disc=0.099
+  [457/880] 28 min  Carbon cost ×0.5  TimingAware seed=2016  disc=2.263
+  [458/880] 28 min  Carbon cost ×0.5  TimingAware seed=2017  disc=2.171
+  [459/880] 28 min  Carbon cost ×0.5  TimingAware seed=2018  disc=2.075
+  [460/880] 28 min  Carbon cost ×0.5  TimingAware seed=2019  disc=2.123
+  [461/880] 28 min  Carbon cost ×0.5  TimingAware seed=2020  disc=0.312
+  [462/880] 28 min  Carbon cost ×2  TimingAware seed=2001  disc=1.046
+  [463/880] 28 min  Carbon cost ×2  TimingAware seed=2002  disc=2.361
+  [464/880] 28 min  Carbon cost ×2  TimingAware seed=2003  disc=1.476
+  [465/880] 28 min  Carbon cost ×2  TimingAware seed=2004  disc=1.543
+  [466/880] 28 min  Carbon cost ×2  TimingAware seed=2005  disc=1.167
+  [467/880] 28 min  Carbon cost ×2  TimingAware seed=2006  disc=1.695
+  [468/880] 28 min  Carbon cost ×2  TimingAware seed=2007  disc=1.679
+  [469/880] 28 min  Carbon cost ×2  TimingAware seed=2008  disc=1.284
+  [470/880] 28 min  Carbon cost ×2  TimingAware seed=2009  disc=2.000
+  [471/880] 28 min  Carbon cost ×2  TimingAware seed=2010  disc=1.548
+  [472/880] 28 min  Carbon cost ×2  TimingAware seed=2011  disc=1.704
+  [473/880] 28 min  Carbon cost ×2  TimingAware seed=2012  disc=1.361
+  [474/880] 28 min  Carbon cost ×2  TimingAware seed=2013  disc=1.374
+  [475/880] 28 min  Carbon cost ×2  TimingAware seed=2014  disc=1.381
+  [476/880] 28 min  Carbon cost ×2  TimingAware seed=2015  disc=0.044
+  [477/880] 28 min  Carbon cost ×2  TimingAware seed=2016  disc=2.071
+  [478/880] 28 min  Carbon cost ×2  TimingAware seed=2017  disc=1.997
+  [479/880] 28 min  Carbon cost ×2  TimingAware seed=2018  disc=1.911
+  [480/880] 28 min  Carbon cost ×2  TimingAware seed=2019  disc=1.928
+  [481/880] 28 min  Carbon cost ×2  TimingAware seed=2020  disc=0.276
+  [482/880] 28 min  Observation noise ×0.5  TimingAware seed=2001  disc=1.135
+  [483/880] 28 min  Observation noise ×0.5  TimingAware seed=2002  disc=2.503
+  [484/880] 28 min  Observation noise ×0.5  TimingAware seed=2003  disc=1.573
+  [485/880] 28 min  Observation noise ×0.5  TimingAware seed=2004  disc=1.643
+  [486/880] 28 min  Observation noise ×0.5  TimingAware seed=2005  disc=1.265
+  [487/880] 28 min  Observation noise ×0.5  TimingAware seed=2006  disc=1.800
+  [488/880] 28 min  Observation noise ×0.5  TimingAware seed=2007  disc=1.799
+  [489/880] 28 min  Observation noise ×0.5  TimingAware seed=2008  disc=1.387
+  [490/880] 28 min  Observation noise ×0.5  TimingAware seed=2009  disc=2.127
+  [491/880] 28 min  Observation noise ×0.5  TimingAware seed=2010  disc=1.650
+  [492/880] 28 min  Observation noise ×0.5  TimingAware seed=2011  disc=1.806
+  [493/880] 28 min  Observation noise ×0.5  TimingAware seed=2012  disc=1.472
+  [494/880] 28 min  Observation noise ×0.5  TimingAware seed=2013  disc=1.434
+  [495/880] 28 min  Observation noise ×0.5  TimingAware seed=2014  disc=1.499
+  [496/880] 28 min  Observation noise ×0.5  TimingAware seed=2015  disc=0.038
+  [497/880] 28 min  Observation noise ×0.5  TimingAware seed=2016  disc=2.198
+  [498/880] 28 min  Observation noise ×0.5  TimingAware seed=2017  disc=2.117
+  [499/880] 28 min  Observation noise ×0.5  TimingAware seed=2018  disc=2.023
+  [500/880] 28 min  Observation noise ×0.5  TimingAware seed=2019  disc=2.058
+  [501/880] 28 min  Observation noise ×0.5  TimingAware seed=2020  disc=0.282
+  [502/880] 28 min  Observation noise ×2  TimingAware seed=2001  disc=1.135
+  [503/880] 28 min  Observation noise ×2  TimingAware seed=2002  disc=2.503
+  [504/880] 28 min  Observation noise ×2  TimingAware seed=2003  disc=1.573
+  [505/880] 28 min  Observation noise ×2  TimingAware seed=2004  disc=1.643
+  [506/880] 28 min  Observation noise ×2  TimingAware seed=2005  disc=1.265
+  [507/880] 28 min  Observation noise ×2  TimingAware seed=2006  disc=1.800
+  [508/880] 28 min  Observation noise ×2  TimingAware seed=2007  disc=1.799
+  [509/880] 28 min  Observation noise ×2  TimingAware seed=2008  disc=1.387
+  [510/880] 28 min  Observation noise ×2  TimingAware seed=2009  disc=2.127
+  [511/880] 28 min  Observation noise ×2  TimingAware seed=2010  disc=1.650
+  [512/880] 28 min  Observation noise ×2  TimingAware seed=2011  disc=1.806
+  [513/880] 28 min  Observation noise ×2  TimingAware seed=2012  disc=1.472
+  [514/880] 28 min  Observation noise ×2  TimingAware seed=2013  disc=1.434
+  [515/880] 28 min  Observation noise ×2  TimingAware seed=2014  disc=1.499
+  [516/880] 28 min  Observation noise ×2  TimingAware seed=2015  disc=0.068
+  [517/880] 28 min  Observation noise ×2  TimingAware seed=2016  disc=2.198
+  [518/880] 28 min  Observation noise ×2  TimingAware seed=2017  disc=2.117
+  [519/880] 28 min  Observation noise ×2  TimingAware seed=2018  disc=2.023
+  [520/880] 28 min  Observation noise ×2  TimingAware seed=2019  disc=2.058
+  [521/880] 28 min  Observation noise ×2  TimingAware seed=2020  disc=0.282
+  [522/880] 28 min  Discount factor 0.90  TimingAware seed=2001  disc=0.516
+  [523/880] 28 min  Discount factor 0.90  TimingAware seed=2002  disc=1.134
+  [524/880] 28 min  Discount factor 0.90  TimingAware seed=2003  disc=0.714
+  [525/880] 28 min  Discount factor 0.90  TimingAware seed=2004  disc=0.744
+  [526/880] 28 min  Discount factor 0.90  TimingAware seed=2005  disc=0.567
+  [527/880] 28 min  Discount factor 0.90  TimingAware seed=2006  disc=0.814
+  [528/880] 28 min  Discount factor 0.90  TimingAware seed=2007  disc=0.811
+  [529/880] 28 min  Discount factor 0.90  TimingAware seed=2008  disc=0.624
+  [530/880] 28 min  Discount factor 0.90  TimingAware seed=2009  disc=0.966
+  [531/880] 28 min  Discount factor 0.90  TimingAware seed=2010  disc=0.750
+  [532/880] 28 min  Discount factor 0.90  TimingAware seed=2011  disc=0.816
+  [533/880] 28 min  Discount factor 0.90  TimingAware seed=2012  disc=0.653
+  [534/880] 28 min  Discount factor 0.90  TimingAware seed=2013  disc=0.653
+  [535/880] 28 min  Discount factor 0.90  TimingAware seed=2014  disc=0.674
+  [536/880] 28 min  Discount factor 0.90  TimingAware seed=2015  disc=0.021
+  [537/880] 28 min  Discount factor 0.90  TimingAware seed=2016  disc=1.000
+  [538/880] 28 min  Discount factor 0.90  TimingAware seed=2017  disc=1.153
+  [539/880] 28 min  Discount factor 0.90  TimingAware seed=2018  disc=0.916
+  [540/880] 28 min  Discount factor 0.90  TimingAware seed=2019  disc=0.934
+  [541/880] 28 min  Discount factor 0.90  TimingAware seed=2020  disc=0.122
+  [542/880] 28 min  Discount factor 0.95  TimingAware seed=2001  disc=2.295
+  [543/880] 28 min  Discount factor 0.95  TimingAware seed=2002  disc=4.980
+  [544/880] 28 min  Discount factor 0.95  TimingAware seed=2003  disc=3.195
+  [545/880] 28 min  Discount factor 0.95  TimingAware seed=2004  disc=3.339
+  [546/880] 28 min  Discount factor 0.95  TimingAware seed=2005  disc=2.592
+  [547/880] 28 min  Discount factor 0.95  TimingAware seed=2006  disc=3.658
+  [548/880] 28 min  Discount factor 0.95  TimingAware seed=2007  disc=3.696
+  [549/880] 28 min  Discount factor 0.95  TimingAware seed=2008  disc=2.874
+  [550/880] 28 min  Discount factor 0.95  TimingAware seed=2009  disc=3.581
+  [551/880] 28 min  Discount factor 0.95  TimingAware seed=2010  disc=3.351
+  [552/880] 28 min  Discount factor 0.95  TimingAware seed=2011  disc=3.689
+  [553/880] 28 min  Discount factor 0.95  TimingAware seed=2012  disc=3.056
+  [554/880] 28 min  Discount factor 0.95  TimingAware seed=2013  disc=2.986
+  [555/880] 28 min  Discount factor 0.95  TimingAware seed=2014  disc=3.094
+  [556/880] 28 min  Discount factor 0.95  TimingAware seed=2015  disc=0.189
+  [557/880] 28 min  Discount factor 0.95  TimingAware seed=2016  disc=4.374
+  [558/880] 28 min  Discount factor 0.95  TimingAware seed=2017  disc=4.287
+  [559/880] 28 min  Discount factor 0.95  TimingAware seed=2018  disc=4.095
+  [560/880] 28 min  Discount factor 0.95  TimingAware seed=2019  disc=3.594
+  [561/880] 28 min  Discount factor 0.95  TimingAware seed=2020  disc=0.694
+  [562/880] 28 min  Deposit size ×0.75  TimingAware seed=2001  disc=2.114
+  [563/880] 28 min  Deposit size ×0.75  TimingAware seed=2002  disc=2.503
+  [564/880] 28 min  Deposit size ×0.75  TimingAware seed=2003  disc=1.793
+  [565/880] 28 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2020  disc=1.361
+  [566/880] 28 min  Deposit size ×0.75  TimingAware seed=2004  disc=1.880
+  [567/880] 28 min  Deposit size ×0.75  TimingAware seed=2005  disc=1.223
+  [568/880] 28 min  Deposit size ×0.75  TimingAware seed=2006  disc=1.903
+  [569/880] 28 min  Deposit size ×0.75  TimingAware seed=2008  disc=1.385
+  [570/880] 28 min  Deposit size ×0.75  TimingAware seed=2007  disc=1.799
+  [571/880] 28 min  Deposit size ×0.75  TimingAware seed=2009  disc=2.009
+  [572/880] 28 min  Deposit size ×0.75  TimingAware seed=2010  disc=1.911
+  [573/880] 28 min  Deposit size ×0.75  TimingAware seed=2011  disc=1.891
+  [574/880] 28 min  Deposit size ×0.75  TimingAware seed=2013  disc=1.478
+  [575/880] 28 min  Deposit size ×0.75  TimingAware seed=2012  disc=1.458
+  [576/880] 28 min  Deposit size ×0.75  TimingAware seed=2014  disc=1.499
+  [577/880] 28 min  Deposit size ×0.75  TimingAware seed=2015  disc=0.597
+  [578/880] 28 min  Deposit size ×0.75  TimingAware seed=2016  disc=2.198
+  [579/880] 28 min  Deposit size ×0.75  TimingAware seed=2018  disc=2.134
+  [580/880] 28 min  Deposit size ×0.75  TimingAware seed=2017  disc=2.487
+  [581/880] 28 min  Deposit size ×0.75  TimingAware seed=2019  disc=2.024
+  [582/880] 28 min  Deposit size ×0.75  TimingAware seed=2020  disc=0.447
+  [583/880] 28 min  Deposit size ×1.25  TimingAware seed=2001  disc=1.597
+  [584/880] 28 min  Deposit size ×1.25  TimingAware seed=2003  disc=1.635
+  [585/880] 28 min  Deposit size ×1.25  TimingAware seed=2002  disc=2.503
+  [586/880] 28 min  Deposit size ×1.25  TimingAware seed=2004  disc=1.795
+  [587/880] 28 min  Deposit size ×1.25  TimingAware seed=2005  disc=1.527
+  [588/880] 28 min  Deposit size ×1.25  TimingAware seed=2006  disc=1.831
+  [589/880] 28 min  Deposit size ×1.25  TimingAware seed=2008  disc=1.469
+  [590/880] 28 min  Deposit size ×1.25  TimingAware seed=2007  disc=1.799
+  [591/880] 28 min  Deposit size ×1.25  TimingAware seed=2009  disc=2.185
+  [592/880] 28 min  Deposit size ×1.25  TimingAware seed=2010  disc=1.805
+  [593/880] 28 min  Deposit size ×1.25  TimingAware seed=2011  disc=1.817
+  [594/880] 28 min  Deposit size ×1.25  TimingAware seed=2013  disc=1.516
+  [595/880] 28 min  Deposit size ×1.25  TimingAware seed=2012  disc=1.472
+  [596/880] 28 min  Deposit size ×1.25  TimingAware seed=2014  disc=1.563
+  [597/880] 28 min  Deposit size ×1.25  TimingAware seed=2015  disc=1.084
+  [598/880] 28 min  Deposit size ×1.25  TimingAware seed=2016  disc=2.198
+  [599/880] 28 min  Deposit size ×1.25  TimingAware seed=2017  disc=2.458
+  [600/880] 28 min  Deposit size ×1.25  TimingAware seed=2018  disc=2.079
+  [601/880] 28 min  Deposit size ×1.25  TimingAware seed=2019  disc=2.059
+  [602/880] 28 min  Deposit size ×1.25  TimingAware seed=2020  disc=0.369
+  [603/880] 28 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2005  disc=1.569
+  [604/880] 28 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2004  disc=2.066
+  [605/880] 28 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2002  disc=2.487
+  [606/880] 28 min  Baseline   DynamicProfitMaximizer seed=2002  disc=0.161
+  [607/880] 28 min  Baseline   DynamicProfitMaximizer seed=2003  disc=-0.973
+  [608/880] 28 min  Baseline   DynamicProfitMaximizer seed=2004  disc=-0.930
+  [609/880] 28 min  Baseline   DynamicProfitMaximizer seed=2005  disc=-1.360
+  [610/880] 28 min  Baseline   DynamicProfitMaximizer seed=2001  disc=-1.042
+  [611/880] 28 min  Baseline   DynamicProfitMaximizer seed=2007  disc=-0.693
+  [612/880] 28 min  Baseline   DynamicProfitMaximizer seed=2009  disc=-0.584
+  [613/880] 28 min  Baseline   DynamicProfitMaximizer seed=2006  disc=-0.874
+  [614/880] 28 min  Baseline   DynamicProfitMaximizer seed=2008  disc=-1.594
+  [615/880] 28 min  Baseline   DynamicProfitMaximizer seed=2010  disc=-0.923
+  [616/880] 28 min  Baseline   DynamicProfitMaximizer seed=2011  disc=-1.059
+  [617/880] 28 min  Baseline   DynamicProfitMaximizer seed=2014  disc=-0.757
+  [618/880] 28 min  Baseline   DynamicProfitMaximizer seed=2012  disc=-0.734
+  [619/880] 28 min  Baseline   DynamicProfitMaximizer seed=2013  disc=0.042
+  [620/880] 28 min  Baseline   DynamicProfitMaximizer seed=2015  disc=-2.329
+  [621/880] 28 min  Baseline   DynamicProfitMaximizer seed=2016  disc=0.295
+  [622/880] 28 min  Baseline   DynamicProfitMaximizer seed=2017  disc=-0.462
+  [623/880] 28 min  Baseline   DynamicProfitMaximizer seed=2018  disc=-0.690
+  [624/880] 28 min  Baseline   DynamicProfitMaximizer seed=2019  disc=-0.851
+  [625/880] 28 min  OPEX ×0.75  DynamicProfitMaximizer seed=2001  disc=-0.684
+  [626/880] 28 min  Baseline   DynamicProfitMaximizer seed=2020  disc=-2.152
+  [627/880] 28 min  OPEX ×0.75  DynamicProfitMaximizer seed=2002  disc=0.425
+  [628/880] 28 min  OPEX ×0.75  DynamicProfitMaximizer seed=2003  disc=-0.692
+  [629/880] 28 min  OPEX ×0.75  DynamicProfitMaximizer seed=2004  disc=-0.662
+  [630/880] 28 min  OPEX ×0.75  DynamicProfitMaximizer seed=2005  disc=-1.015
+  [631/880] 28 min  OPEX ×0.75  DynamicProfitMaximizer seed=2006  disc=-0.572
+  [632/880] 28 min  OPEX ×0.75  DynamicProfitMaximizer seed=2007  disc=-0.412
+  [633/880] 28 min  OPEX ×0.75  DynamicProfitMaximizer seed=2008  disc=-1.264
+  [634/880] 28 min  OPEX ×0.75  DynamicProfitMaximizer seed=2009  disc=-0.318
+  [635/880] 28 min  OPEX ×0.75  DynamicProfitMaximizer seed=2010  disc=-0.625
+  [636/880] 28 min  OPEX ×0.75  DynamicProfitMaximizer seed=2011  disc=-0.761
+  [637/880] 28 min  OPEX ×0.75  DynamicProfitMaximizer seed=2012  disc=-0.383
+  [638/880] 28 min  OPEX ×0.75  DynamicProfitMaximizer seed=2015  disc=-2.021
+  [639/880] 28 min  OPEX ×0.75  DynamicProfitMaximizer seed=2013  disc=0.316
+  [640/880] 28 min  OPEX ×0.75  DynamicProfitMaximizer seed=2014  disc=-0.502
+  [641/880] 28 min  OPEX ×0.75  DynamicProfitMaximizer seed=2016  disc=0.579
+  [642/880] 28 min  OPEX ×0.75  DynamicProfitMaximizer seed=2017  disc=-0.217
+  [643/880] 28 min  OPEX ×0.75  DynamicProfitMaximizer seed=2018  disc=-0.433
+  [644/880] 28 min  OPEX ×0.75  DynamicProfitMaximizer seed=2020  disc=-1.848
+  [645/880] 28 min  OPEX ×0.75  DynamicProfitMaximizer seed=2019  disc=-0.529
+  [646/880] 28 min  OPEX ×1.25  DynamicProfitMaximizer seed=2001  disc=-1.400
+  [647/880] 28 min  OPEX ×1.25  DynamicProfitMaximizer seed=2002  disc=-0.103
+  [648/880] 28 min  OPEX ×1.25  DynamicProfitMaximizer seed=2003  disc=-1.254
+  [649/880] 28 min  OPEX ×1.25  DynamicProfitMaximizer seed=2006  disc=-1.176
+  [650/880] 28 min  OPEX ×1.25  DynamicProfitMaximizer seed=2004  disc=-1.198
+  [651/880] 28 min  OPEX ×1.25  DynamicProfitMaximizer seed=2005  disc=-1.704
+  [652/880] 28 min  OPEX ×1.25  DynamicProfitMaximizer seed=2007  disc=-0.974
+  [653/880] 28 min  OPEX ×1.25  DynamicProfitMaximizer seed=2008  disc=-1.923
+  [654/880] 28 min  OPEX ×1.25  DynamicProfitMaximizer seed=2009  disc=-0.850
+  [655/880] 28 min  OPEX ×1.25  DynamicProfitMaximizer seed=2013  disc=-0.232
+  [656/880] 28 min  OPEX ×1.25  DynamicProfitMaximizer seed=2010  disc=-1.220
+  [657/880] 28 min  OPEX ×1.25  DynamicProfitMaximizer seed=2012  disc=-1.084
+  [658/880] 28 min  OPEX ×1.25  DynamicProfitMaximizer seed=2011  disc=-1.358
+  [659/880] 28 min  OPEX ×1.25  DynamicProfitMaximizer seed=2014  disc=-1.012
+  [660/880] 28 min  OPEX ×1.25  DynamicProfitMaximizer seed=2015  disc=-2.637
+  [661/880] 28 min  OPEX ×1.25  DynamicProfitMaximizer seed=2017  disc=-0.707
+  [662/880] 28 min  OPEX ×1.25  DynamicProfitMaximizer seed=2016  disc=0.010
+  [663/880] 28 min  OPEX ×1.25  DynamicProfitMaximizer seed=2019  disc=-1.174
+  [664/880] 28 min  OPEX ×1.25  DynamicProfitMaximizer seed=2018  disc=-0.946
+  [665/880] 28 min  OPEX ×1.25  DynamicProfitMaximizer seed=2020  disc=-2.457
+  [666/880] 28 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2003  disc=-0.870
+  [667/880] 28 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2001  disc=-0.935
+  [668/880] 28 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2002  disc=0.265
+  [669/880] 28 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2005  disc=-1.261
+  [670/880] 28 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2004  disc=-0.832
+  [671/880] 28 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2006  disc=-0.770
+  [672/880] 28 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2007  disc=-0.590
+  [673/880] 28 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2009  disc=-0.472
+  [674/880] 28 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2008  disc=-1.504
+  [675/880] 28 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2010  disc=-0.819
+  [676/880] 28 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2011  disc=-0.992
+  [677/880] 28 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2013  disc=0.149
+  [678/880] 28 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2012  disc=-0.635
+  [679/880] 28 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2015  disc=-2.266
+  [680/880] 28 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2016  disc=0.406
+  [681/880] 28 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2014  disc=-0.655
+  [682/880] 28 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2017  disc=-0.355
+  [683/880] 28 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2018  disc=-0.588
+  [684/880] 28 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2019  disc=-0.744
+  [685/880] 28 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2020  disc=-2.083
+  [686/880] 28 min  Carbon cost ×2  DynamicProfitMaximizer seed=2002  disc=-0.046
+  [687/880] 28 min  Carbon cost ×2  DynamicProfitMaximizer seed=2001  disc=-1.256
+  [688/880] 28 min  Carbon cost ×2  DynamicProfitMaximizer seed=2003  disc=-1.179
+  [689/880] 28 min  Carbon cost ×2  DynamicProfitMaximizer seed=2006  disc=-1.081
+  [690/880] 28 min  Carbon cost ×2  DynamicProfitMaximizer seed=2005  disc=-1.558
+  [691/880] 28 min  Carbon cost ×2  DynamicProfitMaximizer seed=2004  disc=-1.125
+  [692/880] 28 min  Carbon cost ×2  DynamicProfitMaximizer seed=2007  disc=-0.900
+  [693/880] 28 min  Carbon cost ×2  DynamicProfitMaximizer seed=2009  disc=-0.809
+  [694/880] 28 min  Carbon cost ×2  DynamicProfitMaximizer seed=2008  disc=-1.772
+  [695/880] 28 min  Carbon cost ×2  DynamicProfitMaximizer seed=2010  disc=-1.130
+  [696/880] 28 min  Carbon cost ×2  DynamicProfitMaximizer seed=2011  disc=-1.253
+  [697/880] 28 min  Carbon cost ×2  DynamicProfitMaximizer seed=2013  disc=-0.173
+  [698/880] 28 min  Carbon cost ×2  DynamicProfitMaximizer seed=2012  disc=-0.930
+  [699/880] 28 min  Carbon cost ×2  DynamicProfitMaximizer seed=2014  disc=-0.960
+  [700/880] 28 min  Carbon cost ×2  DynamicProfitMaximizer seed=2015  disc=-2.454
+  [701/880] 28 min  Carbon cost ×2  DynamicProfitMaximizer seed=2016  disc=0.089
+  [702/880] 28 min  Carbon cost ×2  DynamicProfitMaximizer seed=2017  disc=-0.675
+  [703/880] 28 min  Carbon cost ×2  DynamicProfitMaximizer seed=2020  disc=-2.291
+  [704/880] 28 min  Carbon cost ×2  DynamicProfitMaximizer seed=2019  disc=-1.064
+  [705/880] 28 min  Carbon cost ×2  DynamicProfitMaximizer seed=2018  disc=-0.893
+  [706/880] 28 min  Observation noise ×0.5  DynamicProfitMaximizer seed=2002  disc=0.161
+  [707/880] 28 min  Observation noise ×0.5  DynamicProfitMaximizer seed=2001  disc=-1.042
+  [708/880] 28 min  Observation noise ×0.5  DynamicProfitMaximizer seed=2003  disc=-0.973
+  [709/880] 28 min  Observation noise ×0.5  DynamicProfitMaximizer seed=2004  disc=-0.930
+  [710/880] 28 min  Observation noise ×0.5  DynamicProfitMaximizer seed=2006  disc=-0.874
+  [711/880] 28 min  Observation noise ×0.5  DynamicProfitMaximizer seed=2005  disc=-1.360
+  [712/880] 28 min  Observation noise ×0.5  DynamicProfitMaximizer seed=2007  disc=-0.693
+  [713/880] 28 min  Observation noise ×0.5  DynamicProfitMaximizer seed=2008  disc=-1.594
+  [714/880] 28 min  Observation noise ×0.5  DynamicProfitMaximizer seed=2010  disc=-0.923
+  [715/880] 28 min  Observation noise ×0.5  DynamicProfitMaximizer seed=2009  disc=-0.585
+  [716/880] 28 min  Observation noise ×0.5  DynamicProfitMaximizer seed=2011  disc=-1.059
+  [717/880] 28 min  Observation noise ×0.5  DynamicProfitMaximizer seed=2012  disc=-0.734
+  [718/880] 28 min  Observation noise ×0.5  DynamicProfitMaximizer seed=2013  disc=0.042
+  [719/880] 28 min  Observation noise ×0.5  DynamicProfitMaximizer seed=2014  disc=-0.757
+  [720/880] 28 min  Observation noise ×0.5  DynamicProfitMaximizer seed=2015  disc=-2.329
+  [721/880] 28 min  Observation noise ×0.5  DynamicProfitMaximizer seed=2016  disc=0.295
+  [722/880] 28 min  Observation noise ×0.5  DynamicProfitMaximizer seed=2019  disc=-0.851
+  [723/880] 28 min  Observation noise ×0.5  DynamicProfitMaximizer seed=2018  disc=-0.690
+  [724/880] 28 min  Observation noise ×0.5  DynamicProfitMaximizer seed=2017  disc=-0.462
+  [725/880] 28 min  Observation noise ×0.5  DynamicProfitMaximizer seed=2020  disc=-2.152
+  [726/880] 28 min  Observation noise ×2  DynamicProfitMaximizer seed=2002  disc=0.161
+  [727/880] 28 min  Observation noise ×2  DynamicProfitMaximizer seed=2003  disc=-0.972
+  [728/880] 28 min  Observation noise ×2  DynamicProfitMaximizer seed=2004  disc=-0.930
+  [729/880] 28 min  Observation noise ×2  DynamicProfitMaximizer seed=2001  disc=-1.042
+  [730/880] 28 min  Observation noise ×2  DynamicProfitMaximizer seed=2005  disc=-1.360
+  [731/880] 28 min  Observation noise ×2  DynamicProfitMaximizer seed=2006  disc=-0.873
+  [732/880] 28 min  Observation noise ×2  DynamicProfitMaximizer seed=2007  disc=-0.693
+  [733/880] 28 min  Observation noise ×2  DynamicProfitMaximizer seed=2008  disc=-1.593
+  [734/880] 28 min  Observation noise ×2  DynamicProfitMaximizer seed=2009  disc=-0.584
+  [735/880] 28 min  Observation noise ×2  DynamicProfitMaximizer seed=2011  disc=-1.059
+  [736/880] 28 min  Observation noise ×2  DynamicProfitMaximizer seed=2010  disc=-0.923
+  [737/880] 28 min  Observation noise ×2  DynamicProfitMaximizer seed=2012  disc=-0.734
+  [738/880] 28 min  Observation noise ×2  DynamicProfitMaximizer seed=2015  disc=-2.329
+  [739/880] 28 min  Observation noise ×2  DynamicProfitMaximizer seed=2013  disc=0.042
+  [740/880] 28 min  Observation noise ×2  DynamicProfitMaximizer seed=2014  disc=-0.757
+  [741/880] 28 min  Observation noise ×2  DynamicProfitMaximizer seed=2017  disc=-0.462
+  [742/880] 28 min  Observation noise ×2  DynamicProfitMaximizer seed=2016  disc=0.295
+  [743/880] 28 min  Observation noise ×2  DynamicProfitMaximizer seed=2018  disc=-0.689
+  [744/880] 28 min  Observation noise ×2  DynamicProfitMaximizer seed=2019  disc=-0.851
+  [745/880] 28 min  Discount factor 0.90  DynamicProfitMaximizer seed=2001  disc=-1.531
+  [746/880] 28 min  Discount factor 0.90  DynamicProfitMaximizer seed=2002  disc=-0.929
+  [747/880] 28 min  Observation noise ×2  DynamicProfitMaximizer seed=2020  disc=-2.152
+  [748/880] 28 min  Discount factor 0.90  DynamicProfitMaximizer seed=2003  disc=-1.474
+  [749/880] 28 min  Discount factor 0.90  DynamicProfitMaximizer seed=2005  disc=-1.739
+  [750/880] 28 min  Discount factor 0.90  DynamicProfitMaximizer seed=2004  disc=-1.444
+  [751/880] 28 min  Discount factor 0.90  DynamicProfitMaximizer seed=2008  disc=-1.827
+  [752/880] 28 min  Discount factor 0.90  DynamicProfitMaximizer seed=2006  disc=-1.446
+  [753/880] 28 min  Discount factor 0.90  DynamicProfitMaximizer seed=2007  disc=-1.341
+  [754/880] 28 min  Discount factor 0.90  DynamicProfitMaximizer seed=2009  disc=-1.298
+  [755/880] 28 min  Discount factor 0.90  DynamicProfitMaximizer seed=2011  disc=-1.494
+  [756/880] 28 min  Discount factor 0.90  DynamicProfitMaximizer seed=2010  disc=-1.493
+  [757/880] 28 min  Discount factor 0.90  DynamicProfitMaximizer seed=2012  disc=-1.413
+  [758/880] 28 min  Discount factor 0.90  DynamicProfitMaximizer seed=2013  disc=-0.978
+  [759/880] 28 min  Discount factor 0.90  DynamicProfitMaximizer seed=2014  disc=-1.346
+  [760/880] 28 min  Discount factor 0.90  DynamicProfitMaximizer seed=2015  disc=-2.190
+  [761/880] 28 min  Discount factor 0.90  DynamicProfitMaximizer seed=2016  disc=-0.858
+  [762/880] 28 min  Discount factor 0.90  DynamicProfitMaximizer seed=2017  disc=-1.214
+  [763/880] 28 min  Discount factor 0.90  DynamicProfitMaximizer seed=2019  disc=-1.494
+  [764/880] 28 min  Discount factor 0.90  DynamicProfitMaximizer seed=2020  disc=-2.122
+  [765/880] 28 min  Discount factor 0.90  DynamicProfitMaximizer seed=2018  disc=-1.317
+  [766/880] 28 min  Discount factor 0.95  DynamicProfitMaximizer seed=2001  disc=-0.065
+  [767/880] 28 min  Discount factor 0.95  DynamicProfitMaximizer seed=2003  disc=-0.011
+  [768/880] 28 min  Discount factor 0.95  DynamicProfitMaximizer seed=2002  disc=2.208
+  [769/880] 28 min  Discount factor 0.95  DynamicProfitMaximizer seed=2004  disc=0.050
+  [770/880] 28 min  Discount factor 0.95  DynamicProfitMaximizer seed=2006  disc=0.232
+  [771/880] 28 min  Discount factor 0.95  DynamicProfitMaximizer seed=2005  disc=-0.574
+  [772/880] 28 min  Discount factor 0.95  DynamicProfitMaximizer seed=2007  disc=0.541
+  [773/880] 28 min  Discount factor 0.95  DynamicProfitMaximizer seed=2008  disc=-1.118
+  [774/880] 28 min  Discount factor 0.95  DynamicProfitMaximizer seed=2009  disc=0.779
+  [775/880] 28 min  Discount factor 0.95  DynamicProfitMaximizer seed=2010  disc=0.181
+  [776/880] 28 min  Discount factor 0.95  DynamicProfitMaximizer seed=2012  disc=0.571
+  [777/880] 28 min  Discount factor 0.95  DynamicProfitMaximizer seed=2011  disc=-0.209
+  [778/880] 28 min  Discount factor 0.95  DynamicProfitMaximizer seed=2014  disc=0.346
+  [779/880] 28 min  Discount factor 0.95  DynamicProfitMaximizer seed=2013  disc=1.951
+  [780/880] 28 min  Discount factor 0.95  DynamicProfitMaximizer seed=2015  disc=-2.529
+  [781/880] 28 min  Discount factor 0.95  DynamicProfitMaximizer seed=2016  disc=2.464
+  [782/880] 28 min  Discount factor 0.95  DynamicProfitMaximizer seed=2018  disc=0.492
+  [783/880] 28 min  Discount factor 0.95  DynamicProfitMaximizer seed=2017  disc=0.955
+  [784/880] 28 min  Discount factor 0.95  DynamicProfitMaximizer seed=2020  disc=-2.165
+  [785/880] 28 min  Discount factor 0.95  DynamicProfitMaximizer seed=2019  disc=0.406
+  [786/880] 28 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2001  disc=-1.169
+  [787/880] 28 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2002  disc=-0.359
+  [788/880] 28 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2004  disc=-1.010
+  [789/880] 28 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2006  disc=-0.902
+  [790/880] 28 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2005  disc=-1.317
+  [791/880] 28 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2003  disc=-1.022
+  [792/880] 28 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2007  disc=-0.724
+  [793/880] 28 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2008  disc=-1.109
+  [794/880] 28 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2009  disc=-0.558
+  [795/880] 28 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2011  disc=-1.119
+  [796/880] 28 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2010  disc=-0.888
+  [797/880] 28 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2013  disc=-0.638
+  [798/880] 28 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2012  disc=-1.549
+  [799/880] 28 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2014  disc=-0.787
+  [800/880] 28 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2015  disc=-2.498
+  [801/880] 28 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2017  disc=-0.483
+  [802/880] 28 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2018  disc=-0.725
+  [803/880] 28 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2016  disc=-0.427
+  [804/880] 28 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2001  disc=-0.816
+  [805/880] 28 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2020  disc=-2.372
+  [806/880] 28 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2002  disc=0.633
+  [807/880] 28 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2019  disc=-0.799
+  [808/880] 28 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2003  disc=-0.945
+  [809/880] 28 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2004  disc=-0.870
+  [810/880] 28 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2006  disc=-0.858
+  [811/880] 28 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2007  disc=-0.010
+  [812/880] 28 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2005  disc=-1.336
+  [813/880] 28 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2009  disc=-0.606
+  [814/880] 28 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2008  disc=-0.958
+  [815/880] 28 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2010  disc=-0.894
+  [816/880] 28 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2011  disc=-0.511
+  [817/880] 28 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2013  disc=0.266
+  [818/880] 28 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2012  disc=-0.699
+  [819/880] 28 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2015  disc=-2.097
+  [820/880] 28 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2016  disc=0.308
+  [821/880] 28 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2014  disc=-0.737
+  [822/880] 28 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2017  disc=-0.466
+  [823/880] 28 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2018  disc=-0.369
+  [824/880] 28 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2019  disc=-0.888
+  [825/880] 28 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2020  disc=-2.004
+  [826/880] 28 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2006  disc=1.845
+  [827/880] 28 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2008  disc=1.692
+  [828/880] 28 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2007  disc=2.066
+  [829/880] 28 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2010  disc=1.931
+  [830/880] 28 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2009  disc=2.039
+  [831/880] 28 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2018  disc=1.955
+  [832/880] 28 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2011  disc=1.909
+  [833/880] 28 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2012  disc=1.878
+  [834/880] 28 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2017  disc=2.239
+  [835/880] 28 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2019  disc=2.057
+  [836/880] 28 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2013  disc=2.130
+  [837/880] 28 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2014  disc=1.403
+  [838/880] 28 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2015  disc=1.620
+  [839/880] 28 min  Deposit size ×0.75  POMCPOW seed=2001  disc=2.057
+  [840/880] 28 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2016  disc=2.191
+  [841/880] 28 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2020  disc=1.544
+  [842/880] 28 min  Deposit size ×0.75  POMCPOW seed=2002  disc=2.385
+  [843/880] 29 min  Deposit size ×0.75  POMCPOW seed=2004  disc=1.870
+  [844/880] 29 min  Deposit size ×0.75  POMCPOW seed=2005  disc=1.534
+  [845/880] 29 min  Deposit size ×0.75  POMCPOW seed=2003  disc=1.701
+  [846/880] 29 min  Deposit size ×0.75  POMCPOW seed=2006  disc=1.723
+  [847/880] 29 min  Deposit size ×0.75  POMCPOW seed=2007  disc=1.987
+  [848/880] 29 min  Deposit size ×0.75  POMCPOW seed=2016  disc=2.144
+  [849/880] 29 min  Deposit size ×0.75  POMCPOW seed=2012  disc=1.810
+  [850/880] 29 min  Deposit size ×0.75  POMCPOW seed=2008  disc=1.669
+  [851/880] 29 min  Deposit size ×0.75  POMCPOW seed=2010  disc=1.782
+  [852/880] 29 min  Deposit size ×0.75  POMCPOW seed=2017  disc=2.436
+  [853/880] 30 min  Deposit size ×0.75  POMCPOW seed=2013  disc=2.064
+  [854/880] 30 min  Deposit size ×0.75  POMCPOW seed=2009  disc=2.043
+  [855/880] 30 min  Deposit size ×0.75  POMCPOW seed=2011  disc=1.848
+  [856/880] 30 min  Deposit size ×0.75  POMCPOW seed=2015  disc=1.275
+  [857/880] 30 min  Deposit size ×1.25  POMCPOW seed=2004  disc=2.034
+  [858/880] 30 min  Deposit size ×0.75  POMCPOW seed=2019  disc=2.017
+  [859/880] 30 min  Deposit size ×1.25  POMCPOW seed=2002  disc=2.361
+  [860/880] 30 min  Deposit size ×1.25  POMCPOW seed=2011  disc=1.842
+  [861/880] 30 min  Deposit size ×1.25  POMCPOW seed=2006  disc=1.842
+  [862/880] 30 min  Deposit size ×0.75  POMCPOW seed=2014  disc=1.687
+  [863/880] 30 min  Deposit size ×1.25  POMCPOW seed=2017  disc=2.276
+  [864/880] 30 min  Deposit size ×1.25  POMCPOW seed=2001  disc=1.902
+  [865/880] 30 min  Deposit size ×1.25  POMCPOW seed=2008  disc=1.644
+  [866/880] 30 min  Deposit size ×1.25  POMCPOW seed=2005  disc=1.597
+  [867/880] 30 min  Deposit size ×1.25  POMCPOW seed=2007  disc=1.952
+  [868/880] 30 min  Deposit size ×1.25  POMCPOW seed=2009  disc=2.138
+  [869/880] 30 min  Deposit size ×0.75  POMCPOW seed=2020  disc=1.142
+  [870/880] 30 min  Deposit size ×1.25  POMCPOW seed=2019  disc=2.089
+  [871/880] 30 min  Deposit size ×1.25  POMCPOW seed=2020  disc=1.483
+  [872/880] 30 min  Deposit size ×1.25  POMCPOW seed=2010  disc=1.980
+  [873/880] 30 min  Deposit size ×1.25  POMCPOW seed=2016  disc=2.118
+  [874/880] 30 min  Deposit size ×1.25  POMCPOW seed=2013  disc=2.086
+  [875/880] 30 min  Deposit size ×1.25  POMCPOW seed=2012  disc=1.815
+  [876/880] 30 min  Deposit size ×1.25  POMCPOW seed=2003  disc=1.736
+  [877/880] 30 min  Deposit size ×0.75  POMCPOW seed=2018  disc=2.052
+  [878/880] 30 min  Deposit size ×1.25  POMCPOW seed=2018  disc=2.068
+  [879/880] 30 min  Deposit size ×1.25  POMCPOW seed=2014  disc=1.595
+  [880/880] 30 min  Deposit size ×1.25  POMCPOW seed=2015  disc=1.507
+880 episodes in 30 min
+
+Mean discounted reward per policy; POMCPOW change vs baseline; POMCPOW − OSL-TA paired over seeds; best policy
+parameter              level      POMCPOW  OSL-TA      TA     DPM  POMCPOW%     met%    mines   PC−OSL-TA ± SE  best
+Baseline                            1.874   1.846   1.591  -0.875     +0.0%      63%     3.00   +0.028 ± 0.040  POMCPOW
+OPEX                   ×0.75        2.013   1.949   1.713  -0.581     +7.4%      67%     3.00   +0.064 ± 0.033  POMCPOW
+OPEX                   ×1.25        1.768   1.736   1.480  -1.170     -5.6%      62%     3.00   +0.032 ± 0.035  POMCPOW
+Carbon cost            ×0.5         1.931   1.902   1.646  -0.778     +3.1%      66%     3.00   +0.029 ± 0.036  POMCPOW
+Carbon cost            ×2           1.788   1.721   1.492  -1.073     -4.6%      62%     3.00   +0.066 ± 0.029  POMCPOW
+Observation noise      ×0.5         1.873   1.888   1.591  -0.875     -0.0%      63%     3.00   -0.015 ± 0.030  OSL-TA
+Observation noise      ×2           1.882   1.766   1.592  -0.875     +0.5%      64%     3.00   +0.116 ± 0.021  POMCPOW
+Discount factor        0.90         0.862   0.863   0.729  -1.447    -54.0%      62%     2.95   -0.001 ± 0.012  OSL-TA
+Discount factor        0.95         3.778   3.730   3.181   0.225   +101.7%      71%     3.00   +0.049 ± 0.070  POMCPOW
+Deposit size           ×0.75        1.861   1.826   1.737  -1.023     -0.7%      62%     3.00   +0.035 ± 0.035  POMCPOW
+Deposit size           ×1.25        1.903   1.907   1.738  -0.693     +1.6%      64%     3.00   -0.003 ± 0.019  OSL-TA
+Note: γ and carbon cost change the objective itself, so compare rankings rather than absolute rewards for those rows.
+CSV: outputs/sensitivity/sensitivity_p6_a0.5_q10000_n20_e6_appendix_rec20-25_osl5.csv

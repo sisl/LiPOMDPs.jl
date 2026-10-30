@@ -230,7 +230,7 @@ function POMDPs.action(policy::EmissionMinimizerPolicy, s::State)
                 
         
                 # Total lifetime emissions (production only)
-                total_lifetime_emissions = lifetime_var_emissions / 1000.0  # Convert kg to tonnes
+                total_lifetime_emissions = lifetime_var_emissions  # t CO2
                 
                 emissions[site] = total_lifetime_emissions
                 
@@ -533,8 +533,8 @@ function POMDPs.action(policy::DynamicProfitMaximizerPolicy, s::State)
                 # Removed: No startup emissions
                 # Emissions are ONLY based on production
                 
-                # Total emissions cost (production only, convert kg to tonnes)
-                total_emissions_cost = (lifetime_variable_emissions / 1000.0) * policy.pomdp.CO2_cost
+                # Total emissions cost (production only) at the social cost of carbon
+                total_emissions_cost = lifetime_variable_emissions * policy.pomdp.CO2_cost
                 
                 # FIXED: Calculate total profit including environmental costs
                 # Total profit = revenue - operational costs - environmental costs
@@ -707,7 +707,7 @@ function POMDPs.action(policy::DynamicEmissionMinimizerPolicy, s::State)
                 emission_factor = policy.pomdp.deposit_types[site] ? policy.pomdp.dle_CO2_emissions : policy.pomdp.mining_CO2_emissions
                 
                 # Total emissions = variable production emissions only (convert kg to tonnes)
-                total_emissions = (realistic_production_per_period * emission_factor * remaining_time) / 1000.0
+                total_emissions = realistic_production_per_period * emission_factor * remaining_time  # t CO2
                 
                 # Store evaluation
                 push!(site_evaluations, (site, total_emissions, realistic_production_per_period, emission_factor))
@@ -895,10 +895,9 @@ function POMDPs.action(policy::AlphaAwareRolloutPolicy, s::State)
                 # Calculate emissions (as negative cost in reward units)
                 variable_emissions_per_tonne = policy.pomdp.deposit_types[site] ? policy.pomdp.dle_CO2_emissions : policy.pomdp.mining_CO2_emissions
                 lifetime_variable_emissions = realistic_sellable * variable_emissions_per_tonne
-                total_emissions_cost = (lifetime_variable_emissions / 1000.0) * policy.pomdp.CO2_cost
+                total_emissions_cost = lifetime_variable_emissions * policy.pomdp.CO2_cost
                 
                 # Use ALPHA to balance profit vs emissions (matching reward function)
-                # Note: emissions are negative in the reward function, so we apply emission_scale_factor
                 alpha_weighted_value = policy.pomdp.alpha * raw_profit + (1 - policy.pomdp.alpha) * (-total_emissions_cost * policy.pomdp.emission_scale_factor)
                 
                 push!(site_evaluations, (site, alpha_weighted_value, expected_recovery, expected_revenue))
@@ -954,10 +953,13 @@ function POMDPs.action(policy::AlphaAwareRolloutPolicy, s::State)
     return Action(site=site_actions, type=site_types)
 end
 
-function POMDPs.action(policy::AlphaAwareRolloutPolicy, b::LiBelief)
-    sampled_deposits = [rand(d) for d in b.deposits_distribution]
-    sampled_price = rand(b.price_distribution)
-    sampled_demand = rand(b.demand_distribution)
+POMDPs.action(policy::AlphaAwareRolloutPolicy, b::LiBelief) = action_from_belief(policy, b, Random.default_rng())
+
+# Samples a state from `b` with `rng` and acts on it.
+function action_from_belief(policy::AlphaAwareRolloutPolicy, b::LiBelief, rng::AbstractRNG)
+    sampled_deposits = [rand(rng, d) for d in b.deposits_distribution]
+    sampled_price = rand(rng, b.price_distribution)
+    sampled_demand = rand(rng, b.demand_distribution)
 
     s = State(
         deposit = sampled_deposits,
@@ -971,6 +973,97 @@ function POMDPs.action(policy::AlphaAwareRolloutPolicy, b::LiBelief)
     )
 
     return POMDPs.action(policy, s)
+end
+
+# Base policies without a sampling step act on the belief directly
+action_from_belief(policy::Policy, b::LiBelief, rng::AbstractRNG) = POMDPs.action(policy, b)
+
+# =============================================================================
+# Timing-Aware Policy (optimal stopping on the expected path)
+# =============================================================================
+
+"""
+TimingAwarePolicy - open the best affordable site at the best time on the expected path.
+
+For each unopened, affordable site it computes the α-weighted discounted value of opening it in
+every remaining year, on the planning model's noise-free price path and expected demand, with
+the site's expected deposit and recovery (construction year, per-ore opex, emissions and
+depletion as in the model). It opens the best site now only if now is that site's best opening
+year and the value is positive: optimal stopping on the mean path. It never explores, so the
+value of information is left to the planner that uses it as a rollout or base policy.
+"""
+struct TimingAwarePolicy <: Policy
+    pomdp::LiPOMDP
+end
+
+# Expected price and demand at each future time τ (index τ), as `transition` would generate them
+function expected_paths(P::LiPOMDP, t::Int, price_now::Float64)
+    H = P.time_horizon
+    price  = zeros(H + 1)
+    demand = zeros(H + 1)
+    for τ in (t + 1):H
+        base = price_base(P, Float64(τ - 1))
+        price[τ]  = base === nothing ? price_now * exp(P.gbm_drift * (τ - t)) : max(base, PRICE_FLOOR)
+        demand[τ] = get_historical_production(P, P.start_year + τ - 1) * P.LCE_per_lithium * P.market_share_target
+    end
+    return price, demand
+end
+
+# α-weighted value, discounted to t_now, of opening `site` at t_open (production starts t_open + 1)
+function opening_value(P::LiPOMDP, site::Int, t_open::Int, t_now::Int, deposit::Float64, r::Float64,
+                       price::Vector{Float64}, demand_left::Vector{Float64})
+    opex = P.deposit_types[site] ? P.dle_opex : P.mining_opex
+    ef   = P.deposit_types[site] ? P.dle_CO2_emissions : P.mining_CO2_emissions
+    threshold = 0.05 * (P.deposit_types[site] ? P.init_deposit_size_dle : P.init_deposit_size_mining)
+    v = -P.alpha * site_capex(P, site) * P.γ^(t_open - t_now)
+    d = deposit
+    for τ in (t_open + 1):P.time_horizon
+        d <= max(threshold, 0.1) && break
+        sold = min(min(P.output, d) * r * P.LCE_per_lithium, max(demand_left[τ], 0.0))
+        d -= sold / (r * P.LCE_per_lithium)
+        profit = sold * (price[τ] - opex * P.recovery[site] / r)
+        emis   = sold * ef * P.CO2_cost
+        v += P.γ^(τ - t_now) * (P.alpha * profit - (1 - P.alpha) * emis * P.emission_scale_factor)
+    end
+    return v
+end
+
+function timing_action(policy::TimingAwarePolicy, t::Int, deposits, recovery, price_now::Float64,
+                       have_opened, is_depleted, restored_mines)
+    P = policy.pomdp
+    n = P.n_deposits
+    price, demand = expected_paths(P, t, price_now)
+    # demand left for a new mine after the capacity of mines already open
+    used = sum((P.output * recovery[i] * P.LCE_per_lithium for i in 1:n
+                if have_opened[i] && !is_depleted[i] && !restored_mines[i]); init=0.0)
+    demand_left = demand .- used
+    best_site, best_v = 0, 0.0
+    for i in 1:n
+        have_opened[i] && continue
+        committed_capex(P, have_opened) + site_capex(P, i) > P.capital_budget && continue
+        v_now = opening_value(P, i, t, t, deposits[i], recovery[i], price, demand_left)
+        v_later = maximum((opening_value(P, i, t2, t, deposits[i], recovery[i], price, demand_left)
+                           for t2 in (t + 1):P.time_horizon); init=-Inf)
+        if v_now > 0 && v_now >= v_later && v_now > best_v
+            best_site, best_v = i, v_now
+        end
+    end
+    types = zeros(Int, n)
+    best_site > 0 && (types[best_site] = 2)
+    return Action(site=collect(1:n), type=types)
+end
+
+function POMDPs.action(policy::TimingAwarePolicy, s::State)
+    P = policy.pomdp
+    return timing_action(policy, Int(s.time), s.deposit, [site_recovery(P, s, i) for i in 1:P.n_deposits],
+                         s.price, s.have_opened, s.is_depleted, s.restored_mines)
+end
+
+function POMDPs.action(policy::TimingAwarePolicy, b::LiBelief)
+    P = policy.pomdp
+    recovery = isempty(b.recovery_distribution) ? copy(P.recovery) : [mean(d) for d in b.recovery_distribution]
+    return timing_action(policy, Int(b.time), [mean(d) for d in b.deposits_distribution], recovery,
+                         mean(b.price_distribution), b.have_opened, b.is_depleted, b.restored_mines)
 end
 
 # =============================================================================
@@ -991,14 +1084,15 @@ which respects the POMDP's alpha parameter for balancing profit vs emissions.
 """
 struct OneStepLookaheadPolicy <: Policy
     pomdp::LiPOMDP
-    rollout_policy::AlphaAwareRolloutPolicy
+    rollout_policy::Policy
     n_rollouts::Int
     debug::Bool
+    rng::AbstractRNG
 end
 
-function OneStepLookaheadPolicy(pomdp::LiPOMDP; n_rollouts=30, debug=false)
-    rollout_policy = AlphaAwareRolloutPolicy(pomdp, debug=false)
-    return OneStepLookaheadPolicy(pomdp, rollout_policy, n_rollouts, debug)
+function OneStepLookaheadPolicy(pomdp::LiPOMDP; n_rollouts=30, debug=false, rng::AbstractRNG=Random.default_rng(),
+                                rollout_policy::Policy=AlphaAwareRolloutPolicy(pomdp, debug=false))
+    return OneStepLookaheadPolicy(pomdp, rollout_policy, n_rollouts, debug, rng)
 end
 
 """
@@ -1112,8 +1206,9 @@ function POMDPs.action(policy::OneStepLookaheadPolicy, s::State)
         println("  Price: $(round(s.price, digits=2))")
     end
     
-    # Generate all feasible actions
-    feasible_actions = generate_feasible_actions(policy, s)
+    # Generate all feasible actions (within the capital budget)
+    feasible_actions = filter(a -> effective_action(policy.pomdp, s.have_opened, a) == a,
+                              generate_feasible_actions(policy, s))
     
     if policy.debug
         println("  Evaluating $(length(feasible_actions)) feasible actions")
@@ -1122,13 +1217,15 @@ function POMDPs.action(policy::OneStepLookaheadPolicy, s::State)
     # Evaluate each action with multiple rollouts
     best_action = feasible_actions[1]
     best_avg_reward = -Inf
+    # Common random numbers: rollout `sim` uses the same seed for every action
+    base_seed = rand(policy.rng, UInt64)
     
     for (idx, a) in enumerate(feasible_actions)
         # Run multiple rollout simulations for this action
         rewards = Float64[]
         
         for sim in 1:policy.n_rollouts
-            rng = Random.MersenneTwister(hash((s.time, idx, sim)))
+            rng = Random.MersenneTwister(hash((base_seed, sim)))
             reward = simulate_rollout(policy, s, a, rng)
             push!(rewards, reward)
         end
@@ -1172,7 +1269,7 @@ function simulate_rollout_belief(policy::OneStepLookaheadPolicy, b0::LiBelief, s
     remaining = Int(policy.pomdp.time_horizon - s.time + 1)
     for _ in 1:remaining
         disc *= policy.pomdp.γ
-        a = action(policy.rollout_policy, b)
+        a = action_from_belief(policy.rollout_policy, b, rng)
         sp, o, r = @gen(:sp, :o, :r)(policy.pomdp, s, a, rng)
         total += disc * r
         isterminal(policy.pomdp, sp) && break
@@ -1199,14 +1296,18 @@ function POMDPs.action(policy::OneStepLookaheadPolicy, b::LiBelief)
         is_depleted = copy(b.is_depleted),
         restored_mines = copy(b.restored_mines),
     )
-    feasible = generate_feasible_actions(policy, s_flags)
+    feasible = filter(a -> effective_action(policy.pomdp, s_flags.have_opened, a) == a,
+                      generate_feasible_actions(policy, s_flags))
     updater = LiBeliefUpdater(P=policy.pomdp)
     best_action = feasible[1]
     best_avg = -Inf
-    for (idx, a) in enumerate(feasible)
+    # Common random numbers: rollout `sim` draws the same hidden state and
+    # noise for every action, so actions are compared on the same scenarios.
+    base_seed = rand(policy.rng, UInt64)
+    for a in feasible
         total = 0.0
         for sim in 1:policy.n_rollouts
-            rng = Random.MersenneTwister(hash((b.time, idx, sim, :onestep)))
+            rng = Random.MersenneTwister(hash((base_seed, sim)))
             s = rand(rng, b)
             total += simulate_rollout_belief(policy, b, s, a, updater, rng)
         end

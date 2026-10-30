@@ -1,0 +1,151 @@
+The latest version of Julia in the `release` channel is 1.13.2+0.x64.linux.gnu. You currently have `1.12.1+0.x64.linux.gnu` installed. Run:
+
+  juliaup update
+
+in your terminal shell to install Julia 1.13.2+0.x64.linux.gnu and update the `release` channel to that version.
+COMPUTE SWEEP  planning=[6]  eval=6  α=[0.25, 0.5, 0.75, 1.0]  γ=0.926  queries=[10000]  rollouts=[30]  budget=2.5e9  seeds=10  threads=27
+  [1/120] 6 min  p6 α=0.25 POMCPOW timing q=10000 seed=4001  disc=0.744 expl=59  (347s)
+  [2/120] 6 min  p6 α=0.75 POMCPOW timing q=10000 seed=4001  disc=2.532 expl=51  (349s)
+  [3/120] 6 min  p6 α=0.50 POMCPOW timing q=10000 seed=4004  disc=1.321 expl=48  (353s)
+  [4/120] 6 min  p6 α=0.75 POMCPOW timing q=10000 seed=4002  disc=2.160 expl=42  (355s)
+  [5/120] 6 min  p6 α=0.50 POMCPOW timing q=10000 seed=4005  disc=1.148 expl=62  (355s)
+  [6/120] 6 min  p6 α=0.25 POMCPOW timing q=10000 seed=4009  disc=0.475 expl=46  (356s)
+  [7/120] 6 min  p6 α=0.25 POMCPOW timing q=10000 seed=4003  disc=0.724 expl=46  (356s)
+  [8/120] 6 min  p6 α=0.75 POMCPOW timing q=10000 seed=4005  disc=1.856 expl=46  (357s)
+  [9/120] 6 min  p6 α=0.50 POMCPOW timing q=10000 seed=4007  disc=1.483 expl=48  (358s)
+  [10/120] 6 min  p6 α=0.50 POMCPOW timing q=10000 seed=4010  disc=1.516 expl=39  (358s)
+  [11/120] 6 min  p6 α=0.75 POMCPOW timing q=10000 seed=4007  disc=2.082 expl=45  (358s)
+  [12/120] 6 min  p6 α=0.50 POMCPOW timing q=10000 seed=4008  disc=1.294 expl=52  (360s)
+  [13/120] 6 min  p6 α=0.25 POMCPOW timing q=10000 seed=4002  disc=0.528 expl=50  (360s)
+  [14/120] 6 min  p6 α=0.50 POMCPOW timing q=10000 seed=4003  disc=1.586 expl=54  (361s)
+  [15/120] 6 min  p6 α=0.50 POMCPOW timing q=10000 seed=4001  disc=1.694 expl=49  (361s)
+  [16/120] 6 min  p6 α=0.50 POMCPOW timing q=10000 seed=4002  disc=1.480 expl=44  (362s)
+  [17/120] 6 min  p6 α=0.75 POMCPOW timing q=10000 seed=4004  disc=2.006 expl=47  (363s)
+  [18/120] 6 min  p6 α=0.75 POMCPOW timing q=10000 seed=4003  disc=2.483 expl=59  (364s)
+  [19/120] 6 min  p6 α=0.25 POMCPOW timing q=10000 seed=4005  disc=0.518 expl=46  (365s)
+  [20/120] 6 min  p6 α=0.25 POMCPOW timing q=10000 seed=4010  disc=0.642 expl=39  (366s)
+  [21/120] 6 min  p6 α=0.50 POMCPOW timing q=10000 seed=4006  disc=1.818 expl=48  (366s)
+  [22/120] 6 min  p6 α=0.25 POMCPOW timing q=10000 seed=4006  disc=0.839 expl=44  (367s)
+  [23/120] 6 min  p6 α=0.50 POMCPOW timing q=10000 seed=4009  disc=1.123 expl=40  (367s)
+  [24/120] 6 min  p6 α=0.25 POMCPOW timing q=10000 seed=4004  disc=0.556 expl=53  (367s)
+  [25/120] 6 min  p6 α=0.75 POMCPOW timing q=10000 seed=4006  disc=2.560 expl=43  (368s)
+  [26/120] 6 min  p6 α=0.25 POMCPOW timing q=10000 seed=4008  disc=0.662 expl=52  (368s)
+  [27/120] 6 min  p6 α=0.25 POMCPOW timing q=10000 seed=4007  disc=0.592 expl=47  (371s)
+  [28/120] 8 min  p6 α=0.25 OneStep timing n=30 seed=4006  disc=0.901 expl=13  (86s)
+  [29/120] 8 min  p6 α=0.25 OneStep timing n=30 seed=4003  disc=0.756 expl=9  (92s)
+  [30/120] 8 min  p6 α=0.25 OneStep timing n=30 seed=4005  disc=0.519 expl=12  (90s)
+  [31/120] 8 min  p6 α=0.25 OneStep timing n=30 seed=4001  disc=0.818 expl=26  (94s)
+  [32/120] 8 min  p6 α=0.25 OneStep timing n=30 seed=4002  disc=0.706 expl=8  (94s)
+  [33/120] 8 min  p6 α=0.25 OneStep timing n=30 seed=4004  disc=0.577 expl=32  (93s)
+  [34/120] 8 min  p6 α=0.50 OneStep timing n=30 seed=4001  disc=1.809 expl=28  (89s)
+  [35/120] 8 min  p6 α=0.25 OneStep timing n=30 seed=4007  disc=0.731 expl=8  (91s)
+  [36/120] 8 min  p6 α=0.25 OneStep timing n=30 seed=4009  disc=0.499 expl=15  (91s)
+  [37/120] 8 min  p6 α=0.25 OneStep timing n=30 seed=4010  disc=0.751 expl=13  (91s)
+  [38/120] 8 min  p6 α=0.50 OneStep timing n=30 seed=4002  disc=1.635 expl=6  (91s)
+  [39/120] 8 min  p6 α=0.50 OneStep timing n=30 seed=4003  disc=1.722 expl=8  (91s)
+  [40/120] 8 min  p6 α=0.25 OneStep timing n=30 seed=4008  disc=0.606 expl=14  (95s)
+  [41/120] 8 min  p6 α=0.50 OneStep timing n=30 seed=4004  disc=1.296 expl=35  (92s)
+  [42/120] 9 min  p6 α=0.50 OneStep timing n=30 seed=4005  disc=1.202 expl=14  (89s)
+  [43/120] 9 min  p6 α=0.50 OneStep timing n=30 seed=4008  disc=1.549 expl=14  (90s)
+  [44/120] 9 min  p6 α=0.50 OneStep timing n=30 seed=4007  disc=1.598 expl=8  (91s)
+  [45/120] 9 min  p6 α=0.50 OneStep timing n=30 seed=4006  disc=1.957 expl=9  (92s)
+  [46/120] 9 min  p6 α=0.50 OneStep timing n=30 seed=4009  disc=1.145 expl=20  (91s)
+  [47/120] 9 min  p6 α=0.75 OneStep timing n=30 seed=4001  disc=2.812 expl=23  (90s)
+  [48/120] 9 min  p6 α=0.50 OneStep timing n=30 seed=4010  disc=1.657 expl=9  (90s)
+  [49/120] 9 min  p6 α=0.75 OneStep timing n=30 seed=4005  disc=1.885 expl=21  (89s)
+  [50/120] 9 min  p6 α=0.75 OneStep timing n=30 seed=4003  disc=2.653 expl=8  (91s)
+  [51/120] 9 min  p6 α=0.75 OneStep timing n=30 seed=4004  disc=2.096 expl=21  (92s)
+  [52/120] 9 min  p6 α=0.75 OneStep timing n=30 seed=4002  disc=2.557 expl=7  (92s)
+  [53/120] 9 min  p6 α=0.75 OneStep timing n=30 seed=4006  disc=3.040 expl=8  (91s)
+  [54/120] 9 min  p6 α=0.75 OneStep timing n=30 seed=4008  disc=2.425 expl=14  (90s)
+  [55/120] 9 min  p6 α=0.25 TimingAware seed=4001  disc=0.425 expl=0  (0s)
+  [56/120] 9 min  p6 α=0.25 TimingAware seed=4002  disc=0.352 expl=0  (0s)
+  [57/120] 9 min  p6 α=0.25 TimingAware seed=4003  disc=0.611 expl=0  (0s)
+  [58/120] 9 min  p6 α=0.25 TimingAware seed=4004  disc=0.373 expl=0  (0s)
+  [59/120] 9 min  p6 α=0.25 TimingAware seed=4005  disc=0.238 expl=0  (0s)
+  [60/120] 9 min  p6 α=0.25 TimingAware seed=4006  disc=0.761 expl=0  (0s)
+  [61/120] 9 min  p6 α=0.25 TimingAware seed=4007  disc=0.675 expl=0  (0s)
+  [62/120] 9 min  p6 α=0.25 TimingAware seed=4008  disc=0.578 expl=0  (0s)
+  [63/120] 9 min  p6 α=0.25 TimingAware seed=4009  disc=0.400 expl=0  (0s)
+  [64/120] 9 min  p6 α=0.25 TimingAware seed=4010  disc=0.672 expl=0  (0s)
+  [65/120] 9 min  p6 α=0.50 TimingAware seed=4001  disc=1.000 expl=0  (0s)
+  [66/120] 9 min  p6 α=0.50 TimingAware seed=4002  disc=0.870 expl=0  (0s)
+  [67/120] 9 min  p6 α=0.50 TimingAware seed=4003  disc=1.372 expl=0  (0s)
+  [68/120] 9 min  p6 α=0.50 TimingAware seed=4004  disc=0.907 expl=0  (0s)
+  [69/120] 9 min  p6 α=0.50 TimingAware seed=4005  disc=0.637 expl=0  (0s)
+  [70/120] 9 min  p6 α=0.50 TimingAware seed=4006  disc=1.691 expl=0  (0s)
+  [71/120] 9 min  p6 α=0.50 TimingAware seed=4007  disc=1.534 expl=0  (0s)
+  [72/120] 9 min  p6 α=0.50 TimingAware seed=4008  disc=1.334 expl=0  (0s)
+  [73/120] 9 min  p6 α=0.50 TimingAware seed=4009  disc=0.968 expl=0  (0s)
+  [74/120] 9 min  p6 α=0.50 TimingAware seed=4010  disc=1.522 expl=0  (0s)
+  [75/120] 9 min  p6 α=0.75 TimingAware seed=4001  disc=1.580 expl=0  (0s)
+  [76/120] 9 min  p6 α=0.75 TimingAware seed=4002  disc=1.390 expl=0  (0s)
+  [77/120] 9 min  p6 α=0.75 TimingAware seed=4003  disc=2.141 expl=0  (0s)
+  [78/120] 9 min  p6 α=0.75 TimingAware seed=4004  disc=1.444 expl=0  (0s)
+  [79/120] 9 min  p6 α=0.75 TimingAware seed=4005  disc=1.038 expl=0  (0s)
+  [80/120] 9 min  p6 α=0.75 TimingAware seed=4006  disc=2.625 expl=0  (0s)
+  [81/120] 9 min  p6 α=0.75 TimingAware seed=4007  disc=2.400 expl=0  (0s)
+  [82/120] 9 min  p6 α=0.75 TimingAware seed=4008  disc=2.094 expl=0  (0s)
+  [83/120] 9 min  p6 α=0.75 TimingAware seed=4009  disc=1.546 expl=0  (0s)
+  [84/120] 9 min  p6 α=0.75 TimingAware seed=4010  disc=2.382 expl=0  (0s)
+  [85/120] 9 min  p6 α=1.00 TimingAware seed=4001  disc=2.161 expl=0  (0s)
+  [86/120] 9 min  p6 α=1.00 TimingAware seed=4002  disc=1.910 expl=0  (0s)
+  [87/120] 9 min  p6 α=1.00 TimingAware seed=4003  disc=2.909 expl=0  (0s)
+  [88/120] 9 min  p6 α=1.00 TimingAware seed=4004  disc=1.981 expl=0  (0s)
+  [89/120] 9 min  p6 α=1.00 TimingAware seed=4005  disc=1.440 expl=0  (0s)
+  [90/120] 9 min  p6 α=1.00 TimingAware seed=4006  disc=3.559 expl=0  (0s)
+  [91/120] 9 min  p6 α=1.00 TimingAware seed=4007  disc=3.266 expl=0  (0s)
+  [92/120] 9 min  p6 α=1.00 TimingAware seed=4008  disc=2.853 expl=0  (0s)
+  [93/120] 9 min  p6 α=1.00 TimingAware seed=4009  disc=2.123 expl=0  (0s)
+  [94/120] 9 min  p6 α=1.00 TimingAware seed=4010  disc=3.241 expl=0  (0s)
+  [95/120] 9 min  p6 α=0.75 OneStep timing n=30 seed=4007  disc=2.496 expl=9  (94s)
+  [96/120] 11 min  p6 α=0.75 OneStep timing n=30 seed=4009  disc=1.819 expl=17  (87s)
+  [97/120] 11 min  p6 α=1.00 OneStep timing n=30 seed=4010  disc=3.465 expl=12  (84s)
+  [98/120] 11 min  p6 α=1.00 OneStep timing n=30 seed=4006  disc=4.133 expl=8  (88s)
+  [99/120] 11 min  p6 α=1.00 OneStep timing n=30 seed=4003  disc=3.599 expl=11  (90s)
+  [100/120] 11 min  p6 α=1.00 OneStep timing n=30 seed=4002  disc=3.504 expl=6  (90s)
+  [101/120] 11 min  p6 α=1.00 OneStep timing n=30 seed=4004  disc=1.848 expl=23  (91s)
+  [102/120] 11 min  p6 α=0.75 OneStep timing n=30 seed=4010  disc=2.561 expl=11  (93s)
+  [103/120] 11 min  p6 α=1.00 OneStep timing n=30 seed=4008  disc=3.285 expl=14  (88s)
+  [104/120] 11 min  p6 α=1.00 OneStep timing n=30 seed=4005  disc=2.610 expl=23  (92s)
+  [105/120] 11 min  p6 α=1.00 OneStep timing n=30 seed=4001  disc=3.811 expl=23  (94s)
+  [106/120] 11 min  p6 α=1.00 OneStep timing n=30 seed=4007  disc=3.393 expl=10  (93s)
+  [107/120] 11 min  p6 α=1.00 OneStep timing n=30 seed=4009  disc=2.458 expl=14  (93s)
+  [108/120] 11 min  p6 α=1.00 POMCPOW timing q=10000 seed=4008  disc=3.198 expl=56  (309s)
+  [109/120] 11 min  p6 α=1.00 POMCPOW timing q=10000 seed=4001  disc=3.488 expl=50  (314s)
+  [110/120] 11 min  p6 α=1.00 POMCPOW timing q=10000 seed=4006  disc=3.915 expl=42  (311s)
+  [111/120] 11 min  p6 α=1.00 POMCPOW timing q=10000 seed=4007  disc=3.329 expl=52  (312s)
+  [112/120] 11 min  p6 α=1.00 POMCPOW timing q=10000 seed=4002  disc=2.840 expl=46  (316s)
+  [113/120] 11 min  p6 α=1.00 POMCPOW timing q=10000 seed=4004  disc=2.811 expl=43  (316s)
+  [114/120] 11 min  p6 α=0.75 POMCPOW timing q=10000 seed=4009  disc=1.751 expl=51  (324s)
+  [115/120] 11 min  p6 α=0.75 POMCPOW timing q=10000 seed=4008  disc=2.253 expl=52  (325s)
+  [116/120] 11 min  p6 α=0.75 POMCPOW timing q=10000 seed=4010  disc=2.316 expl=37  (323s)
+  [117/120] 11 min  p6 α=1.00 POMCPOW timing q=10000 seed=4009  disc=2.401 expl=55  (316s)
+  [118/120] 11 min  p6 α=1.00 POMCPOW timing q=10000 seed=4003  disc=3.345 expl=45  (322s)
+  [119/120] 11 min  p6 α=1.00 POMCPOW timing q=10000 seed=4005  disc=2.543 expl=54  (320s)
+  [120/120] 11 min  p6 α=1.00 POMCPOW timing q=10000 seed=4010  disc=3.236 expl=42  (318s)
+Precompiling packages...
+    LiPOMDPs Being precompiled by another process (pid: 3719303, pidfile: /home/edmondsa/.julia/compiled/v1.12/LiPOMDPs/UM6Vf_8cmRF.ji.pidfile)
+   5790.8 ms  ✓ LiPOMDPs
+  1 dependency successfully precompiled in 7 seconds. 497 already precompiled.
+120 episodes in 11 min
+
+Mean discounted reward [explorations, seconds per episode under load]
+p6 α=0.25
+  POMCPOW timing q=10000   0.628  [ 48.2 expl,    362 s]
+  OneStep timing n=30      0.686  [ 15.0 expl,     92 s]
+  TimingAware              0.508  [  0.0 expl,      0 s]
+p6 α=0.50
+  POMCPOW timing q=10000   1.446  [ 48.4 expl,    360 s]
+  OneStep timing n=30      1.557  [ 15.1 expl,     91 s]
+  TimingAware              1.184  [  0.0 expl,      0 s]
+p6 α=0.75
+  POMCPOW timing q=10000   2.200  [ 47.3 expl,    349 s]
+  OneStep timing n=30      2.434  [ 13.9 expl,     91 s]
+  TimingAware              1.864  [  0.0 expl,      0 s]
+p6 α=1.00
+  POMCPOW timing q=10000   3.111  [ 48.5 expl,    315 s]
+  OneStep timing n=30      3.211  [ 14.4 expl,     90 s]
+  TimingAware              2.544  [  0.0 expl,      0 s]
+
+CSV: outputs/pomcpow_vs_heuristics/compute_sweep_p6_a0.25-0.5-0.75-1.0_g0.926_e6.csv

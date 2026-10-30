@@ -1,0 +1,1588 @@
+The latest version of Julia in the `release` channel is 1.13.2+0.x64.linux.gnu. You currently have `1.12.1+0.x64.linux.gnu` installed. Run:
+
+  juliaup update
+
+in your terminal shell to install Julia 1.13.2+0.x64.linux.gnu and update the `release` channel to that version.
+🧪 TRAIN/TEST SPLIT EVALUATION
+============================================================
+Running train/test evaluation...
+Policies: ["POMCPOW", "POMCPOW_Depth1", "OneStepLookahead_AlphaAware", "OneStepLookahead_TimingAware", "DynamicProfitMaximizer", "ExploreOnly", "OneMineProfitMaximization", "OneMineEmissionMinimization", "DynamicEmissionMinimizer", "RandomHeuristicPolicy", "TimingAware"]
+Planning models: [4]
+Evaluation models: [6]
+Alpha values: [0.0, 0.25, 0.5, 0.75, 1.0]
+Train/Test split: 25/50
+
+🚀 TRAIN/TEST SPLIT POLICY EVALUATION
+================================================================================
+Testing policies with proper train/test split to avoid overfitting
+Different price models for planning vs evaluation
+Using ALPHA values for multi-objective optimization
+================================================================================
+Configuration:
+  • Training simulations per policy: 25
+  • Testing simulations per policy: 50
+  • Time horizon: 31
+  • Planning price models: [4]
+  • Evaluation price models: [6]
+  • Policies: ["POMCPOW", "POMCPOW_Depth1", "OneStepLookahead_AlphaAware", "OneStepLookahead_TimingAware", "DynamicProfitMaximizer", "ExploreOnly", "OneMineProfitMaximization", "OneMineEmissionMinimization", "DynamicEmissionMinimizer", "RandomHeuristicPolicy", "TimingAware"]
+  • Alpha values: [0.0, 0.25, 0.5, 0.75, 1.0]
+  • POMCPOW rollout: TimingAwarePolicy
+
+Running 55 configurations on 16 threads
+
+[1/55] Testing POMCPOW with α=0.0...
+  Planning model: Type 4, Evaluation model: Type 6
+
+[15/55] Testing OneStepLookahead_TimingAware with α=0.0...
+  Planning model: Type 4, Evaluation model: Type 6
+
+[8/55] Testing POMCPOW_Depth1 with α=0.5...
+
+[2/55] Testing POMCPOW with α=0.25...
+  Planning model: Type 4, Evaluation model: Type 6
+
+[10/55] Testing POMCPOW_Depth1 with α=1.0...
+  Planning model: Type 4, Evaluation model: Type 6
+
+[13/55] Testing OneStepLookahead_AlphaAware with α=0.25...
+
+[4/55] Testing POMCPOW with α=0.75...
+
+[5/55] Testing POMCPOW_Depth1 with α=0.0...
+  Planning model: Type 4, Evaluation model: Type 6  Planning model: Type 4, Evaluation model: Type 6
+  Planning model: Type 4, Evaluation model: Type 6
+
+[3/55] Testing POMCPOW with α=0.5...
+
+[12/55] Testing OneStepLookahead_AlphaAware with α=0.5...
+[11/55] Testing OneStepLookahead_AlphaAware with α=0.0...
+
+
+[6/55] Testing POMCPOW with α=1.0...
+[14/55] Testing OneStepLookahead_AlphaAware with α=0.75...
+  Planning model: Type 4, Evaluation model: Type 6
+
+[16/55] Testing OneStepLookahead_AlphaAware with α=1.0...
+  Planning model: Type 4, Evaluation model: Type 6
+
+[9/55] Testing POMCPOW_Depth1 with α=0.75...
+
+  Planning model: Type 4, Evaluation model: Type 6  Planning model: Type 4, Evaluation model: Type 6
+  Planning model: Type 4, Evaluation model: Type 6
+  Planning model: Type 4, Evaluation model: Type 6
+
+  Planning model: Type 4, Evaluation model: Type 6
+
+  Planning model: Type 4, Evaluation model: Type 6
+
+[7/55] Testing POMCPOW_Depth1 with α=0.25...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $23636.23M ± 3794.13M
+    ✓ Emissions: $-2375.17M ± 112.6M
+    ✓ Discounted Reward: -0.77 ± 0.61
+    ✓ Met Demand: 75.5%
+    ✓ Exploration Cost: $5.88M
+    ✓ CAPEX: $4552.0M
+    ✓ OPEX: $10812.57M
+    ✓ Cost per Tonne: $7010.18
+  🧪 Testing Results:
+    ✓ Profit: $23708.68M ± 3627.48M
+    ✓ Emissions: $-2349.38M ± 137.14M
+    ✓ Discounted Reward: -0.61 ± 0.69
+    ✓ Met Demand: 75.0%
+    ✓ Exploration Cost: $7.12M
+    ✓ CAPEX: $4552.0M
+    ✓ OPEX: $10770.95M
+    ✓ Cost per Tonne: $7028.23
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-72.45M
+    ✓ Emission Overfitting: $-25.79M
+    ✓ Reward Overfitting: -0.16
+    ✅ No significant overfitting detected
+
+[17/55] Testing OneStepLookahead_TimingAware with α=0.25...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $23668.25M ± 3793.77M
+    ✓ Emissions: $-2371.55M ± 118.43M
+    ✓ Discounted Reward: -0.64 ± 0.57
+    ✓ Met Demand: 75.4%
+    ✓ Exploration Cost: $6.29M
+    ✓ CAPEX: $4552.0M
+    ✓ OPEX: $10801.88M
+    ✓ Cost per Tonne: $7011.32
+  🧪 Testing Results:
+    ✓ Profit: $23689.16M ± 3598.17M
+    ✓ Emissions: $-2347.34M ± 135.15M
+    ✓ Discounted Reward: -0.56 ± 0.54
+    ✓ Met Demand: 74.9%
+    ✓ Exploration Cost: $7.32M
+    ✓ CAPEX: $4552.0M
+    ✓ OPEX: $10755.49M
+    ✓ Cost per Tonne: $7041.39
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-20.91M
+    ✓ Emission Overfitting: $-24.21M
+    ✓ Reward Overfitting: -0.08
+    ✅ No significant overfitting detected
+
+[18/55] Testing OneStepLookahead_TimingAware with α=0.5...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $19767.03M ± 7528.21M
+    ✓ Emissions: $-2080.8M ± 427.08M
+    ✓ Discounted Reward: -0.45 ± 0.07
+    ✓ Met Demand: 69.6%
+    ✓ Exploration Cost: $46.74M
+    ✓ CAPEX: $4362.36M
+    ✓ OPEX: $10137.4M
+    ✓ Cost per Tonne: $7115.68
+  🧪 Testing Results:
+    ✓ Profit: $17460.19M ± 7171.69M
+    ✓ Emissions: $-1908.88M ± 385.4M
+    ✓ Discounted Reward: -0.43 ± 0.06
+    ✓ Met Demand: 66.2%
+    ✓ Exploration Cost: $41.48M
+    ✓ CAPEX: $4293.4M
+    ✓ OPEX: $9757.44M
+    ✓ Cost per Tonne: $7295.3
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $2306.84M
+    ✓ Emission Overfitting: $-171.93M
+    ✓ Reward Overfitting: -0.03
+    ✅ No significant overfitting detected
+
+[19/55] Testing OneStepLookahead_TimingAware with α=0.75...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $23860.29M ± 4254.43M
+    ✓ Emissions: $-2361.32M ± 142.95M
+    ✓ Discounted Reward: -0.5 ± 0.64
+    ✓ Met Demand: 74.9%
+    ✓ Exploration Cost: $6.57M
+    ✓ CAPEX: $4552.0M
+    ✓ OPEX: $10721.54M
+    ✓ Cost per Tonne: $7025.1
+  🧪 Testing Results:
+    ✓ Profit: $23705.19M ± 3620.52M
+    ✓ Emissions: $-2346.44M ± 134.31M
+    ✓ Discounted Reward: -0.51 ± 0.39
+    ✓ Met Demand: 74.9%
+    ✓ Exploration Cost: $7.32M
+    ✓ CAPEX: $4552.0M
+    ✓ OPEX: $10745.3M
+    ✓ Cost per Tonne: $7036.24
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $155.1M
+    ✓ Emission Overfitting: $-14.88M
+    ✓ Reward Overfitting: 0.02
+    ✅ No significant overfitting detected
+
+[20/55] Testing OneStepLookahead_TimingAware with α=1.0...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $0.0M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🧪 Testing Results:
+    ✓ Profit: $0.0M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $0.0M
+    ✓ Emission Overfitting: $0.0M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+
+[21/55] Testing DynamicProfitMaximizer with α=0.0...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $0.0M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🧪 Testing Results:
+    ✓ Profit: $0.0M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $0.0M
+    ✓ Emission Overfitting: $0.0M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+
+[22/55] Testing DynamicProfitMaximizer with α=0.25...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $13639.53M ± 5539.46M
+    ✓ Emissions: $-1665.32M ± 152.33M
+    ✓ Discounted Reward: -0.39 ± 0.02
+    ✓ Met Demand: 60.7%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $9065.31M
+    ✓ Cost per Tonne: $7436.5
+  🧪 Testing Results:
+    ✓ Profit: $13900.96M ± 5619.49M
+    ✓ Emissions: $-1639.12M ± 138.96M
+    ✓ Discounted Reward: -0.39 ± 0.02
+    ✓ Met Demand: 60.8%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $9117.2M
+    ✓ Cost per Tonne: $7429.48
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-261.43M
+    ✓ Emission Overfitting: $-26.19M
+    ✓ Reward Overfitting: -0.01
+    ✅ No significant overfitting detected
+
+[23/55] Testing DynamicProfitMaximizer with α=0.5...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $13639.53M ± 5539.46M
+    ✓ Emissions: $-1665.32M ± 152.33M
+    ✓ Discounted Reward: -0.67 ± 0.17
+    ✓ Met Demand: 60.7%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $9065.31M
+    ✓ Cost per Tonne: $7436.5
+  🧪 Testing Results:
+    ✓ Profit: $13900.96M ± 5619.49M
+    ✓ Emissions: $-1639.12M ± 138.96M
+    ✓ Discounted Reward: -0.67 ± 0.18
+    ✓ Met Demand: 60.8%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $9117.2M
+    ✓ Cost per Tonne: $7429.48
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-261.43M
+    ✓ Emission Overfitting: $-26.19M
+    ✓ Reward Overfitting: -0.01
+    ✅ No significant overfitting detected
+
+[24/55] Testing DynamicProfitMaximizer with α=0.75...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $0.0M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🧪 Testing Results:
+    ✓ Profit: $0.0M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $0.0M
+    ✓ Emission Overfitting: $0.0M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+
+[25/55] Testing DynamicProfitMaximizer with α=1.0...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $13639.53M ± 5539.46M
+    ✓ Emissions: $-1665.32M ± 152.33M
+    ✓ Discounted Reward: -0.96 ± 0.35
+    ✓ Met Demand: 60.7%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $9065.31M
+    ✓ Cost per Tonne: $7436.5
+  🧪 Testing Results:
+    ✓ Profit: $13900.96M ± 5619.49M
+    ✓ Emissions: $-1639.12M ± 138.96M
+    ✓ Discounted Reward: -0.94 ± 0.37
+    ✓ Met Demand: 60.8%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $9117.2M
+    ✓ Cost per Tonne: $7429.48
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-261.43M
+    ✓ Emission Overfitting: $-26.19M
+    ✓ Reward Overfitting: -0.01
+    ✅ No significant overfitting detected
+
+[26/55] Testing ExploreOnly with α=0.0...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $13639.53M ± 5539.46M
+    ✓ Emissions: $-1665.32M ± 152.33M
+    ✓ Discounted Reward: -1.24 ± 0.53
+    ✓ Met Demand: 60.7%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $9065.31M
+    ✓ Cost per Tonne: $7436.5
+  🧪 Testing Results:
+    ✓ Profit: $13900.96M ± 5619.49M
+    ✓ Emissions: $-1639.12M ± 138.96M
+    ✓ Discounted Reward: -1.22 ± 0.56
+    ✓ Met Demand: 60.8%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $9117.2M
+    ✓ Cost per Tonne: $7429.48
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-261.43M
+    ✓ Emission Overfitting: $-26.19M
+    ✓ Reward Overfitting: -0.02
+    ✅ No significant overfitting detected
+
+[27/55] Testing ExploreOnly with α=0.25...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $13639.53M ± 5539.46M
+    ✓ Emissions: $-1665.32M ± 152.33M
+    ✓ Discounted Reward: -1.52 ± 0.72
+    ✓ Met Demand: 60.7%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $9065.31M
+    ✓ Cost per Tonne: $7436.5
+  🧪 Testing Results:
+    ✓ Profit: $13900.96M ± 5619.49M
+    ✓ Emissions: $-1639.12M ± 138.96M
+    ✓ Discounted Reward: -1.5 ± 0.75
+    ✓ Met Demand: 60.8%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $9117.2M
+    ✓ Cost per Tonne: $7429.48
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-261.43M
+    ✓ Emission Overfitting: $-26.19M
+    ✓ Reward Overfitting: -0.02
+    ✅ No significant overfitting detected
+
+[28/55] Testing ExploreOnly with α=0.5...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $-321.35M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: -0.03 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $321.35M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🧪 Testing Results:
+    ✓ Profit: $-321.35M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: -0.03 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $321.35M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $0.0M
+    ✓ Emission Overfitting: $0.0M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+
+[29/55] Testing ExploreOnly with α=0.75...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $-321.35M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: -0.06 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $321.35M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🧪 Testing Results:
+    ✓ Profit: $-321.35M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: -0.06 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $321.35M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $0.0M
+    ✓ Emission Overfitting: $0.0M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+
+[30/55] Testing ExploreOnly with α=1.0...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $-321.35M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $321.35M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🧪 Testing Results:
+    ✓ Profit: $-321.35M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $321.35M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $0.0M
+    ✓ Emission Overfitting: $0.0M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+
+[31/55] Testing OneMineProfitMaximization with α=0.0...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $-321.35M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: -0.1 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $321.35M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🧪 Testing Results:
+    ✓ Profit: $-321.35M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: -0.1 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $321.35M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $0.0M
+    ✓ Emission Overfitting: $0.0M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+
+[32/55] Testing OneMineProfitMaximization with α=0.25...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $-321.35M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: -0.13 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $321.35M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🧪 Testing Results:
+    ✓ Profit: $-321.35M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: -0.13 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $321.35M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $0.0M
+    ✓ Emission Overfitting: $0.0M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+
+[33/55] Testing OneMineProfitMaximization with α=0.5...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $0.0M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🧪 Testing Results:
+    ✓ Profit: $0.0M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $0.0M
+    ✓ Emission Overfitting: $0.0M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+
+[34/55] Testing OneMineProfitMaximization with α=0.75...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $-720.82M ± 2354.08M
+    ✓ Emissions: $-421.0M ± 213.19M
+    ✓ Discounted Reward: -0.74 ± 0.2
+    ✓ Met Demand: 18.7%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2937.29M
+    ✓ Cost per Tonne: $7680.02
+  🧪 Testing Results:
+    ✓ Profit: $-942.81M ± 1220.64M
+    ✓ Emissions: $-408.81M ± 195.55M
+    ✓ Discounted Reward: -0.74 ± 0.14
+    ✓ Met Demand: 18.2%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2852.21M
+    ✓ Cost per Tonne: $7650.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $222.0M
+    ✓ Emission Overfitting: $-12.19M
+    ✓ Reward Overfitting: 0.01
+    ✅ No significant overfitting detected
+
+[35/55] Testing OneMineProfitMaximization with α=1.0...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $-720.82M ± 2354.08M
+    ✓ Emissions: $-421.0M ± 213.19M
+    ✓ Discounted Reward: -0.47 ± 0.09
+    ✓ Met Demand: 18.7%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2937.29M
+    ✓ Cost per Tonne: $7680.02
+  🧪 Testing Results:
+    ✓ Profit: $-942.81M ± 1220.64M
+    ✓ Emissions: $-408.81M ± 195.55M
+    ✓ Discounted Reward: -0.47 ± 0.06
+    ✓ Met Demand: 18.2%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2852.21M
+    ✓ Cost per Tonne: $7650.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $222.0M
+    ✓ Emission Overfitting: $-12.19M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+
+[36/55] Testing OneMineEmissionMinimization with α=0.0...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $-720.82M ± 2354.08M
+    ✓ Emissions: $-421.0M ± 213.19M
+    ✓ Discounted Reward: -1.0 ± 0.31
+    ✓ Met Demand: 18.7%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2937.29M
+    ✓ Cost per Tonne: $7680.02
+  🧪 Testing Results:
+    ✓ Profit: $-942.81M ± 1220.64M
+    ✓ Emissions: $-408.81M ± 195.55M
+    ✓ Discounted Reward: -1.02 ± 0.22
+    ✓ Met Demand: 18.2%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2852.21M
+    ✓ Cost per Tonne: $7650.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $222.0M
+    ✓ Emission Overfitting: $-12.19M
+    ✓ Reward Overfitting: 0.01
+    ✅ No significant overfitting detected
+
+[37/55] Testing OneMineEmissionMinimization with α=0.25...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $-720.82M ± 2354.08M
+    ✓ Emissions: $-421.0M ± 213.19M
+    ✓ Discounted Reward: -0.2 ± 0.05
+    ✓ Met Demand: 18.7%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2937.29M
+    ✓ Cost per Tonne: $7680.02
+  🧪 Testing Results:
+    ✓ Profit: $-942.81M ± 1220.64M
+    ✓ Emissions: $-408.81M ± 195.55M
+    ✓ Discounted Reward: -0.19 ± 0.05
+    ✓ Met Demand: 18.2%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2852.21M
+    ✓ Cost per Tonne: $7650.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $222.0M
+    ✓ Emission Overfitting: $-12.19M
+    ✓ Reward Overfitting: -0.0
+    ✅ No significant overfitting detected
+
+[38/55] Testing OneMineEmissionMinimization with α=0.5...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $-720.82M ± 2354.08M
+    ✓ Emissions: $-421.0M ± 213.19M
+    ✓ Discounted Reward: -1.27 ± 0.43
+    ✓ Met Demand: 18.7%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2937.29M
+    ✓ Cost per Tonne: $7680.02
+  🧪 Testing Results:
+    ✓ Profit: $-942.81M ± 1220.64M
+    ✓ Emissions: $-408.81M ± 195.55M
+    ✓ Discounted Reward: -1.29 ± 0.31
+    ✓ Met Demand: 18.2%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2852.21M
+    ✓ Cost per Tonne: $7650.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $222.0M
+    ✓ Emission Overfitting: $-12.19M
+    ✓ Reward Overfitting: 0.02
+    ✅ No significant overfitting detected
+
+[39/55] Testing OneMineEmissionMinimization with α=0.75...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations  🧪 Testing Phase: 50 simulations
+
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $-720.82M ± 2354.08M
+    ✓ Emissions: $-421.0M ± 213.19M
+    ✓ Discounted Reward: -0.47 ± 0.09
+    ✓ Met Demand: 18.7%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2937.29M
+    ✓ Cost per Tonne: $7680.02
+  🧪 Testing Results:
+    ✓ Profit: $-942.81M ± 1220.64M
+    ✓ Emissions: $-408.81M ± 195.55M
+    ✓ Discounted Reward: -0.47 ± 0.06
+    ✓ Met Demand: 18.2%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2852.21M
+    ✓ Cost per Tonne: $7650.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $222.0M
+    ✓ Emission Overfitting: $-12.19M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+
+[40/55] Testing OneMineEmissionMinimization with α=1.0...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $-720.82M ± 2354.08M
+    ✓ Emissions: $-421.0M ± 213.19M
+    ✓ Discounted Reward: -0.74 ± 0.2
+    ✓ Met Demand: 18.7%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2937.29M
+    ✓ Cost per Tonne: $7680.02
+  🧪 Testing Results:
+    ✓ Profit: $-942.81M ± 1220.64M
+    ✓ Emissions: $-408.81M ± 195.55M
+    ✓ Discounted Reward: -0.74 ± 0.14
+    ✓ Met Demand: 18.2%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2852.21M
+    ✓ Cost per Tonne: $7650.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $222.0M
+    ✓ Emission Overfitting: $-12.19M
+    ✓ Reward Overfitting: 0.01
+    ✅ No significant overfitting detected
+
+[41/55] Testing DynamicEmissionMinimizer with α=0.0...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $-720.82M ± 2354.08M
+    ✓ Emissions: $-421.0M ± 213.19M
+    ✓ Discounted Reward: -1.0 ± 0.31
+    ✓ Met Demand: 18.7%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2937.29M
+    ✓ Cost per Tonne: $7680.02
+  🧪 Testing Results:
+    ✓ Profit: $-942.81M ± 1220.64M
+    ✓ Emissions: $-408.81M ± 195.55M
+    ✓ Discounted Reward: -1.02 ± 0.22
+    ✓ Met Demand: 18.2%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2852.21M
+    ✓ Cost per Tonne: $7650.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $222.0M
+    ✓ Emission Overfitting: $-12.19M
+    ✓ Reward Overfitting: 0.01
+    ✅ No significant overfitting detected
+
+[42/55] Testing DynamicEmissionMinimizer with α=0.25...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $-720.82M ± 2354.08M
+    ✓ Emissions: $-421.0M ± 213.19M
+    ✓ Discounted Reward: -0.2 ± 0.05
+    ✓ Met Demand: 18.7%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2937.29M
+    ✓ Cost per Tonne: $7680.02
+  🧪 Testing Results:
+    ✓ Profit: $-942.81M ± 1220.64M
+    ✓ Emissions: $-408.81M ± 195.55M
+    ✓ Discounted Reward: -0.19 ± 0.05
+    ✓ Met Demand: 18.2%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2852.21M
+    ✓ Cost per Tonne: $7650.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $222.0M
+    ✓ Emission Overfitting: $-12.19M
+    ✓ Reward Overfitting: -0.0
+    ✅ No significant overfitting detected
+
+[43/55] Testing DynamicEmissionMinimizer with α=0.5...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $-720.82M ± 2354.08M
+    ✓ Emissions: $-421.0M ± 213.19M
+    ✓ Discounted Reward: -1.27 ± 0.43
+    ✓ Met Demand: 18.7%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2937.29M
+    ✓ Cost per Tonne: $7680.02
+  🧪 Testing Results:
+    ✓ Profit: $-942.81M ± 1220.64M
+    ✓ Emissions: $-408.81M ± 195.55M
+    ✓ Discounted Reward: -1.29 ± 0.31
+    ✓ Met Demand: 18.2%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $1230.0M
+    ✓ OPEX: $2852.21M
+    ✓ Cost per Tonne: $7650.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $222.0M
+    ✓ Emission Overfitting: $-12.19M
+    ✓ Reward Overfitting: 0.02
+    ✅ No significant overfitting detected
+
+[44/55] Testing DynamicEmissionMinimizer with α=0.75...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  📚 Training Phase: 25 simulations  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  🧪 Testing Phase: 50 simulations
+
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $8526.23M ± 6541.75M
+    ✓ Emissions: $-1168.14M ± 292.05M
+    ✓ Discounted Reward: -0.28 ± 0.21
+    ✓ Met Demand: 46.1%
+    ✓ Exploration Cost: $10.82M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $7034.95M
+    ✓ Cost per Tonne: $8331.27
+  🧪 Testing Results:
+    ✓ Profit: $9786.04M ± 6725.38M
+    ✓ Emissions: $-1238.53M ± 251.74M
+    ✓ Discounted Reward: -0.26 ± 0.22
+    ✓ Met Demand: 49.0%
+    ✓ Exploration Cost: $10.82M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $7488.15M
+    ✓ Cost per Tonne: $8067.4
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-1259.81M
+    ✓ Emission Overfitting: $70.39M
+    ✓ Reward Overfitting: -0.02
+    ✅ No significant overfitting detected
+
+[45/55] Testing DynamicEmissionMinimizer with α=1.0...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $8526.23M ± 6541.75M
+    ✓ Emissions: $-1168.14M ± 292.05M
+    ✓ Discounted Reward: -0.26 ± 0.45
+    ✓ Met Demand: 46.1%
+    ✓ Exploration Cost: $10.82M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $7034.95M
+    ✓ Cost per Tonne: $8331.27
+  🧪 Testing Results:
+    ✓ Profit: $9786.04M ± 6725.38M
+    ✓ Emissions: $-1238.53M ± 251.74M
+    ✓ Discounted Reward: -0.2 ± 0.46
+    ✓ Met Demand: 49.0%
+    ✓ Exploration Cost: $10.82M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $7488.15M
+    ✓ Cost per Tonne: $8067.4
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-1259.81M
+    ✓ Emission Overfitting: $70.39M
+    ✓ Reward Overfitting: -0.06
+    ✅ No significant overfitting detected
+
+[46/55] Testing RandomHeuristicPolicy with α=0.0...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $8526.23M ± 6541.75M
+    ✓ Emissions: $-1168.14M ± 292.05M
+    ✓ Discounted Reward: -0.24 ± 0.7
+    ✓ Met Demand: 46.1%
+    ✓ Exploration Cost: $10.82M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $7034.95M
+    ✓ Cost per Tonne: $8331.27
+  🧪 Testing Results:
+    ✓ Profit: $9786.04M ± 6725.38M
+    ✓ Emissions: $-1238.53M ± 251.74M
+    ✓ Discounted Reward: -0.14 ± 0.71
+    ✓ Met Demand: 49.0%
+    ✓ Exploration Cost: $10.82M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $7488.15M
+    ✓ Cost per Tonne: $8067.4
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-1259.81M
+    ✓ Emission Overfitting: $70.39M
+    ✓ Reward Overfitting: -0.1
+    ✅ No significant overfitting detected
+
+[47/55] Testing RandomHeuristicPolicy with α=0.25...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $8526.23M ± 6541.75M
+    ✓ Emissions: $-1168.14M ± 292.05M
+    ✓ Discounted Reward: -0.3 ± 0.05
+    ✓ Met Demand: 46.1%
+    ✓ Exploration Cost: $10.82M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $7034.95M
+    ✓ Cost per Tonne: $8331.27
+  🧪 Testing Results:
+    ✓ Profit: $9786.04M ± 6725.38M
+    ✓ Emissions: $-1238.53M ± 251.74M
+    ✓ Discounted Reward: -0.32 ± 0.04
+    ✓ Met Demand: 49.0%
+    ✓ Exploration Cost: $10.82M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $7488.15M
+    ✓ Cost per Tonne: $8067.4
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-1259.81M
+    ✓ Emission Overfitting: $70.39M
+    ✓ Reward Overfitting: 0.01
+    ✅ No significant overfitting detected
+
+[48/55] Testing RandomHeuristicPolicy with α=0.5...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $8526.23M ± 6541.75M
+    ✓ Emissions: $-1168.14M ± 292.05M
+    ✓ Discounted Reward: -0.22 ± 0.94
+    ✓ Met Demand: 46.1%
+    ✓ Exploration Cost: $10.82M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $7034.95M
+    ✓ Cost per Tonne: $8331.27
+  🧪 Testing Results:
+    ✓ Profit: $9786.04M ± 6725.38M
+    ✓ Emissions: $-1238.53M ± 251.74M
+    ✓ Discounted Reward: -0.09 ± 0.95
+    ✓ Met Demand: 49.0%
+    ✓ Exploration Cost: $10.82M
+    ✓ CAPEX: $4121.0M
+    ✓ OPEX: $7488.15M
+    ✓ Cost per Tonne: $8067.4
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-1259.81M
+    ✓ Emission Overfitting: $70.39M
+    ✓ Reward Overfitting: -0.13
+    ✅ No significant overfitting detected
+
+[49/55] Testing RandomHeuristicPolicy with α=0.75...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $18348.11M ± 7666.19M
+    ✓ Emissions: $-1989.48M ± 409.26M
+    ✓ Discounted Reward: -0.44 ± 0.07
+    ✓ Met Demand: 67.6%
+    ✓ Exploration Cost: $33.08M
+    ✓ CAPEX: $4310.64M
+    ✓ OPEX: $9890.1M
+    ✓ Cost per Tonne: $7251.43
+  🧪 Testing Results:
+    ✓ Profit: $16716.39M ± 7148.93M
+    ✓ Emissions: $-1878.28M ± 382.58M
+    ✓ Discounted Reward: -0.42 ± 0.06
+    ✓ Met Demand: 65.2%
+    ✓ Exploration Cost: $28.5M
+    ✓ CAPEX: $4267.54M
+    ✓ OPEX: $9600.89M
+    ✓ Cost per Tonne: $7434.29
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $1631.73M
+    ✓ Emission Overfitting: $-111.2M
+    ✓ Reward Overfitting: -0.02
+    ✅ No significant overfitting detected
+
+[50/55] Testing RandomHeuristicPolicy with α=1.0...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $18348.11M ± 7666.19M
+    ✓ Emissions: $-1989.48M ± 409.26M
+    ✓ Discounted Reward: -0.88 ± 0.73
+    ✓ Met Demand: 67.6%
+    ✓ Exploration Cost: $33.08M
+    ✓ CAPEX: $4310.64M
+    ✓ OPEX: $9890.1M
+    ✓ Cost per Tonne: $7251.43
+  🧪 Testing Results:
+    ✓ Profit: $16716.39M ± 7148.93M
+    ✓ Emissions: $-1878.28M ± 382.58M
+    ✓ Discounted Reward: -1.04 ± 0.7
+    ✓ Met Demand: 65.2%
+    ✓ Exploration Cost: $28.5M
+    ✓ CAPEX: $4267.54M
+    ✓ OPEX: $9600.89M
+    ✓ Cost per Tonne: $7434.29
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $1631.73M
+    ✓ Emission Overfitting: $-111.2M
+    ✓ Reward Overfitting: 0.16
+    ✅ No significant overfitting detected
+
+[51/55] Testing TimingAware with α=0.0...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $18348.11M ± 7666.19M
+    ✓ Emissions: $-1989.48M ± 409.26M
+    ✓ Discounted Reward: -0.74 ± 0.48
+    ✓ Met Demand: 67.6%
+    ✓ Exploration Cost: $33.08M
+    ✓ CAPEX: $4310.64M
+    ✓ OPEX: $9890.1M
+    ✓ Cost per Tonne: $7251.43
+  🧪 Testing Results:
+    ✓ Profit: $16716.39M ± 7148.93M
+    ✓ Emissions: $-1878.28M ± 382.58M
+    ✓ Discounted Reward: -0.83 ± 0.45
+    ✓ Met Demand: 65.2%
+    ✓ Exploration Cost: $28.5M
+    ✓ CAPEX: $4267.54M
+    ✓ OPEX: $9600.89M
+    ✓ Cost per Tonne: $7434.29
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $1631.73M
+    ✓ Emission Overfitting: $-111.2M
+    ✓ Reward Overfitting: 0.1
+    ✅ No significant overfitting detected
+
+[52/55] Testing TimingAware with α=0.25...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $18348.11M ± 7666.19M
+    ✓ Emissions: $-1989.48M ± 409.26M
+    ✓ Discounted Reward: -0.59 ± 0.23
+    ✓ Met Demand: 67.6%
+    ✓ Exploration Cost: $33.08M
+    ✓ CAPEX: $4310.64M
+    ✓ OPEX: $9890.1M
+    ✓ Cost per Tonne: $7251.43
+  🧪 Testing Results:
+    ✓ Profit: $16716.39M ± 7148.93M
+    ✓ Emissions: $-1878.28M ± 382.58M
+    ✓ Discounted Reward: -0.63 ± 0.21
+    ✓ Met Demand: 65.2%
+    ✓ Exploration Cost: $28.5M
+    ✓ CAPEX: $4267.54M
+    ✓ OPEX: $9600.89M
+    ✓ Cost per Tonne: $7434.29
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $1631.73M
+    ✓ Emission Overfitting: $-111.2M
+    ✓ Reward Overfitting: 0.04
+    ✅ No significant overfitting detected
+
+[53/55] Testing TimingAware with α=0.5...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Results:
+    ✓ Profit: $18348.11M ± 7666.19M
+    ✓ Emissions: $-1989.48M ± 409.26M
+    ✓ Discounted Reward: -1.03 ± 0.98
+    ✓ Met Demand: 67.6%
+    ✓ Exploration Cost: $33.08M
+    ✓ CAPEX: $4310.64M
+    ✓ OPEX: $9890.1M
+    ✓ Cost per Tonne: $7251.43
+  🧪 Testing Results:
+    ✓ Profit: $16716.39M ± 7148.93M
+    ✓ Emissions: $-1878.28M ± 382.58M
+    ✓ Discounted Reward: -1.24 ± 0.94
+    ✓ Met Demand: 65.2%
+    ✓ Exploration Cost: $28.5M
+    ✓ CAPEX: $4267.54M
+    ✓ OPEX: $9600.89M
+    ✓ Cost per Tonne: $7434.29
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $1631.73M
+    ✓ Emission Overfitting: $-111.2M
+    ✓ Reward Overfitting: 0.21
+    ✅ No significant overfitting detected
+
+[54/55] Testing TimingAware with α=0.75...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $0.0M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🧪 Testing Results:
+    ✓ Profit: $0.0M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $0.0M
+    ✓ Emission Overfitting: $0.0M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+
+[55/55] Testing TimingAware with α=1.0...
+  Planning model: Type 4, Evaluation model: Type 6
+  📚 Training Phase: 25 simulations
+  🧪 Testing Phase: 50 simulations
+  📚 Training Results:
+    ✓ Profit: $31982.31M ± 3300.81M
+    ✓ Emissions: $-1994.3M ± 148.28M
+    ✓ Discounted Reward: 2.77 ± 0.31
+    ✓ Met Demand: 63.3%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $4534.76M
+    ✓ OPEX: $9064.44M
+    ✓ Cost per Tonne: $7343.83
+  🧪 Testing Results:
+    ✓ Profit: $32565.52M ± 3389.21M
+    ✓ Emissions: $-2017.36M ± 127.83M
+    ✓ Discounted Reward: 2.82 ± 0.31
+    ✓ Met Demand: 63.7%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $4552.0M
+    ✓ OPEX: $9108.17M
+    ✓ Cost per Tonne: $7377.07
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-583.21M
+    ✓ Emission Overfitting: $23.06M
+    ✓ Reward Overfitting: -0.05
+    ✅ No significant overfitting detected
+  📚 Training Results:
+    ✓ Profit: $30040.32M ± 2862.73M
+    ✓ Emissions: $-1726.63M ± 211.73M
+    ✓ Discounted Reward: 0.72 ± 0.08
+    ✓ Met Demand: 56.2%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $4465.8M
+    ✓ OPEX: $8126.66M
+    ✓ Cost per Tonne: $7663.49
+  🧪 Testing Results:
+    ✓ Profit: $31061.63M ± 3546.63M
+    ✓ Emissions: $-1756.77M ± 162.07M
+    ✓ Discounted Reward: 0.75 ± 0.1
+    ✓ Met Demand: 57.0%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $4491.66M
+    ✓ OPEX: $8224.1M
+    ✓ Cost per Tonne: $7666.3
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-1021.3M
+    ✓ Emission Overfitting: $30.14M
+    ✓ Reward Overfitting: -0.03
+    ✅ No significant overfitting detected
+  📚 Training Results:
+    ✓ Profit: $32155.36M ± 3199.73M
+    ✓ Emissions: $-1951.16M ± 125.76M
+    ✓ Discounted Reward: 1.78 ± 0.2
+    ✓ Met Demand: 62.2%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $4534.76M
+    ✓ OPEX: $8916.24M
+    ✓ Cost per Tonne: $7378.38
+  🧪 Testing Results:
+    ✓ Profit: $32351.93M ± 3360.04M
+    ✓ Emissions: $-1943.64M ± 94.88M
+    ✓ Discounted Reward: 1.79 ± 0.2
+    ✓ Met Demand: 61.5%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $4552.0M
+    ✓ OPEX: $8809.06M
+    ✓ Cost per Tonne: $7466.57
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-196.56M
+    ✓ Emission Overfitting: $-7.52M
+    ✓ Reward Overfitting: -0.01
+    ✅ No significant overfitting detected
+  📚 Training Results:
+    ✓ Profit: $32081.18M ± 3381.96M
+    ✓ Emissions: $-2055.68M ± 188.43M
+    ✓ Discounted Reward: 3.77 ± 0.43
+    ✓ Met Demand: 65.4%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $4517.52M
+    ✓ OPEX: $9372.36M
+    ✓ Cost per Tonne: $7253.73
+  🧪 Testing Results:
+    ✓ Profit: $32659.89M ± 3399.26M
+    ✓ Emissions: $-2057.99M ± 125.9M
+    ✓ Discounted Reward: 3.85 ± 0.42
+    ✓ Met Demand: 64.9%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $4552.0M
+    ✓ OPEX: $9278.55M
+    ✓ Cost per Tonne: $7331.72
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-578.71M
+    ✓ Emission Overfitting: $2.3M
+    ✓ Reward Overfitting: -0.08
+    ✅ No significant overfitting detected
+  📚 Training Results:
+    ✓ Profit: $23820.07M ± 4108.15M
+    ✓ Emissions: $-2343.04M ± 157.09M
+    ✓ Discounted Reward: -0.44 ± 0.35
+    ✓ Met Demand: 74.3%
+    ✓ Exploration Cost: $7.66M
+    ✓ CAPEX: $4552.0M
+    ✓ OPEX: $10645.02M
+    ✓ Cost per Tonne: $7039.42
+  🧪 Testing Results:
+    ✓ Profit: $23822.24M ± 3614.45M
+    ✓ Emissions: $-2328.08M ± 131.28M
+    ✓ Discounted Reward: -0.43 ± 0.24
+    ✓ Met Demand: 74.6%
+    ✓ Exploration Cost: $7.39M
+    ✓ CAPEX: $4543.38M
+    ✓ OPEX: $10723.79M
+    ✓ Cost per Tonne: $7033.12
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-2.17M
+    ✓ Emission Overfitting: $-14.96M
+    ✓ Reward Overfitting: -0.01
+    ✅ No significant overfitting detected
+  📚 Training Results:
+    ✓ Profit: $0.0M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🧪 Testing Results:
+    ✓ Profit: $0.0M ± 0.0M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $0.0M
+    ✓ CAPEX: $0.0M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $0.0M
+    ✓ Emission Overfitting: $0.0M
+    ✓ Reward Overfitting: 0.0
+    ✅ No significant overfitting detected
+  📚 Training Results:
+    ✓ Profit: $4443.85M ± 6811.07M
+    ✓ Emissions: $-397.1M ± 598.72M
+    ✓ Discounted Reward: -0.07 ± 0.1
+    ✓ Met Demand: 15.0%
+    ✓ Exploration Cost: $34.21M
+    ✓ CAPEX: $1318.72M
+    ✓ OPEX: $2268.89M
+    ✓ Cost per Tonne: $8380.09
+  🧪 Testing Results:
+    ✓ Profit: $4343.11M ± 7418.16M
+    ✓ Emissions: $-415.14M ± 645.68M
+    ✓ Discounted Reward: -0.07 ± 0.12
+    ✓ Met Demand: 15.2%
+    ✓ Exploration Cost: $27.88M
+    ✓ CAPEX: $1236.3M
+    ✓ OPEX: $2279.74M
+    ✓ Cost per Tonne: $8133.5
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $100.74M
+    ✓ Emission Overfitting: $18.04M
+    ✓ Reward Overfitting: 0.01
+    ✅ No significant overfitting detected
+  📚 Training Results:
+    ✓ Profit: $31860.9M ± 3222.44M
+    ✓ Emissions: $-2025.86M ± 276.26M
+    ✓ Discounted Reward: 2.7 ± 0.29
+    ✓ Met Demand: 65.0%
+    ✓ Exploration Cost: $53.98M
+    ✓ CAPEX: $4500.28M
+    ✓ OPEX: $9350.62M
+    ✓ Cost per Tonne: $7241.09
+  🧪 Testing Results:
+    ✓ Profit: $32836.15M ± 3526.76M
+    ✓ Emissions: $-2063.7M ± 290.34M
+    ✓ Discounted Reward: 2.77 ± 0.32
+    ✓ Met Demand: 67.5%
+    ✓ Exploration Cost: $46.45M
+    ✓ CAPEX: $4457.18M
+    ✓ OPEX: $9767.37M
+    ✓ Cost per Tonne: $7117.22
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-975.25M
+    ✓ Emission Overfitting: $37.84M
+    ✓ Reward Overfitting: -0.07
+    ✅ No significant overfitting detected
+  📚 Training Results:
+    ✓ Profit: $31993.62M ± 3561.94M
+    ✓ Emissions: $-2014.21M ± 285.85M
+    ✓ Discounted Reward: 3.72 ± 0.42
+    ✓ Met Demand: 65.2%
+    ✓ Exploration Cost: $54.6M
+    ✓ CAPEX: $4483.04M
+    ✓ OPEX: $9392.17M
+    ✓ Cost per Tonne: $7194.45
+  🧪 Testing Results:
+    ✓ Profit: $32913.12M ± 3576.41M
+    ✓ Emissions: $-2132.77M ± 292.89M
+    ✓ Discounted Reward: 3.77 ± 0.44
+    ✓ Met Demand: 69.2%
+    ✓ Exploration Cost: $47.39M
+    ✓ CAPEX: $4465.8M
+    ✓ OPEX: $9983.53M
+    ✓ Cost per Tonne: $7051.15
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-919.5M
+    ✓ Emission Overfitting: $118.56M
+    ✓ Reward Overfitting: -0.05
+    ✅ No significant overfitting detected
+  📚 Training Results:
+    ✓ Profit: $29484.49M ± 4474.98M
+    ✓ Emissions: $-1750.69M ± 265.15M
+    ✓ Discounted Reward: 0.69 ± 0.13
+    ✓ Met Demand: 58.3%
+    ✓ Exploration Cost: $53.8M
+    ✓ CAPEX: $4431.32M
+    ✓ OPEX: $8479.46M
+    ✓ Cost per Tonne: $7517.91
+  🧪 Testing Results:
+    ✓ Profit: $30739.96M ± 4625.5M
+    ✓ Emissions: $-1740.02M ± 253.39M
+    ✓ Discounted Reward: 0.74 ± 0.13
+    ✓ Met Demand: 59.5%
+    ✓ Exploration Cost: $50.17M
+    ✓ CAPEX: $4353.74M
+    ✓ OPEX: $8726.98M
+    ✓ Cost per Tonne: $7360.28
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-1255.47M
+    ✓ Emission Overfitting: $-10.67M
+    ✓ Reward Overfitting: -0.04
+    ✅ No significant overfitting detected
+  📚 Training Results:
+    ✓ Profit: $31152.63M ± 3574.17M
+    ✓ Emissions: $-1966.2M ± 298.95M
+    ✓ Discounted Reward: 1.67 ± 0.24
+    ✓ Met Demand: 63.7%
+    ✓ Exploration Cost: $54.37M
+    ✓ CAPEX: $4483.04M
+    ✓ OPEX: $9196.73M
+    ✓ Cost per Tonne: $7290.26
+  🧪 Testing Results:
+    ✓ Profit: $32325.41M ± 3622.91M
+    ✓ Emissions: $-1884.27M ± 267.36M
+    ✓ Discounted Reward: 1.77 ± 0.22
+    ✓ Met Demand: 63.0%
+    ✓ Exploration Cost: $50.3M
+    ✓ CAPEX: $4422.7M
+    ✓ OPEX: $9179.02M
+    ✓ Cost per Tonne: $7246.43
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-1172.78M
+    ✓ Emission Overfitting: $-81.93M
+    ✓ Reward Overfitting: -0.1
+    ✅ No significant overfitting detected
+  📚 Training Results:
+    ✓ Profit: $24043.87M ± 6763.85M
+    ✓ Emissions: $-1764.18M ± 390.82M
+    ✓ Discounted Reward: 0.35 ± 0.3
+    ✓ Met Demand: 60.7%
+    ✓ Exploration Cost: $25.99M
+    ✓ CAPEX: $4327.88M
+    ✓ OPEX: $8912.1M
+    ✓ Cost per Tonne: $7347.29
+  🧪 Testing Results:
+    ✓ Profit: $27017.29M ± 4861.04M
+    ✓ Emissions: $-1817.43M ± 342.46M
+    ✓ Discounted Reward: 0.46 ± 0.25
+    ✓ Met Demand: 63.2%
+    ✓ Exploration Cost: $26.54M
+    ✓ CAPEX: $4345.12M
+    ✓ OPEX: $9309.4M
+    ✓ Cost per Tonne: $7259.92
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-2973.41M
+    ✓ Emission Overfitting: $53.25M
+    ✓ Reward Overfitting: -0.11
+    ✅ No significant overfitting detected
+  📚 Training Results:
+    ✓ Profit: $24819.48M ± 5450.39M
+    ✓ Emissions: $-2031.93M ± 288.65M
+    ✓ Discounted Reward: 0.87 ± 0.41
+    ✓ Met Demand: 67.0%
+    ✓ Exploration Cost: $25.43M
+    ✓ CAPEX: $4448.56M
+    ✓ OPEX: $9710.2M
+    ✓ Cost per Tonne: $7147.69
+  🧪 Testing Results:
+    ✓ Profit: $26373.47M ± 6215.35M
+    ✓ Emissions: $-2078.62M ± 325.19M
+    ✓ Discounted Reward: 0.93 ± 0.48
+    ✓ Met Demand: 69.7%
+    ✓ Exploration Cost: $25.83M
+    ✓ CAPEX: $4422.7M
+    ✓ OPEX: $10158.28M
+    ✓ Cost per Tonne: $7036.13
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-1553.99M
+    ✓ Emission Overfitting: $46.69M
+    ✓ Reward Overfitting: -0.06
+    ✅ No significant overfitting detected
+  📚 Training Results:
+    ✓ Profit: $27096.55M ± 5757.94M
+    ✓ Emissions: $-2174.21M ± 300.72M
+    ✓ Discounted Reward: 1.73 ± 0.54
+    ✓ Met Demand: 70.7%
+    ✓ Exploration Cost: $26.58M
+    ✓ CAPEX: $4517.52M
+    ✓ OPEX: $10217.17M
+    ✓ Cost per Tonne: $7092.41
+  🧪 Testing Results:
+    ✓ Profit: $27970.57M ± 5877.59M
+    ✓ Emissions: $-2139.86M ± 287.41M
+    ✓ Discounted Reward: 1.85 ± 0.66
+    ✓ Met Demand: 70.8%
+    ✓ Exploration Cost: $26.35M
+    ✓ CAPEX: $4465.8M
+    ✓ OPEX: $10285.48M
+    ✓ Cost per Tonne: $7029.83
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-874.01M
+    ✓ Emission Overfitting: $-34.35M
+    ✓ Reward Overfitting: -0.12
+    ✅ No significant overfitting detected
+  📚 Training Results:
+    ✓ Profit: $-2186.69M ± 1304.18M
+    ✓ Emissions: $0.0M ± 0.0M
+    ✓ Discounted Reward: 0.0 ± 0.0
+    ✓ Met Demand: 0.0%
+    ✓ Exploration Cost: $21.49M
+    ✓ CAPEX: $2165.2M
+    ✓ OPEX: $0.0M
+    ✓ Cost per Tonne: $0.0
+  🧪 Testing Results:
+    ✓ Profit: $-2159.42M ± 2456.65M
+    ✓ Emissions: $-12.91M ± 91.27M
+    ✓ Discounted Reward: -0.0 ± 0.01
+    ✓ Met Demand: 0.6%
+    ✓ Exploration Cost: $19.91M
+    ✓ CAPEX: $2411.2M
+    ✓ OPEX: $90.05M
+    ✓ Cost per Tonne: $151949.49
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-27.27M
+    ✓ Emission Overfitting: $12.91M
+    ✓ Reward Overfitting: 0.0
+    ⚠️  WARNING: Potential overfitting detected!
+  📚 Training Results:
+    ✓ Profit: $26928.02M ± 5429.47M
+    ✓ Emissions: $-2178.76M ± 205.45M
+    ✓ Discounted Reward: 2.46 ± 0.84
+    ✓ Met Demand: 70.1%
+    ✓ Exploration Cost: $26.38M
+    ✓ CAPEX: $4534.76M
+    ✓ OPEX: $10081.15M
+    ✓ Cost per Tonne: $7083.65
+  🧪 Testing Results:
+    ✓ Profit: $29044.79M ± 5323.97M
+    ✓ Emissions: $-2177.96M ± 331.95M
+    ✓ Discounted Reward: 2.76 ± 0.81
+    ✓ Met Demand: 72.4%
+    ✓ Exploration Cost: $25.97M
+    ✓ CAPEX: $4448.56M
+    ✓ OPEX: $10524.97M
+    ✓ Cost per Tonne: $6971.75
+  🔍 Overfitting Analysis:
+    ✓ Profit Overfitting: $-2116.77M
+    ✓ Emission Overfitting: $-0.81M
+    ✓ Reward Overfitting: -0.3
+    ✅ No significant overfitting detected
+
+========================================================================================================================
+✅ RESULTS SAVED TO: outputs/test_train_final_results/results_p4_e6_a0.0-0.25-0.5-0.75-1.0_best_pomcpow_q10k_timing_4ucb_infogate_cheapest.csv
+📊 Train/Test Split Summary:
+  • Training simulations: 25 per policy
+  • Testing simulations: 50 per policy
+  • Total policies tested: 55
+  • Different random seeds used for train vs test
+  • Overfitting analysis included
+========================================================================================================================
+
+🎯 KEY BENEFITS:
+1. Different random seeds prevent overfitting to specific scenarios
+2. Separate training and testing phases
+3. Overfitting detection and analysis
+4. More realistic evaluation on unseen data
+5. Better policy generalization assessment

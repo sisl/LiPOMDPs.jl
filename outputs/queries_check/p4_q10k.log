@@ -1,0 +1,103 @@
+The latest version of Julia in the `release` channel is 1.13.2+0.x64.linux.gnu. You currently have `1.12.1+0.x64.linux.gnu` installed. Run:
+
+  juliaup update
+
+in your terminal shell to install Julia 1.13.2+0.x64.linux.gnu and update the `release` channel to that version.
+COMPUTE SWEEP  planning=[4]  eval=6  α=[1.0, 0.75, 0.5, 0.25]  γ=0.926  queries=[10000]  rollouts=Int64[]  seeds=10  threads=16
+  [1/80] 5 min  p4 α=1.00 POMCPOW timing q=10000 seed=4001  disc=3.249 expl=51  (298s)
+  [2/80] 5 min  p4 α=0.75 POMCPOW timing q=10000 seed=4005  disc=1.811 expl=52  (302s)
+  [3/80] 5 min  p4 α=1.00 POMCPOW timing q=10000 seed=4005  disc=2.418 expl=42  (302s)
+  [4/80] 5 min  p4 α=1.00 POMCPOW timing q=10000 seed=4010  disc=3.192 expl=49  (303s)
+  [5/80] 5 min  p4 α=1.00 POMCPOW timing q=10000 seed=4002  disc=3.387 expl=42  (304s)
+  [6/80] 5 min  p4 α=0.75 POMCPOW timing q=10000 seed=4001  disc=2.009 expl=49  (304s)
+  [7/80] 5 min  p4 α=1.00 POMCPOW timing q=10000 seed=4007  disc=3.256 expl=42  (307s)
+  [8/80] 5 min  p4 α=0.75 POMCPOW timing q=10000 seed=4006  disc=2.042 expl=51  (308s)
+  [9/80] 5 min  p4 α=1.00 POMCPOW timing q=10000 seed=4008  disc=3.195 expl=52  (309s)
+  [10/80] 5 min  p4 α=0.75 POMCPOW timing q=10000 seed=4004  disc=1.365 expl=43  (310s)
+  [11/80] 5 min  p4 α=1.00 POMCPOW timing q=10000 seed=4006  disc=3.052 expl=43  (311s)
+  [12/80] 5 min  p4 α=0.75 POMCPOW timing q=10000 seed=4003  disc=1.920 expl=52  (311s)
+  [13/80] 5 min  p4 α=1.00 POMCPOW timing q=10000 seed=4009  disc=2.340 expl=48  (311s)
+  [14/80] 5 min  p4 α=0.75 POMCPOW timing q=10000 seed=4002  disc=2.402 expl=39  (311s)
+  [15/80] 5 min  p4 α=1.00 POMCPOW timing q=10000 seed=4004  disc=2.759 expl=55  (311s)
+  [16/80] 5 min  p4 α=1.00 POMCPOW timing q=10000 seed=4003  disc=3.528 expl=46  (313s)
+  [17/80] 10 min  p4 α=0.75 POMCPOW timing q=10000 seed=4008  disc=2.356 expl=53  (298s)
+  [18/80] 10 min  p4 α=0.75 POMCPOW timing q=10000 seed=4010  disc=2.486 expl=34  (297s)
+  [19/80] 10 min  p4 α=0.50 POMCPOW timing q=10000 seed=4001  disc=1.393 expl=44  (297s)
+  [20/80] 10 min  p4 α=0.50 POMCPOW timing q=10000 seed=4002  disc=1.578 expl=57  (297s)
+  [21/80] 10 min  p4 α=0.75 POMCPOW timing q=10000 seed=4009  disc=1.703 expl=49  (300s)
+  [22/80] 10 min  p4 α=0.50 POMCPOW timing q=10000 seed=4005  disc=1.143 expl=63  (294s)
+  [23/80] 10 min  p4 α=0.75 POMCPOW timing q=10000 seed=4007  disc=2.467 expl=49  (302s)
+  [24/80] 10 min  p4 α=0.50 POMCPOW timing q=10000 seed=4008  disc=1.156 expl=40  (294s)
+  [25/80] 10 min  p4 α=0.50 POMCPOW timing q=10000 seed=4003  disc=1.566 expl=52  (301s)
+  [26/80] 10 min  p4 α=0.50 POMCPOW timing q=10000 seed=4006  disc=1.923 expl=54  (298s)
+  [27/80] 10 min  p4 α=0.50 POMCPOW timing q=10000 seed=4007  disc=1.300 expl=60  (297s)
+  [28/80] 10 min  p4 α=0.25 POMCPOW timing q=10000 seed=4001  disc=0.786 expl=45  (297s)
+  [29/80] 10 min  p4 α=1.00 TimingAware seed=4003  disc=2.862 expl=0  (1s)
+  [30/80] 10 min  p4 α=1.00 TimingAware seed=4004  disc=1.963 expl=0  (0s)
+  [31/80] 10 min  p4 α=1.00 TimingAware seed=4002  disc=1.912 expl=0  (1s)
+  [32/80] 10 min  p4 α=1.00 TimingAware seed=4006  disc=3.551 expl=0  (0s)
+  [33/80] 10 min  p4 α=1.00 TimingAware seed=4001  disc=2.150 expl=0  (1s)
+  [34/80] 10 min  p4 α=1.00 TimingAware seed=4008  disc=2.885 expl=0  (0s)
+  [35/80] 10 min  p4 α=1.00 TimingAware seed=4007  disc=3.236 expl=0  (0s)
+  [36/80] 10 min  p4 α=1.00 TimingAware seed=4009  disc=2.115 expl=0  (0s)
+  [37/80] 10 min  p4 α=0.75 TimingAware seed=4001  disc=1.569 expl=0  (0s)
+  [38/80] 10 min  p4 α=1.00 TimingAware seed=4005  disc=1.409 expl=0  (0s)
+  [39/80] 10 min  p4 α=1.00 TimingAware seed=4010  disc=3.180 expl=0  (0s)
+  [40/80] 10 min  p4 α=0.75 TimingAware seed=4003  disc=2.138 expl=0  (0s)
+  [41/80] 10 min  p4 α=0.75 TimingAware seed=4006  disc=2.608 expl=0  (0s)
+  [42/80] 10 min  p4 α=0.75 TimingAware seed=4002  disc=1.368 expl=0  (0s)
+  [43/80] 10 min  p4 α=0.75 TimingAware seed=4004  disc=1.424 expl=0  (0s)
+  [44/80] 10 min  p4 α=0.75 TimingAware seed=4007  disc=2.320 expl=0  (0s)
+  [45/80] 10 min  p4 α=0.75 TimingAware seed=4005  disc=1.018 expl=0  (0s)
+  [46/80] 10 min  p4 α=0.75 TimingAware seed=4008  disc=2.114 expl=0  (0s)
+  [47/80] 10 min  p4 α=0.50 TimingAware seed=4002  disc=0.860 expl=0  (0s)
+  [48/80] 10 min  p4 α=0.75 TimingAware seed=4009  disc=1.449 expl=0  (0s)
+  [49/80] 10 min  p4 α=0.75 TimingAware seed=4010  disc=2.380 expl=0  (0s)
+  [50/80] 10 min  p4 α=0.50 TimingAware seed=4003  disc=1.374 expl=0  (0s)
+  [51/80] 10 min  p4 α=0.50 TimingAware seed=4001  disc=0.997 expl=0  (0s)
+  [52/80] 10 min  p4 α=0.50 TimingAware seed=4005  disc=0.628 expl=0  (0s)
+  [53/80] 10 min  p4 α=0.50 TimingAware seed=4008  disc=1.351 expl=0  (0s)
+  [54/80] 10 min  p4 α=0.50 TimingAware seed=4006  disc=1.685 expl=0  (0s)
+  [55/80] 10 min  p4 α=0.50 TimingAware seed=4009  disc=0.912 expl=0  (0s)
+  [56/80] 10 min  p4 α=0.50 TimingAware seed=4007  disc=1.501 expl=0  (0s)
+  [57/80] 10 min  p4 α=0.50 TimingAware seed=4004  disc=0.900 expl=0  (0s)
+  [58/80] 10 min  p4 α=0.25 TimingAware seed=4001  disc=0.386 expl=0  (0s)
+  [59/80] 10 min  p4 α=0.25 TimingAware seed=4003  disc=0.580 expl=0  (0s)
+  [60/80] 10 min  p4 α=0.25 TimingAware seed=4002  disc=0.352 expl=0  (0s)
+  [61/80] 10 min  p4 α=0.25 TimingAware seed=4006  disc=0.721 expl=0  (0s)
+  [62/80] 10 min  p4 α=0.50 TimingAware seed=4010  disc=1.374 expl=0  (0s)
+  [63/80] 10 min  p4 α=0.25 TimingAware seed=4004  disc=0.467 expl=0  (0s)
+  [64/80] 10 min  p4 α=0.25 TimingAware seed=4005  disc=0.339 expl=0  (0s)
+  [65/80] 10 min  p4 α=0.25 TimingAware seed=4007  disc=0.640 expl=0  (0s)
+  [66/80] 10 min  p4 α=0.25 TimingAware seed=4009  disc=0.366 expl=0  (0s)
+  [67/80] 10 min  p4 α=0.25 TimingAware seed=4008  disc=0.565 expl=0  (0s)
+  [68/80] 10 min  p4 α=0.25 TimingAware seed=4010  disc=0.607 expl=0  (0s)
+  [69/80] 10 min  p4 α=0.50 POMCPOW timing q=10000 seed=4004  disc=1.297 expl=52  (301s)
+  [70/80] 10 min  p4 α=0.50 POMCPOW timing q=10000 seed=4010  disc=1.486 expl=54  (298s)
+  [71/80] 10 min  p4 α=0.25 POMCPOW timing q=10000 seed=4002  disc=0.652 expl=54  (299s)
+  [72/80] 10 min  p4 α=0.50 POMCPOW timing q=10000 seed=4009  disc=1.087 expl=51  (306s)
+  [73/80] 13 min  p4 α=0.25 POMCPOW timing q=10000 seed=4005  disc=0.285 expl=53  (205s)
+  [74/80] 14 min  p4 α=0.25 POMCPOW timing q=10000 seed=4003  disc=0.769 expl=47  (210s)
+  [75/80] 14 min  p4 α=0.25 POMCPOW timing q=10000 seed=4006  disc=0.857 expl=59  (209s)
+  [76/80] 14 min  p4 α=0.25 POMCPOW timing q=10000 seed=4007  disc=0.677 expl=52  (209s)
+  [77/80] 14 min  p4 α=0.25 POMCPOW timing q=10000 seed=4008  disc=0.655 expl=52  (209s)
+  [78/80] 14 min  p4 α=0.25 POMCPOW timing q=10000 seed=4009  disc=0.478 expl=44  (209s)
+  [79/80] 14 min  p4 α=0.25 POMCPOW timing q=10000 seed=4004  disc=0.335 expl=54  (214s)
+  [80/80] 14 min  p4 α=0.25 POMCPOW timing q=10000 seed=4010  disc=0.659 expl=49  (211s)
+80 episodes in 14 min
+
+Mean discounted reward [explorations, seconds per episode under load]
+p4 α=1.00
+  POMCPOW timing q=10000   3.038  [ 47.0 expl,    307 s]
+  TimingAware              2.526  [  0.0 expl,      0 s]
+p4 α=0.75
+  POMCPOW timing q=10000   2.056  [ 47.1 expl,    304 s]
+  TimingAware              1.839  [  0.0 expl,      0 s]
+p4 α=0.50
+  POMCPOW timing q=10000   1.393  [ 52.7 expl,    298 s]
+  TimingAware              1.158  [  0.0 expl,      0 s]
+p4 α=0.25
+  POMCPOW timing q=10000   0.615  [ 50.9 expl,    227 s]
+  TimingAware              0.502  [  0.0 expl,      0 s]
+
+CSV: outputs/pomcpow_vs_heuristics/compute_sweep_p4_a1.0-0.75-0.5-0.25_g0.926_e6.csv

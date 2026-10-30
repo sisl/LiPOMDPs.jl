@@ -1,0 +1,51 @@
+The latest version of Julia in the `release` channel is 1.13.2+0.x64.linux.gnu. You currently have `1.12.0+0.x64.linux.gnu` installed. Run:
+
+  juliaup update
+
+in your terminal shell to install Julia 1.13.2+0.x64.linux.gnu and update the `release` channel to that version.
+480 episodes on 56 threads, queries=10000, seeds=[1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020]
+done in 53 min
+
+planning p2, α=0.5  (seeds 1001–1020; evaluation model 6)
+  config                  disc        Δ vs TA    Δ vs OSL-TA   expl  mines  mean open year per site (0 = never)
+  PC base d25            1.547  +0.104 ±0.051  +0.098 ±0.023   40.8   3.00  15.4 16.2 13.4 13.5  (524s/ep)
+  PC base d31            1.550  +0.107 ±0.049  +0.101 ±0.026   42.5   3.00  19.1 11.2 12.3 15.0  (535s/ep)
+  PC base d31 cheap      1.598  +0.154 ±0.044  +0.148 ±0.034   15.9   3.00  22.4 10.2 12.7 14.9  (538s/ep)
+  PC base d25 cheap      1.579  +0.136 ±0.042  +0.129 ±0.031   13.4   3.00  19.6 12.2 13.8 13.7  (522s/ep)
+  TA                     1.443  +0.000 ±0.000  -0.006 ±0.046    0.0   3.00  25.8  8.1 10.0 16.1  (0s/ep)
+  OSL-TA                 1.450  +0.006 ±0.046  +0.000 ±0.000   12.5   3.00  20.0 10.1 12.8 13.1  (40s/ep)
+
+planning p2, α=1.0  (seeds 1001–1020; evaluation model 6)
+  config                  disc        Δ vs TA    Δ vs OSL-TA   expl  mines  mean open year per site (0 = never)
+  PC base d25            3.497  +0.225 ±0.103  +0.187 ±0.053   42.7   3.00  15.6 12.9 13.8 15.2  (525s/ep)
+  PC base d31            3.511  +0.240 ±0.106  +0.202 ±0.051   43.9   3.00  19.5 10.4 11.8 16.1  (539s/ep)
+  PC base d31 cheap      3.492  +0.221 ±0.107  +0.183 ±0.049   29.1   3.00  14.2 15.5 13.0 14.2  (540s/ep)
+  PC base d25 cheap      3.497  +0.225 ±0.102  +0.187 ±0.059   25.9   3.00  18.1 11.6 11.7 15.2  (524s/ep)
+  TA                     3.272  +0.000 ±0.000  -0.038 ±0.105    0.0   3.00  25.9  6.8  9.0 17.2  (0s/ep)
+  OSL-TA                 3.309  +0.038 ±0.105  +0.000 ±0.000   11.4   3.00  22.6  7.9 10.9 13.6  (37s/ep)
+
+planning p3, α=0.5  (seeds 1001–1020; evaluation model 6)
+  config                  disc        Δ vs TA    Δ vs OSL-TA   expl  mines  mean open year per site (0 = never)
+  PC base d25            1.718  -0.045 ±0.029  +0.034 ±0.020   45.4   3.00  19.6 12.8 17.3 16.6  (535s/ep)
+  PC base d31            1.714  -0.048 ±0.030  +0.030 ±0.022   48.7   3.00  18.3 12.7 17.1 18.4  (551s/ep)
+  PC base d31 cheap      1.709  -0.054 ±0.029  +0.024 ±0.024   27.1   3.00  20.8 10.1 16.7 17.8  (549s/ep)
+  PC base d25 cheap      1.737  -0.025 ±0.027  +0.053 ±0.018   24.4   3.00  18.3 14.1 16.6 17.7  (469s/ep)
+  TA                     1.762  +0.000 ±0.000  +0.078 ±0.027    0.0   3.00  26.9  0.0 18.0 22.9  (0s/ep)
+  OSL-TA                 1.684  -0.078 ±0.027  +0.000 ±0.000   16.1   3.00  14.8 14.5 17.3 19.3  (53s/ep)
+
+planning p3, α=1.0  (seeds 1001–1020; evaluation model 6)
+  config                  disc        Δ vs TA    Δ vs OSL-TA   expl  mines  mean open year per site (0 = never)
+  PC base d25            3.718  -0.098 ±0.053  +0.095 ±0.038   44.3   3.00  17.0 14.1 16.8 17.2  (537s/ep)
+  PC base d31            3.647  -0.169 ±0.063  +0.025 ±0.050   46.0   3.00  18.1 14.0 16.1 15.8  (548s/ep)
+  PC base d31 cheap      3.714  -0.102 ±0.053  +0.092 ±0.039   40.9   3.00  19.6 15.6 14.9 15.1  (549s/ep)
+  PC base d25 cheap      3.731  -0.085 ±0.052  +0.108 ±0.057   39.0   3.00  20.8 13.2 16.6 15.8  (459s/ep)
+  TA                     3.816  +0.000 ±0.000  +0.194 ±0.047    0.0   3.00  26.9  0.0 17.0 22.9  (0s/ep)
+  OSL-TA                 3.622  -0.194 ±0.047  +0.000 ±0.000   13.9   3.00  14.7 14.7 16.9 17.1  (49s/ep)
+
+POOLED over all cells × seeds (paired):
+  PC base d25          mean 2.620   Δ vs TA +0.047 ± 0.035   Δ vs OSL-TA +0.104 ± 0.019
+  PC base d31          mean 2.606   Δ vs TA +0.032 ± 0.038   Δ vs OSL-TA +0.089 ± 0.021
+  PC base d31 cheap    mean 2.628   Δ vs TA +0.055 ± 0.035   Δ vs OSL-TA +0.112 ± 0.020
+  PC base d25 cheap    mean 2.636   Δ vs TA +0.063 ± 0.034   Δ vs OSL-TA +0.120 ± 0.023
+  TA                   mean 2.573   Δ vs TA +0.000 ± 0.000   Δ vs OSL-TA +0.057 ± 0.033
+  OSL-TA               mean 2.516   Δ vs TA -0.057 ± 0.033   Δ vs OSL-TA +0.000 ± 0.000

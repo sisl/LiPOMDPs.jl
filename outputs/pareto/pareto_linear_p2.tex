@@ -1,0 +1,128 @@
+% Pareto curve: planning with the linear price model (p2), evaluated on historical prices.
+% Data: test means over 50 held-out scenarios from
+%   outputs/test_train_final_results/results_p2_e6_a0.0-0.25-0.5-0.75-1.0_best_pomcpow_q10k_timing_4ucb_rec20-25_osl5_recexp15.csv
+%   outputs/test_train_final_results/results_p2_e6_a0.05-0.1-0.15-0.2_best_pomcpow_q10k_timing_4ucb_rec20-25_osl5_recexp15.csv
+% Both axes in billions of USD (emission cost = CO2 tonnes x $190/t, undiscounted totals over 1995-2025).
+% Needs \usepackage{pgfplots} and \usetikzlibrary{calc}. Colours use \providecolor, so existing
+% definitions of the same names in your preamble take precedence.
+\providecolor{pomcBlue}{HTML}{4C8FDB}
+\providecolor{colOslTA}{HTML}{FFB870}     % baby orange: One-Step Lookahead (TimingAware)
+\providecolor{colTA}{HTML}{F29CB7}        % light pink:  TimingAware
+\providecolor{colOslAA}{HTML}{FF7F50}     % coral:       One-Step Lookahead (AlphaAware)
+\providecolor{colExplore}{HTML}{4D4D4D}   % dark grey:   ExploreOnly
+\providecolor{colDynEm}{HTML}{A8B45E}     % olive green: DynamicEmissionMinimizer
+\providecolor{colDynProf}{HTML}{E41A1C}   % bright red:  DynamicProfitMaximizer
+\providecolor{colOneMineEm}{HTML}{3A9A3A} % green:       OneMine_EmissionMinimization
+\providecolor{colOneMineProf}{HTML}{8B0000} % dark red:  OneMine_ProfitMaximization
+\begin{tikzpicture}
+\begin{axis}[
+  name=main,
+  width=13.5cm, height=8.8cm,
+  xlabel={Emission Cost (\$B)},
+  ylabel={Profit (\$B)},
+  title={\shortstack{Pareto Curve for Profit vs.\ Emissions \\ Planning with Linear Price Model and Evaluated with Historical Pricing}},
+  title style={font=\small, yshift=1ex},
+  grid=major,
+  major grid style={line width=.4pt, draw=gray!40},
+  axis line style={black, line width=0.5pt},
+  tick style={black, line width=.4pt},
+  tick label style={font=\small},
+  label style={font=\small},
+  xmin=0, xmax=2.8,
+  ymin=-3, ymax=44,
+  ytick={0,10,20,30,40},
+  enlarge x limits=false, enlarge y limits=false,
+  legend style={at={(0.5,-0.16)}, anchor=north, draw=black, fill=white, line width=0.4pt,
+                font=\footnotesize, inner sep=2pt, /tikz/every even column/.append style={column sep=8pt}},
+  legend columns=3,
+  legend cell align=left
+]
+
+% --- POMCPOW, alpha = 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.5, 0.75, 1.0 ---
+\addplot+[very thick, color=pomcBlue, mark=*, mark size=2pt, mark options={fill=pomcBlue, draw=pomcBlue}]
+  coordinates {(0.000,-1.732) (0.756,21.755) (1.795,32.574) (2.059,33.454) (2.203,33.496)
+               (2.262,33.518) (2.385,34.015) (2.407,34.032) (2.455,34.007)};
+\addlegendentry{POMCPOW}
+
+% --- alpha-dependent baselines (same alpha grid) ---
+\addplot+[thick, dashed, color=colOslTA, mark=square*, mark size=1.6pt, mark options={solid, fill=colOslTA, draw=colOslTA}]
+  coordinates {(0.000,0.000) (0.721,20.547) (1.957,32.336) (2.269,33.381) (2.422,33.736)
+               (2.448,33.159) (2.567,33.454) (2.594,33.437) (2.607,33.263)};
+\addlegendentry{OneStepLookahead (TimingAware)}
+
+\addplot+[thick, dashed, color=colTA, mark=triangle*, mark size=2pt, mark options={solid, fill=colTA, draw=colTA}]
+  coordinates {(0.000,0.000) (0.662,22.083) (1.908,29.802) (2.122,29.349) (2.171,28.239)
+               (2.222,28.416) (2.273,28.492) (2.313,28.494) (2.328,28.775)};
+\addlegendentry{TimingAware}
+
+\addplot+[thin, dashed, color=colOslAA, mark=diamond*, mark size=2pt, mark options={solid, fill=colOslAA, draw=colOslAA}]
+  coordinates {(1.549,14.207) (0.920,21.564) (2.118,26.120) (2.305,24.885) (2.337,24.225)
+               (2.341,23.785) (2.354,23.336) (2.372,23.361) (2.356,22.845)};
+\addlegendentry{OneStepLookahead (AlphaAware)}
+
+\addplot+[only marks, mark=pentagon*, mark size=3pt, color=pomcBlue!60!black, mark options={fill=pomcBlue!60!black, draw=pomcBlue!60!black}]
+  coordinates {(2.050,18.392) (0.000,0.000)};
+\addlegendentry{POMCPOW\_Depth1}
+
+% --- alpha-independent heuristics (identical at every alpha) ---
+\addplot+[only marks, mark=*, mark size=2.5pt, color=colExplore, mark options={fill=colExplore, draw=colExplore}]
+  coordinates {(0.000,-0.321)};
+\addlegendentry{ExploreOnly}
+
+\addplot+[only marks, mark=triangle*, mark size=3pt, color=colDynEm, mark options={fill=colDynEm, draw=colDynEm}]
+  coordinates {(1.194,9.258)};
+\addlegendentry{DynamicEmissionMinimizer}
+
+\addplot+[only marks, mark=star, mark size=5pt, color=colDynProf, mark options={draw=colDynProf, solid, line width=1pt}]
+  coordinates {(1.614,13.375)};
+\addlegendentry{DynamicProfitMaximizer}
+
+\addplot+[only marks, mark=pentagon*, mark size=3pt, color=colOneMineEm, mark options={fill=colOneMineEm, draw=colOneMineEm}]
+  coordinates {(0.396,-0.980)};
+\addlegendentry{OneMine\_EmissionMinimization}
+
+\addplot+[only marks, mark=x, mark size=3pt, color=colOneMineProf, mark options={draw=colOneMineProf, line width=1pt}]
+  coordinates {(1.797,12.591)};
+\addlegendentry{OneMine\_ProfitMaximization}
+
+\addplot+[only marks, mark=x, mark size=3pt, color=black, mark options={draw=black}]
+  coordinates {(1.856,16.054)};
+\addlegendentry{RandomHeuristicPolicy}
+
+% --- alpha labels for POMCPOW (alpha >= 0.15 are labelled in the inset) ---
+\node[font=\scriptsize, anchor=north west] at (axis cs:0.000,-1.732) [xshift=2pt, yshift=-1pt] {$\alpha=0$};
+\draw[gray, thin] (axis cs:0.756,21.755) -- (axis cs:1.05,18.6) node[anchor=north west, font=\scriptsize, inner sep=1pt] {$\alpha=0.05$};
+\node[font=\scriptsize, anchor=east]       at (axis cs:1.795,32.574) [xshift=-3pt] {$\alpha=0.1$};
+\node[font=\scriptsize, anchor=south]      at (axis cs:2.225,35.0)   [yshift=1pt] {$\alpha\geq0.15$ (inset)};
+\node[font=\scriptsize, anchor=south west] at (axis cs:2.050,18.392) [xshift=2pt] {$\alpha=0$};
+
+% outline of the zoomed region
+\draw[gray!70, dashed, line width=0.5pt] (axis cs:1.75,27.5) rectangle (axis cs:2.70,35.0);
+\coordinate (insetpos) at (rel axis cs:0.10,0.965);
+\end{axis}
+
+% --- zoom inset on the high-alpha frontier ---
+\begin{axis}[
+  at={(insetpos)}, anchor=north west,
+  scale only axis, width=4.5cm, height=2.5cm,
+  xmin=1.75, xmax=2.70, ymin=27.5, ymax=35.5,
+  xtick={1.8,2.0,2.2,2.4,2.6}, ytick={28,30,32,34},
+  tick label style={font=\tiny}, axis background/.style={fill=white},
+  grid=major, major grid style={line width=.3pt, draw=gray!30},
+  axis line style={gray!70, line width=0.5pt},
+]
+\addplot+[very thick, color=pomcBlue, mark=*, mark size=1.6pt, mark options={fill=pomcBlue, draw=pomcBlue}]
+  coordinates {(1.795,32.574) (2.059,33.454) (2.203,33.496) (2.262,33.518) (2.385,34.015) (2.407,34.032) (2.455,34.007)};
+\addplot+[thick, dashed, color=colOslTA, mark=square*, mark size=1.3pt, mark options={solid, fill=colOslTA, draw=colOslTA}]
+  coordinates {(1.957,32.336) (2.269,33.381) (2.422,33.736) (2.448,33.159) (2.567,33.454) (2.594,33.437) (2.607,33.263)};
+\addplot+[thick, dashed, color=colTA, mark=triangle*, mark size=1.6pt, mark options={solid, fill=colTA, draw=colTA}]
+  coordinates {(1.908,29.802) (2.122,29.349) (2.171,28.239) (2.222,28.416) (2.273,28.492) (2.313,28.494) (2.328,28.775)};
+\node[font=\tiny, anchor=north]      at (axis cs:1.795,32.574) [yshift=-2pt] {$0.1$};
+\node[font=\tiny, anchor=south]      at (axis cs:2.059,33.454) [yshift=2pt] {$0.15$};
+\node[font=\tiny, anchor=north]      at (axis cs:2.203,33.496) [yshift=-2pt] {$0.2$};
+\node[font=\tiny, anchor=south]      at (axis cs:2.262,33.518) [yshift=2pt] {$0.25$};
+\node[font=\tiny, anchor=south east] at (axis cs:2.385,34.015) [yshift=1pt] {$0.5$};
+\node[font=\tiny, anchor=south]      at (axis cs:2.420,34.032) [yshift=6pt] {$0.75$};
+\node[font=\tiny, anchor=south west] at (axis cs:2.455,34.007) [xshift=1pt, yshift=1pt] {$1.0$};
+\end{axis}
+\end{tikzpicture}

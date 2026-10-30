@@ -23,6 +23,9 @@ end
 function get_historical_production(pomdp::LiPOMDP, year::Int64)
     if haskey(pomdp.hist_data, year)
         return pomdp.hist_data[year][1]  # production (now in position 1)
+    elseif year > maximum(keys(pomdp.hist_data))
+        # Only reached for the terminal state's next-year demand; hold the last observed year
+        return pomdp.hist_data[maximum(keys(pomdp.hist_data))][1]
     else
         @warn "No historical production data for year $year"
         return 0.0

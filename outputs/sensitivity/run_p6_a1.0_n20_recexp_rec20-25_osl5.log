@@ -1,0 +1,336 @@
+The latest version of Julia in the `release` channel is 1.13.2+0.x64.linux.gnu. You currently have `1.12.1+0.x64.linux.gnu` installed. Run:
+
+  juliaup update
+
+in your terminal shell to install Julia 1.13.2+0.x64.linux.gnu and update the `release` channel to that version.
+SENSITIVITY  4 settings × 4 policies × 20 seeds = 320 episodes  planning=6 eval=6 α=1.0 queries=10000 threads=30
+  [1/320] 4 min  Baseline   POMCPOW seed=2019  disc=4.347
+  [2/320] 4 min  Recovery explore noise 0.1  POMCPOW seed=2010  disc=3.660
+  [3/320] 5 min  Recovery explore noise 0.1  POMCPOW seed=2003  disc=3.645
+  [4/320] 5 min  Baseline   POMCPOW seed=2018  disc=4.358
+  [5/320] 5 min  Recovery explore noise 0.1  POMCPOW seed=2007  disc=4.230
+  [6/320] 5 min  Baseline   POMCPOW seed=2015  disc=2.981
+  [7/320] 5 min  Recovery explore noise 0.1  POMCPOW seed=2008  disc=3.598
+  [8/320] 5 min  Baseline   POMCPOW seed=2016  disc=4.557
+  [9/320] 5 min  Recovery explore noise 0.1  POMCPOW seed=2002  disc=5.190
+  [10/320] 5 min  Baseline   POMCPOW seed=2013  disc=4.449
+  [11/320] 5 min  Baseline   POMCPOW seed=2020  disc=2.907
+  [12/320] 5 min  Baseline   POMCPOW seed=2012  disc=3.891
+  [13/320] 5 min  Baseline   POMCPOW seed=2003  disc=3.672
+  [14/320] 5 min  Baseline   POMCPOW seed=2005  disc=3.404
+  [15/320] 5 min  Recovery explore noise 0.1  POMCPOW seed=2009  disc=4.193
+  [16/320] 5 min  Baseline   POMCPOW seed=2006  disc=3.936
+  [17/320] 5 min  Baseline   POMCPOW seed=2017  disc=4.801
+  [18/320] 5 min  Baseline   POMCPOW seed=2008  disc=3.160
+  [19/320] 5 min  Baseline   POMCPOW seed=2002  disc=5.066
+  [20/320] 5 min  Baseline   POMCPOW seed=2014  disc=3.702
+  [21/320] 5 min  Baseline   POMCPOW seed=2007  disc=4.250
+  [22/320] 5 min  Recovery explore noise 0.1  POMCPOW seed=2005  disc=3.405
+  [23/320] 5 min  Baseline   POMCPOW seed=2010  disc=3.965
+  [24/320] 5 min  Baseline   POMCPOW seed=2001  disc=3.870
+  [25/320] 5 min  Recovery explore noise 0.1  POMCPOW seed=2006  disc=3.899
+  [26/320] 5 min  Recovery explore noise 0.1  POMCPOW seed=2004  disc=4.219
+  [27/320] 5 min  Baseline   POMCPOW seed=2011  disc=3.890
+  [28/320] 5 min  Baseline   POMCPOW seed=2004  disc=4.162
+  [29/320] 5 min  Recovery explore noise 0.1  POMCPOW seed=2001  disc=3.869
+  [30/320] 5 min  Baseline   POMCPOW seed=2009  disc=4.477
+  [31/320] 9 min  Recovery explore noise 0.1  POMCPOW seed=2013  disc=4.381
+  [32/320] 9 min  Recovery explore noise 0.1  POMCPOW seed=2012  disc=3.887
+  [33/320] 9 min  Recovery explore noise 0.1  POMCPOW seed=2011  disc=3.997
+  [34/320] 9 min  Recovery explore noise 0.1  POMCPOW seed=2014  disc=3.668
+  [35/320] 9 min  Recovery explore noise 0.1  POMCPOW seed=2015  disc=2.703
+  [36/320] 9 min  Recovery explore noise 0.1  POMCPOW seed=2018  disc=4.481
+  [37/320] 9 min  Recovery explore noise 0.15  POMCPOW seed=2007  disc=4.270
+  [38/320] 9 min  Recovery explore noise 0.15  POMCPOW seed=2001  disc=4.325
+  [39/320] 10 min  Recovery explore noise 0.15  POMCPOW seed=2013  disc=4.379
+  [40/320] 10 min  Recovery explore noise 0.1  POMCPOW seed=2017  disc=5.020
+  [41/320] 10 min  Recovery explore noise 0.15  POMCPOW seed=2010  disc=3.850
+  [42/320] 10 min  Recovery explore noise 0.1  POMCPOW seed=2019  disc=4.367
+  [43/320] 10 min  Recovery explore noise 0.15  POMCPOW seed=2009  disc=4.572
+  [44/320] 10 min  Recovery explore noise 0.15  POMCPOW seed=2011  disc=3.882
+  [45/320] 10 min  Recovery explore noise 0.15  POMCPOW seed=2005  disc=3.390
+  [46/320] 10 min  Recovery explore noise 0.15  POMCPOW seed=2004  disc=4.056
+  [47/320] 10 min  Recovery explore noise 0.15  POMCPOW seed=2006  disc=3.946
+  [48/320] 10 min  Recovery explore noise 0.15  POMCPOW seed=2008  disc=3.552
+  [49/320] 10 min  Recovery explore noise 0.1  POMCPOW seed=2020  disc=3.023
+  [50/320] 10 min  Recovery explore noise 0.15  POMCPOW seed=2003  disc=3.570
+  [51/320] 10 min  Recovery explore noise 0.15  POMCPOW seed=2015  disc=2.659
+  [52/320] 10 min  Recovery explore noise 0.1  POMCPOW seed=2016  disc=4.577
+  [53/320] 10 min  Recovery explore noise 0.15  POMCPOW seed=2017  disc=4.822
+  [54/320] 10 min  Recovery explore noise 0.15  POMCPOW seed=2002  disc=5.118
+  [55/320] 10 min  Recovery explore noise 0.15  POMCPOW seed=2019  disc=4.308
+  [56/320] 10 min  Recovery explore noise 0.15  POMCPOW seed=2014  disc=3.661
+  [57/320] 10 min  Baseline   OneStepLookahead_TimingAware seed=2001  disc=3.805
+  [58/320] 10 min  Baseline   OneStepLookahead_TimingAware seed=2003  disc=3.468
+  [59/320] 10 min  Baseline   OneStepLookahead_TimingAware seed=2004  disc=3.736
+  [60/320] 10 min  Recovery explore noise 0.15  POMCPOW seed=2018  disc=4.426
+  [61/320] 10 min  Recovery explore noise 0.15  POMCPOW seed=2020  disc=2.951
+  [62/320] 10 min  Baseline   OneStepLookahead_TimingAware seed=2002  disc=5.184
+  [63/320] 10 min  Recovery explore noise 0.15  POMCPOW seed=2016  disc=4.573
+  [64/320] 10 min  Baseline   OneStepLookahead_TimingAware seed=2005  disc=3.528
+  [65/320] 10 min  Baseline   OneStepLookahead_TimingAware seed=2007  disc=4.386
+  [66/320] 10 min  Baseline   OneStepLookahead_TimingAware seed=2009  disc=3.875
+  [67/320] 10 min  Baseline   OneStepLookahead_TimingAware seed=2006  disc=3.927
+  [68/320] 10 min  Baseline   OneStepLookahead_TimingAware seed=2010  disc=3.721
+  [69/320] 10 min  Baseline   OneStepLookahead_TimingAware seed=2008  disc=3.036
+  [70/320] 10 min  Baseline   OneStepLookahead_TimingAware seed=2011  disc=4.069
+  [71/320] 10 min  Baseline   OneStepLookahead_TimingAware seed=2012  disc=4.001
+  [72/320] 10 min  Baseline   OneStepLookahead_TimingAware seed=2018  disc=3.526
+  [73/320] 10 min  Baseline   OneStepLookahead_TimingAware seed=2013  disc=3.560
+  [74/320] 11 min  Baseline   OneStepLookahead_TimingAware seed=2016  disc=4.152
+  [75/320] 11 min  Recovery explore noise 0.15  POMCPOW seed=2012  disc=3.920
+  [76/320] 11 min  Baseline   OneStepLookahead_TimingAware seed=2014  disc=3.774
+  [77/320] 11 min  Baseline   OneStepLookahead_TimingAware seed=2015  disc=3.232
+  [78/320] 11 min  Baseline   OneStepLookahead_TimingAware seed=2017  disc=5.319
+  [79/320] 11 min  Recovery explore noise 0.1  OneStepLookahead_TimingAware seed=2001  disc=4.533
+  [80/320] 11 min  Recovery explore noise 0.1  OneStepLookahead_TimingAware seed=2003  disc=3.465
+  [81/320] 11 min  Baseline   OneStepLookahead_TimingAware seed=2019  disc=4.416
+  [82/320] 11 min  Baseline   OneStepLookahead_TimingAware seed=2020  disc=2.983
+  [83/320] 11 min  Recovery explore noise 0.1  OneStepLookahead_TimingAware seed=2002  disc=5.235
+  [84/320] 11 min  Recovery explore noise 0.1  OneStepLookahead_TimingAware seed=2006  disc=3.871
+  [85/320] 11 min  Recovery explore noise 0.1  OneStepLookahead_TimingAware seed=2004  disc=3.922
+  [86/320] 11 min  Recovery explore noise 0.1  OneStepLookahead_TimingAware seed=2009  disc=3.866
+  [87/320] 11 min  Recovery explore noise 0.1  OneStepLookahead_TimingAware seed=2007  disc=4.383
+  [88/320] 11 min  Recovery explore noise 0.1  OneStepLookahead_TimingAware seed=2005  disc=3.518
+  [89/320] 11 min  Recovery explore noise 0.1  OneStepLookahead_TimingAware seed=2010  disc=3.556
+  [90/320] 11 min  Recovery explore noise 0.1  OneStepLookahead_TimingAware seed=2008  disc=2.799
+  [91/320] 11 min  Recovery explore noise 0.1  OneStepLookahead_TimingAware seed=2012  disc=3.706
+  [92/320] 11 min  Recovery explore noise 0.1  OneStepLookahead_TimingAware seed=2016  disc=4.427
+  [93/320] 11 min  Recovery explore noise 0.1  OneStepLookahead_TimingAware seed=2011  disc=4.006
+  [94/320] 11 min  Recovery explore noise 0.1  OneStepLookahead_TimingAware seed=2017  disc=4.992
+  [95/320] 11 min  Recovery explore noise 0.1  OneStepLookahead_TimingAware seed=2018  disc=4.155
+  [96/320] 11 min  Recovery explore noise 0.1  OneStepLookahead_TimingAware seed=2013  disc=3.996
+  [97/320] 11 min  Recovery explore noise 0.1  OneStepLookahead_TimingAware seed=2014  disc=3.113
+  [98/320] 11 min  Recovery explore noise 0.1  OneStepLookahead_TimingAware seed=2019  disc=4.154
+  [99/320] 11 min  Recovery explore noise 0.1  OneStepLookahead_TimingAware seed=2015  disc=3.217
+  [100/320] 11 min  Recovery explore noise 0.15  OneStepLookahead_TimingAware seed=2002  disc=4.191
+  [101/320] 11 min  Recovery explore noise 0.1  OneStepLookahead_TimingAware seed=2020  disc=3.094
+  [102/320] 11 min  Recovery explore noise 0.15  OneStepLookahead_TimingAware seed=2003  disc=3.465
+  [103/320] 11 min  Recovery explore noise 0.15  OneStepLookahead_TimingAware seed=2006  disc=3.983
+  [104/320] 11 min  Recovery explore noise 0.15  OneStepLookahead_TimingAware seed=2005  disc=2.611
+  [105/320] 11 min  Recovery explore noise 0.15  OneStepLookahead_TimingAware seed=2004  disc=3.731
+  [106/320] 11 min  Recovery explore noise 0.15  OneStepLookahead_TimingAware seed=2001  disc=4.530
+  [107/320] 11 min  Recovery explore noise 0.15  OneStepLookahead_TimingAware seed=2007  disc=3.740
+  [108/320] 11 min  Recovery explore noise 0.15  OneStepLookahead_TimingAware seed=2009  disc=3.862
+  [109/320] 11 min  Recovery explore noise 0.15  OneStepLookahead_TimingAware seed=2010  disc=3.279
+  [110/320] 11 min  Recovery explore noise 0.15  OneStepLookahead_TimingAware seed=2008  disc=2.791
+  [111/320] 11 min  Recovery explore noise 0.15  OneStepLookahead_TimingAware seed=2011  disc=3.981
+  [112/320] 11 min  Recovery explore noise 0.15  OneStepLookahead_TimingAware seed=2017  disc=4.462
+  [113/320] 11 min  Recovery explore noise 0.15  OneStepLookahead_TimingAware seed=2014  disc=3.131
+  [114/320] 11 min  Recovery explore noise 0.15  OneStepLookahead_TimingAware seed=2019  disc=4.090
+  [115/320] 11 min  Recovery explore noise 0.15  OneStepLookahead_TimingAware seed=2013  disc=4.501
+  [116/320] 11 min  Recovery explore noise 0.15  OneStepLookahead_TimingAware seed=2018  disc=4.232
+  [117/320] 11 min  Recovery explore noise 0.15  OneStepLookahead_TimingAware seed=2012  disc=3.971
+  [118/320] 11 min  Recovery explore noise 0.15  OneStepLookahead_TimingAware seed=2015  disc=3.230
+  [119/320] 11 min  Recovery explore noise 0.15  OneStepLookahead_TimingAware seed=2016  disc=4.282
+  [120/320] 12 min  Recovery explore noise 0.15  OneStepLookahead_TimingAware seed=2020  disc=3.087
+  [121/320] 12 min  Recovery explore noise 0.2  OneStepLookahead_TimingAware seed=2003  disc=3.465
+  [122/320] 12 min  Recovery explore noise 0.2  OneStepLookahead_TimingAware seed=2001  disc=3.978
+  [123/320] 12 min  Recovery explore noise 0.2  OneStepLookahead_TimingAware seed=2004  disc=3.739
+  [124/320] 12 min  Recovery explore noise 0.2  OneStepLookahead_TimingAware seed=2009  disc=3.634
+  [125/320] 12 min  Recovery explore noise 0.2  OneStepLookahead_TimingAware seed=2008  disc=2.391
+  [126/320] 12 min  Recovery explore noise 0.2  OneStepLookahead_TimingAware seed=2002  disc=5.230
+  [127/320] 12 min  Recovery explore noise 0.2  OneStepLookahead_TimingAware seed=2005  disc=3.530
+  [128/320] 12 min  Recovery explore noise 0.2  OneStepLookahead_TimingAware seed=2010  disc=3.880
+  [129/320] 12 min  Recovery explore noise 0.2  OneStepLookahead_TimingAware seed=2007  disc=4.375
+  [130/320] 12 min  Recovery explore noise 0.2  OneStepLookahead_TimingAware seed=2006  disc=3.992
+  [131/320] 12 min  Recovery explore noise 0.2  OneStepLookahead_TimingAware seed=2011  disc=4.055
+  [132/320] 12 min  Baseline   TimingAware seed=2001  disc=2.451
+  [133/320] 12 min  Baseline   TimingAware seed=2002  disc=5.264
+  [134/320] 12 min  Baseline   TimingAware seed=2003  disc=3.350
+  [135/320] 12 min  Baseline   TimingAware seed=2004  disc=3.491
+  [136/320] 12 min  Baseline   TimingAware seed=2005  disc=2.733
+  [137/320] 12 min  Baseline   TimingAware seed=2006  disc=3.809
+  [138/320] 12 min  Baseline   TimingAware seed=2007  disc=3.865
+  [139/320] 12 min  Baseline   TimingAware seed=2008  disc=3.024
+  [140/320] 12 min  Baseline   TimingAware seed=2009  disc=4.491
+  [141/320] 12 min  Baseline   TimingAware seed=2010  disc=3.517
+  [142/320] 12 min  Baseline   TimingAware seed=2011  disc=3.830
+  [143/320] 12 min  Baseline   TimingAware seed=2012  disc=3.184
+  [144/320] 12 min  Baseline   TimingAware seed=2013  disc=3.055
+  [145/320] 12 min  Baseline   TimingAware seed=2014  disc=3.264
+  [146/320] 12 min  Baseline   TimingAware seed=2015  disc=0.259
+  [147/320] 12 min  Baseline   TimingAware seed=2016  disc=4.656
+  [148/320] 12 min  Baseline   TimingAware seed=2017  disc=4.451
+  [149/320] 12 min  Baseline   TimingAware seed=2018  disc=4.255
+  [150/320] 12 min  Baseline   TimingAware seed=2019  disc=4.374
+  [151/320] 12 min  Baseline   TimingAware seed=2020  disc=0.684
+  [152/320] 12 min  Recovery explore noise 0.1  TimingAware seed=2001  disc=2.451
+  [153/320] 12 min  Recovery explore noise 0.1  TimingAware seed=2002  disc=5.264
+  [154/320] 12 min  Recovery explore noise 0.1  TimingAware seed=2003  disc=3.350
+  [155/320] 12 min  Recovery explore noise 0.1  TimingAware seed=2004  disc=3.491
+  [156/320] 12 min  Recovery explore noise 0.1  TimingAware seed=2005  disc=2.733
+  [157/320] 12 min  Recovery explore noise 0.1  TimingAware seed=2006  disc=3.809
+  [158/320] 12 min  Recovery explore noise 0.1  TimingAware seed=2007  disc=3.865
+  [159/320] 12 min  Recovery explore noise 0.1  TimingAware seed=2008  disc=3.024
+  [160/320] 12 min  Recovery explore noise 0.1  TimingAware seed=2009  disc=4.491
+  [161/320] 12 min  Recovery explore noise 0.1  TimingAware seed=2010  disc=3.517
+  [162/320] 12 min  Recovery explore noise 0.1  TimingAware seed=2011  disc=3.830
+  [163/320] 12 min  Recovery explore noise 0.1  TimingAware seed=2012  disc=3.184
+  [164/320] 12 min  Recovery explore noise 0.1  TimingAware seed=2013  disc=3.055
+  [165/320] 12 min  Recovery explore noise 0.1  TimingAware seed=2014  disc=3.264
+  [166/320] 12 min  Recovery explore noise 0.1  TimingAware seed=2015  disc=0.259
+  [167/320] 12 min  Recovery explore noise 0.1  TimingAware seed=2016  disc=4.656
+  [168/320] 12 min  Recovery explore noise 0.1  TimingAware seed=2017  disc=4.451
+  [169/320] 12 min  Recovery explore noise 0.1  TimingAware seed=2018  disc=4.255
+  [170/320] 12 min  Recovery explore noise 0.1  TimingAware seed=2019  disc=4.374
+  [171/320] 12 min  Recovery explore noise 0.1  TimingAware seed=2020  disc=0.684
+  [172/320] 12 min  Recovery explore noise 0.15  TimingAware seed=2001  disc=2.451
+  [173/320] 12 min  Recovery explore noise 0.15  TimingAware seed=2002  disc=5.264
+  [174/320] 12 min  Recovery explore noise 0.15  TimingAware seed=2003  disc=3.350
+  [175/320] 12 min  Recovery explore noise 0.15  TimingAware seed=2004  disc=3.491
+  [176/320] 12 min  Recovery explore noise 0.15  TimingAware seed=2005  disc=2.733
+  [177/320] 12 min  Recovery explore noise 0.15  TimingAware seed=2006  disc=3.809
+  [178/320] 12 min  Recovery explore noise 0.15  TimingAware seed=2007  disc=3.865
+  [179/320] 12 min  Recovery explore noise 0.15  TimingAware seed=2008  disc=3.024
+  [180/320] 12 min  Recovery explore noise 0.15  TimingAware seed=2009  disc=4.491
+  [181/320] 12 min  Recovery explore noise 0.15  TimingAware seed=2010  disc=3.517
+  [182/320] 12 min  Recovery explore noise 0.15  TimingAware seed=2011  disc=3.830
+  [183/320] 12 min  Recovery explore noise 0.15  TimingAware seed=2012  disc=3.184
+  [184/320] 12 min  Recovery explore noise 0.15  TimingAware seed=2013  disc=3.055
+  [185/320] 12 min  Recovery explore noise 0.15  TimingAware seed=2014  disc=3.264
+  [186/320] 12 min  Recovery explore noise 0.15  TimingAware seed=2015  disc=0.259
+  [187/320] 12 min  Recovery explore noise 0.15  TimingAware seed=2016  disc=4.656
+  [188/320] 12 min  Recovery explore noise 0.15  TimingAware seed=2017  disc=4.451
+  [189/320] 12 min  Recovery explore noise 0.15  TimingAware seed=2018  disc=4.255
+  [190/320] 12 min  Recovery explore noise 0.15  TimingAware seed=2019  disc=4.374
+  [191/320] 12 min  Recovery explore noise 0.15  TimingAware seed=2020  disc=0.684
+  [192/320] 12 min  Recovery explore noise 0.2  TimingAware seed=2001  disc=2.451
+  [193/320] 12 min  Recovery explore noise 0.2  TimingAware seed=2002  disc=5.264
+  [194/320] 12 min  Recovery explore noise 0.2  TimingAware seed=2003  disc=3.350
+  [195/320] 12 min  Recovery explore noise 0.2  TimingAware seed=2004  disc=3.491
+  [196/320] 12 min  Recovery explore noise 0.2  TimingAware seed=2005  disc=2.733
+  [197/320] 12 min  Recovery explore noise 0.2  TimingAware seed=2006  disc=3.809
+  [198/320] 12 min  Recovery explore noise 0.2  TimingAware seed=2007  disc=3.865
+  [199/320] 12 min  Recovery explore noise 0.2  TimingAware seed=2008  disc=3.024
+  [200/320] 12 min  Recovery explore noise 0.2  TimingAware seed=2009  disc=4.491
+  [201/320] 12 min  Recovery explore noise 0.2  TimingAware seed=2010  disc=3.517
+  [202/320] 12 min  Recovery explore noise 0.2  TimingAware seed=2011  disc=3.830
+  [203/320] 12 min  Recovery explore noise 0.2  TimingAware seed=2012  disc=3.184
+  [204/320] 12 min  Recovery explore noise 0.2  TimingAware seed=2013  disc=3.055
+  [205/320] 12 min  Recovery explore noise 0.2  TimingAware seed=2014  disc=3.264
+  [206/320] 12 min  Recovery explore noise 0.2  TimingAware seed=2015  disc=0.259
+  [207/320] 12 min  Recovery explore noise 0.2  TimingAware seed=2016  disc=4.656
+  [208/320] 12 min  Recovery explore noise 0.2  TimingAware seed=2017  disc=4.451
+  [209/320] 12 min  Recovery explore noise 0.2  TimingAware seed=2018  disc=4.255
+  [210/320] 12 min  Recovery explore noise 0.2  TimingAware seed=2019  disc=4.374
+  [211/320] 12 min  Recovery explore noise 0.2  TimingAware seed=2020  disc=0.684
+  [212/320] 12 min  Recovery explore noise 0.2  OneStepLookahead_TimingAware seed=2012  disc=3.676
+  [213/320] 12 min  Baseline   DynamicProfitMaximizer seed=2002  disc=0.738
+  [214/320] 12 min  Baseline   DynamicProfitMaximizer seed=2001  disc=-1.655
+  [215/320] 12 min  Baseline   DynamicProfitMaximizer seed=2003  disc=-1.533
+  [216/320] 12 min  Baseline   DynamicProfitMaximizer seed=2004  disc=-1.469
+  [217/320] 12 min  Baseline   DynamicProfitMaximizer seed=2005  disc=-2.323
+  [218/320] 12 min  Baseline   DynamicProfitMaximizer seed=2006  disc=-1.332
+  [219/320] 12 min  Baseline   DynamicProfitMaximizer seed=2007  disc=-0.973
+  [220/320] 12 min  Baseline   DynamicProfitMaximizer seed=2008  disc=-2.829
+  [221/320] 12 min  Baseline   DynamicProfitMaximizer seed=2009  disc=-0.719
+  [222/320] 12 min  Baseline   DynamicProfitMaximizer seed=2010  disc=-1.430
+  [223/320] 12 min  Baseline   DynamicProfitMaximizer seed=2011  disc=-1.728
+  [224/320] 12 min  Baseline   DynamicProfitMaximizer seed=2012  disc=-1.075
+  [225/320] 12 min  Baseline   DynamicProfitMaximizer seed=2013  disc=0.513
+  [226/320] 12 min  Baseline   DynamicProfitMaximizer seed=2014  disc=-1.108
+  [227/320] 12 min  Baseline   DynamicProfitMaximizer seed=2015  disc=-4.408
+  [228/320] 12 min  Baseline   DynamicProfitMaximizer seed=2016  disc=1.036
+  [229/320] 12 min  Baseline   DynamicProfitMaximizer seed=2017  disc=-0.497
+  [230/320] 12 min  Baseline   DynamicProfitMaximizer seed=2018  disc=-0.973
+  [231/320] 12 min  Baseline   DynamicProfitMaximizer seed=2019  disc=-1.276
+  [232/320] 12 min  Baseline   DynamicProfitMaximizer seed=2020  disc=-4.025
+  [233/320] 12 min  Recovery explore noise 0.1  DynamicProfitMaximizer seed=2001  disc=-1.655
+  [234/320] 12 min  Recovery explore noise 0.1  DynamicProfitMaximizer seed=2002  disc=0.738
+  [235/320] 12 min  Recovery explore noise 0.1  DynamicProfitMaximizer seed=2003  disc=-1.533
+  [236/320] 12 min  Recovery explore noise 0.1  DynamicProfitMaximizer seed=2004  disc=-1.469
+  [237/320] 12 min  Recovery explore noise 0.1  DynamicProfitMaximizer seed=2005  disc=-2.323
+  [238/320] 12 min  Recovery explore noise 0.1  DynamicProfitMaximizer seed=2006  disc=-1.332
+  [239/320] 12 min  Recovery explore noise 0.1  DynamicProfitMaximizer seed=2007  disc=-0.973
+  [240/320] 12 min  Recovery explore noise 0.1  DynamicProfitMaximizer seed=2008  disc=-2.829
+  [241/320] 12 min  Recovery explore noise 0.1  DynamicProfitMaximizer seed=2009  disc=-0.719
+  [242/320] 12 min  Recovery explore noise 0.1  DynamicProfitMaximizer seed=2010  disc=-1.430
+  [243/320] 12 min  Recovery explore noise 0.1  DynamicProfitMaximizer seed=2011  disc=-1.728
+  [244/320] 12 min  Recovery explore noise 0.1  DynamicProfitMaximizer seed=2012  disc=-1.075
+  [245/320] 12 min  Recovery explore noise 0.1  DynamicProfitMaximizer seed=2013  disc=0.513
+  [246/320] 12 min  Recovery explore noise 0.1  DynamicProfitMaximizer seed=2014  disc=-1.108
+  [247/320] 12 min  Recovery explore noise 0.1  DynamicProfitMaximizer seed=2015  disc=-4.408
+  [248/320] 12 min  Recovery explore noise 0.1  DynamicProfitMaximizer seed=2016  disc=1.036
+  [249/320] 12 min  Recovery explore noise 0.1  DynamicProfitMaximizer seed=2017  disc=-0.497
+  [250/320] 12 min  Recovery explore noise 0.1  DynamicProfitMaximizer seed=2018  disc=-0.973
+  [251/320] 12 min  Recovery explore noise 0.1  DynamicProfitMaximizer seed=2019  disc=-1.276
+  [252/320] 12 min  Recovery explore noise 0.1  DynamicProfitMaximizer seed=2020  disc=-4.025
+  [253/320] 12 min  Recovery explore noise 0.15  DynamicProfitMaximizer seed=2001  disc=-1.655
+  [254/320] 12 min  Recovery explore noise 0.15  DynamicProfitMaximizer seed=2002  disc=0.738
+  [255/320] 12 min  Recovery explore noise 0.15  DynamicProfitMaximizer seed=2003  disc=-1.533
+  [256/320] 12 min  Recovery explore noise 0.15  DynamicProfitMaximizer seed=2004  disc=-1.469
+  [257/320] 12 min  Recovery explore noise 0.15  DynamicProfitMaximizer seed=2005  disc=-2.323
+  [258/320] 12 min  Recovery explore noise 0.15  DynamicProfitMaximizer seed=2006  disc=-1.332
+  [259/320] 12 min  Recovery explore noise 0.15  DynamicProfitMaximizer seed=2007  disc=-0.973
+  [260/320] 12 min  Recovery explore noise 0.15  DynamicProfitMaximizer seed=2008  disc=-2.829
+  [261/320] 12 min  Recovery explore noise 0.15  DynamicProfitMaximizer seed=2009  disc=-0.719
+  [262/320] 12 min  Recovery explore noise 0.15  DynamicProfitMaximizer seed=2010  disc=-1.430
+  [263/320] 12 min  Recovery explore noise 0.15  DynamicProfitMaximizer seed=2011  disc=-1.728
+  [264/320] 12 min  Recovery explore noise 0.15  DynamicProfitMaximizer seed=2012  disc=-1.075
+  [265/320] 12 min  Recovery explore noise 0.15  DynamicProfitMaximizer seed=2013  disc=0.513
+  [266/320] 12 min  Recovery explore noise 0.15  DynamicProfitMaximizer seed=2014  disc=-1.108
+  [267/320] 12 min  Recovery explore noise 0.15  DynamicProfitMaximizer seed=2015  disc=-4.408
+  [268/320] 12 min  Recovery explore noise 0.15  DynamicProfitMaximizer seed=2016  disc=1.036
+  [269/320] 12 min  Recovery explore noise 0.15  DynamicProfitMaximizer seed=2017  disc=-0.497
+  [270/320] 12 min  Recovery explore noise 0.15  DynamicProfitMaximizer seed=2018  disc=-0.973
+  [271/320] 12 min  Recovery explore noise 0.15  DynamicProfitMaximizer seed=2019  disc=-1.276
+  [272/320] 12 min  Recovery explore noise 0.15  DynamicProfitMaximizer seed=2020  disc=-4.025
+  [273/320] 12 min  Recovery explore noise 0.2  DynamicProfitMaximizer seed=2001  disc=-1.655
+  [274/320] 12 min  Recovery explore noise 0.2  DynamicProfitMaximizer seed=2002  disc=0.738
+  [275/320] 12 min  Recovery explore noise 0.2  DynamicProfitMaximizer seed=2003  disc=-1.533
+  [276/320] 12 min  Recovery explore noise 0.2  DynamicProfitMaximizer seed=2004  disc=-1.469
+  [277/320] 12 min  Recovery explore noise 0.2  DynamicProfitMaximizer seed=2005  disc=-2.323
+  [278/320] 12 min  Recovery explore noise 0.2  DynamicProfitMaximizer seed=2006  disc=-1.332
+  [279/320] 12 min  Recovery explore noise 0.2  DynamicProfitMaximizer seed=2007  disc=-0.973
+  [280/320] 12 min  Recovery explore noise 0.2  DynamicProfitMaximizer seed=2008  disc=-2.829
+  [281/320] 12 min  Recovery explore noise 0.2  DynamicProfitMaximizer seed=2009  disc=-0.719
+  [282/320] 12 min  Recovery explore noise 0.2  DynamicProfitMaximizer seed=2010  disc=-1.430
+  [283/320] 12 min  Recovery explore noise 0.2  DynamicProfitMaximizer seed=2011  disc=-1.728
+  [284/320] 12 min  Recovery explore noise 0.2  DynamicProfitMaximizer seed=2012  disc=-1.075
+  [285/320] 12 min  Recovery explore noise 0.2  DynamicProfitMaximizer seed=2013  disc=0.513
+  [286/320] 12 min  Recovery explore noise 0.2  DynamicProfitMaximizer seed=2014  disc=-1.108
+  [287/320] 12 min  Recovery explore noise 0.2  DynamicProfitMaximizer seed=2015  disc=-4.408
+  [288/320] 12 min  Recovery explore noise 0.2  DynamicProfitMaximizer seed=2016  disc=1.036
+  [289/320] 12 min  Recovery explore noise 0.2  DynamicProfitMaximizer seed=2017  disc=-0.497
+  [290/320] 12 min  Recovery explore noise 0.2  DynamicProfitMaximizer seed=2018  disc=-0.973
+  [291/320] 12 min  Recovery explore noise 0.2  DynamicProfitMaximizer seed=2019  disc=-1.276
+  [292/320] 12 min  Recovery explore noise 0.2  DynamicProfitMaximizer seed=2020  disc=-4.025
+  [293/320] 12 min  Recovery explore noise 0.2  OneStepLookahead_TimingAware seed=2018  disc=4.223
+  [294/320] 12 min  Recovery explore noise 0.2  OneStepLookahead_TimingAware seed=2013  disc=4.503
+  [295/320] 12 min  Recovery explore noise 0.2  OneStepLookahead_TimingAware seed=2016  disc=4.224
+  [296/320] 12 min  Recovery explore noise 0.2  OneStepLookahead_TimingAware seed=2014  disc=3.104
+  [297/320] 12 min  Recovery explore noise 0.2  OneStepLookahead_TimingAware seed=2019  disc=4.414
+  [298/320] 12 min  Recovery explore noise 0.2  OneStepLookahead_TimingAware seed=2015  disc=3.220
+  [299/320] 12 min  Recovery explore noise 0.2  OneStepLookahead_TimingAware seed=2020  disc=3.091
+  [300/320] 12 min  Recovery explore noise 0.2  OneStepLookahead_TimingAware seed=2017  disc=5.318
+  [301/320] 13 min  Recovery explore noise 0.2  POMCPOW seed=2001  disc=4.175
+  [302/320] 13 min  Recovery explore noise 0.2  POMCPOW seed=2002  disc=5.155
+  [303/320] 13 min  Recovery explore noise 0.2  POMCPOW seed=2003  disc=3.778
+  [304/320] 13 min  Recovery explore noise 0.2  POMCPOW seed=2004  disc=4.064
+  [305/320] 13 min  Recovery explore noise 0.2  POMCPOW seed=2005  disc=3.400
+  [306/320] 13 min  Recovery explore noise 0.2  POMCPOW seed=2006  disc=3.939
+  [307/320] 13 min  Recovery explore noise 0.2  POMCPOW seed=2007  disc=4.261
+  [308/320] 14 min  Recovery explore noise 0.2  POMCPOW seed=2009  disc=4.129
+  [309/320] 14 min  Recovery explore noise 0.2  POMCPOW seed=2008  disc=3.584
+  [310/320] 14 min  Recovery explore noise 0.2  POMCPOW seed=2010  disc=4.171
+  [311/320] 14 min  Recovery explore noise 0.2  POMCPOW seed=2012  disc=3.756
+  [312/320] 14 min  Recovery explore noise 0.2  POMCPOW seed=2019  disc=4.095
+  [313/320] 14 min  Recovery explore noise 0.2  POMCPOW seed=2013  disc=4.449
+  [314/320] 14 min  Recovery explore noise 0.2  POMCPOW seed=2015  disc=2.657
+  [315/320] 14 min  Recovery explore noise 0.2  POMCPOW seed=2011  disc=3.968
+  [316/320] 14 min  Recovery explore noise 0.2  POMCPOW seed=2014  disc=3.709
+  [317/320] 14 min  Recovery explore noise 0.2  POMCPOW seed=2017  disc=4.942
+  [318/320] 14 min  Recovery explore noise 0.2  POMCPOW seed=2016  disc=4.579
+  [319/320] 14 min  Recovery explore noise 0.2  POMCPOW seed=2018  disc=4.477
+  [320/320] 14 min  Recovery explore noise 0.2  POMCPOW seed=2020  disc=2.939
+320 episodes in 14 min
+
+Mean discounted reward per policy; POMCPOW change vs baseline; POMCPOW − OSL-TA paired over seeds; best policy
+parameter              level      POMCPOW  OSL-TA      TA     DPM  POMCPOW%     met%    mines   PC−OSL-TA ± SE  best
+Baseline                            3.992   3.885   3.400  -1.353     +0.0%      67%     3.00   +0.107 ± 0.081  POMCPOW
+Recovery explore noise 0.1          4.001   3.901   3.400  -1.353     +0.2%      67%     2.95   +0.100 ± 0.074  POMCPOW
+Recovery explore noise 0.15         4.011   3.757   3.400  -1.353     +0.5%      67%     3.00   +0.254 ± 0.089  POMCPOW
+Recovery explore noise 0.2          4.011   3.902   3.400  -1.353     +0.5%      68%     3.00   +0.109 ± 0.088  POMCPOW
+Note: γ and carbon cost change the objective itself, so compare rankings rather than absolute rewards for those rows.
+CSV: outputs/sensitivity/sensitivity_p6_a1.0_q10000_n20_e6_recexp_rec20-25_osl5.csv

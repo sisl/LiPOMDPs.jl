@@ -795,6 +795,7 @@ println("="^60)
 
 # Configuration
 policies = ["POMCPOW", "POMCPOW_Depth1", "OneStepLookahead", "DynamicProfitMaximizer", "ExploreOnly", "OneMineProfitMaximization", "OneMineEmissionMinimization", "DynamicEmissionMinimizer", "RandomHeuristicPolicy"]
+"POMCPOW_Depth1" in policies || push!(policies, "POMCPOW_Depth1")   # always report the depth-1 baseline
 #policies = [ "POMCPOW_Depth1", "OneStepLookahead", "POMCPOW"]
 planning_price_models =[1]  # Static, Linear, Exponential, Historical
 evaluation_price_models = [6]  # Historical price model for evaluation

@@ -1,0 +1,12 @@
+The latest version of Julia in the `release` channel is 1.13.2+0.x64.linux.gnu. You currently have `1.12.1+0.x64.linux.gnu` installed. Run:
+
+  juliaup update
+
+in your terminal shell to install Julia 1.13.2+0.x64.linux.gnu and update the `release` channel to that version.
+GKS: cannot open display - headless operation mode active
+GKS: could not find font bold.ttf
+GKS: could not find font normal.ttf
+Using seed: 2001 (test sim index 1)
+Generating belief/action timeline comparison for planning price model 2…
+Saved plot to outputs/belief_timeline/belief_action_timeline_comparison_p2_e6.tex
+Saved plot to outputs/belief_timeline/belief_action_timeline_comparison_p2_e6.pdf

@@ -1,0 +1,45 @@
+The latest version of Julia in the `release` channel is 1.13.2+0.x64.linux.gnu. You currently have `1.12.1+0.x64.linux.gnu` installed. Run:
+
+  juliaup update
+
+in your terminal shell to install Julia 1.13.2+0.x64.linux.gnu and update the `release` channel to that version.
+400 episodes on 24 threads, queries=10000, seeds=[1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020]
+done in 197 min
+
+planning p4, α=0.5  (seeds 1001–1020; evaluation model 4)
+  config                  disc        Δ vs TA    Δ vs OSL-TA   expl  mines  mean open year per site (0 = never)
+  PC base d25            1.350  -0.215 ±0.065  -0.184 ±0.067   48.5   1.80  10.3  7.0  6.3  7.7  (351s/ep)
+  PC d31 MP TAtree1      1.408  -0.157 ±0.078  -0.127 ±0.080   20.4   1.60   6.7  6.5  7.1 12.0  (250s/ep)
+  PC d31 MP TAtree1 ko1 ao.1  -0.114  -1.679 ±0.116  -1.649 ±0.112   17.2   2.60   4.0  4.2  1.0  9.6  (1620s/ep)
+  PC d31 MP TAtree1 ko2 ao.2   1.296  -0.269 ±0.102  -0.238 ±0.103   21.1   1.70   8.4  8.8  8.2  6.7  (373s/ep)
+  PC d31 MP TAtree1 c1 ko1 ao.1   0.921  -0.644 ±0.152  -0.614 ±0.152   18.2   2.05   6.7  7.1  8.6  8.3  (1869s/ep)
+  PC d31 MP TAtree1 cheap   1.463  -0.102 ±0.053  -0.071 ±0.054   18.3   1.65   7.9  6.7  8.3 10.1  (226s/ep)
+  PC d31 TAtree1 ko1 ao.1   0.756  -0.809 ±0.155  -0.779 ±0.155   17.8   2.30   8.6  3.8 11.0  8.7  (1689s/ep)
+  PC d31 MP ko1 ao.1    -0.021  -1.586 ±0.119  -1.556 ±0.113   25.7   3.00   4.9  5.8  6.5  5.5  (231s/ep)
+  TA                     1.565  +0.000 ±0.000  +0.030 ±0.018    0.0   1.60  12.1  1.4  9.1 11.5  (0s/ep)
+  OSL-TA                 1.535  -0.030 ±0.018  +0.000 ±0.000   16.4   1.70  10.8  6.3  7.5 10.8  (29s/ep)
+
+planning p4, α=1.0  (seeds 1001–1020; evaluation model 4)
+  config                  disc        Δ vs TA    Δ vs OSL-TA   expl  mines  mean open year per site (0 = never)
+  PC base d25            2.793  -0.440 ±0.183  -0.516 ±0.188   47.1   2.00   9.8  8.8  9.7  7.3  (337s/ep)
+  PC d31 MP TAtree1      3.029  -0.204 ±0.138  -0.279 ±0.120   21.4   1.70   8.2  7.5  9.9  8.0  (245s/ep)
+  PC d31 MP TAtree1 ko1 ao.1   2.384  -0.849 ±0.201  -0.924 ±0.199   19.9   2.40  12.7  6.2 12.0 12.0  (1785s/ep)
+  PC d31 MP TAtree1 ko2 ao.2   2.809  -0.424 ±0.143  -0.499 ±0.141   20.1   1.95   9.1  6.2  6.3 11.4  (427s/ep)
+  PC d31 MP TAtree1 c1 ko1 ao.1   1.868  -1.364 ±0.243  -1.440 ±0.244   18.9   2.50  10.3  5.8  9.8 11.8  (1995s/ep)
+  PC d31 MP TAtree1 cheap   3.071  -0.162 ±0.102  -0.237 ±0.093   20.1   1.75   6.7  7.0  9.5 10.2  (237s/ep)
+  PC d31 TAtree1 ko1 ao.1   1.734  -1.499 ±0.283  -1.574 ±0.281   17.6   2.25   8.0  8.9  6.0  5.6  (1852s/ep)
+  PC d31 MP ko1 ao.1    -0.095  -3.328 ±0.208  -3.403 ±0.189   19.9   3.00   4.2  2.7  3.8  5.8  (242s/ep)
+  TA                     3.233  +0.000 ±0.000  -0.076 ±0.072    0.0   2.00  16.1  1.4 11.2 13.8  (0s/ep)
+  OSL-TA                 3.308  +0.076 ±0.072  +0.000 ±0.000   17.2   1.70  12.1  3.6 10.6  8.3  (24s/ep)
+
+POOLED over all cells × seeds (paired):
+  PC base d25          mean 2.071   Δ vs TA -0.327 ± 0.097   Δ vs OSL-TA -0.350 ± 0.102
+  PC d31 MP TAtree1    mean 2.219   Δ vs TA -0.180 ± 0.078   Δ vs OSL-TA -0.203 ± 0.072
+  PC d31 MP TAtree1 ko1 ao.1 mean 1.135   Δ vs TA -1.264 ± 0.133   Δ vs OSL-TA -1.287 ± 0.127
+  PC d31 MP TAtree1 ko2 ao.2 mean 2.053   Δ vs TA -0.346 ± 0.088   Δ vs OSL-TA -0.369 ± 0.089
+  PC d31 MP TAtree1 c1 ko1 ao.1 mean 1.395   Δ vs TA -1.004 ± 0.153   Δ vs OSL-TA -1.027 ± 0.157
+  PC d31 MP TAtree1 cheap mean 2.267   Δ vs TA -0.132 ± 0.057   Δ vs OSL-TA -0.154 ± 0.055
+  PC d31 TAtree1 ko1 ao.1 mean 1.245   Δ vs TA -1.154 ± 0.169   Δ vs OSL-TA -1.177 ± 0.171
+  PC d31 MP ko1 ao.1   mean -0.058   Δ vs TA -2.457 ± 0.183   Δ vs OSL-TA -2.479 ± 0.184
+  TA                   mean 2.399   Δ vs TA +0.000 ± 0.000   Δ vs OSL-TA -0.023 ± 0.038
+  OSL-TA               mean 2.422   Δ vs TA +0.023 ± 0.038   Δ vs OSL-TA +0.000 ± 0.000

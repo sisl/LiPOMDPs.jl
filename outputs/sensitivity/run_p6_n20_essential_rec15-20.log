@@ -1,0 +1,1527 @@
+The latest version of Julia in the `release` channel is 1.13.2+0.x64.linux.gnu. You currently have `1.12.1+0.x64.linux.gnu` installed. Run:
+
+  juliaup update
+
+in your terminal shell to install Julia 1.13.2+0.x64.linux.gnu and update the `release` channel to that version.
+SENSITIVITY  15 settings × 5 policies × 20 seeds = 1500 episodes  planning=6 eval=6 α=0.5 queries=10000 threads=28
+  [1/1500] 6 min  Demand share 20%  POMCPOW seed=2003  disc=1.097
+  [2/1500] 6 min  Baseline   POMCPOW seed=2004  disc=2.050
+  [3/1500] 6 min  Baseline   POMCPOW seed=2011  disc=1.821
+  [4/1500] 6 min  Baseline   POMCPOW seed=2003  disc=1.330
+  [5/1500] 6 min  Baseline   POMCPOW seed=2009  disc=1.795
+  [6/1500] 6 min  Baseline   POMCPOW seed=2002  disc=2.426
+  [7/1500] 6 min  Baseline   POMCPOW seed=2007  disc=2.039
+  [8/1500] 6 min  Baseline   POMCPOW seed=2001  disc=2.066
+  [9/1500] 6 min  Demand share 20%  POMCPOW seed=2001  disc=1.412
+  [10/1500] 6 min  Demand share 20%  POMCPOW seed=2008  disc=1.237
+  [11/1500] 6 min  Demand share 20%  POMCPOW seed=2005  disc=1.305
+  [12/1500] 6 min  Baseline   POMCPOW seed=2012  disc=1.901
+  [13/1500] 6 min  Baseline   POMCPOW seed=2013  disc=2.091
+  [14/1500] 6 min  Baseline   POMCPOW seed=2006  disc=2.034
+  [15/1500] 6 min  Baseline   POMCPOW seed=2020  disc=1.946
+  [16/1500] 6 min  Baseline   POMCPOW seed=2017  disc=2.115
+  [17/1500] 6 min  Baseline   POMCPOW seed=2010  disc=1.602
+  [18/1500] 6 min  Baseline   POMCPOW seed=2005  disc=1.835
+  [19/1500] 6 min  Baseline   POMCPOW seed=2015  disc=1.889
+  [20/1500] 6 min  Demand share 20%  POMCPOW seed=2002  disc=1.609
+  [21/1500] 6 min  Baseline   POMCPOW seed=2019  disc=1.934
+  [22/1500] 6 min  Demand share 20%  POMCPOW seed=2007  disc=1.341
+  [23/1500] 6 min  Baseline   POMCPOW seed=2018  disc=1.741
+  [24/1500] 6 min  Baseline   POMCPOW seed=2014  disc=1.709
+  [25/1500] 6 min  Baseline   POMCPOW seed=2008  disc=1.846
+  [26/1500] 7 min  Baseline   POMCPOW seed=2016  disc=2.055
+  [27/1500] 7 min  Demand share 20%  POMCPOW seed=2004  disc=1.415
+  [28/1500] 7 min  Demand share 20%  POMCPOW seed=2006  disc=1.419
+  [29/1500] 12 min  Demand share 40%  POMCPOW seed=2005  disc=2.117
+  [30/1500] 12 min  Demand share 20%  POMCPOW seed=2015  disc=1.302
+  [31/1500] 12 min  Demand share 40%  POMCPOW seed=2001  disc=2.744
+  [32/1500] 12 min  Demand share 20%  POMCPOW seed=2011  disc=1.304
+  [33/1500] 12 min  Demand share 40%  POMCPOW seed=2002  disc=3.145
+  [34/1500] 12 min  Demand share 20%  POMCPOW seed=2009  disc=1.405
+  [35/1500] 12 min  Demand share 40%  POMCPOW seed=2003  disc=1.476
+  [36/1500] 12 min  Demand share 20%  POMCPOW seed=2013  disc=1.399
+  [37/1500] 12 min  Demand share 20%  POMCPOW seed=2017  disc=1.515
+  [38/1500] 12 min  Demand share 40%  POMCPOW seed=2009  disc=2.437
+  [39/1500] 12 min  Demand share 40%  POMCPOW seed=2004  disc=2.576
+  [40/1500] 12 min  Demand share 20%  POMCPOW seed=2014  disc=1.127
+  [41/1500] 12 min  Demand share 40%  POMCPOW seed=2007  disc=2.561
+  [42/1500] 12 min  Demand share 40%  POMCPOW seed=2010  disc=1.744
+  [43/1500] 12 min  Demand share 40%  POMCPOW seed=2006  disc=2.510
+  [44/1500] 12 min  Demand share 20%  POMCPOW seed=2010  disc=1.189
+  [45/1500] 12 min  Demand share 20%  POMCPOW seed=2018  disc=1.286
+  [46/1500] 12 min  Demand share 40%  POMCPOW seed=2008  disc=2.287
+  [47/1500] 12 min  Demand share 20%  POMCPOW seed=2020  disc=1.284
+  [48/1500] 12 min  Demand share 20%  POMCPOW seed=2019  disc=1.428
+  [49/1500] 12 min  Demand share 40%  POMCPOW seed=2013  disc=2.698
+  [50/1500] 12 min  Demand share 40%  POMCPOW seed=2011  disc=2.169
+  [51/1500] 12 min  Demand share 20%  POMCPOW seed=2016  disc=1.444
+  [52/1500] 12 min  Demand share 40%  POMCPOW seed=2015  disc=2.355
+  [53/1500] 12 min  Demand share 20%  POMCPOW seed=2012  disc=1.295
+  [54/1500] 12 min  Demand share 40%  POMCPOW seed=2014  disc=2.060
+  [55/1500] 12 min  Demand share 40%  POMCPOW seed=2012  disc=2.341
+  [56/1500] 12 min  Demand share 40%  POMCPOW seed=2016  disc=2.620
+  [57/1500] 17 min  Deposit uncertainty ×0.5  POMCPOW seed=2001  disc=2.082
+  [58/1500] 17 min  Demand share 40%  POMCPOW seed=2017  disc=2.622
+  [59/1500] 17 min  Deposit uncertainty ×0.5  POMCPOW seed=2005  disc=1.843
+  [60/1500] 17 min  Demand share 40%  POMCPOW seed=2020  disc=2.402
+  [61/1500] 17 min  Deposit uncertainty ×0.5  POMCPOW seed=2014  disc=1.725
+  [62/1500] 17 min  Deposit uncertainty ×0.5  POMCPOW seed=2008  disc=1.842
+  [63/1500] 17 min  Deposit uncertainty ×0.5  POMCPOW seed=2004  disc=2.035
+  [64/1500] 17 min  Deposit uncertainty ×0.5  POMCPOW seed=2003  disc=1.390
+  [65/1500] 17 min  Deposit uncertainty ×1.5  POMCPOW seed=2001  disc=2.148
+  [66/1500] 17 min  Demand share 40%  POMCPOW seed=2018  disc=1.989
+  [67/1500] 17 min  Deposit uncertainty ×0.5  POMCPOW seed=2006  disc=2.016
+  [68/1500] 17 min  Deposit uncertainty ×0.5  POMCPOW seed=2015  disc=1.988
+  [69/1500] 17 min  Deposit uncertainty ×0.5  POMCPOW seed=2007  disc=2.039
+  [70/1500] 17 min  Deposit uncertainty ×0.5  POMCPOW seed=2019  disc=1.947
+  [71/1500] 17 min  Deposit uncertainty ×0.5  POMCPOW seed=2017  disc=2.167
+  [72/1500] 17 min  Deposit uncertainty ×0.5  POMCPOW seed=2002  disc=2.268
+  [73/1500] 18 min  Deposit uncertainty ×1.5  POMCPOW seed=2002  disc=2.371
+  [74/1500] 18 min  Deposit uncertainty ×0.5  POMCPOW seed=2020  disc=1.983
+  [75/1500] 18 min  Deposit uncertainty ×0.5  POMCPOW seed=2011  disc=1.832
+  [76/1500] 18 min  Deposit uncertainty ×0.5  POMCPOW seed=2018  disc=1.654
+  [77/1500] 18 min  Deposit uncertainty ×0.5  POMCPOW seed=2010  disc=1.631
+  [78/1500] 18 min  Demand share 40%  POMCPOW seed=2019  disc=2.395
+  [79/1500] 18 min  Deposit uncertainty ×0.5  POMCPOW seed=2012  disc=1.906
+  [80/1500] 18 min  Deposit uncertainty ×0.5  POMCPOW seed=2013  disc=2.095
+  [81/1500] 18 min  Deposit uncertainty ×1.5  POMCPOW seed=2004  disc=2.015
+  [82/1500] 18 min  Deposit uncertainty ×1.5  POMCPOW seed=2003  disc=1.311
+  [83/1500] 18 min  Deposit uncertainty ×0.5  POMCPOW seed=2016  disc=2.010
+  [84/1500] 18 min  Deposit uncertainty ×0.5  POMCPOW seed=2009  disc=2.069
+  [85/1500] 22 min  Deposit uncertainty ×1.5  POMCPOW seed=2005  disc=1.824
+  [86/1500] 22 min  Deposit uncertainty ×1.5  POMCPOW seed=2007  disc=1.990
+  [87/1500] 22 min  Deposit uncertainty ×1.5  POMCPOW seed=2008  disc=1.608
+  [88/1500] 22 min  Deposit uncertainty ×1.5  POMCPOW seed=2006  disc=1.879
+  [89/1500] 22 min  Deposit uncertainty ×1.5  POMCPOW seed=2010  disc=1.623
+  [90/1500] 22 min  Deposit uncertainty ×1.5  POMCPOW seed=2014  disc=1.705
+  [91/1500] 22 min  Deposit uncertainty ×1.5  POMCPOW seed=2019  disc=2.062
+  [92/1500] 22 min  CAPEX ×0.75  POMCPOW seed=2002  disc=2.310
+  [93/1500] 23 min  Deposit uncertainty ×1.5  POMCPOW seed=2013  disc=2.121
+  [94/1500] 23 min  Deposit uncertainty ×1.5  POMCPOW seed=2018  disc=1.771
+  [95/1500] 23 min  Deposit uncertainty ×1.5  POMCPOW seed=2012  disc=1.873
+  [96/1500] 23 min  Deposit uncertainty ×1.5  POMCPOW seed=2011  disc=1.648
+  [97/1500] 23 min  Deposit uncertainty ×1.5  POMCPOW seed=2016  disc=2.080
+  [98/1500] 23 min  Deposit uncertainty ×1.5  POMCPOW seed=2017  disc=2.119
+  [99/1500] 23 min  CAPEX ×0.75  POMCPOW seed=2007  disc=2.171
+  [100/1500] 23 min  CAPEX ×0.75  POMCPOW seed=2001  disc=2.230
+  [101/1500] 23 min  Deposit uncertainty ×1.5  POMCPOW seed=2009  disc=1.879
+  [102/1500] 23 min  Deposit uncertainty ×1.5  POMCPOW seed=2015  disc=1.788
+  [103/1500] 23 min  CAPEX ×0.75  POMCPOW seed=2003  disc=1.470
+  [104/1500] 23 min  CAPEX ×0.75  POMCPOW seed=2009  disc=1.976
+  [105/1500] 23 min  CAPEX ×0.75  POMCPOW seed=2008  disc=1.938
+  [106/1500] 23 min  Deposit uncertainty ×1.5  POMCPOW seed=2020  disc=1.892
+  [107/1500] 23 min  CAPEX ×0.75  POMCPOW seed=2004  disc=2.076
+  [108/1500] 23 min  CAPEX ×0.75  POMCPOW seed=2005  disc=1.918
+  [109/1500] 23 min  CAPEX ×0.75  POMCPOW seed=2006  disc=2.119
+  [110/1500] 23 min  CAPEX ×0.75  POMCPOW seed=2010  disc=1.751
+  [111/1500] 24 min  CAPEX ×0.75  POMCPOW seed=2011  disc=1.945
+  [112/1500] 24 min  CAPEX ×0.75  POMCPOW seed=2012  disc=2.021
+  [113/1500] 27 min  CAPEX ×0.75  POMCPOW seed=2013  disc=2.217
+  [114/1500] 27 min  CAPEX ×0.75  POMCPOW seed=2014  disc=1.577
+  [115/1500] 27 min  CAPEX ×0.75  POMCPOW seed=2016  disc=2.181
+  [116/1500] 28 min  CAPEX ×0.75  POMCPOW seed=2015  disc=1.909
+  [117/1500] 28 min  CAPEX ×1.25  POMCPOW seed=2007  disc=1.674
+  [118/1500] 28 min  CAPEX ×1.25  POMCPOW seed=2003  disc=0.888
+  [119/1500] 28 min  CAPEX ×1.25  POMCPOW seed=2004  disc=1.330
+  [120/1500] 28 min  CAPEX ×1.25  POMCPOW seed=2001  disc=1.463
+  [121/1500] 28 min  CAPEX ×0.75  POMCPOW seed=2019  disc=1.973
+  [122/1500] 28 min  CAPEX ×0.75  POMCPOW seed=2017  disc=2.158
+  [123/1500] 28 min  CAPEX ×1.25  POMCPOW seed=2010  disc=0.841
+  [124/1500] 28 min  CAPEX ×1.25  POMCPOW seed=2006  disc=1.531
+  [125/1500] 28 min  CAPEX ×0.75  POMCPOW seed=2020  disc=1.823
+  [126/1500] 28 min  CAPEX ×0.75  POMCPOW seed=2018  disc=1.927
+  [127/1500] 28 min  CAPEX ×1.25  POMCPOW seed=2015  disc=1.070
+  [128/1500] 28 min  CAPEX ×1.25  POMCPOW seed=2002  disc=2.164
+  [129/1500] 28 min  CAPEX ×1.25  POMCPOW seed=2008  disc=1.349
+  [130/1500] 28 min  CAPEX ×1.25  POMCPOW seed=2005  disc=1.339
+  [131/1500] 28 min  CAPEX ×1.25  POMCPOW seed=2018  disc=1.426
+  [132/1500] 29 min  CAPEX ×1.25  POMCPOW seed=2009  disc=1.072
+  [133/1500] 29 min  CAPEX ×1.25  POMCPOW seed=2012  disc=1.276
+  [134/1500] 29 min  CAPEX ×1.25  POMCPOW seed=2011  disc=1.221
+  [135/1500] 29 min  CAPEX ×1.25  POMCPOW seed=2013  disc=1.438
+  [136/1500] 29 min  CAPEX ×1.25  POMCPOW seed=2016  disc=1.677
+  [137/1500] 29 min  CAPEX ×1.25  POMCPOW seed=2014  disc=1.289
+  [138/1500] 29 min  CAPEX ×1.25  POMCPOW seed=2017  disc=1.165
+  [139/1500] 29 min  CAPEX ×1.25  POMCPOW seed=2020  disc=1.249
+  [140/1500] 29 min  CAPEX ×1.25  POMCPOW seed=2019  disc=1.735
+  [141/1500] 32 min  Recovery rate −0.10  POMCPOW seed=2001  disc=2.027
+  [142/1500] 32 min  Recovery rate −0.10  POMCPOW seed=2002  disc=2.389
+  [143/1500] 33 min  Recovery rate −0.10  POMCPOW seed=2003  disc=1.223
+  [144/1500] 33 min  Recovery rate −0.10  POMCPOW seed=2004  disc=1.939
+  [145/1500] 33 min  Recovery rate −0.10  POMCPOW seed=2005  disc=1.718
+  [146/1500] 33 min  Recovery rate −0.10  POMCPOW seed=2010  disc=1.415
+  [147/1500] 33 min  Recovery rate −0.10  POMCPOW seed=2011  disc=1.647
+  [148/1500] 33 min  Recovery rate −0.10  POMCPOW seed=2013  disc=2.082
+  [149/1500] 33 min  Recovery rate −0.10  POMCPOW seed=2015  disc=1.816
+  [150/1500] 33 min  Recovery rate −0.10  POMCPOW seed=2009  disc=1.832
+  [151/1500] 33 min  Recovery rate −0.10  POMCPOW seed=2007  disc=1.967
+  [152/1500] 33 min  Recovery rate −0.10  POMCPOW seed=2008  disc=1.414
+  [153/1500] 33 min  Recovery rate −0.10  POMCPOW seed=2006  disc=1.711
+  [154/1500] 33 min  Recovery rate −0.10  POMCPOW seed=2018  disc=1.567
+  [155/1500] 34 min  Recovery rate −0.10  POMCPOW seed=2012  disc=1.835
+  [156/1500] 34 min  Recovery rate −0.10  POMCPOW seed=2014  disc=1.655
+  [157/1500] 34 min  Recovery rate −0.10  POMCPOW seed=2017  disc=1.959
+  [158/1500] 34 min  Recovery rate −0.10  POMCPOW seed=2019  disc=1.867
+  [159/1500] 34 min  Recovery rate −0.10  POMCPOW seed=2020  disc=1.634
+  [160/1500] 34 min  Recovery rate −0.10  POMCPOW seed=2016  disc=2.150
+  [161/1500] 34 min  Recovery rate +0.10  POMCPOW seed=2001  disc=1.920
+  [162/1500] 34 min  Recovery rate +0.10  POMCPOW seed=2004  disc=2.052
+  [163/1500] 34 min  Recovery rate +0.10  POMCPOW seed=2002  disc=2.383
+  [164/1500] 34 min  Recovery rate +0.10  POMCPOW seed=2003  disc=1.611
+  [165/1500] 34 min  Recovery rate +0.10  POMCPOW seed=2006  disc=1.954
+  [166/1500] 34 min  Recovery rate +0.10  POMCPOW seed=2005  disc=1.777
+  [167/1500] 34 min  Recovery rate +0.10  POMCPOW seed=2008  disc=1.806
+  [168/1500] 35 min  Recovery rate +0.10  POMCPOW seed=2007  disc=1.997
+  [169/1500] 37 min  Recovery rate +0.10  POMCPOW seed=2010  disc=1.891
+  [170/1500] 38 min  Recovery rate +0.10  POMCPOW seed=2013  disc=2.056
+  [171/1500] 38 min  Recovery rate +0.10  POMCPOW seed=2009  disc=2.143
+  [172/1500] 38 min  Recovery rate +0.10  POMCPOW seed=2012  disc=1.912
+  [173/1500] 38 min  Recovery rate +0.10  POMCPOW seed=2011  disc=1.904
+  [174/1500] 39 min  Recovery rate +0.10  POMCPOW seed=2014  disc=1.717
+  [175/1500] 39 min  Recovery rate +0.10  POMCPOW seed=2016  disc=2.120
+  [176/1500] 39 min  Recovery rate +0.10  POMCPOW seed=2015  disc=1.701
+  [177/1500] 39 min  Recovery rate +0.10  POMCPOW seed=2017  disc=2.296
+  [178/1500] 39 min  Recovery rate +0.10  POMCPOW seed=2018  disc=2.051
+  [179/1500] 39 min  Recovery rate +0.10  POMCPOW seed=2019  disc=2.070
+  [180/1500] 39 min  Carbon cost ×0.5  POMCPOW seed=2006  disc=1.996
+  [181/1500] 39 min  Recovery rate +0.10  POMCPOW seed=2020  disc=1.667
+  [182/1500] 39 min  Carbon cost ×0.5  POMCPOW seed=2003  disc=1.460
+  [183/1500] 39 min  Carbon cost ×0.5  POMCPOW seed=2007  disc=2.114
+  [184/1500] 39 min  Carbon cost ×0.5  POMCPOW seed=2002  disc=2.512
+  [185/1500] 39 min  Carbon cost ×0.5  POMCPOW seed=2004  disc=2.110
+  [186/1500] 39 min  Carbon cost ×0.5  POMCPOW seed=2005  disc=1.893
+  [187/1500] 39 min  Carbon cost ×0.5  POMCPOW seed=2001  disc=2.018
+  [188/1500] 39 min  Carbon cost ×0.5  POMCPOW seed=2009  disc=1.945
+  [189/1500] 39 min  Carbon cost ×0.5  POMCPOW seed=2008  disc=1.909
+  [190/1500] 39 min  Carbon cost ×0.5  POMCPOW seed=2010  disc=1.705
+  [191/1500] 39 min  Carbon cost ×0.5  POMCPOW seed=2011  disc=1.848
+  [192/1500] 40 min  Carbon cost ×0.5  POMCPOW seed=2012  disc=1.923
+  [193/1500] 40 min  Carbon cost ×0.5  POMCPOW seed=2013  disc=2.198
+  [194/1500] 40 min  Carbon cost ×0.5  POMCPOW seed=2015  disc=1.981
+  [195/1500] 40 min  Carbon cost ×0.5  POMCPOW seed=2014  disc=1.749
+  [196/1500] 40 min  Carbon cost ×0.5  POMCPOW seed=2016  disc=2.126
+  [197/1500] 42 min  Carbon cost ×0.5  POMCPOW seed=2017  disc=2.069
+  [198/1500] 43 min  Carbon cost ×0.5  POMCPOW seed=2018  disc=1.841
+  [199/1500] 43 min  Carbon cost ×0.5  POMCPOW seed=2019  disc=2.145
+  [200/1500] 43 min  Carbon cost ×0.5  POMCPOW seed=2020  disc=2.019
+  [201/1500] 43 min  Carbon cost ×2  POMCPOW seed=2001  disc=1.922
+  [202/1500] 44 min  Carbon cost ×2  POMCPOW seed=2003  disc=1.352
+  [203/1500] 44 min  Carbon cost ×2  POMCPOW seed=2002  disc=2.261
+  [204/1500] 44 min  Carbon cost ×2  POMCPOW seed=2009  disc=1.778
+  [205/1500] 44 min  Carbon cost ×2  POMCPOW seed=2005  disc=1.739
+  [206/1500] 44 min  Carbon cost ×2  POMCPOW seed=2010  disc=1.501
+  [207/1500] 44 min  Carbon cost ×2  POMCPOW seed=2007  disc=1.908
+  [208/1500] 44 min  Carbon cost ×2  POMCPOW seed=2011  disc=1.698
+  [209/1500] 44 min  Carbon cost ×2  POMCPOW seed=2013  disc=1.959
+  [210/1500] 44 min  Carbon cost ×2  POMCPOW seed=2006  disc=1.920
+  [211/1500] 44 min  Carbon cost ×2  POMCPOW seed=2008  disc=1.733
+  [212/1500] 44 min  Carbon cost ×2  POMCPOW seed=2012  disc=1.794
+  [213/1500] 44 min  Carbon cost ×2  POMCPOW seed=2004  disc=1.910
+  [214/1500] 44 min  Carbon cost ×2  POMCPOW seed=2017  disc=1.945
+  [215/1500] 44 min  Carbon cost ×2  POMCPOW seed=2015  disc=1.837
+  [216/1500] 45 min  Carbon cost ×2  POMCPOW seed=2018  disc=1.680
+  [217/1500] 45 min  Carbon cost ×2  POMCPOW seed=2016  disc=1.957
+  [218/1500] 45 min  Carbon cost ×2  POMCPOW seed=2014  disc=1.587
+  [219/1500] 45 min  Production capacity 20k t/yr  POMCPOW seed=2001  disc=1.926
+  [220/1500] 45 min  Carbon cost ×2  POMCPOW seed=2019  disc=1.957
+  [221/1500] 45 min  Production capacity 20k t/yr  POMCPOW seed=2003  disc=1.291
+  [222/1500] 45 min  Production capacity 20k t/yr  POMCPOW seed=2004  disc=1.869
+  [223/1500] 45 min  Carbon cost ×2  POMCPOW seed=2020  disc=1.827
+  [224/1500] 45 min  Production capacity 20k t/yr  POMCPOW seed=2002  disc=2.307
+  [225/1500] 47 min  Production capacity 20k t/yr  POMCPOW seed=2005  disc=1.700
+  [226/1500] 48 min  Production capacity 20k t/yr  POMCPOW seed=2007  disc=1.833
+  [227/1500] 48 min  Production capacity 20k t/yr  POMCPOW seed=2006  disc=1.802
+  [228/1500] 49 min  Production capacity 20k t/yr  POMCPOW seed=2008  disc=1.688
+  [229/1500] 49 min  Production capacity 20k t/yr  POMCPOW seed=2011  disc=1.613
+  [230/1500] 49 min  Production capacity 20k t/yr  POMCPOW seed=2015  disc=1.732
+  [231/1500] 49 min  Production capacity 20k t/yr  POMCPOW seed=2013  disc=1.949
+  [232/1500] 49 min  Production capacity 20k t/yr  POMCPOW seed=2016  disc=1.942
+  [233/1500] 49 min  Production capacity 20k t/yr  POMCPOW seed=2009  disc=1.656
+  [234/1500] 49 min  Production capacity 20k t/yr  POMCPOW seed=2010  disc=1.286
+  [235/1500] 49 min  Production capacity 20k t/yr  POMCPOW seed=2017  disc=1.986
+  [236/1500] 49 min  Production capacity 30k t/yr  POMCPOW seed=2002  disc=2.483
+  [237/1500] 50 min  Production capacity 20k t/yr  POMCPOW seed=2018  disc=1.499
+  [238/1500] 50 min  Production capacity 20k t/yr  POMCPOW seed=2012  disc=1.695
+  [239/1500] 50 min  Production capacity 30k t/yr  POMCPOW seed=2003  disc=1.325
+  [240/1500] 50 min  Production capacity 20k t/yr  POMCPOW seed=2019  disc=1.801
+  [241/1500] 50 min  Production capacity 20k t/yr  POMCPOW seed=2014  disc=1.496
+  [242/1500] 50 min  Production capacity 30k t/yr  POMCPOW seed=2007  disc=2.021
+  [243/1500] 50 min  Production capacity 30k t/yr  POMCPOW seed=2001  disc=2.144
+  [244/1500] 50 min  Production capacity 30k t/yr  POMCPOW seed=2006  disc=2.042
+  [245/1500] 50 min  Production capacity 20k t/yr  POMCPOW seed=2020  disc=1.782
+  [246/1500] 50 min  Production capacity 30k t/yr  POMCPOW seed=2005  disc=1.578
+  [247/1500] 50 min  Production capacity 30k t/yr  POMCPOW seed=2004  disc=2.152
+  [248/1500] 51 min  Production capacity 30k t/yr  POMCPOW seed=2008  disc=1.910
+  [249/1500] 51 min  Production capacity 30k t/yr  POMCPOW seed=2009  disc=2.066
+  [250/1500] 51 min  Production capacity 30k t/yr  POMCPOW seed=2010  disc=1.692
+  [251/1500] 51 min  Production capacity 30k t/yr  POMCPOW seed=2011  disc=1.921
+  [252/1500] 51 min  Production capacity 30k t/yr  POMCPOW seed=2012  disc=2.003
+  [253/1500] 52 min  Production capacity 30k t/yr  POMCPOW seed=2013  disc=2.117
+  [254/1500] 53 min  Production capacity 30k t/yr  POMCPOW seed=2014  disc=1.756
+  [255/1500] 54 min  Production capacity 30k t/yr  POMCPOW seed=2017  disc=2.240
+  [256/1500] 54 min  Production capacity 30k t/yr  POMCPOW seed=2015  disc=1.972
+  [257/1500] 54 min  Production capacity 30k t/yr  POMCPOW seed=2018  disc=1.651
+  [258/1500] 54 min  Production capacity 30k t/yr  POMCPOW seed=2016  disc=1.959
+  [259/1500] 55 min  Deposit size ×0.75  POMCPOW seed=2004  disc=2.056
+  [260/1500] 55 min  Production capacity 30k t/yr  POMCPOW seed=2020  disc=1.990
+  [261/1500] 55 min  Production capacity 30k t/yr  POMCPOW seed=2019  disc=2.168
+  [262/1500] 55 min  Deposit size ×0.75  POMCPOW seed=2005  disc=1.776
+  [263/1500] 55 min  Deposit size ×0.75  POMCPOW seed=2010  disc=1.642
+  [264/1500] 55 min  Deposit size ×0.75  POMCPOW seed=2007  disc=2.034
+  [265/1500] 55 min  Deposit size ×0.75  POMCPOW seed=2001  disc=2.128
+  [266/1500] 55 min  Deposit size ×0.75  POMCPOW seed=2003  disc=1.247
+  [267/1500] 55 min  Deposit size ×0.75  POMCPOW seed=2006  disc=1.747
+  [268/1500] 55 min  Deposit size ×0.75  POMCPOW seed=2009  disc=1.850
+  [269/1500] 55 min  Deposit size ×0.75  POMCPOW seed=2002  disc=2.426
+  [270/1500] 55 min  Deposit size ×0.75  POMCPOW seed=2008  disc=1.831
+  [271/1500] 56 min  Deposit size ×0.75  POMCPOW seed=2014  disc=1.688
+  [272/1500] 56 min  Deposit size ×0.75  POMCPOW seed=2011  disc=1.749
+  [273/1500] 56 min  Deposit size ×0.75  POMCPOW seed=2012  disc=1.882
+  [274/1500] 56 min  Deposit size ×0.75  POMCPOW seed=2013  disc=2.119
+  [275/1500] 56 min  Deposit size ×0.75  POMCPOW seed=2017  disc=2.070
+  [276/1500] 56 min  Deposit size ×0.75  POMCPOW seed=2015  disc=1.813
+  [277/1500] 56 min  Baseline   OneStepLookahead_TimingAware seed=2002  disc=2.312
+  [278/1500] 56 min  Baseline   OneStepLookahead_TimingAware seed=2001  disc=2.183
+  [279/1500] 56 min  Deposit size ×0.75  POMCPOW seed=2020  disc=1.891
+  [280/1500] 56 min  Deposit size ×0.75  POMCPOW seed=2016  disc=2.002
+  [281/1500] 56 min  Baseline   OneStepLookahead_TimingAware seed=2003  disc=1.470
+  [282/1500] 56 min  Deposit size ×0.75  POMCPOW seed=2018  disc=1.551
+  [283/1500] 57 min  Baseline   OneStepLookahead_TimingAware seed=2004  disc=2.077
+  [284/1500] 57 min  Deposit size ×0.75  POMCPOW seed=2019  disc=2.012
+  [285/1500] 57 min  Baseline   OneStepLookahead_TimingAware seed=2006  disc=1.951
+  [286/1500] 57 min  Baseline   OneStepLookahead_TimingAware seed=2005  disc=1.539
+  [287/1500] 57 min  Baseline   OneStepLookahead_TimingAware seed=2008  disc=1.875
+  [288/1500] 57 min  Baseline   OneStepLookahead_TimingAware seed=2009  disc=1.861
+  [289/1500] 57 min  Baseline   OneStepLookahead_TimingAware seed=2007  disc=1.858
+  [290/1500] 57 min  Baseline   OneStepLookahead_TimingAware seed=2010  disc=1.703
+  [291/1500] 57 min  Baseline   OneStepLookahead_TimingAware seed=2012  disc=1.955
+  [292/1500] 57 min  Baseline   OneStepLookahead_TimingAware seed=2011  disc=1.908
+  [293/1500] 57 min  Deposit size ×1.25  POMCPOW seed=2001  disc=2.064
+  [294/1500] 57 min  Baseline   OneStepLookahead_TimingAware seed=2014  disc=1.450
+  [295/1500] 57 min  Baseline   OneStepLookahead_TimingAware seed=2013  disc=2.061
+  [296/1500] 57 min  Baseline   OneStepLookahead_TimingAware seed=2016  disc=1.934
+  [297/1500] 57 min  Baseline   OneStepLookahead_TimingAware seed=2015  disc=1.532
+  [298/1500] 58 min  Baseline   OneStepLookahead_TimingAware seed=2017  disc=2.243
+  [299/1500] 58 min  Baseline   OneStepLookahead_TimingAware seed=2018  disc=1.426
+  [300/1500] 58 min  Demand share 20%  OneStepLookahead_TimingAware seed=2001  disc=1.429
+  [301/1500] 58 min  Baseline   OneStepLookahead_TimingAware seed=2020  disc=1.851
+  [302/1500] 58 min  Demand share 20%  OneStepLookahead_TimingAware seed=2002  disc=1.651
+  [303/1500] 58 min  Baseline   OneStepLookahead_TimingAware seed=2019  disc=1.993
+  [304/1500] 58 min  Demand share 20%  OneStepLookahead_TimingAware seed=2004  disc=1.460
+  [305/1500] 58 min  Demand share 20%  OneStepLookahead_TimingAware seed=2003  disc=1.098
+  [306/1500] 58 min  Demand share 20%  OneStepLookahead_TimingAware seed=2005  disc=1.239
+  [307/1500] 58 min  Demand share 20%  OneStepLookahead_TimingAware seed=2006  disc=1.353
+  [308/1500] 58 min  Demand share 20%  OneStepLookahead_TimingAware seed=2007  disc=1.400
+  [309/1500] 58 min  Demand share 20%  OneStepLookahead_TimingAware seed=2008  disc=1.270
+  [310/1500] 58 min  Demand share 20%  OneStepLookahead_TimingAware seed=2010  disc=1.220
+  [311/1500] 59 min  Demand share 20%  OneStepLookahead_TimingAware seed=2011  disc=1.353
+  [312/1500] 59 min  Demand share 20%  OneStepLookahead_TimingAware seed=2012  disc=1.332
+  [313/1500] 59 min  Demand share 20%  OneStepLookahead_TimingAware seed=2009  disc=1.464
+  [314/1500] 59 min  Demand share 20%  OneStepLookahead_TimingAware seed=2014  disc=1.190
+  [315/1500] 59 min  Demand share 20%  OneStepLookahead_TimingAware seed=2013  disc=1.434
+  [316/1500] 59 min  Demand share 20%  OneStepLookahead_TimingAware seed=2015  disc=1.370
+  [317/1500] 59 min  Deposit size ×1.25  POMCPOW seed=2002  disc=2.378
+  [318/1500] 59 min  Demand share 20%  OneStepLookahead_TimingAware seed=2016  disc=1.468
+  [319/1500] 59 min  Deposit size ×1.25  POMCPOW seed=2005  disc=1.885
+  [320/1500] 59 min  Deposit size ×1.25  POMCPOW seed=2004  disc=2.058
+  [321/1500] 59 min  Demand share 20%  OneStepLookahead_TimingAware seed=2018  disc=1.249
+  [322/1500] 59 min  Demand share 20%  OneStepLookahead_TimingAware seed=2019  disc=1.472
+  [323/1500] 59 min  Demand share 20%  OneStepLookahead_TimingAware seed=2020  disc=1.356
+  [324/1500] 59 min  Demand share 20%  OneStepLookahead_TimingAware seed=2017  disc=1.557
+  [325/1500] 59 min  Deposit size ×1.25  POMCPOW seed=2003  disc=1.595
+  [326/1500] 59 min  Demand share 40%  OneStepLookahead_TimingAware seed=2001  disc=2.824
+  [327/1500] 59 min  Demand share 40%  OneStepLookahead_TimingAware seed=2002  disc=3.156
+  [328/1500] 59 min  Demand share 40%  OneStepLookahead_TimingAware seed=2003  disc=1.638
+  [329/1500] 60 min  Demand share 40%  OneStepLookahead_TimingAware seed=2004  disc=2.614
+  [330/1500] 60 min  Demand share 40%  OneStepLookahead_TimingAware seed=2005  disc=2.114
+  [331/1500] 60 min  Demand share 40%  OneStepLookahead_TimingAware seed=2008  disc=2.298
+  [332/1500] 60 min  Demand share 40%  OneStepLookahead_TimingAware seed=2009  disc=2.380
+  [333/1500] 60 min  Demand share 40%  OneStepLookahead_TimingAware seed=2006  disc=2.579
+  [334/1500] 60 min  Demand share 40%  OneStepLookahead_TimingAware seed=2007  disc=2.629
+  [335/1500] 60 min  Demand share 40%  OneStepLookahead_TimingAware seed=2010  disc=1.788
+  [336/1500] 60 min  Demand share 40%  OneStepLookahead_TimingAware seed=2011  disc=2.280
+  [337/1500] 60 min  Deposit size ×1.25  POMCPOW seed=2006  disc=2.074
+  [338/1500] 60 min  Demand share 40%  OneStepLookahead_TimingAware seed=2012  disc=2.455
+  [339/1500] 60 min  Deposit size ×1.25  POMCPOW seed=2013  disc=2.109
+  [340/1500] 60 min  Demand share 40%  OneStepLookahead_TimingAware seed=2013  disc=2.728
+  [341/1500] 60 min  Demand share 40%  OneStepLookahead_TimingAware seed=2016  disc=2.630
+  [342/1500] 60 min  Demand share 40%  OneStepLookahead_TimingAware seed=2015  disc=2.356
+  [343/1500] 60 min  Deposit size ×1.25  POMCPOW seed=2007  disc=1.995
+  [344/1500] 60 min  Demand share 40%  OneStepLookahead_TimingAware seed=2014  disc=1.991
+  [345/1500] 60 min  Deposit uncertainty ×0.5  OneStepLookahead_TimingAware seed=2002  disc=2.166
+  [346/1500] 60 min  Demand share 40%  OneStepLookahead_TimingAware seed=2019  disc=2.429
+  [347/1500] 60 min  Demand share 40%  OneStepLookahead_TimingAware seed=2020  disc=2.485
+  [348/1500] 60 min  Demand share 40%  OneStepLookahead_TimingAware seed=2018  disc=1.850
+  [349/1500] 60 min  Demand share 40%  OneStepLookahead_TimingAware seed=2017  disc=2.635
+  [350/1500] 60 min  Deposit size ×1.25  POMCPOW seed=2009  disc=2.050
+  [351/1500] 60 min  Deposit size ×1.25  POMCPOW seed=2008  disc=1.868
+  [352/1500] 60 min  Deposit uncertainty ×0.5  OneStepLookahead_TimingAware seed=2004  disc=2.093
+  [353/1500] 61 min  Deposit uncertainty ×0.5  OneStepLookahead_TimingAware seed=2001  disc=2.025
+  [354/1500] 61 min  Deposit size ×1.25  POMCPOW seed=2012  disc=1.888
+  [355/1500] 61 min  Deposit uncertainty ×0.5  OneStepLookahead_TimingAware seed=2005  disc=1.513
+  [356/1500] 61 min  Deposit uncertainty ×0.5  OneStepLookahead_TimingAware seed=2003  disc=1.428
+  [357/1500] 61 min  Deposit size ×1.25  POMCPOW seed=2010  disc=1.669
+  [358/1500] 61 min  Deposit uncertainty ×0.5  OneStepLookahead_TimingAware seed=2013  disc=1.938
+  [359/1500] 61 min  Deposit uncertainty ×0.5  OneStepLookahead_TimingAware seed=2007  disc=1.898
+  [360/1500] 61 min  Deposit uncertainty ×0.5  OneStepLookahead_TimingAware seed=2006  disc=1.940
+  [361/1500] 61 min  Deposit size ×1.25  POMCPOW seed=2016  disc=2.099
+  [362/1500] 61 min  Deposit uncertainty ×0.5  OneStepLookahead_TimingAware seed=2008  disc=1.537
+  [363/1500] 61 min  Deposit size ×1.25  POMCPOW seed=2015  disc=2.007
+  [364/1500] 61 min  Deposit uncertainty ×0.5  OneStepLookahead_TimingAware seed=2009  disc=1.780
+  [365/1500] 61 min  Deposit uncertainty ×0.5  OneStepLookahead_TimingAware seed=2014  disc=1.475
+  [366/1500] 61 min  Deposit size ×1.25  POMCPOW seed=2014  disc=1.736
+  [367/1500] 61 min  Deposit uncertainty ×0.5  OneStepLookahead_TimingAware seed=2010  disc=1.505
+  [368/1500] 61 min  Deposit size ×1.25  POMCPOW seed=2011  disc=1.806
+  [369/1500] 61 min  Deposit size ×1.25  POMCPOW seed=2017  disc=1.917
+  [370/1500] 61 min  Deposit uncertainty ×0.5  OneStepLookahead_TimingAware seed=2015  disc=1.922
+  [371/1500] 61 min  Deposit uncertainty ×0.5  OneStepLookahead_TimingAware seed=2012  disc=1.662
+  [372/1500] 61 min  Deposit uncertainty ×0.5  OneStepLookahead_TimingAware seed=2011  disc=1.790
+  [373/1500] 61 min  Deposit uncertainty ×0.5  OneStepLookahead_TimingAware seed=2017  disc=1.979
+  [374/1500] 61 min  Deposit uncertainty ×0.5  OneStepLookahead_TimingAware seed=2018  disc=1.425
+  [375/1500] 61 min  Deposit size ×1.25  POMCPOW seed=2020  disc=1.977
+  [376/1500] 61 min  Deposit uncertainty ×0.5  OneStepLookahead_TimingAware seed=2020  disc=1.832
+  [377/1500] 61 min  Deposit uncertainty ×0.5  OneStepLookahead_TimingAware seed=2016  disc=2.026
+  [378/1500] 61 min  Deposit uncertainty ×0.5  OneStepLookahead_TimingAware seed=2019  disc=1.982
+  [379/1500] 61 min  Deposit uncertainty ×1.5  OneStepLookahead_TimingAware seed=2002  disc=2.472
+  [380/1500] 61 min  Deposit uncertainty ×1.5  OneStepLookahead_TimingAware seed=2006  disc=1.948
+  [381/1500] 61 min  Deposit uncertainty ×1.5  OneStepLookahead_TimingAware seed=2001  disc=2.170
+  [382/1500] 61 min  Deposit uncertainty ×1.5  OneStepLookahead_TimingAware seed=2013  disc=2.060
+  [383/1500] 61 min  Deposit uncertainty ×1.5  OneStepLookahead_TimingAware seed=2007  disc=1.898
+  [384/1500] 61 min  Deposit uncertainty ×1.5  OneStepLookahead_TimingAware seed=2004  disc=2.052
+  [385/1500] 61 min  Deposit uncertainty ×1.5  OneStepLookahead_TimingAware seed=2005  disc=1.559
+  [386/1500] 61 min  Deposit uncertainty ×1.5  OneStepLookahead_TimingAware seed=2003  disc=1.424
+  [387/1500] 61 min  Deposit size ×1.25  POMCPOW seed=2018  disc=1.826
+  [388/1500] 61 min  Deposit uncertainty ×1.5  OneStepLookahead_TimingAware seed=2009  disc=1.994
+  [389/1500] 61 min  Deposit uncertainty ×1.5  OneStepLookahead_TimingAware seed=2008  disc=1.682
+  [390/1500] 61 min  Deposit uncertainty ×1.5  OneStepLookahead_TimingAware seed=2011  disc=1.872
+  [391/1500] 61 min  CAPEX ×0.75  OneStepLookahead_TimingAware seed=2001  disc=2.010
+  [392/1500] 61 min  Deposit uncertainty ×1.5  OneStepLookahead_TimingAware seed=2010  disc=1.702
+  [393/1500] 61 min  Deposit uncertainty ×1.5  OneStepLookahead_TimingAware seed=2012  disc=1.957
+  [394/1500] 61 min  Deposit uncertainty ×1.5  OneStepLookahead_TimingAware seed=2015  disc=1.902
+  [395/1500] 61 min  Deposit uncertainty ×1.5  OneStepLookahead_TimingAware seed=2014  disc=1.771
+  [396/1500] 61 min  Deposit uncertainty ×1.5  OneStepLookahead_TimingAware seed=2017  disc=2.243
+  [397/1500] 61 min  Deposit uncertainty ×1.5  OneStepLookahead_TimingAware seed=2018  disc=1.819
+  [398/1500] 61 min  Deposit uncertainty ×1.5  OneStepLookahead_TimingAware seed=2016  disc=2.116
+  [399/1500] 61 min  CAPEX ×0.75  OneStepLookahead_TimingAware seed=2002  disc=2.326
+  [400/1500] 62 min  CAPEX ×0.75  OneStepLookahead_TimingAware seed=2004  disc=2.032
+  [401/1500] 62 min  Deposit uncertainty ×1.5  OneStepLookahead_TimingAware seed=2019  disc=1.908
+  [402/1500] 62 min  Deposit uncertainty ×1.5  OneStepLookahead_TimingAware seed=2020  disc=1.925
+  [403/1500] 62 min  CAPEX ×0.75  OneStepLookahead_TimingAware seed=2005  disc=1.766
+  [404/1500] 62 min  CAPEX ×0.75  OneStepLookahead_TimingAware seed=2003  disc=1.484
+  [405/1500] 62 min  CAPEX ×0.75  OneStepLookahead_TimingAware seed=2008  disc=1.620
+  [406/1500] 62 min  CAPEX ×0.75  OneStepLookahead_TimingAware seed=2013  disc=2.126
+  [407/1500] 62 min  CAPEX ×0.75  OneStepLookahead_TimingAware seed=2016  disc=1.633
+  [408/1500] 62 min  CAPEX ×0.75  OneStepLookahead_TimingAware seed=2007  disc=2.052
+  [409/1500] 62 min  Deposit size ×1.25  POMCPOW seed=2019  disc=2.095
+  [410/1500] 62 min  CAPEX ×0.75  OneStepLookahead_TimingAware seed=2018  disc=1.693
+  [411/1500] 62 min  CAPEX ×0.75  OneStepLookahead_TimingAware seed=2006  disc=2.154
+  [412/1500] 62 min  CAPEX ×0.75  OneStepLookahead_TimingAware seed=2009  disc=2.070
+  [413/1500] 62 min  CAPEX ×0.75  OneStepLookahead_TimingAware seed=2010  disc=1.888
+  [414/1500] 62 min  CAPEX ×0.75  OneStepLookahead_TimingAware seed=2015  disc=1.780
+  [415/1500] 62 min  CAPEX ×0.75  OneStepLookahead_TimingAware seed=2017  disc=2.237
+  [416/1500] 62 min  CAPEX ×0.75  OneStepLookahead_TimingAware seed=2011  disc=1.936
+  [417/1500] 62 min  CAPEX ×1.25  OneStepLookahead_TimingAware seed=2005  disc=0.956
+  [418/1500] 62 min  CAPEX ×0.75  OneStepLookahead_TimingAware seed=2020  disc=1.866
+  [419/1500] 62 min  CAPEX ×1.25  OneStepLookahead_TimingAware seed=2002  disc=2.242
+  [420/1500] 62 min  CAPEX ×0.75  OneStepLookahead_TimingAware seed=2014  disc=1.752
+  [421/1500] 62 min  CAPEX ×0.75  OneStepLookahead_TimingAware seed=2012  disc=2.049
+  [422/1500] 62 min  CAPEX ×1.25  OneStepLookahead_TimingAware seed=2001  disc=1.920
+  [423/1500] 62 min  CAPEX ×1.25  OneStepLookahead_TimingAware seed=2007  disc=1.936
+  [424/1500] 62 min  CAPEX ×1.25  OneStepLookahead_TimingAware seed=2003  disc=1.098
+  [425/1500] 62 min  CAPEX ×1.25  OneStepLookahead_TimingAware seed=2004  disc=1.824
+  [426/1500] 62 min  CAPEX ×1.25  OneStepLookahead_TimingAware seed=2008  disc=1.540
+  [427/1500] 62 min  CAPEX ×1.25  OneStepLookahead_TimingAware seed=2006  disc=1.665
+  [428/1500] 62 min  CAPEX ×1.25  OneStepLookahead_TimingAware seed=2009  disc=1.808
+  [429/1500] 62 min  CAPEX ×0.75  OneStepLookahead_TimingAware seed=2019  disc=2.090
+  [430/1500] 62 min  CAPEX ×1.25  OneStepLookahead_TimingAware seed=2013  disc=1.776
+  [431/1500] 62 min  CAPEX ×1.25  OneStepLookahead_TimingAware seed=2010  disc=1.265
+  [432/1500] 62 min  CAPEX ×1.25  OneStepLookahead_TimingAware seed=2011  disc=1.455
+  [433/1500] 62 min  CAPEX ×1.25  OneStepLookahead_TimingAware seed=2012  disc=1.723
+  [434/1500] 62 min  CAPEX ×1.25  OneStepLookahead_TimingAware seed=2015  disc=1.088
+  [435/1500] 62 min  CAPEX ×1.25  OneStepLookahead_TimingAware seed=2018  disc=1.434
+  [436/1500] 62 min  CAPEX ×1.25  OneStepLookahead_TimingAware seed=2014  disc=1.490
+  [437/1500] 62 min  CAPEX ×1.25  OneStepLookahead_TimingAware seed=2016  disc=1.913
+  [438/1500] 62 min  CAPEX ×1.25  OneStepLookahead_TimingAware seed=2019  disc=1.846
+  [439/1500] 62 min  CAPEX ×1.25  OneStepLookahead_TimingAware seed=2017  disc=1.787
+  [440/1500] 62 min  CAPEX ×1.25  OneStepLookahead_TimingAware seed=2020  disc=1.803
+  [441/1500] 62 min  Recovery rate −0.10  OneStepLookahead_TimingAware seed=2002  disc=2.190
+  [442/1500] 62 min  Recovery rate −0.10  OneStepLookahead_TimingAware seed=2001  disc=1.983
+  [443/1500] 62 min  Recovery rate −0.10  OneStepLookahead_TimingAware seed=2013  disc=2.000
+  [444/1500] 62 min  Recovery rate −0.10  OneStepLookahead_TimingAware seed=2004  disc=2.012
+  [445/1500] 62 min  Recovery rate −0.10  OneStepLookahead_TimingAware seed=2006  disc=1.805
+  [446/1500] 62 min  Recovery rate −0.10  OneStepLookahead_TimingAware seed=2012  disc=1.870
+  [447/1500] 62 min  Recovery rate −0.10  OneStepLookahead_TimingAware seed=2008  disc=1.477
+  [448/1500] 62 min  Recovery rate −0.10  OneStepLookahead_TimingAware seed=2017  disc=1.687
+  [449/1500] 62 min  Recovery rate −0.10  OneStepLookahead_TimingAware seed=2010  disc=1.433
+  [450/1500] 62 min  Recovery rate −0.10  OneStepLookahead_TimingAware seed=2018  disc=1.536
+  [451/1500] 62 min  Recovery rate −0.10  OneStepLookahead_TimingAware seed=2003  disc=1.261
+  [452/1500] 62 min  Recovery rate −0.10  OneStepLookahead_TimingAware seed=2005  disc=1.746
+  [453/1500] 62 min  Recovery rate −0.10  OneStepLookahead_TimingAware seed=2015  disc=1.565
+  [454/1500] 63 min  Recovery rate −0.10  OneStepLookahead_TimingAware seed=2011  disc=1.781
+  [455/1500] 63 min  Recovery rate −0.10  OneStepLookahead_TimingAware seed=2007  disc=2.087
+  [456/1500] 63 min  Recovery rate −0.10  OneStepLookahead_TimingAware seed=2016  disc=1.983
+  [457/1500] 63 min  Recovery rate −0.10  OneStepLookahead_TimingAware seed=2009  disc=1.830
+  [458/1500] 63 min  Recovery rate −0.10  OneStepLookahead_TimingAware seed=2014  disc=1.698
+  [459/1500] 63 min  Recovery rate −0.10  OneStepLookahead_TimingAware seed=2019  disc=1.840
+  [460/1500] 63 min  Recovery rate +0.10  OneStepLookahead_TimingAware seed=2002  disc=2.432
+  [461/1500] 63 min  Recovery rate −0.10  OneStepLookahead_TimingAware seed=2020  disc=1.844
+  [462/1500] 63 min  Recovery rate +0.10  OneStepLookahead_TimingAware seed=2001  disc=2.103
+  [463/1500] 63 min  Recovery rate +0.10  OneStepLookahead_TimingAware seed=2003  disc=1.652
+  [464/1500] 63 min  Recovery rate +0.10  OneStepLookahead_TimingAware seed=2004  disc=1.996
+  [465/1500] 63 min  Recovery rate +0.10  OneStepLookahead_TimingAware seed=2005  disc=1.436
+  [466/1500] 63 min  Recovery rate +0.10  OneStepLookahead_TimingAware seed=2009  disc=1.961
+  [467/1500] 63 min  Recovery rate +0.10  OneStepLookahead_TimingAware seed=2010  disc=1.769
+  [468/1500] 63 min  Recovery rate +0.10  OneStepLookahead_TimingAware seed=2008  disc=1.743
+  [469/1500] 63 min  Recovery rate +0.10  OneStepLookahead_TimingAware seed=2017  disc=2.164
+  [470/1500] 63 min  Recovery rate +0.10  OneStepLookahead_TimingAware seed=2007  disc=2.053
+  [471/1500] 63 min  Recovery rate +0.10  OneStepLookahead_TimingAware seed=2006  disc=2.008
+  [472/1500] 63 min  Recovery rate +0.10  OneStepLookahead_TimingAware seed=2018  disc=1.961
+  [473/1500] 63 min  Recovery rate +0.10  OneStepLookahead_TimingAware seed=2014  disc=1.512
+  [474/1500] 63 min  Recovery rate +0.10  OneStepLookahead_TimingAware seed=2011  disc=1.922
+  [475/1500] 63 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2002  disc=2.165
+  [476/1500] 63 min  Recovery rate +0.10  OneStepLookahead_TimingAware seed=2020  disc=1.708
+  [477/1500] 63 min  Recovery rate +0.10  OneStepLookahead_TimingAware seed=2012  disc=1.945
+  [478/1500] 63 min  Recovery rate +0.10  OneStepLookahead_TimingAware seed=2016  disc=1.964
+  [479/1500] 63 min  Recovery rate +0.10  OneStepLookahead_TimingAware seed=2019  disc=2.027
+  [480/1500] 63 min  Recovery rate +0.10  OneStepLookahead_TimingAware seed=2013  disc=1.970
+  [481/1500] 63 min  Recovery rate +0.10  OneStepLookahead_TimingAware seed=2015  disc=1.735
+  [482/1500] 63 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2003  disc=1.514
+  [483/1500] 63 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2008  disc=1.620
+  [484/1500] 63 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2001  disc=2.245
+  [485/1500] 63 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2005  disc=1.690
+  [486/1500] 63 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2013  disc=2.067
+  [487/1500] 63 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2004  disc=2.178
+  [488/1500] 63 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2009  disc=1.943
+  [489/1500] 63 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2007  disc=1.929
+  [490/1500] 63 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2006  disc=2.021
+  [491/1500] 63 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2010  disc=1.767
+  [492/1500] 63 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2012  disc=2.012
+  [493/1500] 63 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2011  disc=1.943
+  [494/1500] 63 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2014  disc=1.796
+  [495/1500] 63 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2016  disc=1.792
+  [496/1500] 63 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2018  disc=1.521
+  [497/1500] 63 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2015  disc=1.693
+  [498/1500] 63 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2019  disc=2.032
+  [499/1500] 63 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2001  disc=1.870
+  [500/1500] 63 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2020  disc=2.006
+  [501/1500] 63 min  Carbon cost ×0.5  OneStepLookahead_TimingAware seed=2017  disc=2.306
+  [502/1500] 63 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2004  disc=1.968
+  [503/1500] 63 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2005  disc=1.497
+  [504/1500] 63 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2002  disc=2.317
+  [505/1500] 63 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2006  disc=1.945
+  [506/1500] 63 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2003  disc=1.356
+  [507/1500] 63 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2010  disc=1.583
+  [508/1500] 63 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2009  disc=1.742
+  [509/1500] 63 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2008  disc=1.760
+  [510/1500] 63 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2011  disc=1.813
+  [511/1500] 63 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2016  disc=1.685
+  [512/1500] 64 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2007  disc=1.986
+  [513/1500] 64 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2015  disc=1.511
+  [514/1500] 64 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2013  disc=1.919
+  [515/1500] 64 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2012  disc=1.835
+  [516/1500] 64 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2014  disc=1.630
+  [517/1500] 64 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2020  disc=1.690
+  [518/1500] 64 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2018  disc=1.484
+  [519/1500] 64 min  Production capacity 20k t/yr  OneStepLookahead_TimingAware seed=2001  disc=1.916
+  [520/1500] 64 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2017  disc=2.075
+  [521/1500] 64 min  Carbon cost ×2  OneStepLookahead_TimingAware seed=2019  disc=1.839
+  [522/1500] 64 min  Production capacity 20k t/yr  OneStepLookahead_TimingAware seed=2002  disc=2.353
+  [523/1500] 64 min  Production capacity 20k t/yr  OneStepLookahead_TimingAware seed=2003  disc=1.358
+  [524/1500] 64 min  Production capacity 20k t/yr  OneStepLookahead_TimingAware seed=2004  disc=1.905
+  [525/1500] 64 min  Production capacity 20k t/yr  OneStepLookahead_TimingAware seed=2006  disc=1.928
+  [526/1500] 64 min  Production capacity 20k t/yr  OneStepLookahead_TimingAware seed=2005  disc=1.630
+  [527/1500] 64 min  Production capacity 20k t/yr  OneStepLookahead_TimingAware seed=2008  disc=1.774
+  [528/1500] 64 min  Production capacity 20k t/yr  OneStepLookahead_TimingAware seed=2007  disc=1.942
+  [529/1500] 64 min  Production capacity 20k t/yr  OneStepLookahead_TimingAware seed=2020  disc=1.527
+  [530/1500] 64 min  Production capacity 20k t/yr  OneStepLookahead_TimingAware seed=2009  disc=1.903
+  [531/1500] 64 min  Production capacity 20k t/yr  OneStepLookahead_TimingAware seed=2010  disc=1.338
+  [532/1500] 64 min  Production capacity 20k t/yr  OneStepLookahead_TimingAware seed=2011  disc=1.707
+  [533/1500] 64 min  Production capacity 20k t/yr  OneStepLookahead_TimingAware seed=2015  disc=1.716
+  [534/1500] 64 min  Production capacity 20k t/yr  OneStepLookahead_TimingAware seed=2013  disc=1.972
+  [535/1500] 64 min  Production capacity 20k t/yr  OneStepLookahead_TimingAware seed=2012  disc=1.792
+  [536/1500] 64 min  Production capacity 30k t/yr  OneStepLookahead_TimingAware seed=2006  disc=1.778
+  [537/1500] 64 min  Production capacity 20k t/yr  OneStepLookahead_TimingAware seed=2019  disc=1.825
+  [538/1500] 64 min  Production capacity 20k t/yr  OneStepLookahead_TimingAware seed=2016  disc=1.997
+  [539/1500] 64 min  Production capacity 20k t/yr  OneStepLookahead_TimingAware seed=2017  disc=1.978
+  [540/1500] 64 min  Production capacity 20k t/yr  OneStepLookahead_TimingAware seed=2014  disc=1.573
+  [541/1500] 64 min  Production capacity 20k t/yr  OneStepLookahead_TimingAware seed=2018  disc=1.603
+  [542/1500] 64 min  Production capacity 30k t/yr  OneStepLookahead_TimingAware seed=2003  disc=1.239
+  [543/1500] 64 min  Production capacity 30k t/yr  OneStepLookahead_TimingAware seed=2001  disc=2.223
+  [544/1500] 64 min  Production capacity 30k t/yr  OneStepLookahead_TimingAware seed=2007  disc=2.104
+  [545/1500] 64 min  Production capacity 30k t/yr  OneStepLookahead_TimingAware seed=2002  disc=2.509
+  [546/1500] 64 min  Production capacity 30k t/yr  OneStepLookahead_TimingAware seed=2005  disc=1.968
+  [547/1500] 64 min  Production capacity 30k t/yr  OneStepLookahead_TimingAware seed=2004  disc=2.243
+  [548/1500] 64 min  Production capacity 30k t/yr  OneStepLookahead_TimingAware seed=2008  disc=1.731
+  [549/1500] 64 min  Production capacity 30k t/yr  OneStepLookahead_TimingAware seed=2009  disc=1.963
+  [550/1500] 64 min  Production capacity 30k t/yr  OneStepLookahead_TimingAware seed=2010  disc=1.845
+  [551/1500] 64 min  Production capacity 30k t/yr  OneStepLookahead_TimingAware seed=2015  disc=1.647
+  [552/1500] 64 min  Production capacity 30k t/yr  OneStepLookahead_TimingAware seed=2012  disc=2.042
+  [553/1500] 64 min  Production capacity 30k t/yr  OneStepLookahead_TimingAware seed=2011  disc=1.913
+  [554/1500] 64 min  Production capacity 30k t/yr  OneStepLookahead_TimingAware seed=2017  disc=2.292
+  [555/1500] 64 min  Production capacity 30k t/yr  OneStepLookahead_TimingAware seed=2018  disc=1.564
+  [556/1500] 64 min  Production capacity 30k t/yr  OneStepLookahead_TimingAware seed=2016  disc=2.153
+  [557/1500] 64 min  Production capacity 30k t/yr  OneStepLookahead_TimingAware seed=2013  disc=2.185
+  [558/1500] 64 min  Production capacity 30k t/yr  OneStepLookahead_TimingAware seed=2014  disc=1.825
+  [559/1500] 64 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2001  disc=2.118
+  [560/1500] 64 min  Production capacity 30k t/yr  OneStepLookahead_TimingAware seed=2019  disc=2.219
+  [561/1500] 64 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2002  disc=2.282
+  [562/1500] 64 min  Production capacity 30k t/yr  OneStepLookahead_TimingAware seed=2020  disc=2.082
+  [563/1500] 64 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2003  disc=1.345
+  [564/1500] 64 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2006  disc=1.791
+  [565/1500] 64 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2007  disc=1.900
+  [566/1500] 64 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2008  disc=1.854
+  [567/1500] 64 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2005  disc=1.840
+  [568/1500] 64 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2004  disc=2.106
+  [569/1500] 64 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2010  disc=1.698
+  [570/1500] 64 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2009  disc=1.984
+  [571/1500] 64 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2014  disc=1.741
+  [572/1500] 64 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2012  disc=1.958
+  [573/1500] 65 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2018  disc=1.417
+  [574/1500] 65 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2013  disc=2.149
+  [575/1500] 65 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2016  disc=2.048
+  [576/1500] 65 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2015  disc=1.881
+  [577/1500] 65 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2011  disc=1.770
+  [578/1500] 65 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2001  disc=1.907
+  [579/1500] 65 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2017  disc=2.238
+  [580/1500] 65 min  Baseline   OneStepLookahead_AlphaAware seed=2002  disc=0.020
+  [581/1500] 65 min  Baseline   OneStepLookahead_AlphaAware seed=2001  disc=-0.591
+  [582/1500] 65 min  Baseline   OneStepLookahead_AlphaAware seed=2004  disc=-0.142
+  [583/1500] 65 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2020  disc=1.899
+  [584/1500] 65 min  Baseline   OneStepLookahead_AlphaAware seed=2003  disc=-1.407
+  [585/1500] 65 min  Deposit size ×0.75  OneStepLookahead_TimingAware seed=2019  disc=2.076
+  [586/1500] 65 min  Baseline   OneStepLookahead_AlphaAware seed=2010  disc=-1.147
+  [587/1500] 65 min  Baseline   OneStepLookahead_AlphaAware seed=2007  disc=-0.346
+  [588/1500] 65 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2002  disc=2.408
+  [589/1500] 65 min  Baseline   OneStepLookahead_AlphaAware seed=2009  disc=-0.545
+  [590/1500] 65 min  Baseline   OneStepLookahead_AlphaAware seed=2005  disc=-0.654
+  [591/1500] 65 min  Baseline   OneStepLookahead_AlphaAware seed=2006  disc=0.009
+  [592/1500] 65 min  Baseline   OneStepLookahead_AlphaAware seed=2008  disc=-0.561
+  [593/1500] 65 min  Baseline   OneStepLookahead_AlphaAware seed=2014  disc=-0.690
+  [594/1500] 65 min  Baseline   OneStepLookahead_AlphaAware seed=2012  disc=-1.105
+  [595/1500] 65 min  Baseline   OneStepLookahead_AlphaAware seed=2016  disc=-0.825
+  [596/1500] 65 min  Baseline   OneStepLookahead_AlphaAware seed=2011  disc=-0.631
+  [597/1500] 65 min  Baseline   OneStepLookahead_AlphaAware seed=2017  disc=-0.343
+  [598/1500] 65 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2004  disc=2.017
+  [599/1500] 65 min  Baseline   OneStepLookahead_AlphaAware seed=2015  disc=-0.450
+  [600/1500] 65 min  Baseline   OneStepLookahead_AlphaAware seed=2019  disc=-0.462
+  [601/1500] 65 min  Baseline   OneStepLookahead_AlphaAware seed=2013  disc=0.200
+  [602/1500] 65 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2003  disc=1.560
+  [603/1500] 65 min  Baseline   OneStepLookahead_AlphaAware seed=2018  disc=-0.889
+  [604/1500] 65 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2008  disc=1.787
+  [605/1500] 65 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2009  disc=1.991
+  [606/1500] 65 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2005  disc=1.844
+  [607/1500] 65 min  Baseline   OneStepLookahead_AlphaAware seed=2020  disc=0.276
+  [608/1500] 65 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2010  disc=1.506
+  [609/1500] 65 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2006  disc=2.120
+  [610/1500] 65 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2007  disc=2.116
+  [611/1500] 65 min  Demand share 20%  OneStepLookahead_AlphaAware seed=2010  disc=-0.746
+  [612/1500] 65 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2013  disc=2.108
+  [613/1500] 65 min  Demand share 20%  OneStepLookahead_AlphaAware seed=2013  disc=-0.520
+  [614/1500] 65 min  Demand share 20%  OneStepLookahead_AlphaAware seed=2006  disc=-0.075
+  [615/1500] 65 min  Demand share 20%  OneStepLookahead_AlphaAware seed=2007  disc=-0.115
+  [616/1500] 65 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2012  disc=1.957
+  [617/1500] 65 min  Demand share 20%  OneStepLookahead_AlphaAware seed=2015  disc=-0.560
+  [618/1500] 65 min  Demand share 20%  OneStepLookahead_AlphaAware seed=2009  disc=0.201
+  [619/1500] 65 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2015  disc=1.848
+  [620/1500] 65 min  Demand share 40%  OneStepLookahead_AlphaAware seed=2001  disc=-0.670
+  [621/1500] 65 min  Demand share 20%  OneStepLookahead_AlphaAware seed=2008  disc=0.227
+  [622/1500] 65 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2016  disc=2.087
+  [623/1500] 65 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2011  disc=1.933
+  [624/1500] 65 min  Demand share 40%  OneStepLookahead_AlphaAware seed=2002  disc=0.202
+  [625/1500] 65 min  Demand share 40%  OneStepLookahead_AlphaAware seed=2003  disc=-1.738
+  [626/1500] 65 min  Demand share 20%  OneStepLookahead_AlphaAware seed=2011  disc=-0.193
+  [627/1500] 65 min  Demand share 40%  OneStepLookahead_AlphaAware seed=2005  disc=-1.092
+  [628/1500] 65 min  Demand share 20%  OneStepLookahead_AlphaAware seed=2012  disc=0.771
+  [629/1500] 65 min  Demand share 40%  OneStepLookahead_AlphaAware seed=2008  disc=-0.577
+  [630/1500] 65 min  Demand share 40%  OneStepLookahead_AlphaAware seed=2004  disc=-0.015
+  [631/1500] 65 min  Demand share 40%  OneStepLookahead_AlphaAware seed=2007  disc=-0.552
+  [632/1500] 65 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2014  disc=1.599
+  [633/1500] 65 min  Demand share 40%  OneStepLookahead_AlphaAware seed=2011  disc=-0.807
+  [634/1500] 65 min  Demand share 20%  OneStepLookahead_AlphaAware seed=2005  disc=0.678
+  [635/1500] 65 min  Demand share 40%  OneStepLookahead_AlphaAware seed=2006  disc=-0.131
+  [636/1500] 65 min  Demand share 20%  OneStepLookahead_AlphaAware seed=2014  disc=-0.153
+  [637/1500] 65 min  Demand share 40%  OneStepLookahead_AlphaAware seed=2010  disc=-0.737
+  [638/1500] 65 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2017  disc=2.209
+  [639/1500] 65 min  Demand share 40%  OneStepLookahead_AlphaAware seed=2012  disc=-1.407
+  [640/1500] 65 min  Demand share 20%  OneStepLookahead_AlphaAware seed=2002  disc=1.233
+  [641/1500] 65 min  Demand share 40%  OneStepLookahead_AlphaAware seed=2009  disc=-0.503
+  [642/1500] 65 min  Demand share 40%  OneStepLookahead_AlphaAware seed=2016  disc=-0.819
+  [643/1500] 65 min  Demand share 20%  OneStepLookahead_AlphaAware seed=2004  disc=0.403
+  [644/1500] 65 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2019  disc=1.980
+  [645/1500] 65 min  Demand share 20%  OneStepLookahead_AlphaAware seed=2016  disc=0.008
+  [646/1500] 65 min  Demand share 40%  OneStepLookahead_AlphaAware seed=2013  disc=0.066
+  [647/1500] 65 min  Demand share 40%  OneStepLookahead_AlphaAware seed=2014  disc=-0.581
+  [648/1500] 65 min  Demand share 40%  OneStepLookahead_AlphaAware seed=2015  disc=-0.431
+  [649/1500] 65 min  Demand share 40%  OneStepLookahead_AlphaAware seed=2019  disc=-0.325
+  [650/1500] 65 min  Demand share 40%  OneStepLookahead_AlphaAware seed=2018  disc=-1.066
+  [651/1500] 65 min  Demand share 40%  OneStepLookahead_AlphaAware seed=2020  disc=-0.038
+  [652/1500] 65 min  Demand share 40%  OneStepLookahead_AlphaAware seed=2017  disc=-0.239
+  [653/1500] 65 min  Deposit uncertainty ×0.5  OneStepLookahead_AlphaAware seed=2003  disc=-1.573
+  [654/1500] 65 min  Deposit uncertainty ×0.5  OneStepLookahead_AlphaAware seed=2005  disc=-0.998
+  [655/1500] 65 min  Demand share 20%  OneStepLookahead_AlphaAware seed=2001  disc=1.141
+  [656/1500] 65 min  Deposit uncertainty ×0.5  OneStepLookahead_AlphaAware seed=2002  disc=0.030
+  [657/1500] 65 min  Deposit uncertainty ×0.5  OneStepLookahead_AlphaAware seed=2001  disc=-0.598
+  [658/1500] 65 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2018  disc=1.826
+  [659/1500] 65 min  Deposit uncertainty ×0.5  OneStepLookahead_AlphaAware seed=2004  disc=-0.182
+  [660/1500] 65 min  Deposit uncertainty ×0.5  OneStepLookahead_AlphaAware seed=2011  disc=-0.818
+  [661/1500] 65 min  Deposit uncertainty ×0.5  OneStepLookahead_AlphaAware seed=2009  disc=-0.747
+  [662/1500] 65 min  Deposit uncertainty ×0.5  OneStepLookahead_AlphaAware seed=2010  disc=-0.992
+  [663/1500] 65 min  Deposit size ×1.25  OneStepLookahead_TimingAware seed=2020  disc=1.932
+  [664/1500] 65 min  Deposit uncertainty ×0.5  OneStepLookahead_AlphaAware seed=2019  disc=-0.454
+  [665/1500] 65 min  Deposit uncertainty ×0.5  OneStepLookahead_AlphaAware seed=2007  disc=-0.574
+  [666/1500] 65 min  Deposit uncertainty ×0.5  OneStepLookahead_AlphaAware seed=2012  disc=-1.284
+  [667/1500] 65 min  Deposit uncertainty ×0.5  OneStepLookahead_AlphaAware seed=2015  disc=-0.367
+  [668/1500] 65 min  Deposit uncertainty ×0.5  OneStepLookahead_AlphaAware seed=2008  disc=-0.544
+  [669/1500] 65 min  Deposit uncertainty ×0.5  OneStepLookahead_AlphaAware seed=2020  disc=-0.152
+  [670/1500] 65 min  Deposit uncertainty ×0.5  OneStepLookahead_AlphaAware seed=2016  disc=-0.836
+  [671/1500] 65 min  Deposit uncertainty ×0.5  OneStepLookahead_AlphaAware seed=2018  disc=-1.068
+  [672/1500] 65 min  Deposit uncertainty ×1.5  OneStepLookahead_AlphaAware seed=2001  disc=-0.015
+  [673/1500] 65 min  Deposit uncertainty ×0.5  OneStepLookahead_AlphaAware seed=2017  disc=-0.395
+  [674/1500] 65 min  Deposit uncertainty ×0.5  OneStepLookahead_AlphaAware seed=2014  disc=-0.699
+  [675/1500] 65 min  Deposit uncertainty ×1.5  OneStepLookahead_AlphaAware seed=2002  disc=0.010
+  [676/1500] 65 min  Deposit uncertainty ×0.5  OneStepLookahead_AlphaAware seed=2006  disc=-0.111
+  [677/1500] 65 min  Deposit uncertainty ×1.5  OneStepLookahead_AlphaAware seed=2010  disc=-1.074
+  [678/1500] 65 min  Demand share 20%  OneStepLookahead_AlphaAware seed=2018  disc=0.344
+  [679/1500] 65 min  Deposit uncertainty ×0.5  OneStepLookahead_AlphaAware seed=2013  disc=0.113
+  [680/1500] 65 min  Deposit uncertainty ×1.5  OneStepLookahead_AlphaAware seed=2004  disc=-0.249
+  [681/1500] 65 min  Deposit uncertainty ×1.5  OneStepLookahead_AlphaAware seed=2014  disc=-0.681
+  [682/1500] 65 min  Deposit uncertainty ×1.5  OneStepLookahead_AlphaAware seed=2019  disc=-0.472
+  [683/1500] 65 min  Deposit uncertainty ×1.5  OneStepLookahead_AlphaAware seed=2016  disc=-0.812
+  [684/1500] 65 min  Deposit uncertainty ×1.5  OneStepLookahead_AlphaAware seed=2017  disc=-0.571
+  [685/1500] 65 min  Deposit uncertainty ×1.5  OneStepLookahead_AlphaAware seed=2007  disc=0.644
+  [686/1500] 65 min  Demand share 20%  OneStepLookahead_AlphaAware seed=2020  disc=0.367
+  [687/1500] 65 min  Deposit uncertainty ×1.5  OneStepLookahead_AlphaAware seed=2003  disc=-1.472
+  [688/1500] 65 min  Deposit uncertainty ×1.5  OneStepLookahead_AlphaAware seed=2015  disc=-0.248
+  [689/1500] 65 min  Demand share 20%  OneStepLookahead_AlphaAware seed=2003  disc=1.020
+  [690/1500] 65 min  Deposit uncertainty ×1.5  OneStepLookahead_AlphaAware seed=2008  disc=-0.492
+  [691/1500] 65 min  Deposit uncertainty ×1.5  OneStepLookahead_AlphaAware seed=2020  disc=0.014
+  [692/1500] 65 min  Deposit uncertainty ×1.5  OneStepLookahead_AlphaAware seed=2013  disc=0.040
+  [693/1500] 65 min  Deposit uncertainty ×1.5  OneStepLookahead_AlphaAware seed=2005  disc=-0.655
+  [694/1500] 65 min  Deposit uncertainty ×1.5  OneStepLookahead_AlphaAware seed=2009  disc=-0.392
+  [695/1500] 65 min  Demand share 20%  OneStepLookahead_AlphaAware seed=2019  disc=1.015
+  [696/1500] 65 min  Deposit uncertainty ×1.5  OneStepLookahead_AlphaAware seed=2006  disc=-0.102
+  [697/1500] 65 min  Deposit uncertainty ×1.5  OneStepLookahead_AlphaAware seed=2018  disc=0.401
+  [698/1500] 65 min  CAPEX ×1.25  OneStepLookahead_AlphaAware seed=2002  disc=0.034
+  [699/1500] 65 min  CAPEX ×1.25  OneStepLookahead_AlphaAware seed=2001  disc=-0.843
+  [700/1500] 65 min  CAPEX ×1.25  OneStepLookahead_AlphaAware seed=2004  disc=0.001
+  [701/1500] 65 min  Deposit uncertainty ×1.5  OneStepLookahead_AlphaAware seed=2012  disc=1.407
+  [702/1500] 65 min  CAPEX ×1.25  OneStepLookahead_AlphaAware seed=2005  disc=-1.263
+  [703/1500] 65 min  CAPEX ×1.25  OneStepLookahead_AlphaAware seed=2003  disc=-1.694
+  [704/1500] 65 min  CAPEX ×1.25  OneStepLookahead_AlphaAware seed=2007  disc=-0.430
+  [705/1500] 65 min  CAPEX ×1.25  OneStepLookahead_AlphaAware seed=2008  disc=-0.785
+  [706/1500] 65 min  CAPEX ×1.25  OneStepLookahead_AlphaAware seed=2009  disc=-0.466
+  [707/1500] 65 min  Demand share 20%  OneStepLookahead_AlphaAware seed=2017  disc=1.470
+  [708/1500] 65 min  CAPEX ×1.25  OneStepLookahead_AlphaAware seed=2010  disc=-0.900
+  [709/1500] 65 min  CAPEX ×1.25  OneStepLookahead_AlphaAware seed=2011  disc=-0.687
+  [710/1500] 65 min  CAPEX ×1.25  OneStepLookahead_AlphaAware seed=2006  disc=0.043
+  [711/1500] 65 min  CAPEX ×1.25  OneStepLookahead_AlphaAware seed=2012  disc=-2.253
+  [712/1500] 65 min  CAPEX ×1.25  OneStepLookahead_AlphaAware seed=2014  disc=-0.430
+  [713/1500] 65 min  CAPEX ×1.25  OneStepLookahead_AlphaAware seed=2016  disc=-1.139
+  [714/1500] 65 min  CAPEX ×1.25  OneStepLookahead_AlphaAware seed=2013  disc=0.488
+  [715/1500] 65 min  CAPEX ×1.25  OneStepLookahead_AlphaAware seed=2017  disc=-0.361
+  [716/1500] 65 min  CAPEX ×1.25  OneStepLookahead_AlphaAware seed=2019  disc=-0.412
+  [717/1500] 65 min  CAPEX ×1.25  OneStepLookahead_AlphaAware seed=2018  disc=-0.842
+  [718/1500] 65 min  CAPEX ×1.25  OneStepLookahead_AlphaAware seed=2015  disc=-0.239
+  [719/1500] 65 min  CAPEX ×1.25  OneStepLookahead_AlphaAware seed=2020  disc=0.049
+  [720/1500] 65 min  CAPEX ×0.75  OneStepLookahead_AlphaAware seed=2012  disc=1.860
+  [721/1500] 65 min  Recovery rate −0.10  OneStepLookahead_AlphaAware seed=2003  disc=-1.969
+  [722/1500] 65 min  Recovery rate −0.10  OneStepLookahead_AlphaAware seed=2002  disc=-0.191
+  [723/1500] 65 min  Recovery rate −0.10  OneStepLookahead_AlphaAware seed=2001  disc=-0.857
+  [724/1500] 65 min  Recovery rate −0.10  OneStepLookahead_AlphaAware seed=2004  disc=-0.339
+  [725/1500] 65 min  Recovery rate −0.10  OneStepLookahead_AlphaAware seed=2007  disc=-0.203
+  [726/1500] 65 min  Recovery rate −0.10  OneStepLookahead_AlphaAware seed=2009  disc=-0.971
+  [727/1500] 65 min  Recovery rate −0.10  OneStepLookahead_AlphaAware seed=2005  disc=-1.083
+  [728/1500] 65 min  Recovery rate −0.10  OneStepLookahead_AlphaAware seed=2012  disc=-1.187
+  [729/1500] 65 min  Recovery rate −0.10  OneStepLookahead_AlphaAware seed=2010  disc=-1.040
+  [730/1500] 65 min  Recovery rate −0.10  OneStepLookahead_AlphaAware seed=2006  disc=-0.281
+  [731/1500] 65 min  Recovery rate −0.10  OneStepLookahead_AlphaAware seed=2011  disc=-0.923
+  [732/1500] 65 min  Recovery rate −0.10  OneStepLookahead_AlphaAware seed=2015  disc=-0.760
+  [733/1500] 65 min  CAPEX ×0.75  OneStepLookahead_AlphaAware seed=2005  disc=1.928
+  [734/1500] 66 min  Recovery rate −0.10  OneStepLookahead_AlphaAware seed=2013  disc=0.247
+  [735/1500] 66 min  Recovery rate −0.10  OneStepLookahead_AlphaAware seed=2017  disc=-0.880
+  [736/1500] 66 min  Recovery rate −0.10  OneStepLookahead_AlphaAware seed=2016  disc=-0.527
+  [737/1500] 66 min  Recovery rate −0.10  OneStepLookahead_AlphaAware seed=2019  disc=-0.545
+  [738/1500] 66 min  Recovery rate −0.10  OneStepLookahead_AlphaAware seed=2018  disc=-1.088
+  [739/1500] 66 min  CAPEX ×0.75  OneStepLookahead_AlphaAware seed=2004  disc=2.171
+  [740/1500] 66 min  CAPEX ×0.75  OneStepLookahead_AlphaAware seed=2019  disc=2.105
+  [741/1500] 66 min  CAPEX ×0.75  OneStepLookahead_AlphaAware seed=2016  disc=1.898
+  [742/1500] 66 min  Recovery rate −0.10  OneStepLookahead_AlphaAware seed=2020  disc=-0.488
+  [743/1500] 66 min  Recovery rate +0.10  OneStepLookahead_AlphaAware seed=2001  disc=-0.552
+  [744/1500] 66 min  Recovery rate +0.10  OneStepLookahead_AlphaAware seed=2003  disc=-0.522
+  [745/1500] 66 min  Recovery rate +0.10  OneStepLookahead_AlphaAware seed=2004  disc=-0.424
+  [746/1500] 66 min  CAPEX ×0.75  OneStepLookahead_AlphaAware seed=2001  disc=2.027
+  [747/1500] 66 min  CAPEX ×0.75  OneStepLookahead_AlphaAware seed=2003  disc=1.417
+  [748/1500] 66 min  Recovery rate −0.10  OneStepLookahead_AlphaAware seed=2014  disc=-0.081
+  [749/1500] 66 min  CAPEX ×0.75  OneStepLookahead_AlphaAware seed=2006  disc=2.155
+  [750/1500] 66 min  Deposit uncertainty ×1.5  OneStepLookahead_AlphaAware seed=2011  disc=1.862
+  [751/1500] 66 min  CAPEX ×0.75  OneStepLookahead_AlphaAware seed=2020  disc=1.828
+  [752/1500] 66 min  CAPEX ×0.75  OneStepLookahead_AlphaAware seed=2007  disc=2.070
+  [753/1500] 66 min  Recovery rate +0.10  OneStepLookahead_AlphaAware seed=2002  disc=0.146
+  [754/1500] 66 min  Recovery rate +0.10  OneStepLookahead_AlphaAware seed=2007  disc=-0.389
+  [755/1500] 66 min  CAPEX ×0.75  OneStepLookahead_AlphaAware seed=2002  disc=2.515
+  [756/1500] 66 min  Recovery rate +0.10  OneStepLookahead_AlphaAware seed=2011  disc=-0.543
+  [757/1500] 66 min  Recovery rate +0.10  OneStepLookahead_AlphaAware seed=2012  disc=-0.781
+  [758/1500] 66 min  CAPEX ×0.75  OneStepLookahead_AlphaAware seed=2008  disc=1.972
+  [759/1500] 66 min  CAPEX ×0.75  OneStepLookahead_AlphaAware seed=2011  disc=1.975
+  [760/1500] 66 min  Recovery rate +0.10  OneStepLookahead_AlphaAware seed=2009  disc=-0.108
+  [761/1500] 66 min  CAPEX ×0.75  OneStepLookahead_AlphaAware seed=2014  disc=1.778
+  [762/1500] 66 min  CAPEX ×0.75  OneStepLookahead_AlphaAware seed=2015  disc=2.009
+  [763/1500] 66 min  CAPEX ×0.75  OneStepLookahead_AlphaAware seed=2010  disc=1.785
+  [764/1500] 66 min  CAPEX ×0.75  OneStepLookahead_AlphaAware seed=2017  disc=2.327
+  [765/1500] 66 min  CAPEX ×0.75  OneStepLookahead_AlphaAware seed=2013  disc=2.231
+  [766/1500] 66 min  Recovery rate +0.10  OneStepLookahead_AlphaAware seed=2008  disc=-0.484
+  [767/1500] 66 min  Recovery rate +0.10  OneStepLookahead_AlphaAware seed=2013  disc=-1.150
+  [768/1500] 66 min  Recovery rate +0.10  OneStepLookahead_AlphaAware seed=2010  disc=-0.231
+  [769/1500] 66 min  Carbon cost ×0.5  OneStepLookahead_AlphaAware seed=2001  disc=-0.481
+  [770/1500] 66 min  Carbon cost ×0.5  OneStepLookahead_AlphaAware seed=2002  disc=0.148
+  [771/1500] 66 min  Recovery rate +0.10  OneStepLookahead_AlphaAware seed=2019  disc=-0.293
+  [772/1500] 66 min  Carbon cost ×0.5  OneStepLookahead_AlphaAware seed=2004  disc=-0.004
+  [773/1500] 66 min  Recovery rate +0.10  OneStepLookahead_AlphaAware seed=2015  disc=-1.432
+  [774/1500] 66 min  Recovery rate +0.10  OneStepLookahead_AlphaAware seed=2014  disc=-0.354
+  [775/1500] 66 min  Recovery rate +0.10  OneStepLookahead_AlphaAware seed=2017  disc=0.390
+  [776/1500] 66 min  Recovery rate +0.10  OneStepLookahead_AlphaAware seed=2006  disc=0.125
+  [777/1500] 66 min  Carbon cost ×0.5  OneStepLookahead_AlphaAware seed=2009  disc=-0.406
+  [778/1500] 66 min  Recovery rate +0.10  OneStepLookahead_AlphaAware seed=2020  disc=-1.449
+  [779/1500] 66 min  Recovery rate +0.10  OneStepLookahead_AlphaAware seed=2016  disc=0.010
+  [780/1500] 66 min  CAPEX ×0.75  OneStepLookahead_AlphaAware seed=2018  disc=1.819
+  [781/1500] 66 min  Carbon cost ×0.5  OneStepLookahead_AlphaAware seed=2008  disc=-0.599
+  [782/1500] 66 min  Carbon cost ×0.5  OneStepLookahead_AlphaAware seed=2010  disc=-1.012
+  [783/1500] 66 min  Carbon cost ×0.5  OneStepLookahead_AlphaAware seed=2012  disc=-0.995
+  [784/1500] 66 min  Carbon cost ×0.5  OneStepLookahead_AlphaAware seed=2014  disc=-0.564
+  [785/1500] 66 min  CAPEX ×0.75  OneStepLookahead_AlphaAware seed=2009  disc=1.999
+  [786/1500] 66 min  Carbon cost ×0.5  OneStepLookahead_AlphaAware seed=2015  disc=-0.320
+  [787/1500] 66 min  Carbon cost ×0.5  OneStepLookahead_AlphaAware seed=2019  disc=-0.337
+  [788/1500] 66 min  Carbon cost ×0.5  OneStepLookahead_AlphaAware seed=2016  disc=-0.716
+  [789/1500] 66 min  Carbon cost ×0.5  OneStepLookahead_AlphaAware seed=2007  disc=-0.211
+  [790/1500] 66 min  Carbon cost ×0.5  OneStepLookahead_AlphaAware seed=2003  disc=-1.299
+  [791/1500] 66 min  Recovery rate +0.10  OneStepLookahead_AlphaAware seed=2018  disc=0.238
+  [792/1500] 66 min  Carbon cost ×0.5  OneStepLookahead_AlphaAware seed=2017  disc=-0.215
+  [793/1500] 66 min  Carbon cost ×0.5  OneStepLookahead_AlphaAware seed=2011  disc=-0.506
+  [794/1500] 66 min  Carbon cost ×0.5  OneStepLookahead_AlphaAware seed=2005  disc=-0.548
+  [795/1500] 66 min  Carbon cost ×2  OneStepLookahead_AlphaAware seed=2010  disc=-1.415
+  [796/1500] 66 min  Carbon cost ×2  OneStepLookahead_AlphaAware seed=2004  disc=-0.418
+  [797/1500] 66 min  Carbon cost ×2  OneStepLookahead_AlphaAware seed=2014  disc=-0.942
+  [798/1500] 66 min  Carbon cost ×0.5  OneStepLookahead_AlphaAware seed=2013  disc=0.331
+  [799/1500] 66 min  Carbon cost ×2  OneStepLookahead_AlphaAware seed=2009  disc=-0.823
+  [800/1500] 66 min  Carbon cost ×2  OneStepLookahead_AlphaAware seed=2017  disc=-0.598
+  [801/1500] 66 min  Carbon cost ×2  OneStepLookahead_AlphaAware seed=2016  disc=-1.044
+  [802/1500] 66 min  Carbon cost ×2  OneStepLookahead_AlphaAware seed=2003  disc=-1.623
+  [803/1500] 66 min  Carbon cost ×2  OneStepLookahead_AlphaAware seed=2015  disc=-0.711
+  [804/1500] 66 min  Carbon cost ×2  OneStepLookahead_AlphaAware seed=2019  disc=-0.713
+  [805/1500] 66 min  Carbon cost ×0.5  OneStepLookahead_AlphaAware seed=2018  disc=-0.763
+  [806/1500] 66 min  Carbon cost ×0.5  OneStepLookahead_AlphaAware seed=2006  disc=0.132
+  [807/1500] 66 min  Carbon cost ×2  OneStepLookahead_AlphaAware seed=2002  disc=0.148
+  [808/1500] 66 min  Carbon cost ×2  OneStepLookahead_AlphaAware seed=2012  disc=-0.996
+  [809/1500] 66 min  Carbon cost ×2  OneStepLookahead_AlphaAware seed=2013  disc=-0.061
+  [810/1500] 66 min  Carbon cost ×2  OneStepLookahead_AlphaAware seed=2011  disc=-0.879
+  [811/1500] 66 min  Carbon cost ×2  OneStepLookahead_AlphaAware seed=2020  disc=-0.304
+  [812/1500] 66 min  Production capacity 20k t/yr  OneStepLookahead_AlphaAware seed=2004  disc=-0.483
+  [813/1500] 66 min  Production capacity 20k t/yr  OneStepLookahead_AlphaAware seed=2002  disc=-0.200
+  [814/1500] 66 min  Carbon cost ×0.5  OneStepLookahead_AlphaAware seed=2020  disc=0.403
+  [815/1500] 66 min  Production capacity 20k t/yr  OneStepLookahead_AlphaAware seed=2010  disc=-1.410
+  [816/1500] 66 min  Carbon cost ×2  OneStepLookahead_AlphaAware seed=2008  disc=-0.399
+  [817/1500] 66 min  Carbon cost ×2  OneStepLookahead_AlphaAware seed=2018  disc=-0.990
+  [818/1500] 66 min  Carbon cost ×2  OneStepLookahead_AlphaAware seed=2006  disc=-0.112
+  [819/1500] 66 min  Production capacity 20k t/yr  OneStepLookahead_AlphaAware seed=2015  disc=-0.747
+  [820/1500] 66 min  Production capacity 30k t/yr  OneStepLookahead_AlphaAware seed=2001  disc=-0.314
+  [821/1500] 66 min  Production capacity 30k t/yr  OneStepLookahead_AlphaAware seed=2002  disc=0.206
+  [822/1500] 66 min  Production capacity 20k t/yr  OneStepLookahead_AlphaAware seed=2012  disc=-0.997
+  [823/1500] 66 min  Recovery rate −0.10  OneStepLookahead_AlphaAware seed=2008  disc=1.462
+  [824/1500] 66 min  Production capacity 20k t/yr  OneStepLookahead_AlphaAware seed=2013  disc=-0.118
+  [825/1500] 66 min  Production capacity 20k t/yr  OneStepLookahead_AlphaAware seed=2017  disc=-0.608
+  [826/1500] 66 min  Production capacity 20k t/yr  OneStepLookahead_AlphaAware seed=2006  disc=-0.372
+  [827/1500] 66 min  Production capacity 30k t/yr  OneStepLookahead_AlphaAware seed=2003  disc=-1.430
+  [828/1500] 66 min  Carbon cost ×2  OneStepLookahead_AlphaAware seed=2005  disc=-0.124
+  [829/1500] 66 min  Production capacity 20k t/yr  OneStepLookahead_AlphaAware seed=2008  disc=-0.553
+  [830/1500] 66 min  Carbon cost ×2  OneStepLookahead_AlphaAware seed=2001  disc=0.355
+  [831/1500] 66 min  Production capacity 30k t/yr  OneStepLookahead_AlphaAware seed=2005  disc=-0.789
+  [832/1500] 66 min  Production capacity 20k t/yr  OneStepLookahead_AlphaAware seed=2009  disc=-0.443
+  [833/1500] 66 min  Production capacity 30k t/yr  OneStepLookahead_AlphaAware seed=2004  disc=0.053
+  [834/1500] 66 min  Production capacity 30k t/yr  OneStepLookahead_AlphaAware seed=2011  disc=-0.591
+  [835/1500] 66 min  Production capacity 30k t/yr  OneStepLookahead_AlphaAware seed=2009  disc=-0.274
+  [836/1500] 66 min  Production capacity 30k t/yr  OneStepLookahead_AlphaAware seed=2007  disc=-0.242
+  [837/1500] 66 min  Production capacity 30k t/yr  OneStepLookahead_AlphaAware seed=2008  disc=-0.478
+  [838/1500] 66 min  Production capacity 30k t/yr  OneStepLookahead_AlphaAware seed=2012  disc=-0.879
+  [839/1500] 66 min  Production capacity 30k t/yr  OneStepLookahead_AlphaAware seed=2010  disc=-0.917
+  [840/1500] 66 min  Production capacity 20k t/yr  OneStepLookahead_AlphaAware seed=2019  disc=-0.338
+  [841/1500] 66 min  Production capacity 30k t/yr  OneStepLookahead_AlphaAware seed=2014  disc=-0.458
+  [842/1500] 66 min  Carbon cost ×2  OneStepLookahead_AlphaAware seed=2007  disc=0.434
+  [843/1500] 66 min  Production capacity 30k t/yr  OneStepLookahead_AlphaAware seed=2015  disc=-0.167
+  [844/1500] 66 min  Production capacity 30k t/yr  OneStepLookahead_AlphaAware seed=2016  disc=-0.604
+  [845/1500] 66 min  Production capacity 30k t/yr  OneStepLookahead_AlphaAware seed=2006  disc=0.014
+  [846/1500] 66 min  Production capacity 20k t/yr  OneStepLookahead_AlphaAware seed=2018  disc=-0.957
+  [847/1500] 66 min  Production capacity 30k t/yr  OneStepLookahead_AlphaAware seed=2018  disc=-0.831
+  [848/1500] 66 min  Production capacity 30k t/yr  OneStepLookahead_AlphaAware seed=2017  disc=0.007
+  [849/1500] 66 min  Production capacity 30k t/yr  OneStepLookahead_AlphaAware seed=2020  disc=-0.131
+  [850/1500] 66 min  Production capacity 30k t/yr  OneStepLookahead_AlphaAware seed=2019  disc=-0.216
+  [851/1500] 66 min  Production capacity 20k t/yr  OneStepLookahead_AlphaAware seed=2014  disc=-0.230
+  [852/1500] 66 min  Production capacity 30k t/yr  OneStepLookahead_AlphaAware seed=2013  disc=0.352
+  [853/1500] 66 min  Deposit size ×0.75  OneStepLookahead_AlphaAware seed=2001  disc=-0.567
+  [854/1500] 66 min  Production capacity 20k t/yr  OneStepLookahead_AlphaAware seed=2016  disc=0.262
+  [855/1500] 66 min  Production capacity 20k t/yr  OneStepLookahead_AlphaAware seed=2020  disc=0.115
+  [856/1500] 66 min  Production capacity 20k t/yr  OneStepLookahead_AlphaAware seed=2001  disc=1.064
+  [857/1500] 66 min  Deposit size ×0.75  OneStepLookahead_AlphaAware seed=2003  disc=-1.799
+  [858/1500] 66 min  Deposit size ×0.75  OneStepLookahead_AlphaAware seed=2005  disc=-1.051
+  [859/1500] 66 min  Deposit size ×0.75  OneStepLookahead_AlphaAware seed=2002  disc=0.084
+  [860/1500] 66 min  Production capacity 20k t/yr  OneStepLookahead_AlphaAware seed=2005  disc=1.052
+  [861/1500] 66 min  Deposit size ×0.75  OneStepLookahead_AlphaAware seed=2004  disc=-0.016
+  [862/1500] 66 min  Deposit size ×0.75  OneStepLookahead_AlphaAware seed=2008  disc=-0.632
+  [863/1500] 66 min  Deposit size ×0.75  OneStepLookahead_AlphaAware seed=2011  disc=-0.796
+  [864/1500] 66 min  Deposit size ×0.75  OneStepLookahead_AlphaAware seed=2012  disc=-1.363
+  [865/1500] 66 min  Deposit size ×0.75  OneStepLookahead_AlphaAware seed=2009  disc=-0.538
+  [866/1500] 66 min  Deposit size ×0.75  OneStepLookahead_AlphaAware seed=2007  disc=-0.541
+  [867/1500] 66 min  Deposit size ×0.75  OneStepLookahead_AlphaAware seed=2013  disc=-0.053
+  [868/1500] 66 min  Deposit size ×0.75  OneStepLookahead_AlphaAware seed=2016  disc=-0.866
+  [869/1500] 66 min  Deposit size ×0.75  OneStepLookahead_AlphaAware seed=2015  disc=-0.462
+  [870/1500] 66 min  Deposit size ×0.75  OneStepLookahead_AlphaAware seed=2010  disc=-0.726
+  [871/1500] 66 min  Deposit size ×0.75  OneStepLookahead_AlphaAware seed=2014  disc=-0.682
+  [872/1500] 66 min  Deposit size ×0.75  OneStepLookahead_AlphaAware seed=2006  disc=-0.269
+  [873/1500] 66 min  Deposit size ×0.75  OneStepLookahead_AlphaAware seed=2019  disc=-0.487
+  [874/1500] 66 min  Baseline   TimingAware seed=2001  disc=1.960
+  [875/1500] 66 min  Baseline   TimingAware seed=2002  disc=2.363
+  [876/1500] 66 min  Baseline   TimingAware seed=2003  disc=1.179
+  [877/1500] 66 min  Baseline   TimingAware seed=2004  disc=1.385
+  [878/1500] 66 min  Baseline   TimingAware seed=2005  disc=1.574
+  [879/1500] 66 min  Baseline   TimingAware seed=2006  disc=2.088
+  [880/1500] 66 min  Baseline   TimingAware seed=2007  disc=2.054
+  [881/1500] 66 min  Baseline   TimingAware seed=2008  disc=1.747
+  [882/1500] 66 min  Baseline   TimingAware seed=2009  disc=1.724
+  [883/1500] 66 min  Baseline   TimingAware seed=2010  disc=0.908
+  [884/1500] 66 min  Baseline   TimingAware seed=2011  disc=1.924
+  [885/1500] 66 min  Baseline   TimingAware seed=2012  disc=1.441
+  [886/1500] 66 min  Baseline   TimingAware seed=2013  disc=2.125
+  [887/1500] 66 min  Baseline   TimingAware seed=2014  disc=1.576
+  [888/1500] 66 min  Deposit size ×0.75  OneStepLookahead_AlphaAware seed=2017  disc=-0.327
+  [889/1500] 66 min  Baseline   TimingAware seed=2015  disc=1.564
+  [890/1500] 66 min  Baseline   TimingAware seed=2016  disc=1.804
+  [891/1500] 66 min  Baseline   TimingAware seed=2018  disc=1.829
+  [892/1500] 66 min  Baseline   TimingAware seed=2017  disc=1.882
+  [893/1500] 66 min  Baseline   TimingAware seed=2019  disc=1.552
+  [894/1500] 66 min  Demand share 20%  TimingAware seed=2001  disc=1.176
+  [895/1500] 66 min  Baseline   TimingAware seed=2020  disc=1.773
+  [896/1500] 66 min  Demand share 20%  TimingAware seed=2002  disc=1.506
+  [897/1500] 66 min  Demand share 20%  TimingAware seed=2003  disc=1.004
+  [898/1500] 66 min  Demand share 20%  TimingAware seed=2004  disc=1.300
+  [899/1500] 66 min  Demand share 20%  TimingAware seed=2006  disc=1.371
+  [900/1500] 66 min  Demand share 20%  TimingAware seed=2005  disc=0.863
+  [901/1500] 66 min  Demand share 20%  TimingAware seed=2007  disc=1.408
+  [902/1500] 66 min  Demand share 20%  TimingAware seed=2009  disc=1.472
+  [903/1500] 66 min  Demand share 20%  TimingAware seed=2008  disc=1.133
+  [904/1500] 66 min  Demand share 20%  TimingAware seed=2010  disc=0.835
+  [905/1500] 66 min  Demand share 20%  TimingAware seed=2011  disc=1.239
+  [906/1500] 66 min  Demand share 20%  TimingAware seed=2012  disc=1.002
+  [907/1500] 66 min  Demand share 20%  TimingAware seed=2014  disc=1.176
+  [908/1500] 66 min  Demand share 20%  TimingAware seed=2013  disc=1.441
+  [909/1500] 66 min  Demand share 20%  TimingAware seed=2015  disc=1.212
+  [910/1500] 66 min  Demand share 20%  TimingAware seed=2017  disc=1.482
+  [911/1500] 66 min  Demand share 20%  TimingAware seed=2016  disc=1.324
+  [912/1500] 66 min  Demand share 20%  TimingAware seed=2018  disc=1.262
+  [913/1500] 66 min  Demand share 20%  TimingAware seed=2019  disc=1.251
+  [914/1500] 66 min  Demand share 20%  TimingAware seed=2020  disc=1.362
+  [915/1500] 66 min  Demand share 40%  TimingAware seed=2002  disc=2.961
+  [916/1500] 66 min  Demand share 40%  TimingAware seed=2001  disc=1.442
+  [917/1500] 66 min  Demand share 40%  TimingAware seed=2003  disc=1.274
+  [918/1500] 66 min  Demand share 40%  TimingAware seed=2004  disc=2.600
+  [919/1500] 66 min  Demand share 40%  TimingAware seed=2005  disc=1.107
+  [920/1500] 66 min  Demand share 40%  TimingAware seed=2006  disc=2.460
+  [921/1500] 66 min  Demand share 40%  TimingAware seed=2007  disc=2.653
+  [922/1500] 66 min  Demand share 40%  TimingAware seed=2009  disc=2.284
+  [923/1500] 66 min  Demand share 40%  TimingAware seed=2008  disc=2.049
+  [924/1500] 66 min  Demand share 40%  TimingAware seed=2010  disc=1.178
+  [925/1500] 66 min  Demand share 40%  TimingAware seed=2011  disc=1.983
+  [926/1500] 66 min  Demand share 40%  TimingAware seed=2012  disc=1.559
+  [927/1500] 66 min  Demand share 40%  TimingAware seed=2013  disc=2.564
+  [928/1500] 66 min  Demand share 40%  TimingAware seed=2014  disc=2.002
+  [929/1500] 66 min  Demand share 40%  TimingAware seed=2016  disc=2.071
+  [930/1500] 66 min  Demand share 40%  TimingAware seed=2015  disc=2.361
+  [931/1500] 66 min  Demand share 40%  TimingAware seed=2017  disc=2.632
+  [932/1500] 66 min  Demand share 40%  TimingAware seed=2018  disc=2.027
+  [933/1500] 66 min  Demand share 40%  TimingAware seed=2019  disc=2.238
+  [934/1500] 66 min  Demand share 40%  TimingAware seed=2020  disc=1.972
+  [935/1500] 66 min  Deposit uncertainty ×0.5  TimingAware seed=2001  disc=1.964
+  [936/1500] 66 min  Deposit uncertainty ×0.5  TimingAware seed=2002  disc=2.306
+  [937/1500] 66 min  Deposit uncertainty ×0.5  TimingAware seed=2003  disc=1.092
+  [938/1500] 66 min  Deposit uncertainty ×0.5  TimingAware seed=2004  disc=1.578
+  [939/1500] 66 min  Deposit uncertainty ×0.5  TimingAware seed=2005  disc=1.580
+  [940/1500] 66 min  Deposit uncertainty ×0.5  TimingAware seed=2006  disc=2.059
+  [941/1500] 66 min  Deposit uncertainty ×0.5  TimingAware seed=2007  disc=2.014
+  [942/1500] 66 min  Deposit uncertainty ×0.5  TimingAware seed=2008  disc=1.674
+  [943/1500] 66 min  Deposit uncertainty ×0.5  TimingAware seed=2009  disc=1.840
+  [944/1500] 66 min  Deposit uncertainty ×0.5  TimingAware seed=2010  disc=1.028
+  [945/1500] 66 min  Deposit uncertainty ×0.5  TimingAware seed=2011  disc=1.932
+  [946/1500] 66 min  Deposit uncertainty ×0.5  TimingAware seed=2012  disc=1.441
+  [947/1500] 66 min  Deposit uncertainty ×0.5  TimingAware seed=2013  disc=2.125
+  [948/1500] 66 min  Deposit uncertainty ×0.5  TimingAware seed=2014  disc=1.588
+  [949/1500] 66 min  Deposit uncertainty ×0.5  TimingAware seed=2015  disc=1.632
+  [950/1500] 66 min  Deposit uncertainty ×0.5  TimingAware seed=2016  disc=1.804
+  [951/1500] 66 min  Deposit uncertainty ×0.5  TimingAware seed=2017  disc=1.913
+  [952/1500] 66 min  Deposit uncertainty ×0.5  TimingAware seed=2018  disc=1.800
+  [953/1500] 66 min  Deposit uncertainty ×0.5  TimingAware seed=2019  disc=1.552
+  [954/1500] 66 min  Deposit uncertainty ×0.5  TimingAware seed=2020  disc=1.777
+  [955/1500] 66 min  Deposit uncertainty ×1.5  TimingAware seed=2001  disc=1.946
+  [956/1500] 66 min  Deposit uncertainty ×1.5  TimingAware seed=2002  disc=2.376
+  [957/1500] 66 min  Deposit uncertainty ×1.5  TimingAware seed=2003  disc=1.179
+  [958/1500] 66 min  Deposit uncertainty ×1.5  TimingAware seed=2004  disc=1.347
+  [959/1500] 66 min  Deposit uncertainty ×1.5  TimingAware seed=2005  disc=1.559
+  [960/1500] 66 min  Deposit uncertainty ×1.5  TimingAware seed=2006  disc=2.046
+  [961/1500] 66 min  Deposit uncertainty ×1.5  TimingAware seed=2007  disc=2.072
+  [962/1500] 66 min  Deposit uncertainty ×1.5  TimingAware seed=2008  disc=1.766
+  [963/1500] 66 min  Deposit uncertainty ×1.5  TimingAware seed=2009  disc=1.387
+  [964/1500] 66 min  Deposit uncertainty ×1.5  TimingAware seed=2010  disc=0.892
+  [965/1500] 66 min  Deposit uncertainty ×1.5  TimingAware seed=2011  disc=1.876
+  [966/1500] 66 min  Deposit uncertainty ×1.5  TimingAware seed=2012  disc=1.441
+  [967/1500] 66 min  Deposit uncertainty ×1.5  TimingAware seed=2013  disc=2.125
+  [968/1500] 66 min  Deposit uncertainty ×1.5  TimingAware seed=2014  disc=1.478
+  [969/1500] 66 min  Deposit uncertainty ×1.5  TimingAware seed=2015  disc=1.519
+  [970/1500] 66 min  Deposit uncertainty ×1.5  TimingAware seed=2016  disc=1.804
+  [971/1500] 66 min  Deposit uncertainty ×1.5  TimingAware seed=2017  disc=1.817
+  [972/1500] 66 min  Deposit uncertainty ×1.5  TimingAware seed=2018  disc=1.790
+  [973/1500] 66 min  Deposit uncertainty ×1.5  TimingAware seed=2020  disc=1.761
+  [974/1500] 66 min  Deposit uncertainty ×1.5  TimingAware seed=2019  disc=1.552
+  [975/1500] 66 min  CAPEX ×0.75  TimingAware seed=2001  disc=2.099
+  [976/1500] 66 min  CAPEX ×0.75  TimingAware seed=2002  disc=2.457
+  [977/1500] 66 min  CAPEX ×0.75  TimingAware seed=2003  disc=1.514
+  [978/1500] 66 min  CAPEX ×0.75  TimingAware seed=2004  disc=1.784
+  [979/1500] 66 min  CAPEX ×0.75  TimingAware seed=2005  disc=1.899
+  [980/1500] 66 min  CAPEX ×0.75  TimingAware seed=2006  disc=2.181
+  [981/1500] 66 min  CAPEX ×0.75  TimingAware seed=2007  disc=2.146
+  [982/1500] 66 min  CAPEX ×0.75  TimingAware seed=2008  disc=1.841
+  [983/1500] 66 min  CAPEX ×0.75  TimingAware seed=2009  disc=1.818
+  [984/1500] 66 min  CAPEX ×0.75  TimingAware seed=2010  disc=1.603
+  [985/1500] 66 min  CAPEX ×0.75  TimingAware seed=2011  disc=2.017
+  [986/1500] 66 min  CAPEX ×0.75  TimingAware seed=2012  disc=1.753
+  [987/1500] 66 min  Deposit size ×0.75  OneStepLookahead_AlphaAware seed=2020  disc=-0.161
+  [988/1500] 66 min  CAPEX ×0.75  TimingAware seed=2013  disc=2.122
+  [989/1500] 66 min  CAPEX ×0.75  TimingAware seed=2014  disc=1.669
+  [990/1500] 66 min  CAPEX ×0.75  TimingAware seed=2015  disc=1.862
+  [991/1500] 66 min  CAPEX ×0.75  TimingAware seed=2018  disc=1.986
+  [992/1500] 66 min  CAPEX ×0.75  TimingAware seed=2017  disc=1.976
+  [993/1500] 66 min  CAPEX ×0.75  TimingAware seed=2016  disc=2.031
+  [994/1500] 66 min  CAPEX ×0.75  TimingAware seed=2019  disc=2.010
+  [995/1500] 66 min  CAPEX ×0.75  TimingAware seed=2020  disc=2.010
+  [996/1500] 66 min  CAPEX ×1.25  TimingAware seed=2001  disc=1.322
+  [997/1500] 66 min  CAPEX ×1.25  TimingAware seed=2002  disc=1.862
+  [998/1500] 66 min  CAPEX ×1.25  TimingAware seed=2003  disc=0.452
+  [999/1500] 66 min  CAPEX ×1.25  TimingAware seed=2004  disc=0.761
+  [1000/1500] 66 min  CAPEX ×1.25  TimingAware seed=2005  disc=0.903
+  [1001/1500] 66 min  CAPEX ×1.25  TimingAware seed=2006  disc=1.674
+  [1002/1500] 66 min  CAPEX ×1.25  TimingAware seed=2008  disc=1.216
+  [1003/1500] 66 min  CAPEX ×1.25  TimingAware seed=2007  disc=1.942
+  [1004/1500] 66 min  CAPEX ×1.25  TimingAware seed=2010  disc=0.379
+  [1005/1500] 66 min  CAPEX ×1.25  TimingAware seed=2009  disc=1.193
+  [1006/1500] 66 min  CAPEX ×1.25  TimingAware seed=2011  disc=1.401
+  [1007/1500] 66 min  CAPEX ×1.25  TimingAware seed=2012  disc=0.877
+  [1008/1500] 66 min  CAPEX ×1.25  TimingAware seed=2013  disc=1.867
+  [1009/1500] 66 min  CAPEX ×1.25  TimingAware seed=2014  disc=1.487
+  [1010/1500] 66 min  CAPEX ×1.25  TimingAware seed=2015  disc=0.640
+  [1011/1500] 66 min  CAPEX ×1.25  TimingAware seed=2016  disc=1.023
+  [1012/1500] 66 min  CAPEX ×1.25  TimingAware seed=2017  disc=1.248
+  [1013/1500] 66 min  CAPEX ×1.25  TimingAware seed=2018  disc=1.500
+  [1014/1500] 66 min  CAPEX ×1.25  TimingAware seed=2019  disc=0.903
+  [1015/1500] 66 min  CAPEX ×1.25  TimingAware seed=2020  disc=1.787
+  [1016/1500] 66 min  Recovery rate −0.10  TimingAware seed=2001  disc=1.803
+  [1017/1500] 66 min  Recovery rate −0.10  TimingAware seed=2004  disc=1.018
+  [1018/1500] 66 min  Recovery rate −0.10  TimingAware seed=2002  disc=2.266
+  [1019/1500] 66 min  Recovery rate −0.10  TimingAware seed=2003  disc=0.894
+  [1020/1500] 66 min  Recovery rate −0.10  TimingAware seed=2005  disc=0.782
+  [1021/1500] 66 min  Recovery rate −0.10  TimingAware seed=2006  disc=1.975
+  [1022/1500] 66 min  Recovery rate −0.10  TimingAware seed=2007  disc=2.043
+  [1023/1500] 66 min  Recovery rate −0.10  TimingAware seed=2008  disc=1.179
+  [1024/1500] 66 min  Recovery rate −0.10  TimingAware seed=2009  disc=1.590
+  [1025/1500] 66 min  Recovery rate −0.10  TimingAware seed=2011  disc=1.792
+  [1026/1500] 66 min  Recovery rate −0.10  TimingAware seed=2010  disc=1.246
+  [1027/1500] 66 min  Recovery rate −0.10  TimingAware seed=2013  disc=1.967
+  [1028/1500] 66 min  Recovery rate −0.10  TimingAware seed=2012  disc=1.218
+  [1029/1500] 66 min  Recovery rate −0.10  TimingAware seed=2014  disc=1.552
+  [1030/1500] 66 min  Recovery rate −0.10  TimingAware seed=2015  disc=1.729
+  [1031/1500] 66 min  Recovery rate −0.10  TimingAware seed=2016  disc=2.169
+  [1032/1500] 66 min  Recovery rate −0.10  TimingAware seed=2018  disc=1.585
+  [1033/1500] 66 min  Recovery rate −0.10  TimingAware seed=2017  disc=1.683
+  [1034/1500] 66 min  Recovery rate −0.10  TimingAware seed=2019  disc=1.760
+  [1035/1500] 66 min  Recovery rate −0.10  TimingAware seed=2020  disc=1.507
+  [1036/1500] 66 min  Recovery rate +0.10  TimingAware seed=2001  disc=1.455
+  [1037/1500] 66 min  Recovery rate +0.10  TimingAware seed=2003  disc=1.630
+  [1038/1500] 66 min  Recovery rate +0.10  TimingAware seed=2002  disc=2.447
+  [1039/1500] 66 min  Recovery rate +0.10  TimingAware seed=2004  disc=1.901
+  [1040/1500] 66 min  Recovery rate +0.10  TimingAware seed=2005  disc=1.597
+  [1041/1500] 66 min  Recovery rate +0.10  TimingAware seed=2006  disc=1.945
+  [1042/1500] 66 min  Recovery rate +0.10  TimingAware seed=2008  disc=1.621
+  [1043/1500] 66 min  Recovery rate +0.10  TimingAware seed=2007  disc=1.907
+  [1044/1500] 66 min  Recovery rate +0.10  TimingAware seed=2010  disc=1.295
+  [1045/1500] 66 min  Recovery rate +0.10  TimingAware seed=2009  disc=2.199
+  [1046/1500] 66 min  Recovery rate +0.10  TimingAware seed=2011  disc=1.925
+  [1047/1500] 66 min  Recovery rate +0.10  TimingAware seed=2012  disc=1.636
+  [1048/1500] 66 min  Recovery rate +0.10  TimingAware seed=2013  disc=1.605
+  [1049/1500] 66 min  Recovery rate +0.10  TimingAware seed=2014  disc=1.462
+  [1050/1500] 66 min  Recovery rate +0.10  TimingAware seed=2015  disc=1.389
+  [1051/1500] 66 min  Recovery rate +0.10  TimingAware seed=2018  disc=2.056
+  [1052/1500] 66 min  Recovery rate +0.10  TimingAware seed=2016  disc=2.153
+  [1053/1500] 66 min  Recovery rate +0.10  TimingAware seed=2017  disc=2.103
+  [1054/1500] 66 min  Recovery rate +0.10  TimingAware seed=2019  disc=2.152
+  [1055/1500] 66 min  Recovery rate +0.10  TimingAware seed=2020  disc=0.632
+  [1056/1500] 66 min  Carbon cost ×0.5  TimingAware seed=2001  disc=2.028
+  [1057/1500] 66 min  Carbon cost ×0.5  TimingAware seed=2002  disc=2.417
+  [1058/1500] 66 min  Carbon cost ×0.5  TimingAware seed=2004  disc=1.436
+  [1059/1500] 66 min  Carbon cost ×0.5  TimingAware seed=2005  disc=1.636
+  [1060/1500] 66 min  Carbon cost ×0.5  TimingAware seed=2003  disc=1.228
+  [1061/1500] 66 min  Carbon cost ×0.5  TimingAware seed=2006  disc=2.142
+  [1062/1500] 66 min  Carbon cost ×0.5  TimingAware seed=2007  disc=2.110
+  [1063/1500] 66 min  Carbon cost ×0.5  TimingAware seed=2008  disc=1.800
+  [1064/1500] 66 min  Carbon cost ×0.5  TimingAware seed=2009  disc=1.771
+  [1065/1500] 66 min  Carbon cost ×0.5  TimingAware seed=2010  disc=0.951
+  [1066/1500] 66 min  Carbon cost ×0.5  TimingAware seed=2011  disc=1.979
+  [1067/1500] 66 min  Carbon cost ×0.5  TimingAware seed=2012  disc=1.500
+  [1068/1500] 66 min  Carbon cost ×0.5  TimingAware seed=2015  disc=1.610
+  [1069/1500] 66 min  Carbon cost ×0.5  TimingAware seed=2013  disc=2.189
+  [1070/1500] 66 min  Carbon cost ×0.5  TimingAware seed=2014  disc=1.628
+  [1071/1500] 66 min  Carbon cost ×0.5  TimingAware seed=2016  disc=1.868
+  [1072/1500] 66 min  Carbon cost ×0.5  TimingAware seed=2017  disc=1.930
+  [1073/1500] 66 min  Carbon cost ×0.5  TimingAware seed=2018  disc=1.878
+  [1074/1500] 66 min  Carbon cost ×0.5  TimingAware seed=2019  disc=1.604
+  [1075/1500] 66 min  Carbon cost ×0.5  TimingAware seed=2020  disc=1.827
+  [1076/1500] 66 min  Carbon cost ×2  TimingAware seed=2002  disc=2.253
+  [1077/1500] 66 min  Carbon cost ×2  TimingAware seed=2001  disc=1.844
+  [1078/1500] 66 min  Carbon cost ×2  TimingAware seed=2004  disc=1.286
+  [1079/1500] 66 min  Carbon cost ×2  TimingAware seed=2003  disc=1.074
+  [1080/1500] 66 min  Carbon cost ×2  TimingAware seed=2005  disc=1.473
+  [1081/1500] 66 min  Carbon cost ×2  TimingAware seed=2006  disc=1.974
+  [1082/1500] 66 min  Carbon cost ×2  TimingAware seed=2007  disc=1.943
+  [1083/1500] 66 min  Carbon cost ×2  TimingAware seed=2008  disc=1.657
+  [1084/1500] 66 min  Carbon cost ×2  TimingAware seed=2009  disc=1.627
+  [1085/1500] 66 min  Carbon cost ×2  TimingAware seed=2010  disc=0.842
+  [1086/1500] 66 min  Carbon cost ×2  TimingAware seed=2011  disc=1.819
+  [1087/1500] 66 min  Carbon cost ×2  TimingAware seed=2012  disc=1.332
+  [1088/1500] 66 min  Carbon cost ×2  TimingAware seed=2013  disc=1.986
+  [1089/1500] 66 min  Carbon cost ×2  TimingAware seed=2014  disc=1.470
+  [1090/1500] 66 min  Carbon cost ×2  TimingAware seed=2015  disc=1.478
+  [1091/1500] 66 min  Carbon cost ×2  TimingAware seed=2016  disc=1.703
+  [1092/1500] 66 min  Carbon cost ×2  TimingAware seed=2018  disc=1.733
+  [1093/1500] 66 min  Carbon cost ×2  TimingAware seed=2017  disc=1.786
+  [1094/1500] 66 min  Carbon cost ×2  TimingAware seed=2019  disc=1.459
+  [1095/1500] 66 min  Carbon cost ×2  TimingAware seed=2020  disc=1.663
+  [1096/1500] 66 min  Production capacity 20k t/yr  TimingAware seed=2001  disc=1.104
+  [1097/1500] 66 min  Production capacity 20k t/yr  TimingAware seed=2002  disc=2.188
+  [1098/1500] 66 min  Production capacity 20k t/yr  TimingAware seed=2003  disc=0.960
+  [1099/1500] 66 min  Production capacity 20k t/yr  TimingAware seed=2004  disc=1.365
+  [1100/1500] 66 min  Production capacity 20k t/yr  TimingAware seed=2005  disc=1.086
+  [1101/1500] 66 min  Production capacity 20k t/yr  TimingAware seed=2006  disc=1.941
+  [1102/1500] 66 min  Production capacity 20k t/yr  TimingAware seed=2007  disc=1.972
+  [1103/1500] 66 min  Production capacity 20k t/yr  TimingAware seed=2008  disc=1.530
+  [1104/1500] 66 min  Production capacity 20k t/yr  TimingAware seed=2009  disc=1.824
+  [1105/1500] 66 min  Production capacity 20k t/yr  TimingAware seed=2010  disc=1.208
+  [1106/1500] 66 min  Production capacity 20k t/yr  TimingAware seed=2011  disc=1.767
+  [1107/1500] 66 min  Production capacity 20k t/yr  TimingAware seed=2012  disc=1.208
+  [1108/1500] 66 min  Production capacity 20k t/yr  TimingAware seed=2014  disc=1.581
+  [1109/1500] 66 min  Production capacity 20k t/yr  TimingAware seed=2013  disc=1.930
+  [1110/1500] 66 min  Production capacity 20k t/yr  TimingAware seed=2016  disc=1.573
+  [1111/1500] 66 min  Production capacity 20k t/yr  TimingAware seed=2015  disc=1.284
+  [1112/1500] 66 min  Production capacity 20k t/yr  TimingAware seed=2017  disc=1.989
+  [1113/1500] 66 min  Production capacity 20k t/yr  TimingAware seed=2018  disc=1.611
+  [1114/1500] 66 min  Production capacity 20k t/yr  TimingAware seed=2019  disc=1.683
+  [1115/1500] 66 min  Production capacity 30k t/yr  TimingAware seed=2001  disc=1.995
+  [1116/1500] 66 min  Production capacity 20k t/yr  TimingAware seed=2020  disc=1.658
+  [1117/1500] 66 min  Production capacity 30k t/yr  TimingAware seed=2003  disc=1.349
+  [1118/1500] 66 min  Production capacity 30k t/yr  TimingAware seed=2002  disc=2.356
+  [1119/1500] 66 min  Production capacity 30k t/yr  TimingAware seed=2004  disc=1.626
+  [1120/1500] 66 min  Production capacity 30k t/yr  TimingAware seed=2005  disc=1.714
+  [1121/1500] 66 min  Production capacity 30k t/yr  TimingAware seed=2006  disc=2.095
+  [1122/1500] 66 min  Production capacity 30k t/yr  TimingAware seed=2008  disc=1.723
+  [1123/1500] 66 min  Production capacity 30k t/yr  TimingAware seed=2007  disc=2.137
+  [1124/1500] 66 min  Production capacity 30k t/yr  TimingAware seed=2010  disc=1.091
+  [1125/1500] 66 min  Production capacity 30k t/yr  TimingAware seed=2009  disc=2.173
+  [1126/1500] 66 min  Production capacity 30k t/yr  TimingAware seed=2011  disc=1.959
+  [1127/1500] 66 min  Production capacity 30k t/yr  TimingAware seed=2012  disc=1.558
+  [1128/1500] 66 min  Production capacity 30k t/yr  TimingAware seed=2013  disc=2.185
+  [1129/1500] 66 min  Production capacity 30k t/yr  TimingAware seed=2015  disc=1.760
+  [1130/1500] 66 min  Production capacity 30k t/yr  TimingAware seed=2014  disc=1.809
+  [1131/1500] 66 min  Production capacity 30k t/yr  TimingAware seed=2016  disc=1.912
+  [1132/1500] 66 min  Production capacity 30k t/yr  TimingAware seed=2017  disc=1.332
+  [1133/1500] 66 min  Production capacity 30k t/yr  TimingAware seed=2020  disc=2.043
+  [1134/1500] 66 min  Production capacity 30k t/yr  TimingAware seed=2018  disc=1.905
+  [1135/1500] 66 min  Production capacity 30k t/yr  TimingAware seed=2019  disc=1.682
+  [1136/1500] 66 min  Deposit size ×0.75  TimingAware seed=2002  disc=2.345
+  [1137/1500] 66 min  Deposit size ×0.75  TimingAware seed=2001  disc=1.935
+  [1138/1500] 66 min  Deposit size ×0.75  TimingAware seed=2004  disc=2.063
+  [1139/1500] 66 min  Deposit size ×0.75  TimingAware seed=2003  disc=1.155
+  [1140/1500] 66 min  Deposit size ×0.75  TimingAware seed=2006  disc=1.987
+  [1141/1500] 66 min  Deposit size ×0.75  TimingAware seed=2005  disc=1.571
+  [1142/1500] 66 min  Deposit size ×0.75  TimingAware seed=2007  disc=2.122
+  [1143/1500] 66 min  Deposit size ×0.75  TimingAware seed=2008  disc=1.698
+  [1144/1500] 66 min  Deposit size ×0.75  TimingAware seed=2009  disc=1.991
+  [1145/1500] 66 min  Deposit size ×0.75  TimingAware seed=2011  disc=1.781
+  [1146/1500] 66 min  Deposit size ×0.75  TimingAware seed=2010  disc=1.553
+  [1147/1500] 66 min  Deposit size ×0.75  TimingAware seed=2013  disc=2.115
+  [1148/1500] 66 min  Deposit size ×0.75  TimingAware seed=2012  disc=1.428
+  [1149/1500] 66 min  Deposit size ×0.75  TimingAware seed=2014  disc=1.718
+  [1150/1500] 66 min  Deposit size ×0.75  TimingAware seed=2015  disc=1.895
+  [1151/1500] 66 min  Deposit size ×0.75  TimingAware seed=2018  disc=1.786
+  [1152/1500] 66 min  Deposit size ×0.75  TimingAware seed=2016  disc=1.796
+  [1153/1500] 66 min  Deposit size ×0.75  TimingAware seed=2017  disc=2.235
+  [1154/1500] 66 min  Deposit size ×0.75  TimingAware seed=2019  disc=1.877
+  [1155/1500] 66 min  Deposit size ×0.75  TimingAware seed=2020  disc=1.909
+  [1156/1500] 66 min  Deposit size ×1.25  TimingAware seed=2002  disc=2.385
+  [1157/1500] 66 min  Deposit size ×1.25  TimingAware seed=2001  disc=1.398
+  [1158/1500] 66 min  Deposit size ×1.25  TimingAware seed=2004  disc=1.651
+  [1159/1500] 66 min  Deposit size ×1.25  TimingAware seed=2003  disc=1.242
+  [1160/1500] 66 min  Deposit size ×1.25  TimingAware seed=2005  disc=1.584
+  [1161/1500] 66 min  Deposit size ×1.25  TimingAware seed=2006  disc=2.136
+  [1162/1500] 66 min  Deposit size ×1.25  TimingAware seed=2009  disc=1.968
+  [1163/1500] 66 min  Deposit size ×1.25  TimingAware seed=2007  disc=2.090
+  [1164/1500] 66 min  Deposit size ×1.25  TimingAware seed=2008  disc=1.806
+  [1165/1500] 66 min  Deposit size ×1.25  TimingAware seed=2010  disc=1.115
+  [1166/1500] 66 min  Deposit size ×1.25  TimingAware seed=2011  disc=1.947
+  [1167/1500] 66 min  Deposit size ×1.25  TimingAware seed=2012  disc=1.441
+  [1168/1500] 66 min  Deposit size ×1.25  TimingAware seed=2013  disc=2.125
+  [1169/1500] 66 min  Deposit size ×1.25  TimingAware seed=2014  disc=1.718
+  [1170/1500] 66 min  Deposit size ×1.25  TimingAware seed=2016  disc=1.804
+  [1171/1500] 66 min  Deposit size ×1.25  TimingAware seed=2015  disc=1.631
+  [1172/1500] 66 min  Deposit size ×1.25  TimingAware seed=2017  disc=2.194
+  [1173/1500] 66 min  Deposit size ×1.25  TimingAware seed=2018  disc=1.876
+  [1174/1500] 66 min  Deposit size ×1.25  TimingAware seed=2020  disc=1.774
+  [1175/1500] 66 min  Deposit size ×1.25  TimingAware seed=2019  disc=1.779
+  [1176/1500] 66 min  Deposit size ×0.75  OneStepLookahead_AlphaAware seed=2018  disc=-0.607
+  [1177/1500] 66 min  Recovery rate +0.10  OneStepLookahead_AlphaAware seed=2005  disc=1.435
+  [1178/1500] 66 min  Deposit size ×1.25  OneStepLookahead_AlphaAware seed=2002  disc=0.220
+  [1179/1500] 66 min  Deposit size ×1.25  OneStepLookahead_AlphaAware seed=2017  disc=-0.485
+  [1180/1500] 66 min  Deposit size ×1.25  OneStepLookahead_AlphaAware seed=2010  disc=-0.904
+  [1181/1500] 66 min  Deposit size ×1.25  OneStepLookahead_AlphaAware seed=2004  disc=0.639
+  [1182/1500] 66 min  Deposit size ×1.25  OneStepLookahead_AlphaAware seed=2011  disc=-0.622
+  [1183/1500] 66 min  Baseline   DynamicProfitMaximizer seed=2006  disc=-0.813
+  [1184/1500] 66 min  Baseline   DynamicProfitMaximizer seed=2002  disc=-0.366
+  [1185/1500] 66 min  Baseline   DynamicProfitMaximizer seed=2007  disc=-1.431
+  [1186/1500] 66 min  Baseline   DynamicProfitMaximizer seed=2003  disc=-1.432
+  [1187/1500] 66 min  Baseline   DynamicProfitMaximizer seed=2008  disc=-0.862
+  [1188/1500] 66 min  Baseline   DynamicProfitMaximizer seed=2004  disc=-0.786
+  [1189/1500] 66 min  Baseline   DynamicProfitMaximizer seed=2005  disc=-1.086
+  [1190/1500] 66 min  Baseline   DynamicProfitMaximizer seed=2009  disc=-0.827
+  [1191/1500] 66 min  Baseline   DynamicProfitMaximizer seed=2001  disc=0.266
+  [1192/1500] 66 min  Baseline   DynamicProfitMaximizer seed=2010  disc=-1.824
+  [1193/1500] 66 min  Baseline   DynamicProfitMaximizer seed=2012  disc=-0.058
+  [1194/1500] 66 min  Baseline   DynamicProfitMaximizer seed=2011  disc=-0.887
+  [1195/1500] 66 min  Baseline   DynamicProfitMaximizer seed=2013  disc=-0.358
+  [1196/1500] 66 min  Baseline   DynamicProfitMaximizer seed=2014  disc=-0.804
+  [1197/1500] 66 min  Baseline   DynamicProfitMaximizer seed=2015  disc=-0.836
+  [1198/1500] 66 min  Baseline   DynamicProfitMaximizer seed=2016  disc=-0.200
+  [1199/1500] 66 min  Baseline   DynamicProfitMaximizer seed=2018  disc=-1.048
+  [1200/1500] 66 min  Baseline   DynamicProfitMaximizer seed=2017  disc=-1.009
+  [1201/1500] 66 min  Baseline   DynamicProfitMaximizer seed=2019  disc=-1.243
+  [1202/1500] 66 min  Baseline   DynamicProfitMaximizer seed=2020  disc=-0.720
+  [1203/1500] 66 min  Demand share 20%  DynamicProfitMaximizer seed=2001  disc=-0.257
+  [1204/1500] 66 min  Demand share 20%  DynamicProfitMaximizer seed=2003  disc=-1.062
+  [1205/1500] 66 min  Demand share 20%  DynamicProfitMaximizer seed=2002  disc=-0.101
+  [1206/1500] 66 min  Demand share 20%  DynamicProfitMaximizer seed=2004  disc=-1.150
+  [1207/1500] 66 min  Demand share 20%  DynamicProfitMaximizer seed=2006  disc=-0.411
+  [1208/1500] 66 min  Demand share 20%  DynamicProfitMaximizer seed=2005  disc=-0.707
+  [1209/1500] 66 min  Demand share 20%  DynamicProfitMaximizer seed=2007  disc=-0.344
+  [1210/1500] 66 min  Demand share 20%  DynamicProfitMaximizer seed=2008  disc=-0.505
+  [1211/1500] 66 min  Production capacity 20k t/yr  OneStepLookahead_AlphaAware seed=2003  disc=0.718
+  [1212/1500] 66 min  Demand share 20%  DynamicProfitMaximizer seed=2009  disc=-0.862
+  [1213/1500] 66 min  Demand share 20%  DynamicProfitMaximizer seed=2011  disc=-0.468
+  [1214/1500] 66 min  Demand share 20%  DynamicProfitMaximizer seed=2010  disc=-1.660
+  [1215/1500] 66 min  Demand share 20%  DynamicProfitMaximizer seed=2012  disc=-0.848
+  [1216/1500] 66 min  Demand share 20%  DynamicProfitMaximizer seed=2014  disc=-0.937
+  [1217/1500] 66 min  Demand share 20%  DynamicProfitMaximizer seed=2013  disc=-0.352
+  [1218/1500] 66 min  Demand share 20%  DynamicProfitMaximizer seed=2019  disc=-1.046
+  [1219/1500] 66 min  Demand share 20%  DynamicProfitMaximizer seed=2015  disc=-1.037
+  [1220/1500] 66 min  Demand share 20%  DynamicProfitMaximizer seed=2017  disc=-1.016
+  [1221/1500] 66 min  Demand share 20%  DynamicProfitMaximizer seed=2016  disc=-0.406
+  [1222/1500] 66 min  Demand share 20%  DynamicProfitMaximizer seed=2018  disc=-0.656
+  [1223/1500] 66 min  Demand share 40%  DynamicProfitMaximizer seed=2003  disc=-1.594
+  [1224/1500] 66 min  Demand share 40%  DynamicProfitMaximizer seed=2001  disc=0.215
+  [1225/1500] 66 min  Demand share 20%  DynamicProfitMaximizer seed=2020  disc=-0.802
+  [1226/1500] 66 min  Demand share 40%  DynamicProfitMaximizer seed=2005  disc=-1.174
+  [1227/1500] 66 min  Demand share 40%  DynamicProfitMaximizer seed=2004  disc=-0.786
+  [1228/1500] 66 min  Demand share 40%  DynamicProfitMaximizer seed=2006  disc=-0.791
+  [1229/1500] 66 min  Demand share 40%  DynamicProfitMaximizer seed=2002  disc=-0.792
+  [1230/1500] 66 min  Demand share 40%  DynamicProfitMaximizer seed=2007  disc=-1.592
+  [1231/1500] 66 min  Demand share 40%  DynamicProfitMaximizer seed=2016  disc=-0.306
+  [1232/1500] 66 min  Demand share 40%  DynamicProfitMaximizer seed=2008  disc=-0.723
+  [1233/1500] 66 min  Demand share 40%  DynamicProfitMaximizer seed=2011  disc=-1.036
+  [1234/1500] 66 min  Demand share 40%  DynamicProfitMaximizer seed=2012  disc=-0.464
+  [1235/1500] 66 min  Demand share 40%  DynamicProfitMaximizer seed=2009  disc=-0.817
+  [1236/1500] 66 min  Demand share 40%  DynamicProfitMaximizer seed=2014  disc=-0.778
+  [1237/1500] 66 min  Demand share 40%  DynamicProfitMaximizer seed=2010  disc=-1.969
+  [1238/1500] 66 min  Demand share 40%  DynamicProfitMaximizer seed=2015  disc=-0.825
+  [1239/1500] 66 min  Demand share 40%  DynamicProfitMaximizer seed=2013  disc=-0.571
+  [1240/1500] 66 min  Demand share 40%  DynamicProfitMaximizer seed=2017  disc=-1.088
+  [1241/1500] 66 min  Demand share 40%  DynamicProfitMaximizer seed=2019  disc=-0.809
+  [1242/1500] 66 min  Demand share 40%  DynamicProfitMaximizer seed=2018  disc=-1.153
+  [1243/1500] 66 min  Deposit uncertainty ×0.5  DynamicProfitMaximizer seed=2001  disc=0.084
+  [1244/1500] 66 min  Demand share 40%  DynamicProfitMaximizer seed=2020  disc=-1.174
+  [1245/1500] 66 min  Deposit uncertainty ×0.5  DynamicProfitMaximizer seed=2002  disc=-0.567
+  [1246/1500] 66 min  Deposit uncertainty ×0.5  DynamicProfitMaximizer seed=2004  disc=-0.774
+  [1247/1500] 66 min  Deposit uncertainty ×0.5  DynamicProfitMaximizer seed=2006  disc=-0.810
+  [1248/1500] 66 min  Deposit uncertainty ×0.5  DynamicProfitMaximizer seed=2005  disc=-1.089
+  [1249/1500] 66 min  Deposit uncertainty ×0.5  DynamicProfitMaximizer seed=2003  disc=-1.408
+  [1250/1500] 66 min  Deposit uncertainty ×0.5  DynamicProfitMaximizer seed=2009  disc=-0.806
+  [1251/1500] 66 min  Deposit uncertainty ×0.5  DynamicProfitMaximizer seed=2007  disc=-1.470
+  [1252/1500] 66 min  Deposit uncertainty ×0.5  DynamicProfitMaximizer seed=2008  disc=-1.086
+  [1253/1500] 66 min  Deposit uncertainty ×0.5  DynamicProfitMaximizer seed=2010  disc=-1.844
+  [1254/1500] 66 min  Deposit uncertainty ×0.5  DynamicProfitMaximizer seed=2011  disc=-1.036
+  [1255/1500] 66 min  Deposit uncertainty ×0.5  DynamicProfitMaximizer seed=2018  disc=-1.069
+  [1256/1500] 66 min  Deposit uncertainty ×0.5  DynamicProfitMaximizer seed=2013  disc=-0.641
+  [1257/1500] 66 min  Deposit uncertainty ×0.5  DynamicProfitMaximizer seed=2014  disc=-0.803
+  [1258/1500] 66 min  Deposit uncertainty ×0.5  DynamicProfitMaximizer seed=2012  disc=-0.422
+  [1259/1500] 66 min  Deposit uncertainty ×0.5  DynamicProfitMaximizer seed=2015  disc=-0.771
+  [1260/1500] 66 min  Deposit uncertainty ×0.5  DynamicProfitMaximizer seed=2016  disc=-0.307
+  [1261/1500] 66 min  Deposit uncertainty ×0.5  DynamicProfitMaximizer seed=2017  disc=-0.965
+  [1262/1500] 66 min  Deposit uncertainty ×0.5  DynamicProfitMaximizer seed=2019  disc=-1.241
+  [1263/1500] 66 min  Deposit uncertainty ×1.5  DynamicProfitMaximizer seed=2003  disc=-1.439
+  [1264/1500] 66 min  Deposit uncertainty ×0.5  DynamicProfitMaximizer seed=2020  disc=-1.083
+  [1265/1500] 66 min  Deposit uncertainty ×1.5  DynamicProfitMaximizer seed=2002  disc=-0.257
+  [1266/1500] 66 min  Deposit uncertainty ×1.5  DynamicProfitMaximizer seed=2001  disc=0.264
+  [1267/1500] 66 min  Deposit uncertainty ×1.5  DynamicProfitMaximizer seed=2006  disc=-0.815
+  [1268/1500] 66 min  Deposit uncertainty ×1.5  DynamicProfitMaximizer seed=2004  disc=-0.770
+  [1269/1500] 66 min  Deposit uncertainty ×1.5  DynamicProfitMaximizer seed=2005  disc=-1.094
+  [1270/1500] 66 min  Deposit uncertainty ×1.5  DynamicProfitMaximizer seed=2007  disc=-1.426
+  [1271/1500] 66 min  Deposit uncertainty ×1.5  DynamicProfitMaximizer seed=2011  disc=-0.547
+  [1272/1500] 66 min  Deposit uncertainty ×1.5  DynamicProfitMaximizer seed=2008  disc=-0.779
+  [1273/1500] 66 min  Deposit uncertainty ×1.5  DynamicProfitMaximizer seed=2009  disc=-0.820
+  [1274/1500] 66 min  Deposit uncertainty ×1.5  DynamicProfitMaximizer seed=2010  disc=-1.805
+  [1275/1500] 66 min  Deposit uncertainty ×1.5  DynamicProfitMaximizer seed=2013  disc=-0.285
+  [1276/1500] 66 min  Deposit uncertainty ×1.5  DynamicProfitMaximizer seed=2012  disc=-0.020
+  [1277/1500] 66 min  Deposit uncertainty ×1.5  DynamicProfitMaximizer seed=2014  disc=-0.814
+  [1278/1500] 66 min  Deposit uncertainty ×1.5  DynamicProfitMaximizer seed=2019  disc=-1.275
+  [1279/1500] 66 min  Deposit uncertainty ×1.5  DynamicProfitMaximizer seed=2016  disc=-0.194
+  [1280/1500] 66 min  Deposit uncertainty ×1.5  DynamicProfitMaximizer seed=2015  disc=-0.842
+  [1281/1500] 66 min  Deposit uncertainty ×1.5  DynamicProfitMaximizer seed=2018  disc=-1.038
+  [1282/1500] 66 min  Deposit uncertainty ×1.5  DynamicProfitMaximizer seed=2017  disc=-1.051
+  [1283/1500] 66 min  Deposit uncertainty ×1.5  DynamicProfitMaximizer seed=2020  disc=-0.702
+  [1284/1500] 66 min  CAPEX ×0.75  DynamicProfitMaximizer seed=2006  disc=-0.124
+  [1285/1500] 66 min  CAPEX ×0.75  DynamicProfitMaximizer seed=2001  disc=0.385
+  [1286/1500] 66 min  CAPEX ×0.75  DynamicProfitMaximizer seed=2003  disc=-1.110
+  [1287/1500] 66 min  CAPEX ×0.75  DynamicProfitMaximizer seed=2002  disc=0.432
+  [1288/1500] 66 min  CAPEX ×0.75  DynamicProfitMaximizer seed=2005  disc=-0.706
+  [1289/1500] 66 min  CAPEX ×0.75  DynamicProfitMaximizer seed=2007  disc=-0.470
+  [1290/1500] 66 min  CAPEX ×0.75  DynamicProfitMaximizer seed=2004  disc=-0.046
+  [1291/1500] 66 min  CAPEX ×0.75  DynamicProfitMaximizer seed=2008  disc=-0.180
+  [1292/1500] 66 min  CAPEX ×0.75  DynamicProfitMaximizer seed=2009  disc=-0.361
+  [1293/1500] 66 min  CAPEX ×0.75  DynamicProfitMaximizer seed=2012  disc=-0.128
+  [1294/1500] 66 min  CAPEX ×0.75  DynamicProfitMaximizer seed=2010  disc=-0.915
+  [1295/1500] 66 min  CAPEX ×0.75  DynamicProfitMaximizer seed=2011  disc=-0.339
+  [1296/1500] 66 min  CAPEX ×0.75  DynamicProfitMaximizer seed=2014  disc=-0.545
+  [1297/1500] 66 min  CAPEX ×0.75  DynamicProfitMaximizer seed=2017  disc=-0.085
+  [1298/1500] 66 min  CAPEX ×1.25  DynamicProfitMaximizer seed=2001  disc=-0.491
+  [1299/1500] 66 min  CAPEX ×0.75  DynamicProfitMaximizer seed=2013  disc=0.214
+  [1300/1500] 66 min  CAPEX ×0.75  DynamicProfitMaximizer seed=2016  disc=0.338
+  [1301/1500] 66 min  CAPEX ×0.75  DynamicProfitMaximizer seed=2015  disc=-0.121
+  [1302/1500] 66 min  CAPEX ×0.75  DynamicProfitMaximizer seed=2019  disc=-0.274
+  [1303/1500] 66 min  CAPEX ×0.75  DynamicProfitMaximizer seed=2018  disc=-0.531
+  [1304/1500] 66 min  CAPEX ×0.75  DynamicProfitMaximizer seed=2020  disc=-0.019
+  [1305/1500] 66 min  CAPEX ×1.25  DynamicProfitMaximizer seed=2008  disc=-1.167
+  [1306/1500] 66 min  CAPEX ×1.25  DynamicProfitMaximizer seed=2002  disc=-0.749
+  [1307/1500] 66 min  CAPEX ×1.25  DynamicProfitMaximizer seed=2004  disc=-0.453
+  [1308/1500] 66 min  CAPEX ×1.25  DynamicProfitMaximizer seed=2003  disc=-1.457
+  [1309/1500] 66 min  CAPEX ×1.25  DynamicProfitMaximizer seed=2005  disc=-1.011
+  [1310/1500] 66 min  CAPEX ×1.25  DynamicProfitMaximizer seed=2006  disc=-0.696
+  [1311/1500] 66 min  CAPEX ×1.25  DynamicProfitMaximizer seed=2007  disc=-1.475
+  [1312/1500] 66 min  CAPEX ×1.25  DynamicProfitMaximizer seed=2009  disc=-0.630
+  [1313/1500] 66 min  CAPEX ×1.25  DynamicProfitMaximizer seed=2010  disc=-1.633
+  [1314/1500] 66 min  CAPEX ×1.25  DynamicProfitMaximizer seed=2012  disc=-0.655
+  [1315/1500] 66 min  CAPEX ×1.25  DynamicProfitMaximizer seed=2013  disc=-0.434
+  [1316/1500] 66 min  CAPEX ×1.25  DynamicProfitMaximizer seed=2011  disc=-0.926
+  [1317/1500] 66 min  CAPEX ×1.25  DynamicProfitMaximizer seed=2015  disc=-0.662
+  [1318/1500] 66 min  CAPEX ×1.25  DynamicProfitMaximizer seed=2014  disc=-0.620
+  [1319/1500] 66 min  CAPEX ×1.25  DynamicProfitMaximizer seed=2017  disc=-0.872
+  [1320/1500] 66 min  CAPEX ×1.25  DynamicProfitMaximizer seed=2016  disc=-1.104
+  [1321/1500] 66 min  Recovery rate −0.10  DynamicProfitMaximizer seed=2003  disc=-1.637
+  [1322/1500] 66 min  CAPEX ×1.25  DynamicProfitMaximizer seed=2018  disc=-0.893
+  [1323/1500] 66 min  Recovery rate −0.10  DynamicProfitMaximizer seed=2002  disc=-0.896
+  [1324/1500] 66 min  Recovery rate −0.10  DynamicProfitMaximizer seed=2001  disc=0.052
+  [1325/1500] 66 min  CAPEX ×1.25  DynamicProfitMaximizer seed=2020  disc=-0.482
+  [1326/1500] 66 min  CAPEX ×1.25  DynamicProfitMaximizer seed=2019  disc=-1.214
+  [1327/1500] 66 min  Recovery rate −0.10  DynamicProfitMaximizer seed=2004  disc=-0.806
+  [1328/1500] 66 min  Recovery rate −0.10  DynamicProfitMaximizer seed=2009  disc=-0.982
+  [1329/1500] 66 min  Recovery rate −0.10  DynamicProfitMaximizer seed=2005  disc=-1.187
+  [1330/1500] 66 min  Recovery rate −0.10  DynamicProfitMaximizer seed=2007  disc=-1.180
+  [1331/1500] 66 min  Recovery rate −0.10  DynamicProfitMaximizer seed=2006  disc=-0.956
+  [1332/1500] 66 min  Recovery rate −0.10  DynamicProfitMaximizer seed=2010  disc=-1.907
+  [1333/1500] 66 min  Recovery rate −0.10  DynamicProfitMaximizer seed=2008  disc=-1.445
+  [1334/1500] 66 min  Recovery rate −0.10  DynamicProfitMaximizer seed=2011  disc=-1.191
+  [1335/1500] 66 min  Recovery rate −0.10  DynamicProfitMaximizer seed=2012  disc=-0.256
+  [1336/1500] 66 min  Recovery rate −0.10  DynamicProfitMaximizer seed=2016  disc=-0.162
+  [1337/1500] 66 min  Recovery rate −0.10  DynamicProfitMaximizer seed=2014  disc=-0.845
+  [1338/1500] 66 min  Recovery rate −0.10  DynamicProfitMaximizer seed=2013  disc=-0.681
+  [1339/1500] 66 min  Recovery rate −0.10  DynamicProfitMaximizer seed=2017  disc=-1.218
+  [1340/1500] 66 min  Recovery rate −0.10  DynamicProfitMaximizer seed=2015  disc=-0.956
+  [1341/1500] 66 min  Recovery rate −0.10  DynamicProfitMaximizer seed=2018  disc=-1.202
+  [1342/1500] 66 min  Recovery rate −0.10  DynamicProfitMaximizer seed=2019  disc=-0.897
+  [1343/1500] 66 min  Recovery rate +0.10  DynamicProfitMaximizer seed=2004  disc=-0.748
+  [1344/1500] 66 min  Recovery rate −0.10  DynamicProfitMaximizer seed=2020  disc=-1.211
+  [1345/1500] 66 min  Recovery rate +0.10  DynamicProfitMaximizer seed=2002  disc=0.137
+  [1346/1500] 66 min  Recovery rate +0.10  DynamicProfitMaximizer seed=2001  disc=-0.457
+  [1347/1500] 66 min  Recovery rate +0.10  DynamicProfitMaximizer seed=2003  disc=-0.929
+  [1348/1500] 66 min  Recovery rate +0.10  DynamicProfitMaximizer seed=2005  disc=-1.153
+  [1349/1500] 66 min  Recovery rate +0.10  DynamicProfitMaximizer seed=2007  disc=-0.725
+  [1350/1500] 66 min  Recovery rate +0.10  DynamicProfitMaximizer seed=2006  disc=-0.809
+  [1351/1500] 66 min  Recovery rate +0.10  DynamicProfitMaximizer seed=2011  disc=-0.547
+  [1352/1500] 66 min  Recovery rate +0.10  DynamicProfitMaximizer seed=2009  disc=-0.651
+  [1353/1500] 66 min  Recovery rate +0.10  DynamicProfitMaximizer seed=2008  disc=-1.093
+  [1354/1500] 66 min  Recovery rate +0.10  DynamicProfitMaximizer seed=2010  disc=-0.728
+  [1355/1500] 66 min  Recovery rate +0.10  DynamicProfitMaximizer seed=2012  disc=-0.374
+  [1356/1500] 66 min  Recovery rate +0.10  DynamicProfitMaximizer seed=2013  disc=0.033
+  [1357/1500] 66 min  Recovery rate +0.10  DynamicProfitMaximizer seed=2014  disc=-0.774
+  [1358/1500] 66 min  Recovery rate +0.10  DynamicProfitMaximizer seed=2019  disc=-0.729
+  [1359/1500] 66 min  Recovery rate +0.10  DynamicProfitMaximizer seed=2015  disc=-1.831
+  [1360/1500] 66 min  Recovery rate +0.10  DynamicProfitMaximizer seed=2017  disc=-0.545
+  [1361/1500] 66 min  Recovery rate +0.10  DynamicProfitMaximizer seed=2016  disc=0.244
+  [1362/1500] 66 min  Recovery rate +0.10  DynamicProfitMaximizer seed=2020  disc=-1.662
+  [1363/1500] 66 min  Recovery rate +0.10  DynamicProfitMaximizer seed=2018  disc=-0.715
+  [1364/1500] 66 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2001  disc=0.376
+  [1365/1500] 66 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2006  disc=-0.714
+  [1366/1500] 66 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2004  disc=-0.677
+  [1367/1500] 66 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2003  disc=-1.343
+  [1368/1500] 66 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2002  disc=-0.269
+  [1369/1500] 66 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2005  disc=-0.988
+  [1370/1500] 66 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2008  disc=-0.764
+  [1371/1500] 66 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2007  disc=-1.341
+  [1372/1500] 66 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2010  disc=-1.730
+  [1373/1500] 66 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2013  disc=-0.251
+  [1374/1500] 66 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2009  disc=-0.724
+  [1375/1500] 66 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2011  disc=-0.788
+  [1376/1500] 66 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2014  disc=-0.698
+  [1377/1500] 66 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2012  disc=0.049
+  [1378/1500] 66 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2015  disc=-0.737
+  [1379/1500] 66 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2016  disc=-0.097
+  [1380/1500] 66 min  Carbon cost ×2  DynamicProfitMaximizer seed=2001  disc=0.045
+  [1381/1500] 66 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2018  disc=-0.952
+  [1382/1500] 66 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2019  disc=-1.148
+  [1383/1500] 66 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2017  disc=-0.912
+  [1384/1500] 66 min  Carbon cost ×0.5  DynamicProfitMaximizer seed=2020  disc=-0.613
+  [1385/1500] 66 min  Carbon cost ×2  DynamicProfitMaximizer seed=2002  disc=-0.561
+  [1386/1500] 66 min  Carbon cost ×2  DynamicProfitMaximizer seed=2003  disc=-1.610
+  [1387/1500] 66 min  Carbon cost ×2  DynamicProfitMaximizer seed=2008  disc=-1.057
+  [1388/1500] 66 min  Carbon cost ×2  DynamicProfitMaximizer seed=2004  disc=-1.002
+  [1389/1500] 66 min  Carbon cost ×2  DynamicProfitMaximizer seed=2006  disc=-1.011
+  [1390/1500] 66 min  Carbon cost ×2  DynamicProfitMaximizer seed=2009  disc=-1.034
+  [1391/1500] 66 min  Carbon cost ×2  DynamicProfitMaximizer seed=2007  disc=-1.611
+  [1392/1500] 66 min  Carbon cost ×2  DynamicProfitMaximizer seed=2005  disc=-1.282
+  [1393/1500] 66 min  Carbon cost ×2  DynamicProfitMaximizer seed=2012  disc=-0.273
+  [1394/1500] 66 min  Carbon cost ×2  DynamicProfitMaximizer seed=2010  disc=-2.012
+  [1395/1500] 66 min  Carbon cost ×2  DynamicProfitMaximizer seed=2011  disc=-1.087
+  [1396/1500] 66 min  Carbon cost ×2  DynamicProfitMaximizer seed=2015  disc=-1.035
+  [1397/1500] 66 min  Carbon cost ×2  DynamicProfitMaximizer seed=2013  disc=-0.573
+  [1398/1500] 66 min  Carbon cost ×2  DynamicProfitMaximizer seed=2014  disc=-1.016
+  [1399/1500] 66 min  Carbon cost ×2  DynamicProfitMaximizer seed=2016  disc=-0.407
+  [1400/1500] 66 min  Carbon cost ×2  DynamicProfitMaximizer seed=2018  disc=-1.241
+  [1401/1500] 66 min  Carbon cost ×2  DynamicProfitMaximizer seed=2017  disc=-1.204
+  [1402/1500] 66 min  Carbon cost ×2  DynamicProfitMaximizer seed=2019  disc=-1.432
+  [1403/1500] 66 min  Production capacity 20k t/yr  DynamicProfitMaximizer seed=2001  disc=-0.078
+  [1404/1500] 66 min  Carbon cost ×2  DynamicProfitMaximizer seed=2020  disc=-0.935
+  [1405/1500] 66 min  Production capacity 20k t/yr  DynamicProfitMaximizer seed=2004  disc=-1.055
+  [1406/1500] 66 min  Production capacity 20k t/yr  DynamicProfitMaximizer seed=2002  disc=-0.259
+  [1407/1500] 66 min  Production capacity 20k t/yr  DynamicProfitMaximizer seed=2003  disc=-1.497
+  [1408/1500] 66 min  Production capacity 20k t/yr  DynamicProfitMaximizer seed=2005  disc=-1.225
+  [1409/1500] 66 min  Production capacity 20k t/yr  DynamicProfitMaximizer seed=2007  disc=-1.170
+  [1410/1500] 66 min  Production capacity 20k t/yr  DynamicProfitMaximizer seed=2006  disc=-0.943
+  [1411/1500] 66 min  Production capacity 20k t/yr  DynamicProfitMaximizer seed=2008  disc=-0.704
+  [1412/1500] 66 min  Production capacity 20k t/yr  DynamicProfitMaximizer seed=2013  disc=-0.340
+  [1413/1500] 66 min  Production capacity 20k t/yr  DynamicProfitMaximizer seed=2010  disc=-1.952
+  [1414/1500] 66 min  Production capacity 20k t/yr  DynamicProfitMaximizer seed=2009  disc=-1.045
+  [1415/1500] 66 min  Production capacity 20k t/yr  DynamicProfitMaximizer seed=2011  disc=-0.960
+  [1416/1500] 66 min  Production capacity 20k t/yr  DynamicProfitMaximizer seed=2014  disc=-1.006
+  [1417/1500] 66 min  Production capacity 20k t/yr  DynamicProfitMaximizer seed=2015  disc=-1.040
+  [1418/1500] 66 min  Production capacity 20k t/yr  DynamicProfitMaximizer seed=2012  disc=-0.272
+  [1419/1500] 66 min  Production capacity 20k t/yr  DynamicProfitMaximizer seed=2016  disc=-0.489
+  [1420/1500] 66 min  Production capacity 20k t/yr  DynamicProfitMaximizer seed=2020  disc=-0.978
+  [1421/1500] 66 min  Production capacity 20k t/yr  DynamicProfitMaximizer seed=2017  disc=-1.193
+  [1422/1500] 66 min  Production capacity 20k t/yr  DynamicProfitMaximizer seed=2019  disc=-1.367
+  [1423/1500] 66 min  Production capacity 30k t/yr  DynamicProfitMaximizer seed=2001  disc=0.385
+  [1424/1500] 66 min  Production capacity 20k t/yr  DynamicProfitMaximizer seed=2018  disc=-1.170
+  [1425/1500] 66 min  Production capacity 30k t/yr  DynamicProfitMaximizer seed=2003  disc=-1.358
+  [1426/1500] 66 min  Production capacity 30k t/yr  DynamicProfitMaximizer seed=2002  disc=-0.378
+  [1427/1500] 66 min  Production capacity 30k t/yr  DynamicProfitMaximizer seed=2005  disc=-0.955
+  [1428/1500] 66 min  Production capacity 30k t/yr  DynamicProfitMaximizer seed=2004  disc=-0.541
+  [1429/1500] 66 min  Production capacity 30k t/yr  DynamicProfitMaximizer seed=2008  disc=-0.990
+  [1430/1500] 66 min  Production capacity 30k t/yr  DynamicProfitMaximizer seed=2007  disc=-1.381
+  [1431/1500] 66 min  Production capacity 30k t/yr  DynamicProfitMaximizer seed=2006  disc=-0.655
+  [1432/1500] 66 min  Production capacity 30k t/yr  DynamicProfitMaximizer seed=2010  disc=-1.699
+  [1433/1500] 66 min  Production capacity 30k t/yr  DynamicProfitMaximizer seed=2011  disc=-0.912
+  [1434/1500] 66 min  Production capacity 30k t/yr  DynamicProfitMaximizer seed=2009  disc=-0.609
+  [1435/1500] 66 min  Production capacity 30k t/yr  DynamicProfitMaximizer seed=2017  disc=-0.826
+  [1436/1500] 66 min  Production capacity 30k t/yr  DynamicProfitMaximizer seed=2012  disc=-0.057
+  [1437/1500] 66 min  Production capacity 30k t/yr  DynamicProfitMaximizer seed=2013  disc=-0.461
+  [1438/1500] 66 min  Production capacity 30k t/yr  DynamicProfitMaximizer seed=2014  disc=-0.623
+  [1439/1500] 66 min  Production capacity 30k t/yr  DynamicProfitMaximizer seed=2015  disc=-0.633
+  [1440/1500] 66 min  Production capacity 30k t/yr  DynamicProfitMaximizer seed=2016  disc=0.041
+  [1441/1500] 66 min  Production capacity 30k t/yr  DynamicProfitMaximizer seed=2018  disc=-0.927
+  [1442/1500] 66 min  Production capacity 30k t/yr  DynamicProfitMaximizer seed=2019  disc=-1.119
+  [1443/1500] 66 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2001  disc=-0.619
+  [1444/1500] 66 min  Production capacity 30k t/yr  DynamicProfitMaximizer seed=2020  disc=-0.488
+  [1445/1500] 66 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2003  disc=-1.573
+  [1446/1500] 66 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2002  disc=-0.884
+  [1447/1500] 66 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2005  disc=-1.157
+  [1448/1500] 66 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2007  disc=-1.627
+  [1449/1500] 66 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2004  disc=-0.734
+  [1450/1500] 66 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2006  disc=-0.853
+  [1451/1500] 66 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2009  disc=-0.821
+  [1452/1500] 66 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2008  disc=-0.836
+  [1453/1500] 66 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2011  disc=-1.097
+  [1454/1500] 66 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2010  disc=-1.800
+  [1455/1500] 66 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2012  disc=-0.787
+  [1456/1500] 66 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2013  disc=-0.645
+  [1457/1500] 66 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2014  disc=-0.780
+  [1458/1500] 66 min  Deposit size ×1.25  OneStepLookahead_AlphaAware seed=2006  disc=-0.085
+  [1459/1500] 66 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2015  disc=-0.843
+  [1460/1500] 66 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2001  disc=0.277
+  [1461/1500] 66 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2016  disc=-0.946
+  [1462/1500] 66 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2017  disc=-1.058
+  [1463/1500] 66 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2018  disc=-1.162
+  [1464/1500] 66 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2019  disc=-0.779
+  [1465/1500] 66 min  Deposit size ×0.75  DynamicProfitMaximizer seed=2020  disc=-1.131
+  [1466/1500] 66 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2006  disc=-0.212
+  [1467/1500] 66 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2008  disc=-0.284
+  [1468/1500] 66 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2003  disc=-1.178
+  [1469/1500] 66 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2004  disc=-1.144
+  [1470/1500] 66 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2002  disc=0.312
+  [1471/1500] 66 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2005  disc=-0.777
+  [1472/1500] 66 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2007  disc=-0.707
+  [1473/1500] 66 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2009  disc=-0.798
+  [1474/1500] 66 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2010  disc=-1.852
+  [1475/1500] 66 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2012  disc=-0.858
+  [1476/1500] 66 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2011  disc=-0.102
+  [1477/1500] 66 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2015  disc=-0.771
+  [1478/1500] 66 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2014  disc=-0.825
+  [1479/1500] 66 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2013  disc=0.047
+  [1480/1500] 66 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2016  disc=-0.193
+  [1481/1500] 66 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2017  disc=-0.944
+  [1482/1500] 66 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2018  disc=-0.775
+  [1483/1500] 66 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2019  disc=-1.174
+  [1484/1500] 66 min  Deposit size ×1.25  DynamicProfitMaximizer seed=2020  disc=-0.719
+  [1485/1500] 66 min  Deposit size ×1.25  OneStepLookahead_AlphaAware seed=2015  disc=-0.212
+  [1486/1500] 66 min  Deposit size ×1.25  OneStepLookahead_AlphaAware seed=2013  disc=0.016
+  [1487/1500] 66 min  Deposit size ×1.25  OneStepLookahead_AlphaAware seed=2012  disc=-0.873
+  [1488/1500] 66 min  Deposit size ×1.25  OneStepLookahead_AlphaAware seed=2018  disc=-0.764
+  [1489/1500] 66 min  Deposit size ×1.25  OneStepLookahead_AlphaAware seed=2008  disc=-0.242
+  [1490/1500] 66 min  Deposit size ×1.25  OneStepLookahead_AlphaAware seed=2020  disc=0.320
+  [1491/1500] 66 min  Deposit size ×1.25  OneStepLookahead_AlphaAware seed=2019  disc=0.026
+  [1492/1500] 66 min  Deposit size ×1.25  OneStepLookahead_AlphaAware seed=2016  disc=0.267
+  [1493/1500] 66 min  Deposit size ×1.25  OneStepLookahead_AlphaAware seed=2001  disc=1.123
+  [1494/1500] 66 min  Deposit size ×1.25  OneStepLookahead_AlphaAware seed=2009  disc=0.082
+  [1495/1500] 66 min  Deposit size ×1.25  OneStepLookahead_AlphaAware seed=2005  disc=1.196
+  [1496/1500] 66 min  Production capacity 20k t/yr  OneStepLookahead_AlphaAware seed=2007  disc=1.959
+  [1497/1500] 66 min  Deposit size ×1.25  OneStepLookahead_AlphaAware seed=2014  disc=0.879
+  [1498/1500] 66 min  Production capacity 20k t/yr  OneStepLookahead_AlphaAware seed=2011  disc=1.674
+  [1499/1500] 66 min  Deposit size ×1.25  OneStepLookahead_AlphaAware seed=2003  disc=1.563
+  [1500/1500] 66 min  Deposit size ×1.25  OneStepLookahead_AlphaAware seed=2007  disc=2.081
+1500 episodes in 66 min
+
+Mean discounted reward per policy; POMCPOW change vs baseline; POMCPOW − OSL-TA paired over seeds; best policy
+parameter              level      POMCPOW  OSL-TA  OSL-AA      TA     DPM  POMCPOW%     met%    mines   PC−OSL-TA ± SE  best
+Baseline                            1.911   1.859  -0.514   1.723  -0.816     +0.0%      64%     3.00   +0.052 ± 0.036  POMCPOW
+Demand share           20%          1.341   1.368   0.326   1.241  -0.731    -29.9%      66%     2.10   -0.028 ± 0.009  OSL-TA
+Demand share           40%          2.362   2.393  -0.573   2.071  -0.911    +23.6%      54%     3.00   -0.030 ± 0.015  OSL-TA
+Deposit uncertainty    ×0.5         1.926   1.796  -0.612   1.735  -0.905     +0.8%      65%     3.00   +0.130 ± 0.027  POMCPOW
+Deposit uncertainty    ×1.5         1.885   1.924  -0.143   1.687  -0.786     -1.4%      62%     3.00   -0.038 ± 0.024  OSL-TA
+CAPEX                  ×0.75        1.984   1.928   1.994   1.939  -0.229     +3.8%      72%     3.60   +0.056 ± 0.039  OSL-AA
+CAPEX                  ×1.25        1.360   1.628  -0.607   1.222  -0.881    -28.9%      57%     2.00   -0.268 ± 0.057  OSL-TA
+Recovery rate          −0.10        1.792   1.781  -0.585   1.588  -0.978     -6.2%      58%     3.00   +0.011 ± 0.029  POMCPOW
+Recovery rate          +0.10        1.951   1.903  -0.318   1.756  -0.703     +2.1%      68%     3.00   +0.048 ± 0.027  POMCPOW
+Carbon cost            ×0.5         1.978   1.912  -0.398   1.777  -0.716     +3.5%      66%     3.00   +0.066 ± 0.042  POMCPOW
+Carbon cost            ×2           1.813   1.775  -0.561   1.620  -1.017     -5.1%      61%     3.00   +0.038 ± 0.030  POMCPOW
+Production capacity    20k t/yr     1.743   1.787  -0.031   1.573  -0.937     -8.8%      58%     3.00   -0.044 ± 0.022  OSL-TA
+Production capacity    30k t/yr     1.959   1.976  -0.385   1.820  -0.709     +2.5%      68%     3.00   -0.017 ± 0.036  OSL-TA
+Deposit size           ×0.75        1.876   1.905  -0.593   1.848  -1.007     -1.9%      61%     3.00   -0.029 ± 0.018  OSL-TA
+Deposit size           ×1.25        1.955   1.937   0.211   1.783  -0.634     +2.3%      65%     3.00   +0.018 ± 0.025  POMCPOW
+Note: γ and carbon cost change the objective itself, so compare rankings rather than absolute rewards for those rows.
+CSV: outputs/sensitivity/sensitivity_p6_a0.5_q10000_n20_e6_essential_rec15-20.csv

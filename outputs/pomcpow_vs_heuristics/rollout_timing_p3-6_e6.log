@@ -1,0 +1,280 @@
+The latest version of Julia in the `release` channel is 1.13.2+0.x64.linux.gnu. You currently have `1.12.1+0.x64.linux.gnu` installed. Run:
+
+  juliaup update
+
+in your terminal shell to install Julia 1.13.2+0.x64.linux.gnu and update the `release` channel to that version.
+ROLLOUT TIMING TEST  planning=[3, 6]  eval=6  α=[0.5, 1.0]  γ=0.926  seeds=10  threads=40
+  [1/240] 0 min  p6 α=0.50 TimingAware seed=4009  disc=0.573 expl=0
+  [2/240] 0 min  p3 α=0.50 TimingAware seed=4005  disc=0.300 expl=0
+  [3/240] 0 min  p6 α=0.50 TimingAware seed=4003  disc=0.840 expl=0
+  [4/240] 0 min  p6 α=1.00 TimingAware seed=4005  disc=0.836 expl=0
+  [5/240] 0 min  p3 α=1.00 TimingAware seed=4007  disc=1.882 expl=0
+  [6/240] 0 min  p3 α=1.00 TimingAware seed=4001  disc=1.366 expl=0
+  [7/240] 0 min  p6 α=0.50 TimingAware seed=4010  disc=1.033 expl=0
+  [8/240] 0 min  p6 α=1.00 TimingAware seed=4006  disc=2.619 expl=0
+  [9/240] 0 min  p6 α=0.50 TimingAware seed=4004  disc=0.454 expl=0
+  [10/240] 0 min  p3 α=1.00 TimingAware seed=4008  disc=1.840 expl=0
+  [11/240] 0 min  p6 α=1.00 TimingAware seed=4001  disc=1.398 expl=0
+  [12/240] 0 min  p3 α=1.00 TimingAware seed=4002  disc=1.230 expl=0
+  [13/240] 0 min  p3 α=0.50 TimingAware seed=4006  disc=1.191 expl=0
+  [14/240] 0 min  p6 α=1.00 TimingAware seed=4002  disc=1.252 expl=0
+  [15/240] 0 min  p6 α=1.00 TimingAware seed=4007  disc=1.937 expl=0
+  [16/240] 0 min  p3 α=1.00 TimingAware seed=4003  disc=1.674 expl=0
+  [17/240] 0 min  p3 α=0.50 TimingAware seed=4007  disc=0.848 expl=0
+  [18/240] 0 min  p6 α=0.50 TimingAware seed=4005  disc=0.352 expl=0
+  [19/240] 0 min  p3 α=1.00 TimingAware seed=4009  disc=1.154 expl=0
+  [20/240] 0 min  p6 α=1.00 TimingAware seed=4003  disc=1.815 expl=0
+  [21/240] 0 min  p3 α=1.00 TimingAware seed=4004  disc=0.962 expl=0
+  [22/240] 0 min  p3 α=0.50 TimingAware seed=4008  disc=0.837 expl=0
+  [23/240] 0 min  p6 α=1.00 TimingAware seed=4008  disc=1.908 expl=0
+  [24/240] 0 min  p6 α=0.50 TimingAware seed=4006  disc=1.238 expl=0
+  [25/240] 0 min  p6 α=1.00 TimingAware seed=4004  disc=1.042 expl=0
+  [26/240] 0 min  p3 α=1.00 TimingAware seed=4010  disc=2.114 expl=0
+  [27/240] 0 min  p3 α=1.00 TimingAware seed=4005  disc=0.754 expl=0
+  [28/240] 0 min  p3 α=0.50 TimingAware seed=4009  disc=0.500 expl=0
+  [29/240] 0 min  p6 α=1.00 TimingAware seed=4009  disc=1.284 expl=0
+  [30/240] 0 min  p6 α=0.50 TimingAware seed=4007  disc=0.895 expl=0
+  [31/240] 0 min  p6 α=0.50 TimingAware seed=4001  disc=0.639 expl=0
+  [32/240] 0 min  p3 α=1.00 TimingAware seed=4006  disc=2.538 expl=0
+  [33/240] 0 min  p6 α=1.00 TimingAware seed=4010  disc=2.209 expl=0
+  [34/240] 0 min  p3 α=0.50 TimingAware seed=4010  disc=0.976 expl=0
+  [35/240] 0 min  p6 α=0.50 TimingAware seed=4008  disc=0.880 expl=0
+  [36/240] 0 min  p6 α=0.50 TimingAware seed=4002  disc=0.561 expl=0
+  [37/240] 0 min  p6 α=0.50 OneStep alphaaware base seed=4005  disc=-0.820 expl=4
+  [38/240] 1 min  p3 α=1.00 OneStep alphaaware base seed=4003  disc=0.381 expl=3
+  [39/240] 1 min  p6 α=1.00 OneStep alphaaware base seed=4007  disc=-0.046 expl=7
+  [40/240] 1 min  p3 α=0.50 OneStep alphaaware base seed=4007  disc=-0.059 expl=8
+  [41/240] 1 min  p3 α=1.00 OneStep alphaaware base seed=4009  disc=-0.145 expl=5
+  [42/240] 1 min  p6 α=0.50 OneStep alphaaware base seed=4006  disc=0.510 expl=5
+  [43/240] 1 min  p3 α=1.00 OneStep timing base seed=4005  disc=1.345 expl=24
+  [44/240] 2 min  p3 α=0.50 OneStep alphaaware base seed=4008  disc=-0.319 expl=4
+  [45/240] 2 min  p6 α=1.00 OneStep alphaaware base seed=4008  disc=-0.086 expl=3
+  [46/240] 2 min  p3 α=1.00 OneStep alphaaware base seed=4004  disc=-0.477 expl=6
+  [47/240] 2 min  p3 α=0.50 OneStep timing base seed=4003  disc=0.907 expl=6
+  [48/240] 2 min  p3 α=0.50 OneStep timing base seed=4009  disc=0.637 expl=12
+  [49/240] 2 min  p6 α=0.50 OneStep timing base seed=4001  disc=0.915 expl=23
+  [50/240] 2 min  p6 α=1.00 OneStep timing base seed=4009  disc=1.480 expl=15
+  [51/240] 2 min  p6 α=1.00 OneStep alphaaware base seed=4001  disc=1.209 expl=5
+  [52/240] 2 min  p6 α=0.50 OneStep timing base seed=4007  disc=0.952 expl=9
+  [53/240] 2 min  p6 α=1.00 OneStep timing base seed=4003  disc=2.069 expl=6
+  [54/240] 2 min  p3 α=0.50 OneStep alphaaware base seed=4001  disc=0.957 expl=14
+  [55/240] 2 min  p3 α=0.50 OneStep alphaaware base seed=4009  disc=-0.326 expl=4
+  [56/240] 2 min  p3 α=1.00 OneStep alphaaware base seed=4005  disc=-0.865 expl=3
+  [57/240] 2 min  p6 α=1.00 OneStep alphaaware base seed=4002  disc=0.031 expl=1
+  [58/240] 3 min  p3 α=1.00 OneStep alphaaware base seed=4010  disc=2.090 expl=5
+  [59/240] 3 min  p6 α=0.50 POMCPOW leaf value 0 seed=4009  disc=0.605 expl=56
+  [60/240] 3 min  p6 α=1.00 OneStep alphaaware base seed=4009  disc=-0.144 expl=5
+  [61/240] 3 min  p3 α=1.00 POMCPOW leaf value 0 seed=4007  disc=1.039 expl=53
+  [62/240] 3 min  p6 α=0.50 POMCPOW leaf value 0 seed=4003  disc=1.023 expl=38
+  [63/240] 3 min  p3 α=0.50 OneStep alphaaware base seed=4002  disc=-0.136 expl=1
+  [64/240] 3 min  p6 α=1.00 POMCPOW leaf value 0 seed=4005  disc=0.511 expl=49
+  [65/240] 3 min  p3 α=1.00 POMCPOW leaf value 0 seed=4001  disc=0.355 expl=39
+  [66/240] 3 min  p3 α=0.50 POMCPOW leaf value 0 seed=4005  disc=0.248 expl=46
+  [67/240] 3 min  p3 α=1.00 OneStep timing base seed=4006  disc=2.796 expl=5
+  [68/240] 3 min  p3 α=0.50 OneStep alphaaware base seed=4010  disc=-0.081 expl=2
+  [69/240] 3 min  p6 α=0.50 OneStep alphaaware base seed=4007  disc=0.782 expl=14
+  [70/240] 3 min  p3 α=1.00 OneStep alphaaware base seed=4006  disc=2.350 expl=4
+  [71/240] 3 min  p6 α=1.00 OneStep alphaaware base seed=4003  disc=0.039 expl=4
+  [72/240] 3 min  p3 α=0.50 OneStep timing base seed=4010  disc=1.095 expl=13
+  [73/240] 3 min  p3 α=0.50 OneStep timing base seed=4004  disc=0.881 expl=27
+  [74/240] 3 min  p6 α=1.00 OneStep timing base seed=4010  disc=2.409 expl=12
+  [75/240] 3 min  p3 α=0.50 TimingAware seed=4001  disc=0.602 expl=0
+  [76/240] 3 min  p3 α=0.50 TimingAware seed=4002  disc=0.539 expl=0
+  [77/240] 3 min  p3 α=0.50 TimingAware seed=4003  disc=0.768 expl=0
+  [78/240] 3 min  p3 α=0.50 TimingAware seed=4004  disc=0.412 expl=0
+  [79/240] 3 min  p6 α=1.00 OneStep timing base seed=4004  disc=1.831 expl=30
+  [80/240] 4 min  p6 α=0.50 OneStep timing base seed=4002  disc=1.047 expl=7
+  [81/240] 4 min  p6 α=0.50 OneStep timing base seed=4008  disc=0.960 expl=10
+  [82/240] 4 min  p6 α=0.50 OneStep alphaaware base seed=4008  disc=-0.258 expl=4
+  [83/240] 4 min  p3 α=0.50 OneStep alphaaware base seed=4003  disc=0.141 expl=6
+  [84/240] 4 min  p6 α=1.00 OneStep alphaaware base seed=4010  disc=2.150 expl=6
+  [85/240] 4 min  p6 α=1.00 OneStep alphaaware base seed=4004  disc=-0.475 expl=5
+  [86/240] 4 min  p6 α=0.50 OneStep alphaaware base seed=4001  disc=1.131 expl=10
+  [87/240] 4 min  p6 α=0.50 OneStep alphaaware base seed=4009  disc=-0.336 expl=4
+  [88/240] 5 min  p6 α=1.00 OneStep alphaaware base seed=4005  disc=-1.040 expl=3
+  [89/240] 5 min  p3 α=1.00 OneStep timing base seed=4007  disc=1.829 expl=8
+  [90/240] 5 min  p3 α=0.50 OneStep alphaaware base seed=4004  disc=-0.388 expl=6
+  [91/240] 5 min  p3 α=1.00 OneStep alphaaware base seed=4007  disc=1.987 expl=11
+  [92/240] 5 min  p6 α=1.00 OneStep timing base seed=4005  disc=1.340 expl=31
+  [93/240] 5 min  p3 α=1.00 OneStep timing base seed=4001  disc=2.138 expl=24
+  [94/240] 5 min  p3 α=1.00 POMCPOW dynprofit rollout seed=4003  disc=-0.802 expl=30
+  [95/240] 5 min  p3 α=0.50 OneStep timing base seed=4005  disc=0.591 expl=31
+  [96/240] 5 min  p3 α=1.00 OneStep alphaaware base seed=4001  disc=2.039 expl=12
+  [97/240] 5 min  p6 α=0.50 OneStep alphaaware base seed=4002  disc=-0.143 expl=1
+  [98/240] 5 min  p6 α=1.00 POMCPOW leaf value 0 seed=4006  disc=1.817 expl=55
+  [99/240] 5 min  p3 α=0.50 OneStep alphaaware base seed=4005  disc=-0.702 expl=4
+  [100/240] 5 min  p6 α=1.00 OneStep alphaaware base seed=4006  disc=0.403 expl=4
+  [101/240] 5 min  p3 α=1.00 POMCPOW leaf value 0 seed=4002  disc=1.087 expl=46
+  [102/240] 5 min  p3 α=1.00 POMCPOW leaf value 0 seed=4008  disc=1.074 expl=43
+  [103/240] 5 min  p3 α=1.00 OneStep alphaaware base seed=4008  disc=-0.412 expl=4
+  [104/240] 5 min  p6 α=0.50 OneStep timing base seed=4003  disc=0.966 expl=9
+  [105/240] 5 min  p6 α=0.50 OneStep timing base seed=4009  disc=0.686 expl=13
+  [106/240] 5 min  p6 α=0.50 OneStep alphaaware base seed=4010  disc=0.400 expl=2
+  [107/240] 5 min  p6 α=0.50 POMCPOW leaf value 0 seed=4004  disc=0.486 expl=41
+  [108/240] 5 min  p3 α=0.50 POMCPOW leaf value 0 seed=4006  disc=1.050 expl=49
+  [109/240] 6 min  p6 α=0.50 POMCPOW leaf value 0 seed=4010  disc=1.045 expl=50
+  [110/240] 6 min  p6 α=1.00 POMCPOW dynprofit rollout seed=4007  disc=-0.497 expl=32
+  [111/240] 6 min  p6 α=0.50 POMCPOW dynprofit rollout seed=4005  disc=-0.711 expl=23
+  [112/240] 6 min  p3 α=0.50 OneStep timing base seed=4001  disc=0.971 expl=27
+  [113/240] 6 min  p3 α=0.50 POMCPOW dynprofit rollout seed=4001  disc=0.610 expl=35
+  [114/240] 6 min  p3 α=1.00 POMCPOW dynprofit rollout seed=4009  disc=-1.051 expl=31
+  [115/240] 6 min  p3 α=0.50 POMCPOW dynprofit rollout seed=4007  disc=0.777 expl=51
+  [116/240] 6 min  p3 α=1.00 OneStep alphaaware base seed=4002  disc=0.045 expl=1
+  [117/240] 6 min  p3 α=1.00 OneStep timing base seed=4008  disc=2.022 expl=13
+  [118/240] 6 min  p6 α=0.50 OneStep alphaaware base seed=4003  disc=0.141 expl=6
+  [119/240] 6 min  p3 α=1.00 POMCPOW timing rollout seed=4005  disc=1.078 expl=56
+  [120/240] 6 min  p6 α=1.00 POMCPOW dynprofit rollout seed=4001  disc=1.818 expl=39
+  [121/240] 6 min  p3 α=0.50 POMCPOW timing rollout seed=4009  disc=0.599 expl=44
+  [122/240] 6 min  p3 α=0.50 POMCPOW timing rollout seed=4003  disc=0.876 expl=52
+  [123/240] 6 min  p6 α=1.00 POMCPOW timing rollout seed=4003  disc=1.815 expl=41
+  [124/240] 6 min  p6 α=0.50 POMCPOW timing rollout seed=4007  disc=0.538 expl=49
+  [125/240] 6 min  p3 α=0.50 OneStep alphaaware base seed=4006  disc=-0.022 expl=6
+  [126/240] 6 min  p6 α=1.00 POMCPOW timing rollout seed=4009  disc=1.386 expl=45
+  [127/240] 6 min  p6 α=0.50 POMCPOW timing rollout seed=4001  disc=0.988 expl=48
+  [128/240] 6 min  p3 α=1.00 OneStep timing base seed=4002  disc=2.225 expl=8
+  [129/240] 7 min  p3 α=0.50 OneStep timing base seed=4006  disc=1.293 expl=5
+  [130/240] 7 min  p6 α=1.00 OneStep timing base seed=4006  disc=3.138 expl=11
+  [131/240] 7 min  p6 α=0.50 OneStep alphaaware base seed=4004  disc=-0.388 expl=5
+  [132/240] 7 min  p6 α=0.50 OneStep timing base seed=4010  disc=1.025 expl=15
+  [133/240] 7 min  p6 α=0.50 OneStep timing base seed=4004  disc=0.672 expl=44
+  [134/240] 7 min  p3 α=0.50 OneStep timing base seed=4002  disc=1.013 expl=7
+  [135/240] 7 min  p3 α=1.00 OneStep timing base seed=4009  disc=1.422 expl=10
+  [136/240] 7 min  p6 α=1.00 POMCPOW leaf value 0 seed=4007  disc=1.110 expl=59
+  [137/240] 7 min  p6 α=0.50 POMCPOW leaf value 0 seed=4005  disc=0.240 expl=45
+  [138/240] 7 min  p3 α=0.50 POMCPOW leaf value 0 seed=4007  disc=0.741 expl=49
+  [139/240] 7 min  p6 α=1.00 POMCPOW leaf value 0 seed=4001  disc=0.418 expl=36
+  [140/240] 8 min  p3 α=1.00 POMCPOW leaf value 0 seed=4009  disc=0.846 expl=54
+  [141/240] 8 min  p3 α=1.00 OneStep timing base seed=4003  disc=2.012 expl=6
+  [142/240] 8 min  p3 α=1.00 POMCPOW leaf value 0 seed=4003  disc=0.898 expl=44
+  [143/240] 8 min  p3 α=0.50 OneStep timing base seed=4007  disc=0.783 expl=11
+  [144/240] 8 min  p6 α=1.00 OneStep timing base seed=4007  disc=1.774 expl=15
+  [145/240] 8 min  p6 α=1.00 OneStep timing base seed=4001  disc=2.013 expl=28
+  [146/240] 8 min  p6 α=0.50 OneStep timing base seed=4005  disc=0.625 expl=28
+  [147/240] 8 min  p3 α=1.00 OneStep timing base seed=4010  disc=2.391 expl=8
+  [148/240] 9 min  p3 α=1.00 OneStep timing base seed=4004  disc=1.869 expl=27
+  [149/240] 9 min  p3 α=0.50 OneStep timing base seed=4008  disc=0.958 expl=12
+  [150/240] 9 min  p6 α=1.00 OneStep timing base seed=4002  disc=2.281 expl=5
+  [151/240] 9 min  p6 α=1.00 OneStep timing base seed=4008  disc=2.082 expl=11
+  [152/240] 9 min  p3 α=0.50 POMCPOW leaf value 0 seed=4008  disc=0.537 expl=46
+  [153/240] 9 min  p6 α=1.00 POMCPOW leaf value 0 seed=4008  disc=1.020 expl=50
+  [154/240] 9 min  p6 α=1.00 POMCPOW leaf value 0 seed=4002  disc=1.129 expl=50
+  [155/240] 9 min  p3 α=1.00 POMCPOW leaf value 0 seed=4004  disc=0.984 expl=50
+  [156/240] 9 min  p3 α=1.00 POMCPOW leaf value 0 seed=4010  disc=1.510 expl=57
+  [157/240] 9 min  p3 α=1.00 POMCPOW dynprofit rollout seed=4004  disc=-1.933 expl=23
+  [158/240] 9 min  p6 α=0.50 OneStep timing base seed=4006  disc=1.450 expl=12
+  [159/240] 10 min  p6 α=0.50 POMCPOW leaf value 0 seed=4006  disc=1.422 expl=45
+  [160/240] 10 min  p6 α=0.50 POMCPOW dynprofit rollout seed=4006  disc=-0.553 expl=43
+  [161/240] 10 min  p6 α=1.00 POMCPOW dynprofit rollout seed=4008  disc=-0.357 expl=28
+  [162/240] 10 min  p3 α=1.00 POMCPOW dynprofit rollout seed=4010  disc=1.530 expl=36
+  [163/240] 10 min  p3 α=0.50 POMCPOW dynprofit rollout seed=4008  disc=-0.212 expl=23
+  [164/240] 10 min  p3 α=0.50 POMCPOW dynprofit rollout seed=4002  disc=-0.086 expl=24
+  [165/240] 10 min  p6 α=1.00 POMCPOW dynprofit rollout seed=4002  disc=0.908 expl=31
+  [166/240] 10 min  p3 α=0.50 POMCPOW timing rollout seed=4010  disc=1.014 expl=44
+  [167/240] 11 min  p6 α=1.00 POMCPOW timing rollout seed=4010  disc=2.257 expl=39
+  [168/240] 11 min  p3 α=1.00 POMCPOW timing rollout seed=4006  disc=2.902 expl=47
+  [169/240] 11 min  p6 α=1.00 POMCPOW timing rollout seed=4004  disc=1.827 expl=60
+  [170/240] 11 min  p6 α=0.50 POMCPOW timing rollout seed=4002  disc=0.848 expl=42
+  [171/240] 11 min  p3 α=0.50 POMCPOW timing rollout seed=4004  disc=0.844 expl=53
+  [172/240] 11 min  p6 α=0.50 POMCPOW timing rollout seed=4008  disc=0.989 expl=51
+  [173/240] 11 min  p3 α=0.50 POMCPOW leaf value 0 seed=4009  disc=0.628 expl=51
+  [174/240] 11 min  p3 α=1.00 POMCPOW leaf value 0 seed=4005  disc=0.538 expl=47
+  [175/240] 11 min  p6 α=1.00 POMCPOW leaf value 0 seed=4003  disc=1.407 expl=41
+  [176/240] 11 min  p6 α=1.00 POMCPOW leaf value 0 seed=4009  disc=1.438 expl=50
+  [177/240] 11 min  p6 α=0.50 POMCPOW leaf value 0 seed=4001  disc=0.167 expl=46
+  [178/240] 11 min  p6 α=0.50 POMCPOW leaf value 0 seed=4007  disc=0.840 expl=47
+  [179/240] 12 min  p3 α=0.50 POMCPOW leaf value 0 seed=4001  disc=0.147 expl=37
+  [180/240] 12 min  p6 α=1.00 POMCPOW leaf value 0 seed=4004  disc=1.050 expl=47
+  [181/240] 12 min  p6 α=1.00 POMCPOW leaf value 0 seed=4010  disc=1.454 expl=47
+  [182/240] 12 min  p3 α=0.50 POMCPOW leaf value 0 seed=4010  disc=1.048 expl=54
+  [183/240] 12 min  p3 α=1.00 POMCPOW leaf value 0 seed=4006  disc=1.224 expl=47
+  [184/240] 13 min  p6 α=0.50 POMCPOW leaf value 0 seed=4002  disc=0.532 expl=36
+  [185/240] 13 min  p3 α=1.00 POMCPOW dynprofit rollout seed=4005  disc=-1.074 expl=29
+  [186/240] 13 min  p6 α=0.50 POMCPOW leaf value 0 seed=4008  disc=0.925 expl=44
+  [187/240] 13 min  p6 α=0.50 POMCPOW dynprofit rollout seed=4007  disc=-0.456 expl=19
+  [188/240] 13 min  p6 α=1.00 POMCPOW dynprofit rollout seed=4009  disc=-1.107 expl=31
+  [189/240] 13 min  p3 α=0.50 POMCPOW dynprofit rollout seed=4009  disc=-0.741 expl=29
+  [190/240] 13 min  p6 α=1.00 POMCPOW dynprofit rollout seed=4003  disc=-0.805 expl=25
+  [191/240] 13 min  p6 α=0.50 POMCPOW dynprofit rollout seed=4001  disc=0.690 expl=42
+  [192/240] 13 min  p3 α=0.50 POMCPOW dynprofit rollout seed=4003  disc=-0.543 expl=34
+  [193/240] 13 min  p3 α=0.50 POMCPOW leaf value 0 seed=4002  disc=0.520 expl=45
+  [194/240] 14 min  p3 α=1.00 POMCPOW timing rollout seed=4007  disc=1.730 expl=51
+  [195/240] 14 min  p6 α=1.00 POMCPOW timing rollout seed=4005  disc=1.327 expl=42
+  [196/240] 14 min  p3 α=1.00 POMCPOW timing rollout seed=4001  disc=1.330 expl=52
+  [197/240] 14 min  p3 α=0.50 POMCPOW timing rollout seed=4005  disc=0.527 expl=50
+  [198/240] 14 min  p6 α=0.50 POMCPOW timing rollout seed=4003  disc=0.932 expl=48
+  [199/240] 14 min  p6 α=0.50 POMCPOW timing rollout seed=4009  disc=0.636 expl=44
+  [200/240] 15 min  p3 α=0.50 POMCPOW leaf value 0 seed=4003  disc=0.715 expl=56
+  [201/240] 15 min  p3 α=1.00 POMCPOW dynprofit rollout seed=4006  disc=-0.629 expl=28
+  [202/240] 15 min  p6 α=0.50 POMCPOW dynprofit rollout seed=4008  disc=-0.362 expl=23
+  [203/240] 15 min  p6 α=1.00 POMCPOW dynprofit rollout seed=4010  disc=0.195 expl=27
+  [204/240] 16 min  p3 α=0.50 POMCPOW dynprofit rollout seed=4010  disc=0.031 expl=35
+  [205/240] 16 min  p6 α=1.00 POMCPOW dynprofit rollout seed=4004  disc=-0.862 expl=24
+  [206/240] 16 min  p6 α=0.50 POMCPOW dynprofit rollout seed=4002  disc=-0.161 expl=26
+  [207/240] 16 min  p3 α=0.50 POMCPOW dynprofit rollout seed=4004  disc=-0.367 expl=28
+  [208/240] 16 min  p3 α=0.50 POMCPOW leaf value 0 seed=4004  disc=0.453 expl=53
+  [209/240] 17 min  p3 α=1.00 POMCPOW timing rollout seed=4008  disc=1.312 expl=54
+  [210/240] 17 min  p6 α=1.00 POMCPOW timing rollout seed=4006  disc=2.579 expl=44
+  [211/240] 17 min  p3 α=1.00 POMCPOW timing rollout seed=4002  disc=1.853 expl=41
+  [212/240] 17 min  p3 α=0.50 POMCPOW timing rollout seed=4006  disc=1.131 expl=42
+  [213/240] 17 min  p6 α=0.50 POMCPOW timing rollout seed=4004  disc=0.896 expl=57
+  [214/240] 17 min  p6 α=0.50 POMCPOW timing rollout seed=4010  disc=1.023 expl=44
+  [215/240] 18 min  p3 α=1.00 POMCPOW dynprofit rollout seed=4007  disc=1.684 expl=53
+  [216/240] 18 min  p6 α=0.50 POMCPOW dynprofit rollout seed=4009  disc=-0.595 expl=30
+  [217/240] 18 min  p6 α=1.00 POMCPOW dynprofit rollout seed=4005  disc=-0.924 expl=17
+  [218/240] 18 min  p3 α=1.00 POMCPOW dynprofit rollout seed=4001  disc=0.804 expl=33
+  [219/240] 18 min  p6 α=0.50 POMCPOW dynprofit rollout seed=4003  disc=-0.659 expl=27
+  [220/240] 18 min  p3 α=0.50 POMCPOW dynprofit rollout seed=4005  disc=-1.298 expl=15
+  [221/240] 18 min  p3 α=0.50 POMCPOW timing rollout seed=4001  disc=0.925 expl=52
+  [222/240] 20 min  p3 α=1.00 POMCPOW timing rollout seed=4009  disc=1.303 expl=50
+  [223/240] 20 min  p6 α=1.00 POMCPOW timing rollout seed=4001  disc=2.283 expl=53
+  [224/240] 20 min  p3 α=1.00 POMCPOW timing rollout seed=4003  disc=2.008 expl=40
+  [225/240] 20 min  p3 α=0.50 POMCPOW timing rollout seed=4007  disc=0.851 expl=48
+  [226/240] 20 min  p6 α=1.00 POMCPOW timing rollout seed=4007  disc=1.708 expl=46
+  [227/240] 20 min  p6 α=0.50 POMCPOW timing rollout seed=4005  disc=0.615 expl=59
+  [228/240] 20 min  p3 α=1.00 POMCPOW dynprofit rollout seed=4008  disc=-0.201 expl=29
+  [229/240] 20 min  p6 α=0.50 POMCPOW dynprofit rollout seed=4010  disc=-0.070 expl=27
+  [230/240] 21 min  p6 α=1.00 POMCPOW dynprofit rollout seed=4006  disc=-0.858 expl=29
+  [231/240] 21 min  p6 α=0.50 POMCPOW dynprofit rollout seed=4004  disc=-0.627 expl=26
+  [232/240] 21 min  p3 α=0.50 POMCPOW dynprofit rollout seed=4006  disc=-0.453 expl=28
+  [233/240] 21 min  p3 α=1.00 POMCPOW dynprofit rollout seed=4002  disc=0.227 expl=40
+  [234/240] 21 min  p3 α=0.50 POMCPOW timing rollout seed=4002  disc=0.764 expl=41
+  [235/240] 22 min  p3 α=1.00 POMCPOW timing rollout seed=4010  disc=2.229 expl=48
+  [236/240] 22 min  p6 α=1.00 POMCPOW timing rollout seed=4002  disc=1.964 expl=35
+  [237/240] 22 min  p3 α=1.00 POMCPOW timing rollout seed=4004  disc=1.793 expl=47
+  [238/240] 22 min  p6 α=1.00 POMCPOW timing rollout seed=4008  disc=1.172 expl=50
+  [239/240] 22 min  p3 α=0.50 POMCPOW timing rollout seed=4008  disc=0.915 expl=50
+  [240/240] 22 min  p6 α=0.50 POMCPOW timing rollout seed=4006  disc=1.320 expl=47
+240 episodes in 22 min
+
+Mean discounted reward [explorations, mines]; Δ vs TimingAware, paired ± SE
+p3 α=0.50
+  POMCPOW dynprofit rollout   -0.228  [ 30.2 expl, 2.0 mines]   Δ  -0.925 ± 0.181
+  POMCPOW timing rollout       0.844  [ 47.6 expl, 2.0 mines]   Δ  +0.147 ± 0.048
+  POMCPOW leaf value 0         0.609  [ 48.6 expl, 2.0 mines]   Δ  -0.088 ± 0.056
+  OneStep alphaaware base     -0.093  [  5.5 expl, 2.0 mines]   Δ  -0.791 ± 0.141
+  OneStep timing base          0.913  [ 15.1 expl, 2.0 mines]   Δ  +0.216 ± 0.056
+  TimingAware                  0.697  [  0.0 expl, 2.0 mines]
+p3 α=1.00
+  POMCPOW dynprofit rollout   -0.144  [ 33.2 expl, 2.0 mines]   Δ  -1.696 ± 0.331
+  POMCPOW timing rollout       1.754  [ 48.6 expl, 2.0 mines]   Δ  +0.202 ± 0.123
+  POMCPOW leaf value 0         0.956  [ 48.0 expl, 1.6 mines]   Δ  -0.596 ± 0.134
+  OneStep alphaaware base      0.699  [  5.4 expl, 2.0 mines]   Δ  -0.852 ± 0.294
+  OneStep timing base          2.005  [ 13.3 expl, 2.0 mines]   Δ  +0.453 ± 0.109
+  TimingAware                  1.551  [  0.0 expl, 2.0 mines]
+p6 α=0.50
+  POMCPOW dynprofit rollout   -0.350  [ 28.6 expl, 2.0 mines]   Δ  -1.097 ± 0.156
+  POMCPOW timing rollout       0.879  [ 48.9 expl, 2.0 mines]   Δ  +0.132 ± 0.071
+  POMCPOW leaf value 0         0.729  [ 44.8 expl, 2.0 mines]   Δ  -0.018 ± 0.058
+  OneStep alphaaware base      0.102  [  5.5 expl, 2.0 mines]   Δ  -0.645 ± 0.157
+  OneStep timing base          0.930  [ 17.0 expl, 2.0 mines]   Δ  +0.183 ± 0.045
+  TimingAware                  0.747  [  0.0 expl, 2.0 mines]
+p6 α=1.00
+  POMCPOW dynprofit rollout   -0.249  [ 28.3 expl, 2.0 mines]   Δ  -1.879 ± 0.357
+  POMCPOW timing rollout       1.832  [ 45.5 expl, 2.0 mines]   Δ  +0.202 ± 0.161
+  POMCPOW leaf value 0         1.135  [ 48.4 expl, 1.6 mines]   Δ  -0.494 ± 0.130
+  OneStep alphaaware base      0.204  [  4.3 expl, 2.0 mines]   Δ  -1.426 ± 0.236
+  OneStep timing base          2.042  [ 16.4 expl, 2.0 mines]   Δ  +0.412 ± 0.110
+  TimingAware                  1.630  [  0.0 expl, 2.0 mines]
+
+CSV: outputs/pomcpow_vs_heuristics/rollout_timing_p3-6_a0.5-1.0_g0.926_e6.csv
+exit 0

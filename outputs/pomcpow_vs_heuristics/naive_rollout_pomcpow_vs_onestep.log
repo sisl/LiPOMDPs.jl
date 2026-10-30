@@ -1,0 +1,817 @@
+The latest version of Julia in the `release` channel is 1.13.2+0.x64.linux.gnu. You currently have `1.12.1+0.x64.linux.gnu` installed. Run:
+
+  juliaup update
+
+in your terminal shell to install Julia 1.13.2+0.x64.linux.gnu and update the `release` channel to that version.
+POMCPOW (DynamicProfit and AlphaAware rollouts, q=30000) vs OneStep (AlphaAware): 750 episodes on 40 threads, γ=0.926
+  [1/750] 22 min  p1 α=0.25 POMCPOW dynprofit q=30000 seed=4004  disc=-0.699 expl=19
+  [2/750] 22 min  p1 α=0.50 POMCPOW dynprofit q=30000 seed=4007  disc=-0.867 expl=24
+  [3/750] 22 min  p1 α=0.50 POMCPOW dynprofit q=30000 seed=4009  disc=-0.848 expl=25
+  [4/750] 22 min  p1 α=0.75 POMCPOW dynprofit q=30000 seed=4003  disc=-0.882 expl=22
+  [5/750] 22 min  p1 α=0.50 POMCPOW dynprofit q=30000 seed=4002  disc=-0.435 expl=27
+  [6/750] 22 min  p1 α=0.50 POMCPOW dynprofit q=30000 seed=4010  disc=-0.188 expl=23
+  [7/750] 22 min  p1 α=0.75 POMCPOW dynprofit q=30000 seed=4010  disc=-0.034 expl=22
+  [8/750] 22 min  p1 α=0.50 POMCPOW dynprofit q=30000 seed=4003  disc=-0.749 expl=26
+  [9/750] 22 min  p1 α=0.25 POMCPOW dynprofit q=30000 seed=4002  disc=-0.352 expl=24
+  [10/750] 22 min  p1 α=0.75 POMCPOW dynprofit q=30000 seed=4002  disc=-0.403 expl=24
+  [11/750] 22 min  p1 α=0.25 POMCPOW dynprofit q=30000 seed=4006  disc=-0.480 expl=28
+  [12/750] 22 min  p1 α=0.25 POMCPOW dynprofit q=30000 seed=4003  disc=-0.514 expl=15
+  [13/750] 22 min  p1 α=0.00 POMCPOW dynprofit q=30000 seed=4003  disc=-0.310 expl=27
+  [14/750] 22 min  p1 α=0.75 POMCPOW dynprofit q=30000 seed=4005  disc=-1.930 expl=14
+  [15/750] 22 min  p1 α=0.00 POMCPOW dynprofit q=30000 seed=4001  disc=-0.207 expl=31
+  [16/750] 22 min  p1 α=0.25 POMCPOW dynprofit q=30000 seed=4007  disc=-0.575 expl=26
+  [17/750] 22 min  p1 α=0.25 POMCPOW dynprofit q=30000 seed=4008  disc=-0.639 expl=20
+  [18/750] 22 min  p1 α=0.50 POMCPOW dynprofit q=30000 seed=4004  disc=-1.268 expl=18
+  [19/750] 22 min  p1 α=0.25 POMCPOW dynprofit q=30000 seed=4010  disc=-0.250 expl=16
+  [20/750] 22 min  p1 α=0.75 POMCPOW dynprofit q=30000 seed=4006  disc=-0.762 expl=22
+  [21/750] 22 min  p1 α=0.75 POMCPOW dynprofit q=30000 seed=4008  disc=-1.309 expl=31
+  [22/750] 22 min  p1 α=0.50 POMCPOW dynprofit q=30000 seed=4008  disc=-1.059 expl=22
+  [23/750] 22 min  p1 α=0.00 POMCPOW dynprofit q=30000 seed=4010  disc=-0.353 expl=25
+  [24/750] 22 min  p1 α=0.25 POMCPOW dynprofit q=30000 seed=4009  disc=-0.567 expl=21
+  [25/750] 22 min  p1 α=0.00 POMCPOW dynprofit q=30000 seed=4002  disc=-0.326 expl=28
+  [26/750] 22 min  p1 α=0.00 POMCPOW dynprofit q=30000 seed=4005  disc=-0.230 expl=29
+  [27/750] 22 min  p1 α=0.50 POMCPOW dynprofit q=30000 seed=4006  disc=-0.670 expl=25
+  [28/750] 22 min  p1 α=0.75 POMCPOW dynprofit q=30000 seed=4007  disc=-1.079 expl=23
+  [29/750] 22 min  p1 α=0.00 POMCPOW dynprofit q=30000 seed=4007  disc=-0.322 expl=36
+  [30/750] 22 min  p1 α=0.00 POMCPOW dynprofit q=30000 seed=4009  disc=-0.324 expl=22
+  [31/750] 22 min  p1 α=0.75 POMCPOW dynprofit q=30000 seed=4009  disc=-1.050 expl=25
+  [32/750] 22 min  p1 α=0.50 POMCPOW dynprofit q=30000 seed=4001  disc=-1.057 expl=12
+  [33/750] 22 min  p1 α=0.50 POMCPOW dynprofit q=30000 seed=4005  disc=-1.423 expl=15
+  [34/750] 22 min  p1 α=0.00 POMCPOW dynprofit q=30000 seed=4008  disc=-0.275 expl=31
+  [35/750] 22 min  p1 α=0.00 POMCPOW dynprofit q=30000 seed=4004  disc=-0.268 expl=24
+  [36/750] 22 min  p1 α=0.00 POMCPOW dynprofit q=30000 seed=4006  disc=-0.314 expl=28
+  [37/750] 22 min  p1 α=0.25 POMCPOW dynprofit q=30000 seed=4005  disc=-0.507 expl=23
+  [38/750] 22 min  p1 α=0.75 POMCPOW dynprofit q=30000 seed=4001  disc=-0.518 expl=21
+  [39/750] 22 min  p1 α=0.25 POMCPOW dynprofit q=30000 seed=4001  disc=-0.618 expl=17
+  [40/750] 23 min  p1 α=0.75 POMCPOW dynprofit q=30000 seed=4004  disc=-1.614 expl=18
+  [41/750] 39 min  p1 α=1.00 POMCPOW dynprofit q=30000 seed=4003  disc=-1.075 expl=22
+  [42/750] 39 min  p1 α=1.00 POMCPOW dynprofit q=30000 seed=4006  disc=-0.919 expl=28
+  [43/750] 39 min  p2 α=0.00 POMCPOW dynprofit q=30000 seed=4002  disc=-0.326 expl=32
+  [44/750] 39 min  p1 α=1.00 POMCPOW dynprofit q=30000 seed=4008  disc=-0.450 expl=27
+  [45/750] 39 min  p2 α=0.00 POMCPOW dynprofit q=30000 seed=4006  disc=-0.314 expl=33
+  [46/750] 39 min  p1 α=1.00 POMCPOW dynprofit q=30000 seed=4001  disc=-0.359 expl=25
+  [47/750] 39 min  p1 α=1.00 POMCPOW dynprofit q=30000 seed=4005  disc=-1.276 expl=23
+  [48/750] 39 min  p2 α=0.00 POMCPOW dynprofit q=30000 seed=4001  disc=-0.207 expl=26
+  [49/750] 39 min  p1 α=1.00 POMCPOW dynprofit q=30000 seed=4004  disc=-2.168 expl=17
+  [50/750] 39 min  p1 α=1.00 POMCPOW dynprofit q=30000 seed=4007  disc=-1.334 expl=24
+  [51/750] 39 min  p2 α=0.50 POMCPOW dynprofit q=30000 seed=4005  disc=-0.730 expl=31
+  [52/750] 40 min  p2 α=0.50 POMCPOW dynprofit q=30000 seed=4007  disc=-0.716 expl=27
+  [53/750] 40 min  p2 α=0.00 POMCPOW dynprofit q=30000 seed=4010  disc=-0.353 expl=25
+  [54/750] 40 min  p2 α=0.00 POMCPOW dynprofit q=30000 seed=4007  disc=-0.322 expl=33
+  [55/750] 40 min  p2 α=0.00 POMCPOW dynprofit q=30000 seed=4004  disc=-0.268 expl=30
+  [56/750] 40 min  p2 α=0.00 POMCPOW dynprofit q=30000 seed=4009  disc=-0.324 expl=30
+  [57/750] 40 min  p2 α=0.25 POMCPOW dynprofit q=30000 seed=4002  disc=-0.117 expl=33
+  [58/750] 40 min  p2 α=0.50 POMCPOW dynprofit q=30000 seed=4003  disc=-0.655 expl=20
+  [59/750] 40 min  p2 α=0.25 POMCPOW dynprofit q=30000 seed=4006  disc=-0.437 expl=31
+  [60/750] 40 min  p2 α=0.00 POMCPOW dynprofit q=30000 seed=4005  disc=-0.230 expl=28
+  [61/750] 40 min  p2 α=0.25 POMCPOW dynprofit q=30000 seed=4010  disc=-0.206 expl=26
+  [62/750] 40 min  p1 α=1.00 POMCPOW dynprofit q=30000 seed=4002  disc=-0.433 expl=29
+  [63/750] 40 min  p2 α=0.00 POMCPOW dynprofit q=30000 seed=4008  disc=-0.275 expl=29
+  [64/750] 40 min  p1 α=1.00 POMCPOW dynprofit q=30000 seed=4010  disc=0.132 expl=30
+  [65/750] 40 min  p2 α=0.25 POMCPOW dynprofit q=30000 seed=4007  disc=-0.510 expl=28
+  [66/750] 40 min  p2 α=0.00 POMCPOW dynprofit q=30000 seed=4003  disc=-0.310 expl=26
+  [67/750] 40 min  p2 α=0.25 POMCPOW dynprofit q=30000 seed=4005  disc=-0.534 expl=26
+  [68/750] 40 min  p2 α=0.25 POMCPOW dynprofit q=30000 seed=4003  disc=-0.412 expl=33
+  [69/750] 40 min  p1 α=1.00 POMCPOW dynprofit q=30000 seed=4009  disc=-1.297 expl=30
+  [70/750] 40 min  p2 α=0.25 POMCPOW dynprofit q=30000 seed=4004  disc=-0.497 expl=31
+  [71/750] 40 min  p2 α=0.50 POMCPOW dynprofit q=30000 seed=4009  disc=-0.704 expl=25
+  [72/750] 40 min  p2 α=0.50 POMCPOW dynprofit q=30000 seed=4006  disc=-0.572 expl=26
+  [73/750] 40 min  p2 α=0.50 POMCPOW dynprofit q=30000 seed=4002  disc=-0.195 expl=37
+  [74/750] 40 min  p2 α=0.50 POMCPOW dynprofit q=30000 seed=4008  disc=-0.250 expl=32
+  [75/750] 40 min  p2 α=0.25 POMCPOW dynprofit q=30000 seed=4009  disc=-0.507 expl=31
+  [76/750] 40 min  p2 α=0.25 POMCPOW dynprofit q=30000 seed=4001  disc=-0.164 expl=42
+  [77/750] 40 min  p2 α=0.50 POMCPOW dynprofit q=30000 seed=4010  disc=-0.041 expl=27
+  [78/750] 40 min  p2 α=0.50 POMCPOW dynprofit q=30000 seed=4001  disc=0.563 expl=41
+  [79/750] 41 min  p2 α=0.50 POMCPOW dynprofit q=30000 seed=4004  disc=-0.645 expl=24
+  [80/750] 41 min  p2 α=0.25 POMCPOW dynprofit q=30000 seed=4008  disc=-0.309 expl=36
+  [81/750] 53 min  p2 α=0.75 POMCPOW dynprofit q=30000 seed=4002  disc=-0.080 expl=27
+  [82/750] 53 min  p2 α=1.00 POMCPOW dynprofit q=30000 seed=4009  disc=-0.971 expl=24
+  [83/750] 54 min  p2 α=1.00 POMCPOW dynprofit q=30000 seed=4010  disc=0.263 expl=26
+  [84/750] 54 min  p2 α=1.00 POMCPOW dynprofit q=30000 seed=4002  disc=-0.321 expl=31
+  [85/750] 54 min  p2 α=0.75 POMCPOW dynprofit q=30000 seed=4003  disc=-0.343 expl=25
+  [86/750] 54 min  p2 α=0.75 POMCPOW dynprofit q=30000 seed=4006  disc=-0.538 expl=31
+  [87/750] 54 min  p2 α=1.00 POMCPOW dynprofit q=30000 seed=4004  disc=-0.738 expl=21
+  [88/750] 54 min  p2 α=0.75 POMCPOW dynprofit q=30000 seed=4007  disc=-0.365 expl=26
+  [89/750] 54 min  p2 α=1.00 POMCPOW dynprofit q=30000 seed=4003  disc=-0.266 expl=33
+  [90/750] 54 min  p3 α=0.00 POMCPOW dynprofit q=30000 seed=4005  disc=-0.230 expl=26
+  [91/750] 54 min  p3 α=0.00 POMCPOW dynprofit q=30000 seed=4001  disc=-0.207 expl=33
+  [92/750] 54 min  p2 α=0.75 POMCPOW dynprofit q=30000 seed=4005  disc=-0.885 expl=28
+  [93/750] 54 min  p3 α=0.00 POMCPOW dynprofit q=30000 seed=4003  disc=-0.310 expl=28
+  [94/750] 54 min  p2 α=1.00 POMCPOW dynprofit q=30000 seed=4007  disc=-0.709 expl=29
+  [95/750] 54 min  p2 α=1.00 POMCPOW dynprofit q=30000 seed=4008  disc=-0.181 expl=30
+  [96/750] 54 min  p3 α=0.00 POMCPOW dynprofit q=30000 seed=4004  disc=-0.268 expl=26
+  [97/750] 54 min  p2 α=0.75 POMCPOW dynprofit q=30000 seed=4010  disc=0.065 expl=29
+  [98/750] 54 min  p2 α=0.75 POMCPOW dynprofit q=30000 seed=4004  disc=-0.636 expl=26
+  [99/750] 54 min  p2 α=0.75 POMCPOW dynprofit q=30000 seed=4009  disc=-0.902 expl=26
+  [100/750] 55 min  p2 α=1.00 POMCPOW dynprofit q=30000 seed=4005  disc=-1.051 expl=22
+  [101/750] 55 min  p3 α=0.00 POMCPOW dynprofit q=30000 seed=4010  disc=-0.353 expl=30
+  [102/750] 55 min  p3 α=0.00 POMCPOW dynprofit q=30000 seed=4008  disc=-0.275 expl=23
+  [103/750] 55 min  p2 α=1.00 POMCPOW dynprofit q=30000 seed=4001  disc=1.239 expl=35
+  [104/750] 55 min  p2 α=0.75 POMCPOW dynprofit q=30000 seed=4001  disc=0.519 expl=34
+  [105/750] 55 min  p3 α=0.00 POMCPOW dynprofit q=30000 seed=4007  disc=-0.322 expl=25
+  [106/750] 55 min  p3 α=0.00 POMCPOW dynprofit q=30000 seed=4006  disc=-0.314 expl=29
+  [107/750] 55 min  p3 α=0.00 POMCPOW dynprofit q=30000 seed=4002  disc=-0.326 expl=38
+  [108/750] 55 min  p3 α=0.25 POMCPOW dynprofit q=30000 seed=4003  disc=-0.410 expl=26
+  [109/750] 55 min  p3 α=0.25 POMCPOW dynprofit q=30000 seed=4002  disc=-0.215 expl=35
+  [110/750] 55 min  p3 α=0.00 POMCPOW dynprofit q=30000 seed=4009  disc=-0.324 expl=29
+  [111/750] 55 min  p2 α=0.75 POMCPOW dynprofit q=30000 seed=4008  disc=-0.307 expl=24
+  [112/750] 55 min  p3 α=0.25 POMCPOW dynprofit q=30000 seed=4001  disc=0.218 expl=42
+  [113/750] 55 min  p3 α=0.25 POMCPOW dynprofit q=30000 seed=4008  disc=-0.222 expl=28
+  [114/750] 55 min  p2 α=1.00 POMCPOW dynprofit q=30000 seed=4006  disc=-0.621 expl=30
+  [115/750] 55 min  p3 α=0.25 POMCPOW dynprofit q=30000 seed=4005  disc=-0.428 expl=35
+  [116/750] 56 min  p3 α=0.25 POMCPOW dynprofit q=30000 seed=4004  disc=-0.165 expl=34
+  [117/750] 56 min  p3 α=0.25 POMCPOW dynprofit q=30000 seed=4006  disc=-0.372 expl=33
+  [118/750] 56 min  p3 α=0.25 POMCPOW dynprofit q=30000 seed=4010  disc=-0.097 expl=26
+  [119/750] 56 min  p3 α=0.25 POMCPOW dynprofit q=30000 seed=4009  disc=-0.397 expl=38
+  [120/750] 57 min  p3 α=0.25 POMCPOW dynprofit q=30000 seed=4007  disc=0.327 expl=52
+  [121/750] 68 min  p3 α=0.50 POMCPOW dynprofit q=30000 seed=4002  disc=0.053 expl=35
+  [122/750] 68 min  p3 α=0.50 POMCPOW dynprofit q=30000 seed=4003  disc=-0.658 expl=26
+  [123/750] 69 min  p3 α=0.50 POMCPOW dynprofit q=30000 seed=4010  disc=-0.072 expl=28
+  [124/750] 69 min  p3 α=0.50 POMCPOW dynprofit q=30000 seed=4005  disc=-0.730 expl=26
+  [125/750] 69 min  p3 α=0.75 POMCPOW dynprofit q=30000 seed=4002  disc=-0.113 expl=31
+  [126/750] 69 min  p3 α=0.75 POMCPOW dynprofit q=30000 seed=4005  disc=-0.876 expl=19
+  [127/750] 69 min  p3 α=0.50 POMCPOW dynprofit q=30000 seed=4004  disc=-0.249 expl=35
+  [128/750] 69 min  p3 α=0.75 POMCPOW dynprofit q=30000 seed=4004  disc=-0.742 expl=26
+  [129/750] 69 min  p3 α=0.75 POMCPOW dynprofit q=30000 seed=4003  disc=-0.835 expl=23
+  [130/750] 69 min  p3 α=0.50 POMCPOW dynprofit q=30000 seed=4009  disc=-0.604 expl=34
+  [131/750] 69 min  p3 α=0.75 POMCPOW dynprofit q=30000 seed=4001  disc=0.723 expl=32
+  [132/750] 69 min  p3 α=0.50 POMCPOW dynprofit q=30000 seed=4006  disc=-0.575 expl=29
+  [133/750] 69 min  p3 α=0.50 POMCPOW dynprofit q=30000 seed=4008  disc=0.074 expl=30
+  [134/750] 69 min  p3 α=0.75 POMCPOW dynprofit q=30000 seed=4009  disc=-0.903 expl=23
+  [135/750] 69 min  p3 α=0.50 POMCPOW dynprofit q=30000 seed=4001  disc=0.507 expl=40
+  [136/750] 69 min  p3 α=0.50 POMCPOW dynprofit q=30000 seed=4007  disc=0.907 expl=45
+  [137/750] 69 min  p3 α=1.00 POMCPOW dynprofit q=30000 seed=4005  disc=-0.715 expl=25
+  [138/750] 69 min  p3 α=0.75 POMCPOW dynprofit q=30000 seed=4008  disc=0.023 expl=36
+  [139/750] 69 min  p3 α=0.75 POMCPOW dynprofit q=30000 seed=4006  disc=-0.711 expl=22
+  [140/750] 69 min  p3 α=1.00 POMCPOW dynprofit q=30000 seed=4010  disc=-0.713 expl=27
+  [141/750] 69 min  p3 α=1.00 POMCPOW dynprofit q=30000 seed=4003  disc=-0.741 expl=35
+  [142/750] 69 min  p3 α=1.00 POMCPOW dynprofit q=30000 seed=4009  disc=-1.110 expl=21
+  [143/750] 70 min  p3 α=1.00 POMCPOW dynprofit q=30000 seed=4004  disc=-0.627 expl=26
+  [144/750] 70 min  p3 α=1.00 POMCPOW dynprofit q=30000 seed=4008  disc=0.169 expl=35
+  [145/750] 70 min  p3 α=1.00 POMCPOW dynprofit q=30000 seed=4006  disc=-0.571 expl=36
+  [146/750] 70 min  p3 α=1.00 POMCPOW dynprofit q=30000 seed=4002  disc=0.127 expl=31
+  [147/750] 70 min  p3 α=0.75 POMCPOW dynprofit q=30000 seed=4010  disc=0.259 expl=32
+  [148/750] 70 min  p4 α=0.00 POMCPOW dynprofit q=30000 seed=4003  disc=-0.310 expl=23
+  [149/750] 70 min  p4 α=0.00 POMCPOW dynprofit q=30000 seed=4001  disc=-0.207 expl=30
+  [150/750] 70 min  p4 α=0.00 POMCPOW dynprofit q=30000 seed=4004  disc=-0.268 expl=25
+  [151/750] 70 min  p3 α=1.00 POMCPOW dynprofit q=30000 seed=4001  disc=1.342 expl=37
+  [152/750] 70 min  p3 α=0.75 POMCPOW dynprofit q=30000 seed=4007  disc=1.248 expl=59
+  [153/750] 70 min  p4 α=0.00 POMCPOW dynprofit q=30000 seed=4005  disc=-0.230 expl=31
+  [154/750] 70 min  p4 α=0.00 POMCPOW dynprofit q=30000 seed=4007  disc=-0.322 expl=20
+  [155/750] 70 min  p4 α=0.00 POMCPOW dynprofit q=30000 seed=4006  disc=-0.314 expl=29
+  [156/750] 70 min  p4 α=0.00 POMCPOW dynprofit q=30000 seed=4002  disc=-0.326 expl=28
+  [157/750] 70 min  p3 α=1.00 POMCPOW dynprofit q=30000 seed=4007  disc=-0.267 expl=34
+  [158/750] 71 min  p4 α=0.00 POMCPOW dynprofit q=30000 seed=4008  disc=-0.275 expl=27
+  [159/750] 71 min  p4 α=0.00 POMCPOW dynprofit q=30000 seed=4010  disc=-0.353 expl=33
+  [160/750] 71 min  p4 α=0.00 POMCPOW dynprofit q=30000 seed=4009  disc=-0.324 expl=30
+  [161/750] 81 min  p4 α=0.25 POMCPOW dynprofit q=30000 seed=4001  disc=-0.620 expl=18
+  [162/750] 81 min  p4 α=0.25 POMCPOW dynprofit q=30000 seed=4002  disc=-0.339 expl=30
+  [163/750] 82 min  p4 α=0.25 POMCPOW dynprofit q=30000 seed=4003  disc=-0.504 expl=32
+  [164/750] 82 min  p4 α=0.25 POMCPOW dynprofit q=30000 seed=4010  disc=-0.253 expl=29
+  [165/750] 82 min  p4 α=0.25 POMCPOW dynprofit q=30000 seed=4006  disc=-0.481 expl=36
+  [166/750] 82 min  p4 α=0.25 POMCPOW dynprofit q=30000 seed=4005  disc=-0.779 expl=20
+  [167/750] 82 min  p4 α=0.25 POMCPOW dynprofit q=30000 seed=4004  disc=-0.721 expl=21
+  [168/750] 82 min  p4 α=0.50 POMCPOW dynprofit q=30000 seed=4001  disc=-0.411 expl=22
+  [169/750] 82 min  p4 α=0.50 POMCPOW dynprofit q=30000 seed=4003  disc=-0.720 expl=31
+  [170/750] 82 min  p4 α=0.25 POMCPOW dynprofit q=30000 seed=4009  disc=-0.521 expl=30
+  [171/750] 82 min  p4 α=0.25 POMCPOW dynprofit q=30000 seed=4008  disc=-0.651 expl=27
+  [172/750] 82 min  p4 α=0.25 POMCPOW dynprofit q=30000 seed=4007  disc=-0.577 expl=30
+  [173/750] 82 min  p4 α=0.50 POMCPOW dynprofit q=30000 seed=4009  disc=-0.816 expl=30
+  [174/750] 82 min  p4 α=0.50 POMCPOW dynprofit q=30000 seed=4004  disc=-1.237 expl=24
+  [175/750] 82 min  p4 α=0.50 POMCPOW dynprofit q=30000 seed=4010  disc=-0.161 expl=35
+  [176/750] 82 min  p4 α=0.50 POMCPOW dynprofit q=30000 seed=4007  disc=-0.807 expl=28
+  [177/750] 82 min  p4 α=0.75 POMCPOW dynprofit q=30000 seed=4004  disc=-1.720 expl=18
+  [178/750] 82 min  p4 α=0.50 POMCPOW dynprofit q=30000 seed=4008  disc=-1.029 expl=26
+  [179/750] 83 min  p4 α=0.50 POMCPOW dynprofit q=30000 seed=4002  disc=-0.372 expl=26
+  [180/750] 83 min  p4 α=0.75 POMCPOW dynprofit q=30000 seed=4002  disc=-0.437 expl=23
+  [181/750] 83 min  p4 α=0.50 POMCPOW dynprofit q=30000 seed=4005  disc=-1.364 expl=23
+  [182/750] 83 min  p4 α=0.75 POMCPOW dynprofit q=30000 seed=4003  disc=-0.917 expl=26
+  [183/750] 83 min  p4 α=0.75 POMCPOW dynprofit q=30000 seed=4001  disc=-1.439 expl=19
+  [184/750] 83 min  p4 α=0.75 POMCPOW dynprofit q=30000 seed=4008  disc=-1.401 expl=18
+  [185/750] 83 min  p4 α=0.50 POMCPOW dynprofit q=30000 seed=4006  disc=-0.641 expl=31
+  [186/750] 83 min  p4 α=0.75 POMCPOW dynprofit q=30000 seed=4005  disc=-1.119 expl=26
+  [187/750] 83 min  p4 α=0.75 POMCPOW dynprofit q=30000 seed=4007  disc=-1.089 expl=23
+  [188/750] 83 min  p4 α=1.00 POMCPOW dynprofit q=30000 seed=4001  disc=-1.852 expl=19
+  [189/750] 83 min  p4 α=0.75 POMCPOW dynprofit q=30000 seed=4006  disc=-0.756 expl=27
+  [190/750] 83 min  p4 α=1.00 POMCPOW dynprofit q=30000 seed=4003  disc=-1.143 expl=30
+  [191/750] 83 min  p4 α=1.00 POMCPOW dynprofit q=30000 seed=4004  disc=-1.993 expl=29
+  [192/750] 84 min  p4 α=0.75 POMCPOW dynprofit q=30000 seed=4009  disc=-0.972 expl=30
+  [193/750] 84 min  p4 α=0.75 POMCPOW dynprofit q=30000 seed=4010  disc=-0.057 expl=25
+  [194/750] 84 min  p4 α=1.00 POMCPOW dynprofit q=30000 seed=4008  disc=-1.748 expl=27
+  [195/750] 84 min  p4 α=1.00 POMCPOW dynprofit q=30000 seed=4006  disc=-0.868 expl=25
+  [196/750] 84 min  p4 α=1.00 POMCPOW dynprofit q=30000 seed=4005  disc=-1.326 expl=28
+  [197/750] 84 min  p4 α=1.00 POMCPOW dynprofit q=30000 seed=4007  disc=-1.332 expl=21
+  [198/750] 84 min  p4 α=1.00 POMCPOW dynprofit q=30000 seed=4002  disc=-0.190 expl=32
+  [199/750] 84 min  p4 α=1.00 POMCPOW dynprofit q=30000 seed=4009  disc=-1.101 expl=26
+  [200/750] 85 min  p4 α=1.00 POMCPOW dynprofit q=30000 seed=4010  disc=0.138 expl=25
+  [201/750] 96 min  p6 α=0.00 POMCPOW dynprofit q=30000 seed=4002  disc=-0.326 expl=32
+  [202/750] 97 min  p6 α=0.00 POMCPOW dynprofit q=30000 seed=4003  disc=-0.310 expl=29
+  [203/750] 97 min  p6 α=0.00 POMCPOW dynprofit q=30000 seed=4006  disc=-0.314 expl=31
+  [204/750] 97 min  p6 α=0.00 POMCPOW dynprofit q=30000 seed=4009  disc=-0.324 expl=24
+  [205/750] 97 min  p6 α=0.00 POMCPOW dynprofit q=30000 seed=4004  disc=-0.268 expl=29
+  [206/750] 97 min  p6 α=0.00 POMCPOW dynprofit q=30000 seed=4005  disc=-0.230 expl=31
+  [207/750] 97 min  p6 α=0.00 POMCPOW dynprofit q=30000 seed=4010  disc=-0.353 expl=32
+  [208/750] 97 min  p6 α=0.00 POMCPOW dynprofit q=30000 seed=4007  disc=-0.322 expl=23
+  [209/750] 97 min  p6 α=0.00 POMCPOW dynprofit q=30000 seed=4001  disc=-0.207 expl=34
+  [210/750] 97 min  p6 α=0.25 POMCPOW dynprofit q=30000 seed=4002  disc=-0.297 expl=28
+  [211/750] 97 min  p6 α=0.00 POMCPOW dynprofit q=30000 seed=4008  disc=-0.275 expl=29
+  [212/750] 97 min  p6 α=0.25 POMCPOW dynprofit q=30000 seed=4005  disc=-0.428 expl=37
+  [213/750] 97 min  p6 α=0.25 POMCPOW dynprofit q=30000 seed=4006  disc=-0.368 expl=22
+  [214/750] 97 min  p6 α=0.50 POMCPOW dynprofit q=30000 seed=4002  disc=-0.435 expl=35
+  [215/750] 97 min  p6 α=0.25 POMCPOW dynprofit q=30000 seed=4007  disc=-0.328 expl=26
+  [216/750] 97 min  p6 α=0.25 POMCPOW dynprofit q=30000 seed=4008  disc=-0.600 expl=16
+  [217/750] 98 min  p6 α=0.25 POMCPOW dynprofit q=30000 seed=4003  disc=-0.472 expl=14
+  [218/750] 98 min  p6 α=0.25 POMCPOW dynprofit q=30000 seed=4004  disc=-0.678 expl=16
+  [219/750] 98 min  p6 α=0.25 POMCPOW dynprofit q=30000 seed=4009  disc=-0.508 expl=24
+  [220/750] 98 min  p6 α=0.50 POMCPOW dynprofit q=30000 seed=4001  disc=-1.056 expl=14
+  [221/750] 98 min  p6 α=0.50 POMCPOW dynprofit q=30000 seed=4010  disc=-0.190 expl=29
+  [222/750] 98 min  p6 α=0.50 POMCPOW dynprofit q=30000 seed=4003  disc=-0.744 expl=13
+  [223/750] 98 min  p6 α=0.50 POMCPOW dynprofit q=30000 seed=4004  disc=-1.266 expl=16
+  [224/750] 98 min  p6 α=0.50 POMCPOW dynprofit q=30000 seed=4006  disc=-0.670 expl=26
+  [225/750] 98 min  p6 α=0.25 POMCPOW dynprofit q=30000 seed=4010  disc=-0.189 expl=24
+  [226/750] 98 min  p6 α=0.25 POMCPOW dynprofit q=30000 seed=4001  disc=0.274 expl=39
+  [227/750] 98 min  p6 α=0.75 POMCPOW dynprofit q=30000 seed=4002  disc=-0.486 expl=22
+  [228/750] 98 min  p6 α=0.50 POMCPOW dynprofit q=30000 seed=4007  disc=-0.866 expl=19
+  [229/750] 98 min  p6 α=0.50 POMCPOW dynprofit q=30000 seed=4005  disc=-1.419 expl=9
+  [230/750] 98 min  p6 α=0.50 POMCPOW dynprofit q=30000 seed=4008  disc=-1.057 expl=16
+  [231/750] 99 min  p6 α=0.75 POMCPOW dynprofit q=30000 seed=4003  disc=-0.962 expl=19
+  [232/750] 99 min  p6 α=0.75 POMCPOW dynprofit q=30000 seed=4007  disc=-1.137 expl=23
+  [233/750] 99 min  p6 α=0.50 POMCPOW dynprofit q=30000 seed=4009  disc=-0.847 expl=22
+  [234/750] 99 min  p6 α=0.75 POMCPOW dynprofit q=30000 seed=4001  disc=-1.478 expl=11
+  [235/750] 99 min  p6 α=0.75 POMCPOW dynprofit q=30000 seed=4005  disc=-2.012 expl=8
+  [236/750] 99 min  p6 α=0.75 POMCPOW dynprofit q=30000 seed=4009  disc=-1.105 expl=19
+  [237/750] 100 min  p6 α=0.75 POMCPOW dynprofit q=30000 seed=4008  disc=-1.450 expl=20
+  [238/750] 100 min  p6 α=0.75 POMCPOW dynprofit q=30000 seed=4006  disc=-0.842 expl=17
+  [239/750] 100 min  p6 α=0.75 POMCPOW dynprofit q=30000 seed=4010  disc=-0.108 expl=27
+  [240/750] 100 min  p6 α=0.75 POMCPOW dynprofit q=30000 seed=4004  disc=-1.764 expl=19
+  [241/750] 110 min  p6 α=1.00 POMCPOW dynprofit q=30000 seed=4002  disc=-0.543 expl=25
+  [242/750] 111 min  p6 α=1.00 POMCPOW dynprofit q=30000 seed=4004  disc=-2.268 expl=19
+  [243/750] 111 min  p6 α=1.00 POMCPOW dynprofit q=30000 seed=4001  disc=-1.900 expl=9
+  [244/750] 111 min  p6 α=1.00 POMCPOW dynprofit q=30000 seed=4007  disc=-1.415 expl=26
+  [245/750] 111 min  p1 α=0.00 POMCPOW alphaaware q=30000 seed=4006  disc=-0.297 expl=32
+  [246/750] 112 min  p6 α=1.00 POMCPOW dynprofit q=30000 seed=4008  disc=-1.843 expl=19
+  [247/750] 112 min  p1 α=0.25 POMCPOW alphaaware q=30000 seed=4002  disc=-0.363 expl=23
+  [248/750] 112 min  p1 α=0.00 POMCPOW alphaaware q=30000 seed=4008  disc=-0.246 expl=34
+  [249/750] 112 min  p1 α=0.25 POMCPOW alphaaware q=30000 seed=4007  disc=-0.576 expl=15
+  [250/750] 113 min  p6 α=1.00 POMCPOW dynprofit q=30000 seed=4003  disc=-1.179 expl=18
+  [251/750] 113 min  p6 α=1.00 POMCPOW dynprofit q=30000 seed=4005  disc=-2.614 expl=16
+  [252/750] 113 min  p1 α=0.50 POMCPOW alphaaware q=30000 seed=4001  disc=-1.059 expl=15
+  [253/750] 113 min  p1 α=0.25 POMCPOW alphaaware q=30000 seed=4008  disc=-0.651 expl=21
+  [254/750] 113 min  p1 α=0.50 POMCPOW alphaaware q=30000 seed=4002  disc=-0.433 expl=24
+  [255/750] 113 min  p1 α=0.00 POMCPOW alphaaware q=30000 seed=4010  disc=-0.197 expl=42
+  [256/750] 113 min  p6 α=1.00 POMCPOW dynprofit q=30000 seed=4010  disc=-0.029 expl=25
+  [257/750] 113 min  p1 α=0.00 POMCPOW alphaaware q=30000 seed=4004  disc=-0.243 expl=33
+  [258/750] 113 min  p6 α=1.00 POMCPOW dynprofit q=30000 seed=4006  disc=-1.028 expl=28
+  [259/750] 113 min  p1 α=0.25 POMCPOW alphaaware q=30000 seed=4005  disc=-0.811 expl=20
+  [260/750] 113 min  p1 α=0.25 POMCPOW alphaaware q=30000 seed=4001  disc=-0.615 expl=9
+  [261/750] 113 min  p1 α=0.00 POMCPOW alphaaware q=30000 seed=4003  disc=-0.295 expl=29
+  [262/750] 113 min  p1 α=0.00 POMCPOW alphaaware q=30000 seed=4007  disc=-0.305 expl=29
+  [263/750] 113 min  p1 α=0.00 POMCPOW alphaaware q=30000 seed=4001  disc=-0.193 expl=29
+  [264/750] 114 min  p1 α=0.00 POMCPOW alphaaware q=30000 seed=4005  disc=-0.204 expl=26
+  [265/750] 114 min  p1 α=0.50 POMCPOW alphaaware q=30000 seed=4005  disc=-1.423 expl=15
+  [266/750] 114 min  p1 α=0.25 POMCPOW alphaaware q=30000 seed=4010  disc=-0.255 expl=21
+  [267/750] 114 min  p1 α=0.25 POMCPOW alphaaware q=30000 seed=4006  disc=-0.476 expl=26
+  [268/750] 114 min  p6 α=1.00 POMCPOW dynprofit q=30000 seed=4009  disc=-1.370 expl=21
+  [269/750] 114 min  p1 α=0.50 POMCPOW alphaaware q=30000 seed=4009  disc=-0.845 expl=23
+  [270/750] 114 min  p1 α=0.50 POMCPOW alphaaware q=30000 seed=4004  disc=-1.267 expl=20
+  [271/750] 114 min  p1 α=0.25 POMCPOW alphaaware q=30000 seed=4003  disc=-0.512 expl=23
+  [272/750] 114 min  p1 α=0.00 POMCPOW alphaaware q=30000 seed=4002  disc=-0.161 expl=41
+  [273/750] 115 min  p1 α=0.50 POMCPOW alphaaware q=30000 seed=4006  disc=-0.670 expl=27
+  [274/750] 115 min  p1 α=0.00 POMCPOW alphaaware q=30000 seed=4009  disc=-0.277 expl=32
+  [275/750] 115 min  p1 α=0.25 POMCPOW alphaaware q=30000 seed=4004  disc=-0.751 expl=22
+  [276/750] 115 min  p1 α=0.50 POMCPOW alphaaware q=30000 seed=4003  disc=-0.746 expl=20
+  [277/750] 115 min  p1 α=0.25 POMCPOW alphaaware q=30000 seed=4009  disc=-0.568 expl=22
+  [278/750] 116 min  p1 α=0.50 POMCPOW alphaaware q=30000 seed=4010  disc=-0.191 expl=27
+  [279/750] 116 min  p1 α=0.50 POMCPOW alphaaware q=30000 seed=4008  disc=-1.060 expl=23
+  [280/750] 116 min  p1 α=0.50 POMCPOW alphaaware q=30000 seed=4007  disc=-0.869 expl=27
+  [281/750] 125 min  p1 α=0.75 POMCPOW alphaaware q=30000 seed=4002  disc=-0.437 expl=26
+  [282/750] 125 min  p1 α=0.75 POMCPOW alphaaware q=30000 seed=4003  disc=-0.915 expl=19
+  [283/750] 126 min  p1 α=0.75 POMCPOW alphaaware q=30000 seed=4001  disc=-0.379 expl=19
+  [284/750] 126 min  p1 α=0.75 POMCPOW alphaaware q=30000 seed=4004  disc=-1.598 expl=28
+  [285/750] 126 min  p1 α=0.75 POMCPOW alphaaware q=30000 seed=4005  disc=-1.301 expl=25
+  [286/750] 126 min  p1 α=0.75 POMCPOW alphaaware q=30000 seed=4007  disc=-1.094 expl=25
+  [287/750] 126 min  p1 α=0.75 POMCPOW alphaaware q=30000 seed=4006  disc=-0.799 expl=25
+  [288/750] 126 min  p1 α=0.75 POMCPOW alphaaware q=30000 seed=4008  disc=-1.402 expl=21
+  [289/750] 127 min  p1 α=0.75 POMCPOW alphaaware q=30000 seed=4010  disc=-0.064 expl=27
+  [290/750] 127 min  p1 α=0.75 POMCPOW alphaaware q=30000 seed=4009  disc=-1.061 expl=28
+  [291/750] 128 min  p1 α=1.00 POMCPOW alphaaware q=30000 seed=4001  disc=-0.359 expl=25
+  [292/750] 128 min  p1 α=1.00 POMCPOW alphaaware q=30000 seed=4005  disc=-1.276 expl=23
+  [293/750] 128 min  p1 α=1.00 POMCPOW alphaaware q=30000 seed=4006  disc=-0.919 expl=28
+  [294/750] 128 min  p1 α=1.00 POMCPOW alphaaware q=30000 seed=4010  disc=0.132 expl=30
+  [295/750] 128 min  p1 α=1.00 POMCPOW alphaaware q=30000 seed=4007  disc=-1.334 expl=24
+  [296/750] 128 min  p1 α=1.00 POMCPOW alphaaware q=30000 seed=4003  disc=-1.075 expl=22
+  [297/750] 128 min  p1 α=1.00 POMCPOW alphaaware q=30000 seed=4008  disc=-0.450 expl=27
+  [298/750] 128 min  p2 α=0.00 POMCPOW alphaaware q=30000 seed=4002  disc=-0.268 expl=29
+  [299/750] 128 min  p2 α=0.00 POMCPOW alphaaware q=30000 seed=4001  disc=-0.186 expl=34
+  [300/750] 128 min  p1 α=1.00 POMCPOW alphaaware q=30000 seed=4009  disc=-1.297 expl=30
+  [301/750] 128 min  p1 α=1.00 POMCPOW alphaaware q=30000 seed=4004  disc=-2.168 expl=17
+  [302/750] 128 min  p2 α=0.00 POMCPOW alphaaware q=30000 seed=4004  disc=-0.255 expl=27
+  [303/750] 128 min  p2 α=0.00 POMCPOW alphaaware q=30000 seed=4007  disc=-0.305 expl=35
+  [304/750] 129 min  p1 α=1.00 POMCPOW alphaaware q=30000 seed=4002  disc=-0.433 expl=29
+  [305/750] 129 min  p2 α=0.00 POMCPOW alphaaware q=30000 seed=4006  disc=-0.297 expl=25
+  [306/750] 129 min  p2 α=0.00 POMCPOW alphaaware q=30000 seed=4003  disc=-0.295 expl=22
+  [307/750] 129 min  p2 α=0.00 POMCPOW alphaaware q=30000 seed=4005  disc=-0.215 expl=30
+  [308/750] 129 min  p2 α=0.00 POMCPOW alphaaware q=30000 seed=4008  disc=-0.246 expl=30
+  [309/750] 129 min  p2 α=0.25 POMCPOW alphaaware q=30000 seed=4003  disc=-0.476 expl=27
+  [310/750] 130 min  p2 α=0.00 POMCPOW alphaaware q=30000 seed=4010  disc=-0.197 expl=40
+  [311/750] 130 min  p2 α=0.25 POMCPOW alphaaware q=30000 seed=4001  disc=0.093 expl=42
+  [312/750] 130 min  p2 α=0.25 POMCPOW alphaaware q=30000 seed=4002  disc=-0.263 expl=27
+  [313/750] 130 min  p2 α=0.00 POMCPOW alphaaware q=30000 seed=4009  disc=-0.147 expl=44
+  [314/750] 130 min  p2 α=0.25 POMCPOW alphaaware q=30000 seed=4005  disc=-0.536 expl=29
+  [315/750] 130 min  p2 α=0.25 POMCPOW alphaaware q=30000 seed=4007  disc=-0.512 expl=34
+  [316/750] 130 min  p2 α=0.25 POMCPOW alphaaware q=30000 seed=4004  disc=-0.509 expl=29
+  [317/750] 130 min  p2 α=0.25 POMCPOW alphaaware q=30000 seed=4008  disc=-0.251 expl=32
+  [318/750] 130 min  p2 α=0.25 POMCPOW alphaaware q=30000 seed=4006  disc=-0.420 expl=27
+  [319/750] 131 min  p2 α=0.25 POMCPOW alphaaware q=30000 seed=4009  disc=-0.525 expl=30
+  [320/750] 131 min  p2 α=0.25 POMCPOW alphaaware q=30000 seed=4010  disc=-0.206 expl=27
+  [321/750] 139 min  p2 α=0.50 POMCPOW alphaaware q=30000 seed=4001  disc=0.449 expl=39
+  [322/750] 140 min  p2 α=0.50 POMCPOW alphaaware q=30000 seed=4002  disc=-0.258 expl=44
+  [323/750] 140 min  p2 α=0.50 POMCPOW alphaaware q=30000 seed=4004  disc=-0.874 expl=39
+  [324/750] 140 min  p2 α=0.50 POMCPOW alphaaware q=30000 seed=4003  disc=-0.513 expl=22
+  [325/750] 140 min  p2 α=0.50 POMCPOW alphaaware q=30000 seed=4005  disc=-0.710 expl=27
+  [326/750] 141 min  p2 α=0.50 POMCPOW alphaaware q=30000 seed=4006  disc=-0.429 expl=33
+  [327/750] 141 min  p2 α=0.50 POMCPOW alphaaware q=30000 seed=4007  disc=-0.126 expl=38
+  [328/750] 141 min  p2 α=0.50 POMCPOW alphaaware q=30000 seed=4008  disc=-0.333 expl=34
+  [329/750] 142 min  p2 α=0.50 POMCPOW alphaaware q=30000 seed=4009  disc=-0.740 expl=26
+  [330/750] 142 min  p2 α=0.75 POMCPOW alphaaware q=30000 seed=4003  disc=-0.836 expl=24
+  [331/750] 142 min  p2 α=0.75 POMCPOW alphaaware q=30000 seed=4004  disc=-0.899 expl=26
+  [332/750] 142 min  p2 α=0.75 POMCPOW alphaaware q=30000 seed=4002  disc=-0.032 expl=33
+  [333/750] 142 min  p2 α=0.75 POMCPOW alphaaware q=30000 seed=4005  disc=-0.912 expl=23
+  [334/750] 143 min  p2 α=0.50 POMCPOW alphaaware q=30000 seed=4010  disc=0.117 expl=27
+  [335/750] 143 min  p2 α=1.00 POMCPOW alphaaware q=30000 seed=4002  disc=-0.321 expl=31
+  [336/750] 143 min  p2 α=1.00 POMCPOW alphaaware q=30000 seed=4005  disc=-1.051 expl=22
+  [337/750] 143 min  p2 α=0.75 POMCPOW alphaaware q=30000 seed=4008  disc=-0.544 expl=28
+  [338/750] 143 min  p2 α=0.75 POMCPOW alphaaware q=30000 seed=4010  disc=0.063 expl=30
+  [339/750] 143 min  p2 α=0.75 POMCPOW alphaaware q=30000 seed=4007  disc=-0.965 expl=24
+  [340/750] 143 min  p2 α=1.00 POMCPOW alphaaware q=30000 seed=4003  disc=-0.266 expl=33
+  [341/750] 143 min  p2 α=0.75 POMCPOW alphaaware q=30000 seed=4001  disc=0.258 expl=37
+  [342/750] 143 min  p2 α=0.75 POMCPOW alphaaware q=30000 seed=4009  disc=-0.903 expl=26
+  [343/750] 143 min  p2 α=0.75 POMCPOW alphaaware q=30000 seed=4006  disc=-0.713 expl=30
+  [344/750] 143 min  p2 α=1.00 POMCPOW alphaaware q=30000 seed=4006  disc=-0.613 expl=22
+  [345/750] 143 min  p2 α=1.00 POMCPOW alphaaware q=30000 seed=4004  disc=-0.739 expl=23
+  [346/750] 143 min  p2 α=1.00 POMCPOW alphaaware q=30000 seed=4009  disc=-0.971 expl=24
+  [347/750] 143 min  p2 α=1.00 POMCPOW alphaaware q=30000 seed=4007  disc=-0.448 expl=24
+  [348/750] 144 min  p2 α=1.00 POMCPOW alphaaware q=30000 seed=4008  disc=-0.180 expl=33
+  [349/750] 144 min  p2 α=1.00 POMCPOW alphaaware q=30000 seed=4001  disc=0.495 expl=37
+  [350/750] 144 min  p3 α=0.00 POMCPOW alphaaware q=30000 seed=4001  disc=-0.193 expl=25
+  [351/750] 144 min  p2 α=1.00 POMCPOW alphaaware q=30000 seed=4010  disc=0.263 expl=26
+  [352/750] 144 min  p3 α=0.00 POMCPOW alphaaware q=30000 seed=4002  disc=-0.281 expl=33
+  [353/750] 145 min  p3 α=0.00 POMCPOW alphaaware q=30000 seed=4004  disc=-0.243 expl=33
+  [354/750] 145 min  p3 α=0.00 POMCPOW alphaaware q=30000 seed=4003  disc=-0.295 expl=25
+  [355/750] 145 min  p3 α=0.00 POMCPOW alphaaware q=30000 seed=4008  disc=-0.262 expl=29
+  [356/750] 145 min  p3 α=0.00 POMCPOW alphaaware q=30000 seed=4005  disc=-0.215 expl=28
+  [357/750] 145 min  p3 α=0.00 POMCPOW alphaaware q=30000 seed=4006  disc=-0.297 expl=26
+  [358/750] 145 min  p3 α=0.00 POMCPOW alphaaware q=30000 seed=4007  disc=-0.305 expl=26
+  [359/750] 146 min  p3 α=0.00 POMCPOW alphaaware q=30000 seed=4009  disc=0.000 expl=64
+  [360/750] 147 min  p3 α=0.00 POMCPOW alphaaware q=30000 seed=4010  disc=-0.197 expl=38
+  [361/750] 154 min  p3 α=0.25 POMCPOW alphaaware q=30000 seed=4001  disc=0.245 expl=43
+  [362/750] 155 min  p3 α=0.25 POMCPOW alphaaware q=30000 seed=4002  disc=0.045 expl=36
+  [363/750] 155 min  p3 α=0.25 POMCPOW alphaaware q=30000 seed=4003  disc=-0.321 expl=32
+  [364/750] 155 min  p3 α=0.25 POMCPOW alphaaware q=30000 seed=4004  disc=-0.278 expl=35
+  [365/750] 155 min  p3 α=0.25 POMCPOW alphaaware q=30000 seed=4006  disc=0.024 expl=32
+  [366/750] 156 min  p3 α=0.25 POMCPOW alphaaware q=30000 seed=4005  disc=-0.426 expl=30
+  [367/750] 156 min  p3 α=0.25 POMCPOW alphaaware q=30000 seed=4007  disc=0.208 expl=57
+  [368/750] 157 min  p3 α=0.25 POMCPOW alphaaware q=30000 seed=4010  disc=0.394 expl=38
+  [369/750] 157 min  p3 α=0.25 POMCPOW alphaaware q=30000 seed=4008  disc=-0.189 expl=36
+  [370/750] 157 min  p3 α=0.50 POMCPOW alphaaware q=30000 seed=4001  disc=0.613 expl=45
+  [371/750] 157 min  p3 α=0.50 POMCPOW alphaaware q=30000 seed=4007  disc=-0.381 expl=39
+  [372/750] 157 min  p3 α=0.50 POMCPOW alphaaware q=30000 seed=4003  disc=-0.540 expl=33
+  [373/750] 157 min  p3 α=0.50 POMCPOW alphaaware q=30000 seed=4002  disc=0.050 expl=31
+  [374/750] 157 min  p3 α=0.50 POMCPOW alphaaware q=30000 seed=4010  disc=-0.071 expl=24
+  [375/750] 157 min  p3 α=0.50 POMCPOW alphaaware q=30000 seed=4005  disc=-0.526 expl=30
+  [376/750] 157 min  p3 α=0.50 POMCPOW alphaaware q=30000 seed=4006  disc=-0.458 expl=36
+  [377/750] 157 min  p3 α=0.25 POMCPOW alphaaware q=30000 seed=4009  disc=0.235 expl=43
+  [378/750] 157 min  p3 α=0.50 POMCPOW alphaaware q=30000 seed=4004  disc=-0.626 expl=28
+  [379/750] 157 min  p3 α=0.50 POMCPOW alphaaware q=30000 seed=4009  disc=-0.707 expl=27
+  [380/750] 158 min  p3 α=0.75 POMCPOW alphaaware q=30000 seed=4002  disc=-0.116 expl=31
+  [381/750] 158 min  p3 α=0.75 POMCPOW alphaaware q=30000 seed=4005  disc=-0.654 expl=30
+  [382/750] 158 min  p3 α=0.75 POMCPOW alphaaware q=30000 seed=4006  disc=-0.536 expl=27
+  [383/750] 158 min  p3 α=0.75 POMCPOW alphaaware q=30000 seed=4008  disc=-0.151 expl=34
+  [384/750] 158 min  p3 α=0.75 POMCPOW alphaaware q=30000 seed=4010  disc=0.215 expl=21
+  [385/750] 158 min  p3 α=0.75 POMCPOW alphaaware q=30000 seed=4004  disc=-0.191 expl=26
+  [386/750] 158 min  p3 α=0.75 POMCPOW alphaaware q=30000 seed=4003  disc=1.041 expl=44
+  [387/750] 158 min  p3 α=0.75 POMCPOW alphaaware q=30000 seed=4001  disc=0.591 expl=37
+  [388/750] 158 min  p3 α=0.50 POMCPOW alphaaware q=30000 seed=4008  disc=0.553 expl=44
+  [389/750] 158 min  p3 α=0.75 POMCPOW alphaaware q=30000 seed=4007  disc=-0.366 expl=26
+  [390/750] 159 min  p3 α=1.00 POMCPOW alphaaware q=30000 seed=4001  disc=1.333 expl=42
+  [391/750] 159 min  p3 α=0.75 POMCPOW alphaaware q=30000 seed=4009  disc=-0.557 expl=37
+  [392/750] 159 min  p3 α=1.00 POMCPOW alphaaware q=30000 seed=4002  disc=0.128 expl=31
+  [393/750] 159 min  p3 α=1.00 POMCPOW alphaaware q=30000 seed=4003  disc=-0.741 expl=35
+  [394/750] 159 min  p3 α=1.00 POMCPOW alphaaware q=30000 seed=4005  disc=-0.715 expl=25
+  [395/750] 160 min  p3 α=1.00 POMCPOW alphaaware q=30000 seed=4006  disc=-0.571 expl=36
+  [396/750] 160 min  p3 α=1.00 POMCPOW alphaaware q=30000 seed=4007  disc=-0.268 expl=35
+  [397/750] 160 min  p3 α=1.00 POMCPOW alphaaware q=30000 seed=4004  disc=-0.627 expl=26
+  [398/750] 160 min  p3 α=1.00 POMCPOW alphaaware q=30000 seed=4008  disc=-0.306 expl=26
+  [399/750] 160 min  p3 α=1.00 POMCPOW alphaaware q=30000 seed=4009  disc=-1.110 expl=21
+  [400/750] 161 min  p3 α=1.00 POMCPOW alphaaware q=30000 seed=4010  disc=-0.713 expl=27
+  [401/750] 168 min  p4 α=0.00 POMCPOW alphaaware q=30000 seed=4001  disc=-0.193 expl=30
+  [402/750] 169 min  p4 α=0.00 POMCPOW alphaaware q=30000 seed=4003  disc=-0.295 expl=32
+  [403/750] 169 min  p4 α=0.00 POMCPOW alphaaware q=30000 seed=4002  disc=-0.281 expl=30
+  [404/750] 169 min  p4 α=0.00 POMCPOW alphaaware q=30000 seed=4004  disc=-0.243 expl=31
+  [405/750] 170 min  p4 α=0.00 POMCPOW alphaaware q=30000 seed=4007  disc=-0.305 expl=25
+  [406/750] 170 min  p4 α=0.00 POMCPOW alphaaware q=30000 seed=4005  disc=-0.215 expl=30
+  [407/750] 170 min  p4 α=0.00 POMCPOW alphaaware q=30000 seed=4008  disc=-0.246 expl=35
+  [408/750] 170 min  p4 α=0.00 POMCPOW alphaaware q=30000 seed=4006  disc=-0.288 expl=32
+  [409/750] 171 min  p4 α=0.00 POMCPOW alphaaware q=30000 seed=4010  disc=-0.325 expl=25
+  [410/750] 171 min  p4 α=0.25 POMCPOW alphaaware q=30000 seed=4002  disc=-0.057 expl=34
+  [411/750] 171 min  p4 α=0.25 POMCPOW alphaaware q=30000 seed=4006  disc=-0.166 expl=38
+  [412/750] 171 min  p4 α=0.25 POMCPOW alphaaware q=30000 seed=4007  disc=0.148 expl=44
+  [413/750] 171 min  p4 α=0.25 POMCPOW alphaaware q=30000 seed=4010  disc=-0.047 expl=30
+  [414/750] 171 min  p4 α=0.25 POMCPOW alphaaware q=30000 seed=4005  disc=-0.277 expl=35
+  [415/750] 171 min  p4 α=0.25 POMCPOW alphaaware q=30000 seed=4003  disc=-0.206 expl=31
+  [416/750] 171 min  p4 α=0.25 POMCPOW alphaaware q=30000 seed=4004  disc=-0.216 expl=30
+  [417/750] 171 min  p4 α=0.50 POMCPOW alphaaware q=30000 seed=4003  disc=-0.631 expl=30
+  [418/750] 171 min  p4 α=0.25 POMCPOW alphaaware q=30000 seed=4009  disc=0.273 expl=52
+  [419/750] 171 min  p4 α=0.25 POMCPOW alphaaware q=30000 seed=4001  disc=-0.412 expl=21
+  [420/750] 171 min  p4 α=0.50 POMCPOW alphaaware q=30000 seed=4001  disc=0.246 expl=35
+  [421/750] 171 min  p4 α=0.50 POMCPOW alphaaware q=30000 seed=4002  disc=-0.285 expl=29
+  [422/750] 171 min  p4 α=0.25 POMCPOW alphaaware q=30000 seed=4008  disc=-0.280 expl=29
+  [423/750] 171 min  p4 α=0.50 POMCPOW alphaaware q=30000 seed=4005  disc=-0.680 expl=30
+  [424/750] 171 min  p4 α=0.50 POMCPOW alphaaware q=30000 seed=4007  disc=-0.715 expl=26
+  [425/750] 172 min  p4 α=0.50 POMCPOW alphaaware q=30000 seed=4008  disc=-0.942 expl=23
+  [426/750] 172 min  p4 α=0.50 POMCPOW alphaaware q=30000 seed=4009  disc=-0.669 expl=22
+  [427/750] 172 min  p4 α=0.50 POMCPOW alphaaware q=30000 seed=4004  disc=-0.965 expl=23
+  [428/750] 172 min  p4 α=0.00 POMCPOW alphaaware q=30000 seed=4009  disc=-0.161 expl=48
+  [429/750] 172 min  p4 α=0.50 POMCPOW alphaaware q=30000 seed=4010  disc=-0.069 expl=27
+  [430/750] 172 min  p4 α=0.50 POMCPOW alphaaware q=30000 seed=4006  disc=-0.543 expl=27
+  [431/750] 173 min  p4 α=0.75 POMCPOW alphaaware q=30000 seed=4003  disc=-1.376 expl=17
+  [432/750] 173 min  p4 α=0.75 POMCPOW alphaaware q=30000 seed=4001  disc=-0.616 expl=27
+  [433/750] 173 min  p4 α=0.75 POMCPOW alphaaware q=30000 seed=4002  disc=-0.816 expl=25
+  [434/750] 173 min  p4 α=0.75 POMCPOW alphaaware q=30000 seed=4004  disc=-1.120 expl=32
+  [435/750] 174 min  p4 α=0.75 POMCPOW alphaaware q=30000 seed=4005  disc=-1.221 expl=30
+  [436/750] 174 min  p4 α=0.75 POMCPOW alphaaware q=30000 seed=4008  disc=-1.016 expl=24
+  [437/750] 174 min  p4 α=0.75 POMCPOW alphaaware q=30000 seed=4009  disc=-1.579 expl=24
+  [438/750] 174 min  p4 α=0.75 POMCPOW alphaaware q=30000 seed=4006  disc=-0.954 expl=24
+  [439/750] 175 min  p4 α=0.75 POMCPOW alphaaware q=30000 seed=4007  disc=-0.903 expl=28
+  [440/750] 175 min  p4 α=0.75 POMCPOW alphaaware q=30000 seed=4010  disc=-1.058 expl=26
+  [441/750] 182 min  p4 α=1.00 POMCPOW alphaaware q=30000 seed=4001  disc=-1.852 expl=19
+  [442/750] 183 min  p4 α=1.00 POMCPOW alphaaware q=30000 seed=4002  disc=-0.190 expl=32
+  [443/750] 183 min  p4 α=1.00 POMCPOW alphaaware q=30000 seed=4003  disc=-1.143 expl=30
+  [444/750] 183 min  p4 α=1.00 POMCPOW alphaaware q=30000 seed=4004  disc=-1.993 expl=29
+  [445/750] 184 min  p4 α=1.00 POMCPOW alphaaware q=30000 seed=4007  disc=-1.332 expl=21
+  [446/750] 184 min  p4 α=1.00 POMCPOW alphaaware q=30000 seed=4005  disc=-1.326 expl=28
+  [447/750] 185 min  p4 α=1.00 POMCPOW alphaaware q=30000 seed=4006  disc=-0.868 expl=25
+  [448/750] 185 min  p4 α=1.00 POMCPOW alphaaware q=30000 seed=4008  disc=-1.748 expl=27
+  [449/750] 185 min  p4 α=1.00 POMCPOW alphaaware q=30000 seed=4009  disc=-1.101 expl=26
+  [450/750] 185 min  p6 α=0.00 POMCPOW alphaaware q=30000 seed=4001  disc=-0.207 expl=29
+  [451/750] 185 min  p6 α=0.00 POMCPOW alphaaware q=30000 seed=4007  disc=-0.322 expl=26
+  [452/750] 185 min  p6 α=0.00 POMCPOW alphaaware q=30000 seed=4008  disc=-0.275 expl=29
+  [453/750] 185 min  p6 α=0.00 POMCPOW alphaaware q=30000 seed=4003  disc=-0.310 expl=27
+  [454/750] 186 min  p6 α=0.00 POMCPOW alphaaware q=30000 seed=4004  disc=-0.268 expl=29
+  [455/750] 186 min  p6 α=0.00 POMCPOW alphaaware q=30000 seed=4002  disc=-0.326 expl=24
+  [456/750] 186 min  p6 α=0.00 POMCPOW alphaaware q=30000 seed=4009  disc=-0.324 expl=34
+  [457/750] 186 min  p6 α=0.25 POMCPOW alphaaware q=30000 seed=4002  disc=-0.143 expl=33
+  [458/750] 186 min  p6 α=0.25 POMCPOW alphaaware q=30000 seed=4003  disc=-0.222 expl=26
+  [459/750] 186 min  p6 α=0.00 POMCPOW alphaaware q=30000 seed=4005  disc=-0.230 expl=27
+  [460/750] 186 min  p6 α=0.25 POMCPOW alphaaware q=30000 seed=4005  disc=-0.438 expl=39
+  [461/750] 186 min  p6 α=0.00 POMCPOW alphaaware q=30000 seed=4006  disc=-0.314 expl=23
+  [462/750] 186 min  p6 α=0.00 POMCPOW alphaaware q=30000 seed=4010  disc=-0.353 expl=34
+  [463/750] 186 min  p4 α=1.00 POMCPOW alphaaware q=30000 seed=4010  disc=0.138 expl=25
+  [464/750] 187 min  p6 α=0.25 POMCPOW alphaaware q=30000 seed=4001  disc=0.298 expl=51
+  [465/750] 187 min  p6 α=0.25 POMCPOW alphaaware q=30000 seed=4006  disc=0.206 expl=42
+  [466/750] 187 min  p6 α=0.25 POMCPOW alphaaware q=30000 seed=4004  disc=-0.167 expl=41
+  [467/750] 187 min  p6 α=0.25 POMCPOW alphaaware q=30000 seed=4008  disc=-0.270 expl=35
+  [468/750] 187 min  p6 α=0.25 POMCPOW alphaaware q=30000 seed=4009  disc=0.242 expl=48
+  [469/750] 187 min  p6 α=0.25 POMCPOW alphaaware q=30000 seed=4010  disc=-0.055 expl=31
+  [470/750] 187 min  p6 α=0.50 POMCPOW alphaaware q=30000 seed=4002  disc=-0.430 expl=18
+  [471/750] 187 min  p6 α=0.25 POMCPOW alphaaware q=30000 seed=4007  disc=0.408 expl=46
+  [472/750] 187 min  p6 α=0.50 POMCPOW alphaaware q=30000 seed=4001  disc=-1.052 expl=5
+  [473/750] 188 min  p1 α=0.25 OneStepLookahead (AlphaAware) seed=4001  disc=-0.458 expl=0
+  [474/750] 188 min  p1 α=0.00 OneStepLookahead (AlphaAware) seed=4002  disc=0.000 expl=3
+  [475/750] 188 min  p1 α=0.00 OneStepLookahead (AlphaAware) seed=4003  disc=-0.095 expl=17
+  [476/750] 188 min  p1 α=0.00 OneStepLookahead (AlphaAware) seed=4001  disc=0.000 expl=28
+  [477/750] 188 min  p1 α=0.25 OneStepLookahead (AlphaAware) seed=4002  disc=-0.353 expl=0
+  [478/750] 188 min  p6 α=0.50 POMCPOW alphaaware q=30000 seed=4004  disc=-1.266 expl=17
+  [479/750] 188 min  p6 α=0.50 POMCPOW alphaaware q=30000 seed=4006  disc=-0.666 expl=20
+  [480/750] 188 min  p6 α=0.50 POMCPOW alphaaware q=30000 seed=4003  disc=-0.745 expl=18
+  [481/750] 188 min  p6 α=0.50 POMCPOW alphaaware q=30000 seed=4005  disc=-1.421 expl=11
+  [482/750] 189 min  p1 α=0.25 OneStepLookahead (AlphaAware) seed=4003  disc=-0.324 expl=1
+  [483/750] 189 min  p1 α=0.00 OneStepLookahead (AlphaAware) seed=4006  disc=0.000 expl=8
+  [484/750] 189 min  p1 α=0.00 OneStepLookahead (AlphaAware) seed=4010  disc=-0.183 expl=3
+  [485/750] 189 min  p1 α=0.25 OneStepLookahead (AlphaAware) seed=4005  disc=-0.692 expl=0
+  [486/750] 189 min  p1 α=0.00 OneStepLookahead (AlphaAware) seed=4004  disc=0.000 expl=14
+  [487/750] 189 min  p6 α=0.50 POMCPOW alphaaware q=30000 seed=4007  disc=-0.868 expl=23
+  [488/750] 189 min  p1 α=0.00 OneStepLookahead (AlphaAware) seed=4005  disc=0.000 expl=18
+  [489/750] 189 min  p1 α=0.25 OneStepLookahead (AlphaAware) seed=4004  disc=-0.459 expl=0
+  [490/750] 189 min  p1 α=0.00 OneStepLookahead (AlphaAware) seed=4007  disc=0.000 expl=5
+  [491/750] 189 min  p1 α=0.25 OneStepLookahead (AlphaAware) seed=4006  disc=-0.309 expl=1
+  [492/750] 189 min  p1 α=0.25 OneStepLookahead (AlphaAware) seed=4007  disc=-0.405 expl=1
+  [493/750] 189 min  p1 α=0.00 OneStepLookahead (AlphaAware) seed=4009  disc=0.000 expl=11
+  [494/750] 189 min  p1 α=0.25 OneStepLookahead (AlphaAware) seed=4008  disc=-0.432 expl=1
+  [495/750] 189 min  p1 α=0.50 OneStepLookahead (AlphaAware) seed=4005  disc=-0.976 expl=1
+  [496/750] 189 min  p1 α=0.00 OneStepLookahead (AlphaAware) seed=4008  disc=0.000 expl=9
+  [497/750] 189 min  p1 α=0.50 OneStepLookahead (AlphaAware) seed=4001  disc=-0.284 expl=1
+  [498/750] 189 min  p1 α=0.50 OneStepLookahead (AlphaAware) seed=4004  disc=-0.717 expl=1
+  [499/750] 189 min  p1 α=0.50 OneStepLookahead (AlphaAware) seed=4003  disc=-0.125 expl=2
+  [500/750] 189 min  p1 α=0.50 OneStepLookahead (AlphaAware) seed=4008  disc=-0.453 expl=1
+  [501/750] 189 min  p1 α=0.25 OneStepLookahead (AlphaAware) seed=4010  disc=-0.103 expl=1
+  [502/750] 189 min  p1 α=0.75 OneStepLookahead (AlphaAware) seed=4001  disc=-0.232 expl=2
+  [503/750] 189 min  p1 α=0.75 OneStepLookahead (AlphaAware) seed=4004  disc=-1.028 expl=1
+  [504/750] 189 min  p1 α=0.75 OneStepLookahead (AlphaAware) seed=4005  disc=-1.286 expl=2
+  [505/750] 189 min  p6 α=0.50 POMCPOW alphaaware q=30000 seed=4008  disc=-1.058 expl=21
+  [506/750] 189 min  p1 α=0.50 OneStepLookahead (AlphaAware) seed=4002  disc=-0.373 expl=0
+  [507/750] 189 min  p1 α=0.50 OneStepLookahead (AlphaAware) seed=4009  disc=-0.477 expl=0
+  [508/750] 189 min  p1 α=0.50 OneStepLookahead (AlphaAware) seed=4006  disc=-0.303 expl=1
+  [509/750] 189 min  p1 α=0.75 OneStepLookahead (AlphaAware) seed=4003  disc=-0.062 expl=2
+  [510/750] 189 min  p1 α=0.50 OneStepLookahead (AlphaAware) seed=4010  disc=0.182 expl=1
+  [511/750] 189 min  p1 α=0.75 OneStepLookahead (AlphaAware) seed=4002  disc=-0.394 expl=0
+  [512/750] 189 min  p1 α=0.50 OneStepLookahead (AlphaAware) seed=4007  disc=-0.491 expl=1
+  [513/750] 189 min  p1 α=1.00 OneStepLookahead (AlphaAware) seed=4001  disc=-0.441 expl=5
+  [514/750] 190 min  p1 α=0.75 OneStepLookahead (AlphaAware) seed=4009  disc=-0.915 expl=1
+  [515/750] 190 min  p1 α=1.00 OneStepLookahead (AlphaAware) seed=4004  disc=-1.242 expl=1
+  [516/750] 190 min  p1 α=0.75 OneStepLookahead (AlphaAware) seed=4008  disc=-0.495 expl=1
+  [517/750] 190 min  p1 α=1.00 OneStepLookahead (AlphaAware) seed=4005  disc=-1.763 expl=2
+  [518/750] 190 min  p1 α=0.75 OneStepLookahead (AlphaAware) seed=4006  disc=-0.298 expl=1
+  [519/750] 190 min  p1 α=0.75 OneStepLookahead (AlphaAware) seed=4007  disc=-0.577 expl=1
+  [520/750] 190 min  p1 α=1.00 OneStepLookahead (AlphaAware) seed=4003  disc=0.041 expl=2
+  [521/750] 190 min  p1 α=0.75 OneStepLookahead (AlphaAware) seed=4010  disc=0.450 expl=1
+  [522/750] 190 min  p1 α=1.00 OneStepLookahead (AlphaAware) seed=4002  disc=-0.414 expl=0
+  [523/750] 190 min  p1 α=1.00 OneStepLookahead (AlphaAware) seed=4008  disc=-0.538 expl=1
+  [524/750] 190 min  p1 α=1.00 OneStepLookahead (AlphaAware) seed=4006  disc=-0.292 expl=1
+  [525/750] 190 min  p1 α=1.00 OneStepLookahead (AlphaAware) seed=4009  disc=-1.105 expl=1
+  [526/750] 190 min  p1 α=1.00 OneStepLookahead (AlphaAware) seed=4010  disc=0.718 expl=1
+  [527/750] 190 min  p1 α=1.00 OneStepLookahead (AlphaAware) seed=4007  disc=-0.189 expl=1
+  [528/750] 190 min  p6 α=0.50 POMCPOW alphaaware q=30000 seed=4009  disc=-0.848 expl=26
+  [529/750] 190 min  p6 α=0.50 POMCPOW alphaaware q=30000 seed=4010  disc=-0.189 expl=20
+  [530/750] 190 min  p1 α=0.25 OneStepLookahead (AlphaAware) seed=4009  disc=0.270 expl=3
+  [531/750] 190 min  p2 α=0.25 OneStepLookahead (AlphaAware) seed=4002  disc=-0.226 expl=1
+  [532/750] 191 min  p2 α=0.25 OneStepLookahead (AlphaAware) seed=4003  disc=-0.273 expl=4
+  [533/750] 191 min  p2 α=0.25 OneStepLookahead (AlphaAware) seed=4005  disc=-0.528 expl=3
+  [534/750] 191 min  p2 α=0.25 OneStepLookahead (AlphaAware) seed=4004  disc=-0.343 expl=6
+  [535/750] 191 min  p2 α=0.25 OneStepLookahead (AlphaAware) seed=4006  disc=-0.102 expl=3
+  [536/750] 191 min  p2 α=0.25 OneStepLookahead (AlphaAware) seed=4008  disc=-0.012 expl=7
+  [537/750] 191 min  p2 α=0.25 OneStepLookahead (AlphaAware) seed=4007  disc=-0.135 expl=8
+  [538/750] 191 min  p2 α=0.00 OneStepLookahead (AlphaAware) seed=4002  disc=0.000 expl=3
+  [539/750] 191 min  p2 α=0.00 OneStepLookahead (AlphaAware) seed=4010  disc=-0.183 expl=3
+  [540/750] 191 min  p2 α=0.50 OneStepLookahead (AlphaAware) seed=4003  disc=-0.334 expl=3
+  [541/750] 191 min  p2 α=0.25 OneStepLookahead (AlphaAware) seed=4001  disc=0.101 expl=4
+  [542/750] 191 min  p2 α=0.50 OneStepLookahead (AlphaAware) seed=4005  disc=-0.697 expl=3
+  [543/750] 191 min  p2 α=0.50 OneStepLookahead (AlphaAware) seed=4002  disc=-0.135 expl=1
+  [544/750] 191 min  p2 α=0.25 OneStepLookahead (AlphaAware) seed=4009  disc=-0.137 expl=4
+  [545/750] 191 min  p2 α=0.25 OneStepLookahead (AlphaAware) seed=4010  disc=-0.069 expl=3
+  [546/750] 191 min  p2 α=0.00 OneStepLookahead (AlphaAware) seed=4003  disc=-0.095 expl=17
+  [547/750] 192 min  p2 α=0.00 OneStepLookahead (AlphaAware) seed=4006  disc=0.000 expl=8
+  [548/750] 192 min  p2 α=0.50 OneStepLookahead (AlphaAware) seed=4004  disc=-0.387 expl=6
+  [549/750] 192 min  p2 α=0.00 OneStepLookahead (AlphaAware) seed=4008  disc=0.000 expl=9
+  [550/750] 192 min  p2 α=0.50 OneStepLookahead (AlphaAware) seed=4006  disc=-0.037 expl=5
+  [551/750] 192 min  p2 α=0.00 OneStepLookahead (AlphaAware) seed=4001  disc=0.000 expl=28
+  [552/750] 192 min  p2 α=0.50 OneStepLookahead (AlphaAware) seed=4001  disc=0.669 expl=10
+  [553/750] 192 min  p2 α=0.00 OneStepLookahead (AlphaAware) seed=4005  disc=0.000 expl=18
+  [554/750] 192 min  p2 α=0.50 OneStepLookahead (AlphaAware) seed=4008  disc=0.011 expl=3
+  [555/750] 192 min  p2 α=0.00 OneStepLookahead (AlphaAware) seed=4004  disc=0.000 expl=14
+  [556/750] 192 min  p2 α=0.75 OneStepLookahead (AlphaAware) seed=4003  disc=-0.315 expl=3
+  [557/750] 192 min  p2 α=0.75 OneStepLookahead (AlphaAware) seed=4005  disc=-0.867 expl=3
+  [558/750] 192 min  p2 α=0.75 OneStepLookahead (AlphaAware) seed=4002  disc=-0.044 expl=1
+  [559/750] 192 min  p2 α=0.00 OneStepLookahead (AlphaAware) seed=4009  disc=0.000 expl=11
+  [560/750] 192 min  p2 α=0.00 OneStepLookahead (AlphaAware) seed=4007  disc=0.000 expl=5
+  [561/750] 192 min  p2 α=0.75 OneStepLookahead (AlphaAware) seed=4004  disc=-0.430 expl=6
+  [562/750] 192 min  p2 α=0.50 OneStepLookahead (AlphaAware) seed=4007  disc=-0.014 expl=8
+  [563/750] 192 min  p2 α=0.75 OneStepLookahead (AlphaAware) seed=4006  disc=0.109 expl=5
+  [564/750] 192 min  p2 α=1.00 OneStepLookahead (AlphaAware) seed=4005  disc=-1.036 expl=3
+  [565/750] 192 min  p2 α=0.50 OneStepLookahead (AlphaAware) seed=4009  disc=-0.006 expl=4
+  [566/750] 192 min  p2 α=0.75 OneStepLookahead (AlphaAware) seed=4008  disc=0.251 expl=3
+  [567/750] 192 min  p2 α=1.00 OneStepLookahead (AlphaAware) seed=4003  disc=-0.296 expl=3
+  [568/750] 192 min  p2 α=0.50 OneStepLookahead (AlphaAware) seed=4010  disc=0.239 expl=3
+  [569/750] 193 min  p2 α=1.00 OneStepLookahead (AlphaAware) seed=4002  disc=0.048 expl=1
+  [570/750] 193 min  p2 α=0.75 OneStepLookahead (AlphaAware) seed=4001  disc=1.190 expl=10
+  [571/750] 193 min  p2 α=1.00 OneStepLookahead (AlphaAware) seed=4008  disc=0.491 expl=3
+  [572/750] 193 min  p2 α=1.00 OneStepLookahead (AlphaAware) seed=4004  disc=-0.473 expl=6
+  [573/750] 193 min  p2 α=1.00 OneStepLookahead (AlphaAware) seed=4006  disc=0.255 expl=5
+  [574/750] 193 min  p2 α=0.75 OneStepLookahead (AlphaAware) seed=4007  disc=0.107 expl=8
+  [575/750] 193 min  p2 α=0.75 OneStepLookahead (AlphaAware) seed=4009  disc=0.126 expl=4
+  [576/750] 193 min  p2 α=0.75 OneStepLookahead (AlphaAware) seed=4010  disc=0.547 expl=3
+  [577/750] 193 min  p2 α=1.00 OneStepLookahead (AlphaAware) seed=4001  disc=1.711 expl=11
+  [578/750] 193 min  p2 α=1.00 OneStepLookahead (AlphaAware) seed=4007  disc=0.228 expl=8
+  [579/750] 193 min  p2 α=1.00 OneStepLookahead (AlphaAware) seed=4009  disc=0.257 expl=4
+  [580/750] 193 min  p3 α=0.25 OneStepLookahead (AlphaAware) seed=4005  disc=-0.528 expl=2
+  [581/750] 193 min  p2 α=1.00 OneStepLookahead (AlphaAware) seed=4010  disc=0.855 expl=3
+  [582/750] 193 min  p3 α=0.25 OneStepLookahead (AlphaAware) seed=4004  disc=-0.415 expl=6
+  [583/750] 193 min  p3 α=0.25 OneStepLookahead (AlphaAware) seed=4006  disc=-0.285 expl=2
+  [584/750] 194 min  p3 α=0.25 OneStepLookahead (AlphaAware) seed=4003  disc=0.086 expl=9
+  [585/750] 194 min  p3 α=0.25 OneStepLookahead (AlphaAware) seed=4002  disc=0.054 expl=5
+  [586/750] 194 min  p3 α=0.00 OneStepLookahead (AlphaAware) seed=4010  disc=-0.183 expl=3
+  [587/750] 194 min  p3 α=0.25 OneStepLookahead (AlphaAware) seed=4008  disc=-0.173 expl=7
+  [588/750] 194 min  p3 α=0.00 OneStepLookahead (AlphaAware) seed=4001  disc=0.000 expl=28
+  [589/750] 194 min  p3 α=0.50 OneStepLookahead (AlphaAware) seed=4002  disc=-0.135 expl=1
+  [590/750] 194 min  p3 α=0.00 OneStepLookahead (AlphaAware) seed=4003  disc=-0.095 expl=17
+  [591/750] 194 min  p3 α=0.00 OneStepLookahead (AlphaAware) seed=4007  disc=0.000 expl=5
+  [592/750] 194 min  p3 α=0.00 OneStepLookahead (AlphaAware) seed=4002  disc=0.000 expl=3
+  [593/750] 194 min  p3 α=0.00 OneStepLookahead (AlphaAware) seed=4005  disc=0.000 expl=18
+  [594/750] 194 min  p3 α=0.00 OneStepLookahead (AlphaAware) seed=4009  disc=0.000 expl=11
+  [595/750] 194 min  p3 α=0.50 OneStepLookahead (AlphaAware) seed=4005  disc=-0.699 expl=4
+  [596/750] 194 min  p3 α=0.25 OneStepLookahead (AlphaAware) seed=4001  disc=0.451 expl=16
+  [597/750] 194 min  p3 α=0.50 OneStepLookahead (AlphaAware) seed=4004  disc=-0.385 expl=5
+  [598/750] 194 min  p3 α=0.00 OneStepLookahead (AlphaAware) seed=4006  disc=0.000 expl=8
+  [599/750] 195 min  p3 α=0.50 OneStepLookahead (AlphaAware) seed=4008  disc=-0.347 expl=4
+  [600/750] 195 min  p3 α=0.00 OneStepLookahead (AlphaAware) seed=4004  disc=0.000 expl=14
+  [601/750] 195 min  p3 α=0.50 OneStepLookahead (AlphaAware) seed=4003  disc=0.144 expl=6
+  [602/750] 195 min  p3 α=0.00 OneStepLookahead (AlphaAware) seed=4008  disc=0.000 expl=9
+  [603/750] 195 min  p3 α=0.75 OneStepLookahead (AlphaAware) seed=4005  disc=-0.732 expl=3
+  [604/750] 195 min  p3 α=0.75 OneStepLookahead (AlphaAware) seed=4008  disc=-0.396 expl=4
+  [605/750] 195 min  p3 α=0.75 OneStepLookahead (AlphaAware) seed=4003  disc=0.238 expl=3
+  [606/750] 195 min  p3 α=0.25 OneStepLookahead (AlphaAware) seed=4007  disc=0.413 expl=13
+  [607/750] 195 min  p3 α=0.75 OneStepLookahead (AlphaAware) seed=4002  disc=-0.044 expl=1
+  [608/750] 195 min  p3 α=0.25 OneStepLookahead (AlphaAware) seed=4010  disc=0.501 expl=6
+  [609/750] 195 min  p3 α=0.75 OneStepLookahead (AlphaAware) seed=4004  disc=-0.428 expl=5
+  [610/750] 195 min  p3 α=0.50 OneStepLookahead (AlphaAware) seed=4010  disc=-0.080 expl=3
+  [611/750] 195 min  p3 α=0.50 OneStepLookahead (AlphaAware) seed=4009  disc=-0.323 expl=4
+  [612/750] 195 min  p3 α=0.50 OneStepLookahead (AlphaAware) seed=4007  disc=-0.056 expl=8
+  [613/750] 195 min  p3 α=0.75 OneStepLookahead (AlphaAware) seed=4006  disc=0.180 expl=6
+  [614/750] 195 min  p3 α=0.25 OneStepLookahead (AlphaAware) seed=4009  disc=0.278 expl=12
+  [615/750] 195 min  p3 α=0.50 OneStepLookahead (AlphaAware) seed=4006  disc=1.229 expl=14
+  [616/750] 195 min  p3 α=0.50 OneStepLookahead (AlphaAware) seed=4001  disc=0.980 expl=13
+  [617/750] 196 min  p3 α=1.00 OneStepLookahead (AlphaAware) seed=4002  disc=0.048 expl=1
+  [618/750] 196 min  p3 α=0.75 OneStepLookahead (AlphaAware) seed=4007  disc=0.107 expl=8
+  [619/750] 196 min  p3 α=1.00 OneStepLookahead (AlphaAware) seed=4008  disc=-0.407 expl=4
+  [620/750] 196 min  p3 α=1.00 OneStepLookahead (AlphaAware) seed=4005  disc=-0.863 expl=3
+  [621/750] 196 min  p3 α=0.75 OneStepLookahead (AlphaAware) seed=4009  disc=-0.173 expl=5
+  [622/750] 196 min  p3 α=1.00 OneStepLookahead (AlphaAware) seed=4004  disc=-0.471 expl=5
+  [623/750] 196 min  p3 α=1.00 OneStepLookahead (AlphaAware) seed=4003  disc=0.387 expl=3
+  [624/750] 196 min  p4 α=0.25 OneStepLookahead (AlphaAware) seed=4001  disc=-0.526 expl=4
+  [625/750] 196 min  p3 α=0.75 OneStepLookahead (AlphaAware) seed=4010  disc=1.513 expl=6
+  [626/750] 196 min  p3 α=1.00 OneStepLookahead (AlphaAware) seed=4006  disc=2.354 expl=4
+  [627/750] 196 min  p4 α=0.25 OneStepLookahead (AlphaAware) seed=4003  disc=-0.630 expl=4
+  [628/750] 196 min  p3 α=1.00 OneStepLookahead (AlphaAware) seed=4007  disc=0.228 expl=8
+  [629/750] 196 min  p3 α=1.00 OneStepLookahead (AlphaAware) seed=4009  disc=-0.144 expl=5
+  [630/750] 196 min  p4 α=0.25 OneStepLookahead (AlphaAware) seed=4004  disc=-0.624 expl=1
+  [631/750] 196 min  p4 α=0.25 OneStepLookahead (AlphaAware) seed=4007  disc=-0.620 expl=1
+  [632/750] 196 min  p4 α=0.25 OneStepLookahead (AlphaAware) seed=4006  disc=-0.504 expl=2
+  [633/750] 196 min  p3 α=0.75 OneStepLookahead (AlphaAware) seed=4001  disc=1.505 expl=15
+  [634/750] 196 min  p4 α=0.25 OneStepLookahead (AlphaAware) seed=4005  disc=-0.775 expl=2
+  [635/750] 196 min  p4 α=0.50 OneStepLookahead (AlphaAware) seed=4001  disc=-0.636 expl=4
+  [636/750] 196 min  p4 α=0.25 OneStepLookahead (AlphaAware) seed=4009  disc=-0.709 expl=1
+  [637/750] 196 min  p3 α=1.00 OneStepLookahead (AlphaAware) seed=4001  disc=2.048 expl=15
+  [638/750] 197 min  p3 α=1.00 OneStepLookahead (AlphaAware) seed=4010  disc=2.091 expl=6
+  [639/750] 197 min  p4 α=0.50 OneStepLookahead (AlphaAware) seed=4002  disc=-0.657 expl=2
+  [640/750] 197 min  p4 α=0.50 OneStepLookahead (AlphaAware) seed=4004  disc=-0.882 expl=1
+  [641/750] 197 min  p4 α=0.50 OneStepLookahead (AlphaAware) seed=4006  disc=-0.663 expl=2
+  [642/750] 197 min  p4 α=0.50 OneStepLookahead (AlphaAware) seed=4009  disc=-1.066 expl=1
+  [643/750] 197 min  p4 α=0.50 OneStepLookahead (AlphaAware) seed=4007  disc=-0.876 expl=1
+  [644/750] 197 min  p4 α=0.50 OneStepLookahead (AlphaAware) seed=4005  disc=-1.139 expl=2
+  [645/750] 197 min  p4 α=0.50 OneStepLookahead (AlphaAware) seed=4010  disc=-0.649 expl=2
+  [646/750] 197 min  p4 α=0.50 OneStepLookahead (AlphaAware) seed=4003  disc=-0.066 expl=2
+  [647/750] 197 min  p4 α=0.75 OneStepLookahead (AlphaAware) seed=4001  disc=-0.746 expl=4
+  [648/750] 197 min  p4 α=0.00 OneStepLookahead (AlphaAware) seed=4002  disc=0.000 expl=3
+  [649/750] 197 min  p4 α=0.00 OneStepLookahead (AlphaAware) seed=4001  disc=0.000 expl=28
+  [650/750] 197 min  p4 α=0.75 OneStepLookahead (AlphaAware) seed=4002  disc=-0.804 expl=2
+  [651/750] 197 min  p4 α=0.75 OneStepLookahead (AlphaAware) seed=4004  disc=-1.141 expl=1
+  [652/750] 197 min  p4 α=0.00 OneStepLookahead (AlphaAware) seed=4003  disc=-0.095 expl=17
+  [653/750] 197 min  p4 α=0.00 OneStepLookahead (AlphaAware) seed=4010  disc=-0.183 expl=3
+  [654/750] 197 min  p4 α=0.75 OneStepLookahead (AlphaAware) seed=4005  disc=-1.503 expl=2
+  [655/750] 197 min  p4 α=0.75 OneStepLookahead (AlphaAware) seed=4006  disc=-0.821 expl=2
+  [656/750] 197 min  p4 α=0.75 OneStepLookahead (AlphaAware) seed=4007  disc=-1.131 expl=1
+  [657/750] 197 min  p4 α=0.50 OneStepLookahead (AlphaAware) seed=4008  disc=-0.453 expl=1
+  [658/750] 197 min  p4 α=0.75 OneStepLookahead (AlphaAware) seed=4009  disc=-1.422 expl=1
+  [659/750] 197 min  p4 α=0.75 OneStepLookahead (AlphaAware) seed=4003  disc=-0.016 expl=3
+  [660/750] 197 min  p4 α=1.00 OneStepLookahead (AlphaAware) seed=4002  disc=-0.951 expl=2
+  [661/750] 197 min  p4 α=1.00 OneStepLookahead (AlphaAware) seed=4004  disc=-1.399 expl=1
+  [662/750] 197 min  p4 α=0.00 OneStepLookahead (AlphaAware) seed=4005  disc=0.000 expl=18
+  [663/750] 197 min  p4 α=1.00 OneStepLookahead (AlphaAware) seed=4007  disc=-1.387 expl=1
+  [664/750] 197 min  p4 α=0.00 OneStepLookahead (AlphaAware) seed=4004  disc=0.000 expl=14
+  [665/750] 197 min  p4 α=1.00 OneStepLookahead (AlphaAware) seed=4005  disc=-1.866 expl=2
+  [666/750] 197 min  p4 α=1.00 OneStepLookahead (AlphaAware) seed=4001  disc=-0.856 expl=4
+  [667/750] 197 min  p4 α=1.00 OneStepLookahead (AlphaAware) seed=4006  disc=-0.979 expl=2
+  [668/750] 197 min  p4 α=0.75 OneStepLookahead (AlphaAware) seed=4010  disc=-0.763 expl=2
+  [669/750] 197 min  p4 α=0.00 OneStepLookahead (AlphaAware) seed=4006  disc=0.000 expl=8
+  [670/750] 198 min  p4 α=0.00 OneStepLookahead (AlphaAware) seed=4008  disc=0.000 expl=9
+  [671/750] 198 min  p4 α=0.75 OneStepLookahead (AlphaAware) seed=4008  disc=-0.495 expl=1
+  [672/750] 198 min  p4 α=1.00 OneStepLookahead (AlphaAware) seed=4009  disc=-1.779 expl=1
+  [673/750] 198 min  p4 α=0.00 OneStepLookahead (AlphaAware) seed=4009  disc=0.000 expl=11
+  [674/750] 198 min  p4 α=0.00 OneStepLookahead (AlphaAware) seed=4007  disc=0.000 expl=5
+  [675/750] 198 min  p4 α=1.00 OneStepLookahead (AlphaAware) seed=4010  disc=-0.876 expl=2
+  [676/750] 198 min  p4 α=0.25 OneStepLookahead (AlphaAware) seed=4002  disc=0.427 expl=5
+  [677/750] 198 min  p4 α=1.00 OneStepLookahead (AlphaAware) seed=4003  disc=0.097 expl=3
+  [678/750] 198 min  p4 α=1.00 OneStepLookahead (AlphaAware) seed=4008  disc=-0.538 expl=1
+  [679/750] 198 min  p4 α=0.25 OneStepLookahead (AlphaAware) seed=4008  disc=0.418 expl=4
+  [680/750] 198 min  p6 α=0.25 OneStepLookahead (AlphaAware) seed=4005  disc=-0.597 expl=2
+  [681/750] 198 min  p6 α=0.25 OneStepLookahead (AlphaAware) seed=4004  disc=-0.474 expl=2
+  [682/750] 198 min  p6 α=0.25 OneStepLookahead (AlphaAware) seed=4006  disc=-0.285 expl=2
+  [683/750] 198 min  p6 α=0.25 OneStepLookahead (AlphaAware) seed=4008  disc=-0.374 expl=3
+  [684/750] 198 min  p6 α=0.25 OneStepLookahead (AlphaAware) seed=4003  disc=-0.481 expl=1
+  [685/750] 198 min  p4 α=0.25 OneStepLookahead (AlphaAware) seed=4010  disc=0.496 expl=3
+  [686/750] 199 min  p6 α=0.25 OneStepLookahead (AlphaAware) seed=4001  disc=-0.131 expl=4
+  [687/750] 199 min  p6 α=0.25 OneStepLookahead (AlphaAware) seed=4007  disc=-0.215 expl=4
+  [688/750] 199 min  p6 α=0.50 OneStepLookahead (AlphaAware) seed=4005  disc=-0.815 expl=4
+  [689/750] 199 min  p6 α=0.50 OneStepLookahead (AlphaAware) seed=4004  disc=-0.386 expl=5
+  [690/750] 199 min  p6 α=0.50 OneStepLookahead (AlphaAware) seed=4002  disc=-0.142 expl=1
+  [691/750] 199 min  p6 α=0.00 OneStepLookahead (AlphaAware) seed=4010  disc=-0.183 expl=3
+  [692/750] 199 min  p6 α=0.50 OneStepLookahead (AlphaAware) seed=4008  disc=-0.256 expl=4
+  [693/750] 199 min  p6 α=0.00 OneStepLookahead (AlphaAware) seed=4003  disc=-0.095 expl=17
+  [694/750] 199 min  p6 α=0.50 OneStepLookahead (AlphaAware) seed=4006  disc=0.928 expl=6
+  [695/750] 199 min  p6 α=0.25 OneStepLookahead (AlphaAware) seed=4002  disc=0.365 expl=4
+  [696/750] 199 min  p6 α=0.00 OneStepLookahead (AlphaAware) seed=4002  disc=0.000 expl=3
+  [697/750] 199 min  p6 α=0.00 OneStepLookahead (AlphaAware) seed=4001  disc=0.000 expl=28
+  [698/750] 199 min  p6 α=0.00 OneStepLookahead (AlphaAware) seed=4006  disc=0.000 expl=8
+  [699/750] 199 min  p6 α=0.00 OneStepLookahead (AlphaAware) seed=4007  disc=0.000 expl=5
+  [700/750] 199 min  p6 α=0.00 OneStepLookahead (AlphaAware) seed=4005  disc=0.000 expl=18
+  [701/750] 199 min  p6 α=0.00 OneStepLookahead (AlphaAware) seed=4008  disc=0.000 expl=9
+  [702/750] 199 min  p6 α=0.50 OneStepLookahead (AlphaAware) seed=4003  disc=0.144 expl=6
+  [703/750] 200 min  p6 α=0.00 OneStepLookahead (AlphaAware) seed=4004  disc=0.000 expl=14
+  [704/750] 200 min  p6 α=0.50 OneStepLookahead (AlphaAware) seed=4009  disc=-0.333 expl=4
+  [705/750] 200 min  p6 α=0.00 OneStepLookahead (AlphaAware) seed=4009  disc=0.000 expl=11
+  [706/750] 200 min  p6 α=0.50 OneStepLookahead (AlphaAware) seed=4010  disc=0.400 expl=3
+  [707/750] 200 min  p6 α=0.75 OneStepLookahead (AlphaAware) seed=4005  disc=-0.867 expl=3
+  [708/750] 200 min  p6 α=0.25 OneStepLookahead (AlphaAware) seed=4010  disc=0.517 expl=5
+  [709/750] 200 min  p6 α=0.25 OneStepLookahead (AlphaAware) seed=4009  disc=0.288 expl=9
+  [710/750] 200 min  p6 α=0.50 OneStepLookahead (AlphaAware) seed=4001  disc=1.136 expl=10
+  [711/750] 200 min  p6 α=0.75 OneStepLookahead (AlphaAware) seed=4002  disc=-0.054 expl=1
+  [712/750] 200 min  p6 α=0.75 OneStepLookahead (AlphaAware) seed=4008  disc=0.012 expl=4
+  [713/750] 200 min  p6 α=0.75 OneStepLookahead (AlphaAware) seed=4004  disc=-0.428 expl=5
+  [714/750] 200 min  p6 α=0.75 OneStepLookahead (AlphaAware) seed=4003  disc=-0.042 expl=4
+  [715/750] 200 min  p6 α=0.75 OneStepLookahead (AlphaAware) seed=4006  disc=1.619 expl=6
+  [716/750] 200 min  p6 α=1.00 OneStepLookahead (AlphaAware) seed=4005  disc=-1.036 expl=3
+  [717/750] 200 min  p6 α=1.00 OneStepLookahead (AlphaAware) seed=4002  disc=0.034 expl=1
+  [718/750] 200 min  p6 α=0.50 OneStepLookahead (AlphaAware) seed=4007  disc=0.787 expl=14
+  [719/750] 200 min  p6 α=0.75 OneStepLookahead (AlphaAware) seed=4009  disc=0.370 expl=3
+  [720/750] 200 min  p6 α=0.75 POMCPOW alphaaware q=30000 seed=4001  disc=1.132 expl=38
+  [721/750] 200 min  p6 α=1.00 OneStepLookahead (AlphaAware) seed=4003  disc=0.045 expl=4
+  [722/750] 200 min  p6 α=0.75 OneStepLookahead (AlphaAware) seed=4007  disc=0.108 expl=8
+  [723/750] 200 min  p6 α=1.00 OneStepLookahead (AlphaAware) seed=4008  disc=0.150 expl=4
+  [724/750] 200 min  p6 α=0.75 POMCPOW alphaaware q=30000 seed=4002  disc=0.923 expl=37
+  [725/750] 200 min  p6 α=1.00 OneStepLookahead (AlphaAware) seed=4004  disc=-0.471 expl=5
+  [726/750] 200 min  p6 α=0.75 OneStepLookahead (AlphaAware) seed=4010  disc=1.273 expl=5
+  [727/750] 201 min  p6 α=1.00 OneStepLookahead (AlphaAware) seed=4006  disc=0.254 expl=6
+  [728/750] 201 min  p6 α=1.00 OneStepLookahead (AlphaAware) seed=4009  disc=0.633 expl=3
+  [729/750] 201 min  p6 α=1.00 OneStepLookahead (AlphaAware) seed=4010  disc=1.822 expl=5
+  [730/750] 201 min  p6 α=0.75 POMCPOW alphaaware q=30000 seed=4003  disc=-0.836 expl=24
+  [731/750] 201 min  p6 α=0.75 OneStepLookahead (AlphaAware) seed=4001  disc=1.810 expl=12
+  [732/750] 201 min  p6 α=1.00 OneStepLookahead (AlphaAware) seed=4001  disc=2.467 expl=11
+  [733/750] 201 min  p6 α=1.00 OneStepLookahead (AlphaAware) seed=4007  disc=1.792 expl=14
+  [734/750] 201 min  p6 α=0.75 POMCPOW alphaaware q=30000 seed=4004  disc=-0.825 expl=22
+  [735/750] 201 min  p6 α=0.75 POMCPOW alphaaware q=30000 seed=4005  disc=-0.626 expl=35
+  [736/750] 201 min  p6 α=0.75 POMCPOW alphaaware q=30000 seed=4006  disc=-0.712 expl=25
+  [737/750] 202 min  p6 α=0.75 POMCPOW alphaaware q=30000 seed=4009  disc=-0.906 expl=33
+  [738/750] 202 min  p6 α=0.75 POMCPOW alphaaware q=30000 seed=4007  disc=-0.968 expl=27
+  [739/750] 202 min  p6 α=1.00 POMCPOW alphaaware q=30000 seed=4007  disc=-1.410 expl=22
+  [740/750] 202 min  p6 α=0.75 POMCPOW alphaaware q=30000 seed=4008  disc=-0.418 expl=30
+  [741/750] 202 min  p6 α=1.00 POMCPOW alphaaware q=30000 seed=4001  disc=-1.901 expl=8
+  [742/750] 202 min  p6 α=0.75 POMCPOW alphaaware q=30000 seed=4010  disc=0.065 expl=25
+  [743/750] 202 min  p6 α=1.00 POMCPOW alphaaware q=30000 seed=4003  disc=-1.187 expl=27
+  [744/750] 202 min  p6 α=1.00 POMCPOW alphaaware q=30000 seed=4009  disc=-1.367 expl=24
+  [745/750] 202 min  p6 α=1.00 POMCPOW alphaaware q=30000 seed=4006  disc=-1.025 expl=22
+  [746/750] 202 min  p6 α=1.00 POMCPOW alphaaware q=30000 seed=4008  disc=-1.843 expl=22
+  [747/750] 202 min  p6 α=1.00 POMCPOW alphaaware q=30000 seed=4002  disc=-0.547 expl=30
+  [748/750] 202 min  p6 α=1.00 POMCPOW alphaaware q=30000 seed=4005  disc=-2.610 expl=12
+  [749/750] 202 min  p6 α=1.00 POMCPOW alphaaware q=30000 seed=4004  disc=-2.264 expl=17
+  [750/750] 202 min  p6 α=1.00 POMCPOW alphaaware q=30000 seed=4010  disc=-0.024 expl=22
+750 episodes in 202 min
+
+POMCPOW dynprofit q=30000 − OneStepLookahead (AlphaAware), paired over 10 seeds
+cell           POMCPOW   OneStep             Δ ± SE  verdict
+p1 α=0.00      -0.293    -0.028    -0.265 ± 0.018  LOSS (>2SE)
+p1 α=0.25      -0.520    -0.327    -0.194 ± 0.082  LOSS (>2SE)
+p1 α=0.50      -0.857    -0.402    -0.455 ± 0.062  LOSS (>2SE)
+p1 α=0.75      -0.958    -0.484    -0.475 ± 0.085  LOSS (>2SE)
+p1 α=1.00      -0.918    -0.522    -0.395 ± 0.179  LOSS (>2SE)
+p2 α=0.00      -0.293    -0.028    -0.265 ± 0.018  LOSS (>2SE)
+p2 α=0.25      -0.369    -0.172    -0.197 ± 0.051  LOSS (>2SE)
+p2 α=0.50      -0.394    -0.069    -0.325 ± 0.077  LOSS (>2SE)
+p2 α=0.75      -0.347     0.067    -0.415 ± 0.106  LOSS (>2SE)
+p2 α=1.00      -0.336     0.204    -0.539 ± 0.128  LOSS (>2SE)
+p3 α=0.00      -0.293    -0.028    -0.265 ± 0.018  LOSS (>2SE)
+p3 α=0.25      -0.176     0.038    -0.214 ± 0.095  LOSS (>2SE)
+p3 α=0.50      -0.135     0.033    -0.167 ± 0.238  loss (noise)
+p3 α=0.75      -0.193     0.177    -0.370 ± 0.233  loss (noise)
+p3 α=1.00      -0.311     0.527    -0.838 ± 0.376  LOSS (>2SE)
+p4 α=0.00      -0.293    -0.028    -0.265 ± 0.018  LOSS (>2SE)
+p4 α=0.25      -0.545    -0.305    -0.240 ± 0.141  loss (noise)
+p4 α=0.50      -0.756    -0.709    -0.047 ± 0.122  loss (noise)
+p4 α=0.75      -0.991    -0.884    -0.106 ± 0.192  loss (noise)
+p4 α=1.00      -1.142    -1.053    -0.088 ± 0.272  loss (noise)
+p6 α=0.00      -0.293    -0.028    -0.265 ± 0.018  LOSS (>2SE)
+p6 α=0.25      -0.359    -0.139    -0.221 ± 0.124  loss (noise)
+p6 α=0.50      -0.855     0.146    -1.001 ± 0.192  LOSS (>2SE)
+p6 α=0.75      -1.134     0.380    -1.514 ± 0.254  LOSS (>2SE)
+p6 α=1.00      -1.419     0.569    -1.988 ± 0.341  LOSS (>2SE)
+POMCPOW dynprofit q=30000 ahead in 0/25 cells (0 beyond 2 SE); clear losses 18
+
+POMCPOW alphaaware q=30000 − OneStepLookahead (AlphaAware), paired over 10 seeds
+cell           POMCPOW   OneStep             Δ ± SE  verdict
+p1 α=0.00      -0.242    -0.028    -0.214 ± 0.027  LOSS (>2SE)
+p1 α=0.25      -0.558    -0.327    -0.231 ± 0.071  LOSS (>2SE)
+p1 α=0.50      -0.856    -0.402    -0.454 ± 0.062  LOSS (>2SE)
+p1 α=0.75      -0.905    -0.484    -0.421 ± 0.102  LOSS (>2SE)
+p1 α=1.00      -0.918    -0.522    -0.395 ± 0.179  LOSS (>2SE)
+p2 α=0.00      -0.241    -0.028    -0.213 ± 0.027  LOSS (>2SE)
+p2 α=0.25      -0.360    -0.172    -0.188 ± 0.046  LOSS (>2SE)
+p2 α=0.50      -0.342    -0.069    -0.273 ± 0.069  LOSS (>2SE)
+p2 α=0.75      -0.548     0.067    -0.616 ± 0.121  LOSS (>2SE)
+p2 α=1.00      -0.383     0.204    -0.587 ± 0.140  LOSS (>2SE)
+p3 α=0.00      -0.229    -0.028    -0.201 ± 0.035  LOSS (>2SE)
+p3 α=0.25      -0.006     0.038    -0.044 ± 0.064  loss (noise)
+p3 α=0.50      -0.209     0.033    -0.242 ± 0.212  loss (noise)
+p3 α=0.75      -0.072     0.177    -0.249 ± 0.199  loss (noise)
+p3 α=1.00      -0.359     0.527    -0.886 ± 0.359  LOSS (>2SE)
+p4 α=0.00      -0.255    -0.028    -0.227 ± 0.017  LOSS (>2SE)
+p4 α=0.25      -0.124    -0.305    +0.181 ± 0.182  win (noise)
+p4 α=0.50      -0.525    -0.709    +0.183 ± 0.145  win (noise)
+p4 α=0.75      -1.066    -0.884    -0.182 ± 0.152  loss (noise)
+p4 α=1.00      -1.142    -1.053    -0.088 ± 0.272  loss (noise)
+p6 α=0.00      -0.293    -0.028    -0.265 ± 0.018  LOSS (>2SE)
+p6 α=0.25      -0.014    -0.139    +0.125 ± 0.127  win (noise)
+p6 α=0.50      -0.854     0.146    -1.001 ± 0.192  LOSS (>2SE)
+p6 α=0.75      -0.317     0.380    -0.697 ± 0.284  LOSS (>2SE)
+p6 α=1.00      -1.418     0.569    -1.987 ± 0.340  LOSS (>2SE)
+POMCPOW alphaaware q=30000 ahead in 3/25 cells (0 beyond 2 SE); clear losses 17
+CSV: outputs/pomcpow_vs_heuristics/naive_rollout_pomcpow_vs_onestep_q30000_e6.csv
+exit 0
