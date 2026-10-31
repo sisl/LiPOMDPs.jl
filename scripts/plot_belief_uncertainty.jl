@@ -1,19 +1,20 @@
 #!/usr/bin/env julia
 
 """
-Average deposit-belief uncertainty over time for POMCPOW, the one-mine profit maximizer and
-ExploreOnly (paper Figure 2).
+Deposit-belief uncertainty over time, per site, for POMCPOW, the one-mine profit maximizer and
+ExploreOnly (paper Figure 2: a 2×2 panel, one per site).
 
 Same setup as scripts/final_results_best_pomcpow.jl: policies plan under one price model and are
 evaluated on historical prices (model 6) with the test seeds (2001, 2002, ...) and common random
-numbers, so every policy faces the same scenarios. Uncertainty is the mean, over the four sites, of
-the standard deviation of the deposit belief (t Li); the plot shows mean ± std over the scenarios.
+numbers, so every policy faces the same scenarios. Uncertainty is the standard deviation of each
+site's deposit belief (t Li); the plot shows mean ± std over the scenarios.
 
-Usage: julia --project=. scripts/plot_belief_uncertainty.jl [planning_model] [n_sims]
+Usage: julia --project=. -t <threads> scripts/plot_belief_uncertainty.jl [planning_model] [n_sims]
   planning_model  1 static, 2 linear, 3 exponential, 4 GBM, 6 historical (default 2)
   n_sims          number of evaluation scenarios (default 30)
-Writes outputs/belief_uncertainty/belief_uncertainty_comparison_p<planning>_e6.tex (and .pdf when
-pdflatex is available).
+Writes outputs/belief_uncertainty/belief_uncertainty_p<planning>_e6.tex (the paper's figure
+environment, a 2×2 pgfplots groupplot with the data as coordinates), .png (preview rendered with
+Plots/GR) and .csv (mean/std per policy, site and step).
 """
 
 using LiPOMDPs
@@ -23,7 +24,7 @@ using POMDPs
 using POMDPTools
 using POMCPOW
 using POMCPOW: POMCPOWPlanner
-using PGFPlots
+import Plots
 
 const PLANNING_PRICE_MODEL = length(ARGS) >= 1 ? parse(Int, ARGS[1]) : 2
 const N_SIMS = length(ARGS) >= 2 ? parse(Int, ARGS[2]) : 30
@@ -32,6 +33,7 @@ const ALPHA = 0.5
 const TIME_HORIZON = LiPOMDP().time_horizon   # model default (1995–2025)
 const OUTPUT_DIR = "outputs/belief_uncertainty"
 const POLICIES = ["POMCPOW", "OneMineProfitMaximization", "ExploreOnly"]
+const SITE_NAMES = ["Site 1 (DLE)", "Site 2 (DLE)", "Site 3 (Mineral Ore)", "Site 4 (Mineral Ore)"]
 
 # =============================================================================
 # POLICIES
@@ -65,26 +67,28 @@ end
 # BELIEF UNCERTAINTY
 # =============================================================================
 
-# Mean over sites of the std of the deposit belief (t Li)
-belief_uncertainty(b::LiBelief) = mean(std(d) for d in b.deposits_distribution)
+# Std of each site's deposit belief (t Li)
+belief_uncertainty(b::LiBelief) = [std(d) for d in b.deposits_distribution]
 
 """
-Run `n_sims` evaluation scenarios and record the belief uncertainty at every time step.
-Returns a (time_horizon × n_sims) matrix.
+Run `n_sims` evaluation scenarios and record each site's belief uncertainty at every time step.
+Scenarios run in parallel over threads (`julia -t`); each builds its own policy, since a POMCPOW
+planner holds its search tree. Returns a (time_horizon × n_sims × n_sites) array.
 """
 function collect_belief_uncertainty(planning_pomdp::LiPOMDP, evaluation_pomdp::LiPOMDP,
-                                    policy, updater::LiBeliefUpdater, n_sims::Int)
+                                    policy_type::String, updater::LiBeliefUpdater, n_sims::Int)
     T = planning_pomdp.time_horizon
-    uncertainty = zeros(T, n_sims)
+    uncertainty = zeros(T, n_sims, planning_pomdp.n_deposits)
 
-    for sim in 1:n_sims
+    Threads.@threads :greedy for sim in 1:n_sims
+        policy = create_policy(policy_type, planning_pomdp)
         seed = sim + 2000   # test seeds, as in final_results_best_pomcpow.jl
         Random.seed!(seed)
         s0, b0 = create_initial_belief(planning_pomdp)
         b, s = b0, s0
 
         for t in 1:T
-            uncertainty[t, sim] = belief_uncertainty(b)
+            uncertainty[t, sim, :] = belief_uncertainty(b)
 
             a = policy isa POMCPOWPlanner ? first(action_info(policy, b; tree_in_info=false)) :
                                             action(policy, b)
@@ -95,7 +99,7 @@ function collect_belief_uncertainty(planning_pomdp::LiPOMDP, evaluation_pomdp::L
             sp, o, _ = gen(evaluation_pomdp, s, a, env_rng)
 
             if isterminal(evaluation_pomdp, sp)
-                uncertainty[(t+1):T, sim] .= uncertainty[t, sim]
+                uncertainty[(t+1):T, sim, :] .= uncertainty[t:t, sim, :]
                 break
             end
 
@@ -121,84 +125,143 @@ function analyze_belief_uncertainty(policies::Vector{String}; planning_model::In
     results = Dict{String, Dict}()
     for policy_type in policies
         println("Analyzing policy: $policy_type")
-        policy = create_policy(policy_type, planning_pomdp)
-        uncertainty = collect_belief_uncertainty(planning_pomdp, evaluation_pomdp, policy, updater, n_sims)
+        uncertainty = collect_belief_uncertainty(planning_pomdp, evaluation_pomdp, policy_type, updater, n_sims)
         results[policy_type] = Dict(
-            "mean" => vec(mean(uncertainty, dims=2)),
-            "std" => vec(std(uncertainty, dims=2)),
+            "mean" => dropdims(mean(uncertainty, dims=2), dims=2),   # T × n_sites
+            "std" => dropdims(std(uncertainty, dims=2), dims=2),
             "raw" => uncertainty,
         )
-        println("  final uncertainty: $(round(results[policy_type]["mean"][end], digits=2)) ± $(round(results[policy_type]["std"][end], digits=2)) t Li")
+        final = round.(results[policy_type]["mean"][end, :], digits=0)
+        println("  final uncertainty per site (t Li): $final")
     end
     return results
 end
 
 # =============================================================================
-# PLOT
+# OUTPUT
 # =============================================================================
 
-function write_standalone_tex(tikz_code::String, tex_file::String)
-    open(tex_file, "w") do f
-        write(f, """
-\\documentclass[tikz]{standalone}
-\\usepackage{pgfplots}
-\\usepackage{amsmath}
-\\pgfplotsset{compat=1.16}
+const POLICY_STYLES = Dict(
+    "POMCPOW" => (tikz="pomstyle", label="POMCPOW", gr=(:royalblue, :solid, :circle)),
+    "OneMineProfitMaximization" => (tikz="profstyle", label="Profit Maximizer", gr=(:indianred, :dash, :rect)),
+    "ExploreOnly" => (tikz="explstyle", label="Explore Only", gr=(:seagreen, :dot, :utriangle)),
+)
 
-\\begin{document}
-$tikz_code
-\\end{document}
+coords(m, sd) = join(("($(t-1), $(round(m[t], digits=2))) +- (0, $(round(sd[t], digits=2)))" for t in eachindex(m)), " ")
+
+"""
+LaTeX figure for the paper: 2×2 groupplot, one panel per site, with the mean ± std written as
+coordinates. The x axis is the number of steps taken (0 = initial belief). Requires in the preamble
+\\usepackage{pgfplots}, \\usepgfplotslibrary{groupplots} and the colors lightblue, lightred, lightgreen.
+"""
+function write_figure_tex(results::Dict, tex_file::String)
+    T = size(results[POLICIES[1]]["mean"], 1)
+    io = IOBuffer()
+    print(io, """
+% Generated by scripts/plot_belief_uncertainty.jl
+% Preamble requirements:
+% \\usepackage{pgfplots}
+% \\pgfplotsset{compat=1.18}
+% \\usepgfplotslibrary{groupplots}
+% \\definecolor{lightblue}{RGB}{100,149,237} \\definecolor{lightred}{RGB}{240,128,128} \\definecolor{lightgreen}{RGB}{119,190,119}
+
+\\begin{figure}[H]
+\\centering
+
+\\pgfplotsset{
+  every axis/.append style={
+    tick label style={font=\\scriptsize},
+    label style={font=\\small},
+    title style={font=\\small, yshift=3pt},
+    xlabel near ticks,
+    ylabel near ticks,
+    xlabel={Time Step},
+    ylabel={Belief Uncertainty (tonnes Li)},
+    xtick align=outside,
+    ytick align=outside,
+    grid=major,
+    grid style={line width=.2pt, draw=gray!20},
+    enlarge y limits=0.03,
+    scaled y ticks=false,
+    yticklabel style={/pgf/number format/fixed},
+  },
+  pomstyle/.style={lightblue,  thick,  mark=*,        mark size=1.2pt, error bars/.cd, y dir=both, y explicit},
+  profstyle/.style={lightred,   thick,  dashed,        mark=square*,   mark size=1.2pt, error bars/.cd, y dir=both, y explicit},
+  explstyle/.style={lightgreen, thick,  dotted,        mark=triangle*, mark size=1.4pt, error bars/.cd, y dir=both, y explicit}
+}
+
+\\begin{tikzpicture}
+\\begin{groupplot}[
+  group style={
+    group size=2 by 2,
+    horizontal sep=14mm,
+    vertical sep=12mm,
+    x descriptions at=edge bottom,
+    y descriptions at=edge left
+  },
+  width=0.46\\textwidth,
+  height=5.2cm,
+  xmin=0, xmax=$(T-1)
+]
 """)
+    for site in 1:4
+        if site == 1
+            println(io, "\n% ===== Site 1 =====")
+            println(io, "\\nextgroupplot[title={$(SITE_NAMES[site])}, legend to name=depositLegend, legend columns=3, legend style={/tikz/every even column/.append style={column sep=7pt}, draw=none, fill=none, font=\\scriptsize}]")
+        else
+            println(io, "\n% ===== Site $site =====")
+            println(io, "\\nextgroupplot[title={$(SITE_NAMES[site])}, legend=false]")
+        end
+        for policy_name in POLICIES
+            st = POLICY_STYLES[policy_name]
+            println(io, "% $(st.label)")
+            println(io, "\\addplot[$(st.tikz)] coordinates {\n    ",
+                    coords(results[policy_name]["mean"][:, site], results[policy_name]["std"][:, site]), "\n};")
+        end
+        site == 1 && println(io, "\\legend{", join((POLICY_STYLES[p].label for p in POLICIES), ", "), "}")
     end
+    print(io, """
+
+\\end{groupplot}
+
+% Shared legend below the grid
+\\node at ([yshift=-0.7em]current bounding box.south) {\\ref{depositLegend}};
+
+\\end{tikzpicture}
+
+\\caption{Average over $(N_SIMS) simulations of deposit belief uncertainty evolution for sites 1-4 under three policies (POMCPOW, Profit Maximizer, Explore Only).}
+\\label{fig:deposit_uncertainty_grid}
+\\end{figure}
+""")
+    write(tex_file, String(take!(io)))
 end
 
-function plot_belief_uncertainty(results::Dict, output_file::String)
-    policy_styles = Dict(
-        "POMCPOW" => ("blue", "solid", "*", "POMCPOW"),
-        "OneMineProfitMaximization" => ("red", "dashed", "square*", "One Mine Profit Max"),
-        "ExploreOnly" => ("green!70!black", "dotted", "triangle*", "Explore Only"),
-    )
-
-    ax = Axis(
-        xlabel = "Time Step",
-        ylabel = "Avg. Deposit Belief Uncertainty (tonnes Li)",
-        title = "Belief Uncertainty Evolution by Policy",
-        legendPos = "north east",
-        width = "14cm",
-        height = "9cm",
-        style = "grid=major, grid style={line width=.2pt, draw=gray!20}, legend style={font=\\small}",
-    )
-
-    for policy_name in POLICIES
-        haskey(results, policy_name) || continue
-        mean_vals, std_vals = results[policy_name]["mean"], results[policy_name]["std"]
-        color, line_style, marker, display_name = policy_styles[policy_name]
-        push!(ax, Plots.Linear(
-            collect(1:length(mean_vals)), mean_vals,
-            errorBars = ErrorBars(; y = std_vals),
-            style = "$(color), thick, $(line_style), mark=$(marker), mark size=2.5pt, error bars/.cd, y dir=both, y explicit",
-            legendentry = display_name,
-        ))
+# PNG preview of the same panels with Plots/GR (no LaTeX needed)
+function write_png(results::Dict, png_file::String)
+    panels = []
+    for site in 1:4
+        p = Plots.plot(title = SITE_NAMES[site], xlabel = site >= 3 ? "Time Step" : "",
+                       ylabel = isodd(site) ? "Belief Uncertainty (t Li)" : "", legend = site == 2 ? :topright : false,
+                       titlefontsize = 10, guidefontsize = 9, tickfontsize = 8, legendfontsize = 8, ylims = (0, Inf))
+        for policy_name in POLICIES
+            m = results[policy_name]["mean"][:, site]
+            sd = results[policy_name]["std"][:, site]
+            c, ls, mk = POLICY_STYLES[policy_name].gr
+            Plots.plot!(p, 0:length(m)-1, m, ribbon = sd, fillalpha = 0.12, color = c, linestyle = ls,
+                        marker = mk, markersize = 2.5, markerstrokewidth = 0, label = POLICY_STYLES[policy_name].label)
+        end
+        push!(panels, p)
     end
+    Plots.savefig(Plots.plot(panels..., layout = (2, 2), size = (900, 650), left_margin = 4Plots.mm, bottom_margin = 3Plots.mm), png_file)
+end
 
-    mkpath(dirname(output_file))
-    tex_file = replace(output_file, ".pdf" => ".tex")
-    write_standalone_tex(string(ax), tex_file)
-    println("TEX saved to: $tex_file")
-
-    if Sys.which("pdflatex") === nothing
-        println("pdflatex not found; compile $tex_file manually to get the PDF")
-        return ax
-    end
-    cd(dirname(abspath(output_file))) do
-        run(pipeline(`pdflatex -interaction=nonstopmode $(basename(tex_file))`, devnull))
-        for ext in (".aux", ".log", ".out")
-            aux = replace(basename(output_file), ".pdf" => ext)
-            isfile(aux) && rm(aux)
+function write_csv(results::Dict, csv_file::String)
+    open(csv_file, "w") do f
+        println(f, "policy,site,steps_taken,mean_uncertainty,std_uncertainty")
+        for policy_name in POLICIES, site in 1:4, t in 1:size(results[policy_name]["mean"], 1)
+            println(f, "$policy_name,$site,$(t-1),$(results[policy_name]["mean"][t, site]),$(results[policy_name]["std"][t, site])")
         end
     end
-    println("PDF saved to: $output_file")
-    return ax
 end
 
 # =============================================================================
@@ -207,12 +270,14 @@ end
 
 results = analyze_belief_uncertainty(POLICIES; planning_model=PLANNING_PRICE_MODEL, n_sims=N_SIMS)
 
-output_plot = joinpath(OUTPUT_DIR, "belief_uncertainty_comparison_p$(PLANNING_PRICE_MODEL)_e$(EVALUATION_PRICE_MODEL).pdf")
-plot_belief_uncertainty(results, output_plot)
+mkpath(OUTPUT_DIR)
+base = joinpath(OUTPUT_DIR, "belief_uncertainty_p$(PLANNING_PRICE_MODEL)_e$(EVALUATION_PRICE_MODEL)")
+write_figure_tex(results, base * ".tex"); println("LaTeX figure saved to: $base.tex")
+write_png(results, base * ".png");        println("PNG preview saved to: $base.png")
+write_csv(results, base * ".csv");        println("CSV saved to: $base.csv")
 
 println("\n" * "="^60)
-for policy in POLICIES
-    data = results[policy]
-    println("$policy: initial $(round(data["mean"][1], digits=2)) ± $(round(data["std"][1], digits=2)), ",
-            "final $(round(data["mean"][end], digits=2)) ± $(round(data["std"][end], digits=2)) t Li")
+for policy in POLICIES, site in 1:4
+    m = results[policy]["mean"][:, site]
+    println("$policy, $(SITE_NAMES[site]): initial $(round(m[1], digits=0)) → final $(round(m[end], digits=0)) t Li")
 end
