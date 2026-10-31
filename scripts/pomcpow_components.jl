@@ -80,7 +80,7 @@ valid random actions (every root action is still a candidate). Below the root th
 considers {TimingAware action on the node's mean particle state, do nothing}: the search is over
 WHEN to open (a stochastic stopping tree on sampled price/deposit futures) instead of over
 random joint actions, which removes the optimistic bias that noisy in-tree maximisation over
-dozens of junk continuations gives to heavily visited branches (see test_pomcpow_root_values.jl).
+dozens of junk continuations gives to heavily visited branches (visit-count-dependent bias).
 """
 function timing_tree_action_generator(pomdp::LiPOMDP; rng::AbstractRNG=MersenneTwister(11))
     ta = TimingAwarePolicy(pomdp)

@@ -2,13 +2,9 @@
 # https://ourworldindata.org/grapher/lithium-production?tab=chart&country=~OWID_WRL 
 # https://www.energyinst.org/__data/assets/pdf_file/0006/1542714/684_EI_Stat_Review_V16_DIGITAL.pdf 
 # “Data Page: Lithium production”, part of the following publication: Hannah Ritchie, Pablo Rosado, and Max Roser (2023) - “Energy”. Data adapted from Energy Institute. Retrieved from https://archive.ourworldindata.org/20250624-125417/grapher/lithium-production.html [online resource] (archived on June 24, 2025).
-# metric tons (t of Li content)
-# Define the year and production values manually extracted from the image and user's message
+# Production in metric tons of Li content; price in USD per metric ton LCE
+# Demand data: https://www.usgs.gov/centers/national-minerals-information-center
 
-# Data for demand https://www.usgs.gov/centers/national-minerals-information-center
-
-
-# Define the years, demand (in metric tons), and price (in USD per metric ton)
 years = [1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004,
          2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014,
          2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
@@ -25,10 +21,9 @@ price = [3200.0, 3400.0, 3800.0, 4000.0, 4200.0,
          5400.0, 5600.0, 6000.0, 6400.0, 5800.0,
          5180.0, 5180.0, 6060.0, 6800.0, 6690.0,
          6500.0, 8650.0, 15000.0, 16000.0, 12100.0,
-         10100.0, 14200.0, 71100.0, 41300.0, 14000.0, 9000.0]  # Assumes price data starts from 1995
+         10100.0, 14200.0, 71100.0, 41300.0, 14000.0, 9000.0]
 
-# Create dictionary with production and price data
-# Note: We use production as the basis for company demand calculation
+# (production, price) by year; global production is the basis for company demand
 const lithium_data = Dict(
     years[i] => (
         production[i],  # global production (tonnes Li)

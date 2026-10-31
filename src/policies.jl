@@ -1,9 +1,6 @@
-""" Select top k sites to open at period times based on profit maximization
 """
-
-"""
-Calculate expected average price over a mine's lifetime using the exact same logic as update_price.
-This accounts for price appreciation over time and includes the same noise model.
+Average noise-free price over the next `lifetime_years` years under the price model, floored at
+\$1,000/t as in `update_price`. GBM (model 4) falls back to the constant p₀.
 """
 function calculate_lifetime_average_price(P::LiPOMDP, current_time::Float64, lifetime_years::Int)
     p₀ = get_p₀(P)
@@ -22,7 +19,7 @@ function calculate_lifetime_average_price(P::LiPOMDP, current_time::Float64, lif
             base_price = p₀ * exp(P.λ_exp * t)
             noise_std = base_price * 0.1  # 10% of base price
         elseif P.price_model_type == 6  # Historical
-            historical_year = 1995 + Int(t) - 1
+            historical_year = P.start_year + Int(t) - 1
             if haskey(lithium_data, historical_year)
                 base_price = lithium_data[historical_year][2]  # Historical price
             else
@@ -39,9 +36,9 @@ function calculate_lifetime_average_price(P::LiPOMDP, current_time::Float64, lif
             noise_std = p₀ * 0.05
         end
         
-        # Use deterministic price (no noise) for consistent policy decisions
+        # Deterministic price (noise_std is not applied) for consistent policy decisions
         year_price = base_price
-        year_price = max(year_price, 1000.0)  # Ensure minimum price (same as update_price)
+        year_price = max(year_price, 1000.0)  # same floor as update_price
         total_price += year_price
     end
     
@@ -49,6 +46,10 @@ function calculate_lifetime_average_price(P::LiPOMDP, current_time::Float64, lif
 end
 
 
+"""
+ProfitMaximizerPolicy - at each time in `times`, open the `top_k` unopened sites with the highest
+undiscounted lifetime profit (average forecast price, opex and capex). Depleted mines are restored.
+"""
 @with_kw struct ProfitMaximizerPolicy <: Policy
     pomdp::LiPOMDP
     debug::Bool
@@ -68,7 +69,7 @@ function POMDPs.action(policy::ProfitMaximizerPolicy, s::State)
         println("  Have opened: $(s.have_opened)")
     end
     
-    # Check for restoration opportunities first (outside of time restrictions)
+    # Restore depleted mines at any time, not only at the opening times
     opened_sites = zeros(Int, policy.pomdp.n_deposits)
     opened_types = zeros(Int, policy.pomdp.n_deposits)
 
@@ -84,42 +85,35 @@ function POMDPs.action(policy::ProfitMaximizerPolicy, s::State)
         end
     end
 
-    # Only proceed with opening new mines if we're at an allowed time
+    # Open new mines only at the configured times
     if s.time in policy.times
-        # Find the most profitable mine to open
+        # Rank unopened sites by lifetime profit
         profits = zeros(policy.pomdp.n_deposits)
         remaining_time = policy.pomdp.time_horizon - s.time
         for site in 1:policy.pomdp.n_deposits
             if !s.have_opened[site] && s.deposit[site] > 0
-                # Calculate realistic lifetime profit for opening this site now
-                # Consider both deposit size AND demand constraints
+                # Lifetime production, limited by deposit, capacity and demand
                 max_possible_in_situ = min(s.deposit[site], policy.pomdp.output * remaining_time)
                 max_possible_sellable = max_possible_in_situ * policy.pomdp.recovery[site]
                 
-                # But production is also limited by demand - calculate realistic production
-                # Assume we can capture a reasonable share of demand over time
-                avg_demand_per_period = s.company_demand  # Current period demand
+                # Assume current demand holds for the rest of the horizon
+                avg_demand_per_period = s.company_demand
                 realistic_lifetime_demand = avg_demand_per_period * remaining_time
                 realistic_sellable = min(max_possible_sellable, realistic_lifetime_demand)
                 
-                # Calculate lifetime revenue using dynamic price forecasting
-                # Account for price appreciation over the mine's lifetime
-                lifetime_years = Int(remaining_time)  # Mine operates for remaining time horizon
-                
-                # Calculate average expected price over mine lifetime
+                # Revenue at the average forecast price over the rest of the horizon
+                lifetime_years = Int(remaining_time)
                 avg_lifetime_price = calculate_lifetime_average_price(policy.pomdp, s.time, Int(lifetime_years))
                 
-                # Use the exact price model without discount factor
+                # Undiscounted
                 lifetime_revenue = realistic_sellable * avg_lifetime_price
                 
-                # Calculate lifetime costs to match actual cost structure
+                # Lifetime costs
                 capex = policy.pomdp.deposit_types[site] ? policy.pomdp.dle_capex : policy.pomdp.mining_capex
                 opex = policy.pomdp.deposit_types[site] ? policy.pomdp.dle_opex : policy.pomdp.mining_opex
                 lifetime_opex = opex * realistic_sellable  # OPEX on realistic sellable production
                 
-                # Calculate lifetime profit
                 total_profit = lifetime_revenue - lifetime_opex - capex
-                
                 profits[site] = total_profit
                 
                 if policy.debug
@@ -131,7 +125,7 @@ function POMDPs.action(policy::ProfitMaximizerPolicy, s::State)
         ranked_sites = sortperm(profits, rev=true)
         
         for i in 1:policy.top_k
-            opened_sites[ranked_sites[i]] = ranked_sites[i]  # Set to actual site number
+            opened_sites[ranked_sites[i]] = ranked_sites[i]
             opened_types[ranked_sites[i]] = 2
         end
 
@@ -140,7 +134,7 @@ function POMDPs.action(policy::ProfitMaximizerPolicy, s::State)
         if policy.debug
             println("  [DEBUG] ProfitMaximizerPolicy not activated at time $(s.time), but checking for restoration")
         end
-        # Even if not at an allowed time, return any restoration actions that were set
+        # Outside the opening times, return only the restoration actions
         return Action(site=opened_sites, type=opened_types)
     end
     
@@ -151,12 +145,12 @@ function POMDPs.action(policy::ProfitMaximizerPolicy, b::LiBelief)
         println("\n[DEBUG] ProfitMaximizerPolicy evaluating belief")
     end
     
-    # Sample from belief distributions like POMCPOW does for consistency
-    sampled_deposits = [rand(d) for d in b.deposits_distribution]  # Sample from distributions
-    sampled_price = rand(b.price_distribution)  # Sample from distributions
-    sampled_demand = rand(b.demand_distribution)  # Sample from distributions
+    # Act on a single state sampled from the belief
+    sampled_deposits = [rand(d) for d in b.deposits_distribution]
+    sampled_price = rand(b.price_distribution)
+    sampled_demand = rand(b.demand_distribution)
     
-    # Create a representative state
+    # Status flags are known, so they are copied from the belief
     s = State(
         deposit = sampled_deposits,
         time = b.time,
@@ -172,9 +166,10 @@ function POMDPs.action(policy::ProfitMaximizerPolicy, b::LiBelief)
 end
 
 
-"""EmissionMinimizerPolicy - A policy that minimizes emissions
 """
-
+EmissionMinimizerPolicy - at each time in `times`, open the `top_k` unopened sites with the lowest
+lifetime emissions. Depleted mines are restored.
+"""
 @with_kw struct EmissionMinimizerPolicy <: Policy
     pomdp::LiPOMDP
     debug::Bool
@@ -193,7 +188,7 @@ function POMDPs.action(policy::EmissionMinimizerPolicy, s::State)
         println("  Have opened: $(s.have_opened)")
     end
 
-    # Check for restoration opportunities first (outside of time restrictions)
+    # Restore depleted mines at any time, not only at the opening times
     opened_sites = zeros(Int, policy.pomdp.n_deposits)
     opened_types = zeros(Int, policy.pomdp.n_deposits)
 
@@ -209,28 +204,22 @@ function POMDPs.action(policy::EmissionMinimizerPolicy, s::State)
         end
     end
 
-    # Only proceed with opening new mines if we're at an allowed time
+    # Open new mines only at the configured times
     if s.time in policy.times
-        # Find the least emitting mine to open
+        # Rank unopened sites by lifetime emissions
         emissions = zeros(policy.pomdp.n_deposits)
         remaining_time = policy.pomdp.time_horizon - s.time
         for site in 1:policy.pomdp.n_deposits
             if !s.have_opened[site] && s.deposit[site] > 0
-                # Calculate lifetime emissions for opening this site now
+                # Lifetime emissions if the site is opened now
                 remaining_time = max(policy.pomdp.time_horizon - s.time, 0)
                 max_in_situ = min(s.deposit[site], policy.pomdp.output * remaining_time)
                 max_sellable = max_in_situ * policy.pomdp.recovery[site]
                 
-                # Note: Emissions don't depend on price, so we don't need price forecasting here
-                # But we could add price-dependent emission factors in the future if needed
-                
-                # Variable emissions (per in-situ ton produced over lifetime)
+                # Emission factor × lifetime in-situ extraction (no price forecast needed)
                 var_emissions_per_ton = policy.pomdp.deposit_types[site] ? policy.pomdp.dle_CO2_emissions : policy.pomdp.mining_CO2_emissions
                 lifetime_var_emissions = max_in_situ * var_emissions_per_ton
-                
-        
-                # Total lifetime emissions (production only)
-                total_lifetime_emissions = lifetime_var_emissions  # t CO2
+                total_lifetime_emissions = lifetime_var_emissions
                 
                 emissions[site] = total_lifetime_emissions
                 
@@ -244,7 +233,7 @@ function POMDPs.action(policy::EmissionMinimizerPolicy, s::State)
         ranked_sites = sortperm(emissions)
         
         for i in 1:policy.top_k
-            opened_sites[ranked_sites[i]] = ranked_sites[i]  # Set to actual site number
+            opened_sites[ranked_sites[i]] = ranked_sites[i]
             opened_types[ranked_sites[i]] = 2
         end
 
@@ -261,7 +250,7 @@ function POMDPs.action(policy::EmissionMinimizerPolicy, s::State)
         if policy.debug
             println("  [DEBUG] EmissionMinimizerPolicy not activated at time $(s.time), but checking for restoration")
         end
-        # Even if not at an allowed time, return any restoration actions that were set
+        # Outside the opening times, return only the restoration actions
         return Action(site=opened_sites, type=opened_types)
     end
 end
@@ -271,13 +260,12 @@ function POMDPs.action(policy::EmissionMinimizerPolicy, b::LiBelief)
         println("\n[DEBUG] EmissionMinimizerPolicy evaluating belief")
     end
     
-    # Use mean values from belief for stable decisions
-    # Sample from belief distributions like POMCPOW does for consistency
-    sampled_deposits = [max(0.0, rand(d)) for d in b.deposits_distribution]  # Sample from distributions
-    sampled_price = rand(b.price_distribution)  # Sample from distributions
-    sampled_demand = rand(b.demand_distribution)  # Sample from distributions
+    # Act on a single state sampled from the belief
+    sampled_deposits = [max(0.0, rand(d)) for d in b.deposits_distribution]
+    sampled_price = rand(b.price_distribution)
+    sampled_demand = rand(b.demand_distribution)
     
-    # Create a representative state
+    # Status flags are known, so they are copied from the belief
     s = State(
         deposit = sampled_deposits,
         time = b.time,
@@ -293,15 +281,8 @@ function POMDPs.action(policy::EmissionMinimizerPolicy, b::LiBelief)
 end
 
 """
-ExploreOnlyPolicy - A heuristic policy that prioritizes exploration before opening
-"bad policy"
-
-Priority order:
-1. Explore unexplored sites (to gather information)
-2. Open explored sites that aren't opened
-3. Do nothing if all sites are opened
-
-This policy focuses on information gathering before making opening decisions.
+ExploreOnlyPolicy - baseline that explores every unopened site at every step and never opens a
+mine (depleted mines are restored). Measures the cost of exploration with no production.
 """
 struct ExploreOnlyPolicy <: Policy
     pomdp::LiPOMDP
@@ -318,7 +299,7 @@ function POMDPs.action(policy::ExploreOnlyPolicy, s::State)
         println("  Deposits: $(round.(s.deposit, digits=1))")
     end
     
-    # Check for restoration opportunities first
+    # Restore depleted mines; explore every unopened site
     explore_actions = zeros(Int, 4)
     explore_sites = zeros(Int, 4)
 
@@ -344,7 +325,7 @@ function POMDPs.action(policy::ExploreOnlyPolicy, s::State)
         return Action(site=explore_sites, type=explore_actions)
     end
     
-    # Fallback: do nothing if all sites are opened
+    # Do nothing if every site is opened
     if policy.debug
         println("  [DEBUG] All sites opened, doing nothing")
     end
@@ -356,12 +337,12 @@ function POMDPs.action(policy::ExploreOnlyPolicy, b::LiBelief)
         println("\n[DEBUG] ExploreOnlyPolicy evaluating belief")
     end
     
-    # Sample from belief distributions for consistency with other policies
-    sampled_deposits = [rand(d) for d in b.deposits_distribution]  # Sample from distributions
-    sampled_price = rand(b.price_distribution)  # Sample from distributions
-    sampled_demand = rand(b.demand_distribution)  # Sample from distributions
+    # Act on a single state sampled from the belief
+    sampled_deposits = [rand(d) for d in b.deposits_distribution]
+    sampled_price = rand(b.price_distribution)
+    sampled_demand = rand(b.demand_distribution)
     
-    # Create a representative state
+    # Status flags are known, so they are copied from the belief
     s = State(
         deposit = sampled_deposits,
         time = b.time,
@@ -377,8 +358,8 @@ function POMDPs.action(policy::ExploreOnlyPolicy, b::LiBelief)
 end
 
 """
-RandomHeuristicPolicy - Baseline random policy for comparison
-This policy makes random decisions for each mine independently at each time step.
+RandomHeuristicPolicy - baseline that, at each step, independently picks do nothing / explore /
+open uniformly for every unopened site, and restores depleted mines.
 """
 struct RandomHeuristicPolicy <: Policy
     pomdp::LiPOMDP
@@ -414,13 +395,12 @@ function POMDPs.action(policy::RandomHeuristicPolicy, s::State)
             # 0 = do nothing, 1 = explore, 2 = open
             action_choice = rand(policy.rng, 0:2)
             
-            if action_choice > 0  # If we're doing something (explore or open)
-                site_actions[i] = i  # Set site identifier to actual site number
-                site_types[i] = action_choice  # Set action type (1=explore, 2=open)
+            if action_choice > 0
+                site_actions[i] = i
+                site_types[i] = action_choice  # 1=explore, 2=open
             end
-            # If action_choice == 0, both arrays remain 0 (do nothing)
         end
-        # If mine is already opened but not depleted, keep action as 0 (do nothing)
+        # Open, non-depleted mines: do nothing
     end
     
     if policy.debug
@@ -446,10 +426,10 @@ function POMDPs.action(policy::RandomHeuristicPolicy, b::LiBelief)
 end
 
 """
-DynamicProfitMaximizerPolicy - A policy that maximizes profit at each time step
-This policy can take actions on all mines and chooses actions that lead to more profit.
-For each mine, it can explore, open, or do nothing based on expected profitability.
-FIXED: Now includes better demand management for optimal profit maximization.
+DynamicProfitMaximizerPolicy - at every step, rank unopened sites by undiscounted lifetime profit
+(revenue at the average forecast price, minus opex, capex and emissions at CO2_cost), limited by
+the demand not already covered by open mines. Opens the best site (with no profitability
+threshold), explores the others within 70% of the best, and restores depleted mines.
 """
 struct DynamicProfitMaximizerPolicy <: Policy
     pomdp::LiPOMDP
@@ -472,14 +452,12 @@ function POMDPs.action(policy::DynamicProfitMaximizerPolicy, s::State)
     site_actions = zeros(Int, n_sites)
     site_types = zeros(Int, n_sites)
     
-    # Calculate profitability for each action on each mine
     remaining_time = policy.pomdp.time_horizon - s.time
     
-    # Calculate current production capacity from already opened mines
+    # Production capacity (t LCE / year) of mines already open
     current_capacity = 0.0
     for site in 1:n_sites
         if s.have_opened[site] && s.deposit[site] > 0
-            # Calculate this mine's capacity
             mine_capacity = policy.pomdp.output * policy.pomdp.recovery[site] * policy.pomdp.LCE_per_lithium
             current_capacity += mine_capacity
         end
@@ -490,58 +468,48 @@ function POMDPs.action(policy::DynamicProfitMaximizerPolicy, s::State)
         println("  [DEBUG] Current demand: $(round(s.company_demand, digits=1))")
     end
     
-    # Calculate remaining demand
+    # Demand not covered by open mines
     remaining_demand = max(0.0, s.company_demand - current_capacity)
     
-    # evaluate all sites first to see which can contribute
+    # Evaluate every unopened site
     site_evaluations = []
     
     for site in 1:n_sites
         if !s.have_opened[site]
-            # Calculate expected production if we open this mine
             max_possible_production = min(s.deposit[site], policy.pomdp.output * remaining_time)
             expected_recovery = max_possible_production * policy.pomdp.recovery[site]
             
             if expected_recovery > 0
-                # FIXED: Calculate realistic production based on deposit depletion
-                # Calculate how many years this mine can operate before depletion
+                # Years the deposit lasts at nameplate capacity
                 years_to_depletion = s.deposit[site] / policy.pomdp.output
                 
-                # Calculate realistic lifetime production (limited by deposit size AND remaining demand)
+                # Lifetime sellable production, limited by deposit size and uncovered demand
                 realistic_sellable = min(
                     expected_recovery,  # Max possible recovery
                     policy.pomdp.output * policy.pomdp.recovery[site] * policy.pomdp.LCE_per_lithium * years_to_depletion,  # Deposit-limited
                     remaining_demand * remaining_time  # Demand-limited over lifetime
                 )
                 
-                # FIXED: Use lifetime average price to account for price changes over time
+                # Revenue at the average forecast price over the rest of the horizon
                 lifetime_years = Int(remaining_time)
                 avg_lifetime_price = calculate_lifetime_average_price(policy.pomdp, s.time, lifetime_years)
                 expected_revenue = realistic_sellable * avg_lifetime_price
                 
-                # Calculate costs
                 capex = policy.pomdp.deposit_types[site] ? policy.pomdp.dle_capex : policy.pomdp.mining_capex
                 opex = policy.pomdp.deposit_types[site] ? policy.pomdp.dle_opex : policy.pomdp.mining_opex
                 lifetime_opex = opex * realistic_sellable  # OPEX on realistic sellable production
                 
-                # FIXED: Calculate emission costs
-                # Variable emissions (per tonne LCE produced)
+                # Emissions (t CO2 per t LCE produced)
                 variable_emissions_per_tonne = policy.pomdp.deposit_types[site] ? policy.pomdp.dle_CO2_emissions : policy.pomdp.mining_CO2_emissions
                 lifetime_variable_emissions = realistic_sellable * variable_emissions_per_tonne
                 
-                # Removed: No fixed emissions
-                # Removed: No startup emissions
-                # Emissions are ONLY based on production
-                
-                # Total emissions cost (production only) at the social cost of carbon
+                # Emissions cost (production only) at CO2_cost
                 total_emissions_cost = lifetime_variable_emissions * policy.pomdp.CO2_cost
                 
-                # FIXED: Calculate total profit including environmental costs
-                # Total profit = revenue - operational costs - environmental costs
+                # Profit net of emissions cost
                 total_profit = expected_revenue - lifetime_opex - capex - total_emissions_cost
                 
-                # Store evaluation for later decision making
-                push!(site_evaluations, (site, total_profit, expected_recovery, expected_revenue))
+                                push!(site_evaluations, (site, total_profit, expected_recovery, expected_revenue))
                 
                 if policy.debug
                     println("  [DEBUG] Site $site: current_price=$(round(s.price, digits=2)), avg_lifetime_price=$(round(avg_lifetime_price, digits=2)), realistic_production=$(round(realistic_sellable, digits=1)), years_to_depletion=$(round(years_to_depletion, digits=1))")
@@ -550,22 +518,21 @@ function POMDPs.action(policy::DynamicProfitMaximizerPolicy, s::State)
                     println("    Emissions cost: \$$(round(total_emissions_cost/1e6, digits=2))M, Total Profit: \$$(round(total_profit/1e6, digits=2))M")
                 end
             else
-                # If no production possible, do nothing
-                site_actions[site] = 0  # Do nothing
-                site_types[site] = 0  # Do nothing
+                # No production possible: do nothing
+                site_actions[site] = 0
+                site_types[site] = 0
                 
                 if policy.debug
                     println("  [DEBUG] Site $site: Doing nothing (no production possible)")
                 end
             end
         end
-        # If mine is already opened, do nothing (action = 0)
+        # Opened mines: do nothing
     end
     
-    # Check for restoration opportunities first - use sampled state deposits
+    # Restore depleted mines whose (sampled) deposit is exhausted
     for site in 1:policy.pomdp.n_deposits
         if s.have_opened[site] && s.is_depleted[site] && !s.restored_mines[site] && s.deposit[site] <= 0.1
-            # Restore depleted mine - only if sampled deposits are actually zero
             site_actions[site] = site
             site_types[site] = 3  # Restore action
             
@@ -575,15 +542,12 @@ function POMDPs.action(policy::DynamicProfitMaximizerPolicy, s::State)
         end
     end
     
-    # FIXED: Now make decisions based on all available information
     if !isempty(site_evaluations)
         # Sort by profitability (highest first)
         sort!(site_evaluations, by=x->x[2], rev=true)
         
-        # FIXED: Open the most profitable mine regardless of threshold
+        # Open the most profitable mine, with no profitability threshold
         best_site, best_profit, best_recovery, best_revenue = site_evaluations[1]
-        
-        # Open the most profitable mine
         site_actions[best_site] = best_site
         site_types[best_site] = 2  # Open mine
         
@@ -591,10 +555,9 @@ function POMDPs.action(policy::DynamicProfitMaximizerPolicy, s::State)
             println("  [DEBUG] Opening site $best_site: Profit = \$$(round(best_profit/1e6, digits=2))M (most profitable)")
         end
         
-        # Explore other promising sites (restore exploration) - but be selective
+        # Explore the other sites whose profit is within 70% of the best
         for i in 2:length(site_evaluations)
             site, profit, recovery, revenue = site_evaluations[i]
-            # Only explore if the site is reasonably profitable (within 70% of best) AND has good potential
             if profit > best_profit * 0.7 && recovery > 0
                 site_actions[site] = site
                 site_types[site] = 1  # Explore
@@ -602,8 +565,8 @@ function POMDPs.action(policy::DynamicProfitMaximizerPolicy, s::State)
                     println("  [DEBUG] Exploring site $site: Profit = \$$(round(profit/1e6, digits=2))M (promising)")
                 end
             else
-                site_actions[site] = 0  # Do nothing
-                site_types[site] = 0  # Do nothing
+                site_actions[site] = 0
+                site_types[site] = 0
                 if policy.debug
                     println("  [DEBUG] Site $site: Doing nothing (not profitable enough or no recovery potential)")
                 end
@@ -616,12 +579,12 @@ function POMDPs.action(policy::DynamicProfitMaximizerPolicy, s::State)
 end
 
 function POMDPs.action(policy::DynamicProfitMaximizerPolicy, b::LiBelief)
-    # Sample from belief distributions for consistency with other policies
-    sampled_deposits = [rand(d) for d in b.deposits_distribution]  # Sample from distributions
-    sampled_price = rand(b.price_distribution)  # Sample from distributions
-    sampled_demand = rand(b.demand_distribution)  # Sample from distributions
+    # Act on a single state sampled from the belief
+    sampled_deposits = [rand(d) for d in b.deposits_distribution]
+    sampled_price = rand(b.price_distribution)
+    sampled_demand = rand(b.demand_distribution)
     
-    # Create a representative state
+    # Status flags are known, so they are copied from the belief
     s = State(
         deposit = sampled_deposits,
         time = b.time,
@@ -637,10 +600,11 @@ function POMDPs.action(policy::DynamicProfitMaximizerPolicy, b::LiBelief)
 end
 
 """
-DynamicEmissionMinimizerPolicy - A policy that minimizes emissions at each time step
-This policy finds the single lowest emission choice and can take actions on all mines.
-For each mine, it can explore, open, or do nothing based on emission intensity.
-FIXED: Now implements true emission minimization by being highly selective about mine selection.
+DynamicEmissionMinimizerPolicy - opens mines only when open capacity falls short of demand. Unopened
+sites are taken in order of lowest emissions over the rest of the horizon; each is opened only
+if it covers at least 30% of the remaining shortfall, until the shortfall is met. In the same
+steps, other sites that could supply at least 20% of demand are explored and depleted mines are
+restored; with no shortfall it does nothing.
 """
 struct DynamicEmissionMinimizerPolicy <: Policy
     pomdp::LiPOMDP
@@ -662,20 +626,12 @@ function POMDPs.action(policy::DynamicEmissionMinimizerPolicy, s::State)
     site_actions = zeros(Int, n_sites)
     site_types = zeros(Int, n_sites)
     
-    # FIXED: True emission minimization strategy
-    # The goal is to minimize TOTAL emissions, not just emission intensity
-    
-    # Calculate remaining time
     remaining_time = policy.pomdp.time_horizon - s.time
     
-    # Strategy: Only open mines when absolutely necessary to meet demand
-    # and prefer to open them later when demand is higher
-    
-    # Calculate current production capacity from already opened mines
+    # Production capacity (t LCE / year) of mines already open
     current_capacity = 0.0
     for site in 1:n_sites
         if s.have_opened[site] && s.deposit[site] > 0
-            # Calculate this mine's capacity
             mine_capacity = policy.pomdp.output * policy.pomdp.recovery[site] * policy.pomdp.LCE_per_lithium
             current_capacity += mine_capacity
         end
@@ -690,26 +646,22 @@ function POMDPs.action(policy::DynamicEmissionMinimizerPolicy, s::State)
     if current_capacity < s.company_demand
         remaining_demand = s.company_demand - current_capacity
         
-        # Evaluate unopened mines for total emission impact
+        # Total emissions of each unopened site over the rest of the horizon
         site_evaluations = []
         
         for site in 1:n_sites
             if !s.have_opened[site] && s.deposit[site] > 0
-                # Calculate expected production
                 max_possible_production = min(s.deposit[site], policy.pomdp.output * remaining_time)
                 expected_recovery = max_possible_production * policy.pomdp.recovery[site]
                 
-                # Calculate realistic production per period
+                # Production per period, limited by the shortfall
                 mine_capacity_per_period = policy.pomdp.output * policy.pomdp.recovery[site] * policy.pomdp.LCE_per_lithium
                 realistic_production_per_period = min(mine_capacity_per_period, remaining_demand)
                 
-                # Calculate total emissions for this mine (production only)
+                # Production emissions only (t CO2 per t LCE)
                 emission_factor = policy.pomdp.deposit_types[site] ? policy.pomdp.dle_CO2_emissions : policy.pomdp.mining_CO2_emissions
-                
-                # Total emissions = variable production emissions only (convert kg to tonnes)
                 total_emissions = realistic_production_per_period * emission_factor * remaining_time  # t CO2
                 
-                # Store evaluation
                 push!(site_evaluations, (site, total_emissions, realistic_production_per_period, emission_factor))
                 
                 if policy.debug
@@ -721,15 +673,13 @@ function POMDPs.action(policy::DynamicEmissionMinimizerPolicy, s::State)
         # Sort by total emissions (lowest first)
         sort!(site_evaluations, by=x->x[2])
         
-        # FIXED: Only open the minimum number of mines needed
-        # This is the key to true emission minimization
+        # Open the fewest mines that cover the shortfall
         mines_to_open = []
         temp_remaining_demand = remaining_demand
         
         for (site, total_emissions, production_per_period, emission_factor) in site_evaluations
             if temp_remaining_demand > 0
-                # Only open this mine if it significantly reduces unmet demand
-                if production_per_period >= temp_remaining_demand * 0.3  # Must cover at least 30% of remaining demand
+                if production_per_period >= temp_remaining_demand * 0.3  # must cover at least 30% of the remaining shortfall
                     push!(mines_to_open, site)
                     temp_remaining_demand -= production_per_period
                     
@@ -737,7 +687,7 @@ function POMDPs.action(policy::DynamicEmissionMinimizerPolicy, s::State)
                         println("  [DEBUG] Selected site $site: Total emissions = $(round(total_emissions, digits=1)), Production = $(round(production_per_period, digits=1))")
                     end
                     
-                    # Stop if we have enough capacity
+                    # Stop once the shortfall is covered
                     if temp_remaining_demand <= 0
                         break
                     end
@@ -745,10 +695,9 @@ function POMDPs.action(policy::DynamicEmissionMinimizerPolicy, s::State)
             end
         end
         
-        # Check for restoration opportunities first - use sampled state deposits
+        # Restore depleted mines whose (sampled) deposit is exhausted
         for site in 1:policy.pomdp.n_deposits
             if s.have_opened[site] && s.is_depleted[site] && !s.restored_mines[site] && s.deposit[site] <= 0.1
-                # Restore depleted mine - only if sampled deposits are actually zero
                 site_actions[site] = site
                 site_types[site] = 3  # Restore action
                 
@@ -758,16 +707,15 @@ function POMDPs.action(policy::DynamicEmissionMinimizerPolicy, s::State)
             end
         end
         
-        # Apply the decisions
+        # Open the selected mines
         for site in mines_to_open
             site_actions[site] = site
             site_types[site] = 2  # Open mine
         end
         
-        # Explore other sites that weren't selected for opening (restore exploration) - but be selective
+        # Explore unselected sites that could supply at least 20% of demand
         for (site, total_emissions, production_per_period, emission_factor) in site_evaluations
             if !(site in mines_to_open) && production_per_period > 0
-                # Only explore if the site has significant production potential (at least 20% of demand)
                 if production_per_period >= s.company_demand * 0.2
                     site_actions[site] = site
                     site_types[site] = 1  # Explore
@@ -775,8 +723,8 @@ function POMDPs.action(policy::DynamicEmissionMinimizerPolicy, s::State)
                         println("  [DEBUG] Exploring site $site: Total emissions = $(round(total_emissions, digits=1)), Production = $(round(production_per_period, digits=1))")
                     end
                 else
-                    site_actions[site] = 0  # Do nothing
-                    site_types[site] = 0  # Do nothing
+                    site_actions[site] = 0
+                    site_types[site] = 0
                     if policy.debug
                         println("  [DEBUG] Site $site: Doing nothing (insufficient production potential)")
                     end
@@ -798,12 +746,12 @@ function POMDPs.action(policy::DynamicEmissionMinimizerPolicy, b::LiBelief)
         println("\n[DEBUG] DynamicEmissionMinimizerPolicy evaluating belief")
     end
     
-    # Sample from belief distributions for realistic uncertainty
-    sampled_deposits = [max(0.0, rand(d)) for d in b.deposits_distribution]  # Sample from distributions
-    sampled_price = rand(b.price_distribution)  # Sample from distributions
-    sampled_demand = rand(b.demand_distribution)  # Sample from distributions
+    # Act on a single state sampled from the belief
+    sampled_deposits = [max(0.0, rand(d)) for d in b.deposits_distribution]
+    sampled_price = rand(b.price_distribution)
+    sampled_demand = rand(b.demand_distribution)
     
-    # Create a representative state
+    # Status flags are known, so they are copied from the belief
     s = State(
         deposit = sampled_deposits,
         time = b.time,
@@ -823,13 +771,10 @@ end
 # =============================================================================
 
 """
-AlphaAwareRolloutPolicy - A policy that balances profit and emissions using alpha.
-This is similar to DynamicProfitMaximizerPolicy but uses the POMDP's alpha parameter
-to trade off between profit maximization and emission minimization.
-
-When alpha = 1.0: Maximizes profit (like DynamicProfitMaximizerPolicy)
-When alpha = 0.0: Minimizes emissions (like DynamicEmissionMinimizerPolicy)
-When alpha = 0.5: Balances both equally
+AlphaAwareRolloutPolicy - DynamicProfitMaximizerPolicy with sites ranked by the reward's
+alpha-weighted value, alpha × profit - (1 - alpha) × emissions cost × emission_scale_factor,
+instead of profit net of emissions. alpha = 1 ranks by profit alone, alpha = 0 by emissions alone.
+Opens the best site, explores the others within 70% of the best, and restores depleted mines.
 """
 struct AlphaAwareRolloutPolicy <: Policy
     pomdp::LiPOMDP
@@ -853,7 +798,7 @@ function POMDPs.action(policy::AlphaAwareRolloutPolicy, s::State)
     
     remaining_time = policy.pomdp.time_horizon - s.time
     
-    # Calculate current production capacity
+    # Production capacity (t LCE / year) of mines already open
     current_capacity = 0.0
     for site in 1:n_sites
         if s.have_opened[site] && s.deposit[site] > 0
@@ -881,7 +826,7 @@ function POMDPs.action(policy::AlphaAwareRolloutPolicy, s::State)
                     remaining_demand * remaining_time
                 )
                 
-                # Calculate profit
+                # Profit at the average forecast price over the rest of the horizon
                 lifetime_years = Int(remaining_time)
                 avg_lifetime_price = calculate_lifetime_average_price(policy.pomdp, s.time, lifetime_years)
                 expected_revenue = realistic_sellable * avg_lifetime_price
@@ -892,12 +837,12 @@ function POMDPs.action(policy::AlphaAwareRolloutPolicy, s::State)
                 
                 raw_profit = expected_revenue - lifetime_opex - capex
                 
-                # Calculate emissions (as negative cost in reward units)
+                # Emissions cost at CO2_cost ($)
                 variable_emissions_per_tonne = policy.pomdp.deposit_types[site] ? policy.pomdp.dle_CO2_emissions : policy.pomdp.mining_CO2_emissions
                 lifetime_variable_emissions = realistic_sellable * variable_emissions_per_tonne
                 total_emissions_cost = lifetime_variable_emissions * policy.pomdp.CO2_cost
                 
-                # Use ALPHA to balance profit vs emissions (matching reward function)
+                # Weight profit and emissions with alpha, as in `reward`
                 alpha_weighted_value = policy.pomdp.alpha * raw_profit + (1 - policy.pomdp.alpha) * (-total_emissions_cost * policy.pomdp.emission_scale_factor)
                 
                 push!(site_evaluations, (site, alpha_weighted_value, expected_recovery, expected_revenue))
@@ -910,7 +855,7 @@ function POMDPs.action(policy::AlphaAwareRolloutPolicy, s::State)
         end
     end
     
-    # Handle restoration
+    # Restore depleted mines whose (sampled) deposit is exhausted
     for site in 1:policy.pomdp.n_deposits
         if s.have_opened[site] && s.is_depleted[site] && !s.restored_mines[site] && s.deposit[site] <= 0.1
             site_actions[site] = site
@@ -1074,13 +1019,10 @@ end
 One-step lookahead heuristic policy.
 
 At each time step:
-1. Consider all possible actions
-2. For each action, simulate forward using AlphaAwareRolloutPolicy
-3. Run multiple simulations (default 30) to get average reward
-4. Choose the action with highest expected reward
-
-This is essentially a rollout-based policy using AlphaAwareRolloutPolicy as the rollout policy,
-which respects the POMDP's alpha parameter for balancing profit vs emissions.
+1. Consider every feasible action within the capital budget
+2. For each action, simulate forward with `rollout_policy` (default AlphaAwareRolloutPolicy)
+3. Average the discounted return over `n_rollouts` simulations (default 30), with common random numbers
+4. Choose the action with the highest average return
 """
 struct OneStepLookaheadPolicy <: Policy
     pomdp::LiPOMDP
@@ -1096,10 +1038,8 @@ function OneStepLookaheadPolicy(pomdp::LiPOMDP; n_rollouts=30, debug=false, rng:
 end
 
 """
-Generate all feasible actions for a given state.
-Returns a vector of possible actions to consider.
-This generates ALL possible action combinations (4^n_sites = 256 for 4 sites),
-filtered by state constraints.
+All action combinations (4^n_sites = 256 for 4 sites) that are valid in state `s`.
+The capital budget is not checked here.
 """
 function generate_feasible_actions(policy::OneStepLookaheadPolicy, s::State)
     n_sites = policy.pomdp.n_deposits
@@ -1120,7 +1060,7 @@ function generate_feasible_actions(policy::OneStepLookaheadPolicy, s::State)
             temp_idx = div(temp_idx, 4)
         end
         
-        # Check if this action combination is valid
+        # Valid if every site's action is allowed in s
         valid = true
         for site in 1:n_sites
             if types[site] == 1  # EXPLORE
@@ -1144,7 +1084,6 @@ function generate_feasible_actions(policy::OneStepLookaheadPolicy, s::State)
             end
         end
         
-        # Add valid action to list
         if valid
             push!(actions, Action(site=collect(1:n_sites), type=types))
         end

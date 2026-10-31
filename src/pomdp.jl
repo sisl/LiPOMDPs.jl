@@ -1,29 +1,17 @@
-#MAIN functions
-
 """
-Return (in_situ_li, sellable_lce) for a site, limited by:
-- site nameplate capacity (P.output in LCE),
+Return (in_situ_li, sellable_lce) produced by a site in one time step, limited by:
+- site nameplate capacity (P.output, t in-situ Li / year),
 - remaining deposit (in-situ Li),
-- remaining demand (LCE),
-- and recovery.
-Assumes deposits are in Li, price/opex/emissions per LCE.
-
-Centralized production calculation function to ensure consistency across all POMDP functions.
-This function calculates how much can be produced from each site considering:
-- Site capacity (P.output)
-- Available deposit
-- Current year's demand (not cumulative)
-- Recovery rate
-
-Note: Demand resets every year, so this is per-time-step production.
+- remaining demand this step (LCE),
+- and the site's recovery.
+Deposits are in t Li; price, opex and emissions are per t LCE. Shared by `transition`, `reward`
+and the belief updater so production is computed the same way everywhere.
 """
 function calculate_site_production(P::LiPOMDP, s::State, site::Int, current_demand_lce::Float64)
     if !s.have_opened[site] || s.deposit[site] <= 0.1 || s.is_depleted[site] || s.restored_mines[site]
         return 0.0, 0.0
     end
-    # capacity (in-situ Li) from Li nameplate:
-    # P.output is already in Li tonnes per year
-    cap_in_situ_li = P.output
+    cap_in_situ_li = P.output  # t in-situ Li / year
 
     # in-situ Li we can actually take this period:
     max_in_situ_li = min(cap_in_situ_li, s.deposit[site])
@@ -64,12 +52,8 @@ function effective_action(P::LiPOMDP, have_opened, a::Action)
 end
 
 """
-Calculate total production from all open mines for the current time step.
-Returns total production and updated remaining demand.
-
-Note: This tracks remaining demand within a time step (as mines produce).
-Demand resets every year between time steps, but within a time step,
-we need to track remaining demand to make decisions about opening new mines.
+Total sellable LCE from all open mines in the current time step, and the demand left over.
+Sites fill demand in site order, so each sees only the demand the earlier sites left.
 """
 function calculate_total_production(P::LiPOMDP, s::State)
     total_production_lce = 0.0
@@ -98,12 +82,8 @@ function compute_emissions(P::LiPOMDP, s::State, a::Action)
         end
     end
 
-    # Removed: No fixed emissions per open site
-    # Removed: No startup emissions for newly opened sites
-    # Removed: No restoration emissions
-    # Emissions are ONLY based on production (sellable LCE)
-
-    return - total_CO2_tons * P.CO2_cost  # negative penalty
+    # Emissions come from production only (no fixed, startup or restoration emissions)
+    return - total_CO2_tons * P.CO2_cost  # monetized, as a negative penalty
 end
 
 
@@ -112,12 +92,11 @@ function compute_costs(P::LiPOMDP, s::State, a::Action)
     costs = 0.0
     remaining_demand_lce = s.company_demand  # Track remaining demand across sites
     
-    exploration_cost = 0.0  # Start with zero, don't add base cost
+    exploration_cost = 0.0
     for site in 1:P.n_deposits
         if a.type[site] == 1  # Exploring
-            # Use deposit-type-specific exploration cost
             cost = site <= 2 ? P.exploration_cost_dle : P.exploration_cost_hard_rock
-            exploration_cost += cost  # Add cost only when exploring
+            exploration_cost += cost
         end
     end
     
@@ -137,9 +116,6 @@ function compute_costs(P::LiPOMDP, s::State, a::Action)
     for site in 1:P.n_deposits
         if a.type[site] == 2 && !s.have_opened[site]  # Open new mine
             capex = P.deposit_types[site] ? P.dle_capex : P.mining_capex
-            # Note: You had this calculation but commented it out - you might want to use it
-            #amt = min(P.output, s.deposit[site], s.company_demand) 
-            #costs += capex * s.deposit[site]  # Capital cost based on capacity
             costs += capex  # Fixed capital cost regardless of size
         end
     end
@@ -158,9 +134,8 @@ function compute_costs(P::LiPOMDP, s::State, a::Action)
 end
 
 """
-Calculate the maximum possible reward for the given POMDP parameters at a specific time step.
-This is used for dynamic reward scaling to normalize rewards to [0, 1] range.
-The calculation uses the current state's price and demand to determine the maximum possible reward.
+Per-step reward: alpha × profit + (1 - alpha) × monetized emissions × emission_scale_factor,
+divided by `reward_scale`. Revenue comes from mines open at the start of the step, sold at s.price.
 """
 function POMDPs.reward(P::LiPOMDP, s::State, a::Action)
 
@@ -182,7 +157,7 @@ function POMDPs.reward(P::LiPOMDP, s::State, a::Action)
     # Scale reward by manual reward_scale parameter
     scaled_reward = raw_reward / P.reward_scale
     
-    # Fix -0.0 display issue
+    # Normalize -0.0 to 0.0
     return scaled_reward == -0.0 ? 0.0 : scaled_reward
 end
 
@@ -253,24 +228,18 @@ function predict_demand(P::LiPOMDP, b::LiBelief)
     return Normal(m, max(gp_lce * P.demand_uncertainty * P.market_share_target, 1e-5))
 end
 
-# Add function to calculate company's demand
+# Company demand: market share × global production (t Li → t LCE), with forecast noise on global production
 function update_demand(P::LiPOMDP, global_production::Float64; rng::AbstractRNG=Random.default_rng())
-    # Use global production instead of demand as basis for company target
-    # Convert global production from Li metal to LCE
     global_production_lce = global_production * P.LCE_per_lithium
     
-    # Add uncertainty to global production forecast
+    # Forecast noise on global production
     production_noise = global_production_lce * P.demand_uncertainty
     uncertain_global_production = max(0.0, global_production_lce + rand(rng, Normal(0, production_noise)))
     
-    # Calculate company's target demand based on market share of global production
     company_demand = uncertain_global_production * P.market_share_target
     
     return (company_demand)
 end
-
-#transition function, observation function, reward function
-
 
 # Std of a deposit observation for site i. Shared by `observation` and the belief
 # updater so the filter uses the same noise the environment generates.
@@ -282,7 +251,8 @@ function deposit_obs_std(P::LiPOMDP, i::Int, source::Symbol)
     error("unknown observation source $source")
 end
 
-#give signal of where you end up 
+# Noisy observation of the next state: deposits (noise set by explore / produce / neither),
+# recoveries (when hidden), price and demand
 function POMDPs.observation(P::LiPOMDP, s::State,  a::Action, sp::State)
     # Generate observations for all sites based on their status
     deposit_estimate_dist = []
@@ -299,27 +269,20 @@ function POMDPs.observation(P::LiPOMDP, s::State,  a::Action, sp::State)
         # Check if this site is currently open (producing)
         is_open = sp.have_opened[i]
         
+        # Observations are centered on the (non-negative) true deposit; `gen` clamps samples at 0
         if is_exploring
-            # Direct exploration: high-quality observation
-            # Use deposit-type-specific observation noise
+            # Exploration: informative observation
             noise = deposit_obs_std(P, i, :explore)
-            # Truncate to ensure non-negative observations
             mean_deposit = max(0.0, sp.deposit[i])
             push!(deposit_estimate_dist, Normal(mean_deposit, noise))
         elseif is_open
-            # Production-based observation: learn from mining activity
-            # Production provides VERY precise observations through actual extraction
-            # This should be MORE precise than exploration
-            # Use deposit-type-specific observation noise
+            # Production: more precise than exploration
             noise = deposit_obs_std(P, i, :production)
-            # Truncate to ensure non-negative observations
             mean_deposit = max(0.0, sp.deposit[i])
             push!(deposit_estimate_dist, Normal(mean_deposit, noise))
         else
-            # No information: unexplored and not producing
-            # Use deposit-type-specific observation noise
+            # Unexplored and not producing: nearly uninformative
             noise = deposit_obs_std(P, i, :none)
-            # Truncate to ensure non-negative observations
             mean_deposit = max(0.0, sp.deposit[i])
             push!(deposit_estimate_dist, Normal(mean_deposit, noise))
         end
@@ -338,7 +301,6 @@ function POMDPs.observation(P::LiPOMDP, s::State,  a::Action, sp::State)
     return prod_dist
 end
 
-#have a POMDP that updates, takes the POMDP as the input and the updater
 """
 Belief update: a predict-then-correct filter that mirrors `transition` and `observation`.
 
@@ -350,6 +312,7 @@ Belief update: a predict-then-correct filter that mirrors `transition` and `obse
 3. Correction: Kalman (moment-matched Gaussian) updates for explored and producing sites,
    price and demand, using the same observation noise `observation` generates.
 4. Depletion is detected from the production observation, with the transition's 5% threshold.
+5. Recovery (static) is corrected by metallurgical tests when exploring and measured yield once open.
 """
 function POMDPs.update(up::LiBeliefUpdater, b::LiBelief, a::Action, o::Observation)
     P = up.P
@@ -483,11 +446,11 @@ end
 end
 
 
-# rand should sample deposits, price, and demand
+# Sample an initial state: deposits, price, demand and (if hidden) recovery
 function Base.rand(d::InitialStateDistribution)
     deposits = [max(0.0, rand(nd)) for nd in d.deposit_dists]   # sample each deposit, clamp ≥ 0
-    price    = max(100.0, rand(d.price_dist))                   # sample price, ensure minimum
-    demand   = max(0.0, rand(d.demand_dist))                    # sample demand, ensure non-negative
+    price    = max(100.0, rand(d.price_dist))                   # floor at $100/t
+    demand   = max(0.0, rand(d.demand_dist))                    # clamp ≥ 0
     return State(
         deposit = deposits,
         time = 1.0,
@@ -520,7 +483,7 @@ end
 end
 
 
-# Completing Initial State: return a container of distributions (not a concrete State)
+# Initial state distribution: a container of per-variable distributions (not a concrete State)
 function POMDPs.initialstate(P::LiPOMDP)
     # Per-site means and stds for deposit size
     means = Vector{Float64}(undef, P.n_deposits)
@@ -536,13 +499,9 @@ function POMDPs.initialstate(P::LiPOMDP)
     global_production = get_historical_production(P, P.start_year)
     demand0 = update_demand(P, global_production)
 
-    # Uncertainty for price & demand (now directly from P fields)
     price_std  = P.price_init_std
     demand_std = P.demand_init_std
 
-    #return a Distribution that can sample different initial states
-    #so randsample initial state from this distribution
-    
     return InitialStateDistribution(
         deposit_dists = [lognormal_from_moments(means[i], stds[i]) for i in 1:P.n_deposits],
         price_dist    = Normal(price0,  price_std),
@@ -554,7 +513,7 @@ function POMDPs.initialstate(P::LiPOMDP)
 end
 
 function create_initial_belief(P::LiPOMDP)
-    d = initialstate(P)  # your InitialStateDistribution
+    d = initialstate(P)
     belief = LiBelief(
         deposits_distribution = d.deposit_dists,
         time = 1.0,
@@ -566,14 +525,14 @@ function create_initial_belief(P::LiPOMDP)
         restored_mines = fill(false, P.n_deposits),
         recovery_distribution = Vector{UnivariateDistribution}(d.recovery_dists),
     )
-    true_state = rand(initialstate(P))  # Get the true initial state
+    true_state = rand(initialstate(P))  # true initial state, drawn from the same prior as the belief
     
     return true_state, belief  # Return both state and belief
 end
 
 
 
-#given a state s and action a it outputs the distribution of the next state sp
+# Next-state distribution: one sampled transition wrapped as Deterministic (use `gen` for a seeded rng)
 function POMDPs.transition(P::LiPOMDP, s::State, a::Action)
     return Deterministic(sample_transition(P, s, a, Random.default_rng()))
 end
@@ -651,18 +610,17 @@ function transition_core(P::LiPOMDP, s::State, a::Action, price::Float64, demand
         if action_type == 3 && s.have_opened[site] && s.is_depleted[site] && !s.restored_mines[site]
             # Keep is_depleted as true - mine stays depleted after restoration
             sp.restored_mines[site] = true
-            # FIXED: Set deposits to 0 when restoring - mine is completely depleted
+            # Restoration closes the site, so its remaining deposit is zeroed
             sp.deposit[site] = 0.0
         end
     end
 
-    # Automatic production from all open mines using centralized calculation
-    # Use the same remaining demand logic as calculate_total_production
-    # IMPORTANT: Use the OLD demand (s.company_demand) for production, not the new demand
-    # A mine opened this step is under construction: it produces from the next step on,
-    # matching `reward`, which pays for mines open at the start of the step (s.have_opened).
+    # Automatic production from open mines, filling demand in site order as in calculate_total_production.
+    # Production uses this step's demand (s.company_demand), not next period's. A mine opened this
+    # step is under construction: it produces from the next step on, matching `reward`, which pays
+    # for mines open at the start of the step (s.have_opened).
     total_mined_this_step = 0.0
-    remaining_demand_lce = s.company_demand  # Use OLD demand for production calculation
+    remaining_demand_lce = s.company_demand
     
     for site in 1:P.n_deposits
         if s.have_opened[site] && sp.deposit[site] > 0.1 && !sp.is_depleted[site] && !sp.restored_mines[site]
@@ -685,12 +643,7 @@ function transition_core(P::LiPOMDP, s::State, a::Action, price::Float64, demand
     return sp
 end
 
-#if the process similar then use it as a nindex but if its different then create branch
-#last line has to be deterministic 
-#each action type will affect the state being updated 
-#produce at capacity -- rate capacity
-
-# Update the gen function to handle demand observations
+# Generative model: next state, observation and reward, all drawn from `rng`
 function POMDPs.gen(P::LiPOMDP, s::State, a::Action, rng::AbstractRNG)
     
     sp = sample_transition(P, s, a, rng)
@@ -721,7 +674,7 @@ function POMDPs.discount(P::LiPOMDP)
     return P.γ
 end
 
-# Define action space - now returns all possible combinations of actions
+# Action space: every combination of per-site action types (4^4 = 256)
 function POMDPs.actions(P::LiPOMDP)
     acts = Action[]
     
@@ -737,7 +690,7 @@ function POMDPs.actions(P::LiPOMDP)
         end
     end
 
-    # No need for special global do-nothing action - [1,2,3,4] with type=[0,0,0,0] already covers it
+    # type = [0, 0, 0, 0] is the do-nothing action
     return acts
 end
 
@@ -788,11 +741,7 @@ end
 
 
 function POMDPs.actionindex(P::LiPOMDP, a::Action)
-    # For the new action space with all combinations
-    # Each site can have action 0, 1, 2, or 3
-    # Total combinations: 4^4 = 256 actions
-    
-    # Convert action combination to index using base-4 representation
+    # Base-4 index over the per-site action types (0-3), 256 actions in total
     # action.type = [type1, type2, type3, type4] where each type is 0, 1, 2, or 3
     # Index = type1 * 4^3 + type2 * 4^2 + type3 * 4^1 + type4 * 4^0 + 1
     
@@ -804,125 +753,6 @@ function POMDPs.actionindex(P::LiPOMDP, a::Action)
     
     return index
 end
-
-#SINGLE STEP ACTIONS
-# # Define action space - now returns all possible combinations of actions
-# function POMDPs.actions(P::LiPOMDP)
-#     # For now, return a simplified action space with single actions
-#     # This can be expanded to include multiple simultaneous actions
-#     acts = Action[]
-    
-#     # Do nothing action
-#     push!(acts, Action(site=[0, 0, 0, 0], type=[0, 0, 0, 0]))
-
-#     # Single site actions
-#     for site in 1:P.n_deposits
-#         # Explore
-#         site_vec = zeros(Int, 4)
-#         type_vec = zeros(Int, 4)
-#         # site_vec[1] = site
-#         # type_vec[1] = 1
-#         site_vec[site] = site
-#         type_vec[site] = 1
-#         push!(acts, Action(site=site_vec, type=type_vec))
-        
-#         # Open mine
-#         site_vec = zeros(Int, 4)
-#         type_vec = zeros(Int, 4)
-#         # site_vec[1] = site
-#         # type_vec[1] = 2
-#         site_vec[site] = site
-#         type_vec[site] = 2
-#         push!(acts, Action(site=site_vec, type=type_vec))
-        
-#         # Restore mine
-#         site_vec = zeros(Int, 4)
-#         type_vec = zeros(Int, 4)
-#         site_vec[site] = site
-#         type_vec[site] = 3
-#         push!(acts, Action(site=site_vec, type=type_vec))
-#     end
-    
-#     # Could add combined actions here if needed
-#     return acts
-# end
-
-
-
-# # Stateful action generator
-# function POMDPs.actions(P::LiPOMDP, s::State)
-
-#     acts = Action[]
-    
-#     # Do nothing action
-#     push!(acts, Action(site=[0, 0, 0, 0], type=[0, 0, 0, 0]))
-    
-#     # Single site actions based on state
-#     for site in 1:P.n_deposits
-#         if !s.have_opened[site]
-#            # println("DEBUG: Site $site not opened, adding explore/open actions")
-
-#             # Can explore unopened sites
-#             site_vec = zeros(Int, 4)
-#             type_vec = zeros(Int, 4)
-#             # site_vec[1] = site
-#             # type_vec[1] = 1
-#             site_vec[site] = site
-#             type_vec[site] = 1
-#             push!(acts, Action(site=site_vec, type=type_vec))
-            
-#             # Can open unopened sites
-#             site_vec = zeros(Int, 4)
-#             type_vec = zeros(Int, 4)
-#             # site_vec[1] = site
-#             # type_vec[1] = 2
-#             site_vec[site] = site
-#             type_vec[site] = 2
-#             push!(acts, Action(site=site_vec, type=type_vec))
-#         elseif s.have_opened[site] && s.is_depleted[site] && !s.restored_mines[site]
-#             # Can restore depleted mines that haven't been restored yet
-#             site_vec = zeros(Int, 4)
-#             type_vec = zeros(Int, 4)
-#             site_vec[site] = site
-#             type_vec[site] = 3  # Restore action
-#             push!(acts, Action(site=site_vec, type=type_vec))
-#         end
-#         # No operate action needed - mines operate automatically
-#     end
-#     #println("DEBUG: Generated $(length(acts)) total actions")
-#     return acts
-# end
-
-
-# # Actions for beliefs (same logic as states)
-# function POMDPs.actions(P::LiPOMDP, b::LiBelief)
-#     s = rand(b)  # Sample a representative state from the belief
-#     actions = POMDPs.actions(P, s)  
-
-#     return actions
-# end
-    
-
-
-# function POMDPs.actionindex(P::LiPOMDP, a::Action)
-#     # Simple indexing for single-action vectors
-#     # Do nothing action
-#     if all(a.site .== 0) && all(a.type .== 0)
-#         return 1
-#     end
-    
-#     # Find first non-zero action
-#     for i in 1:length(a.site)
-#         if a.site[i] > 0 && a.type[i] > 0
-#             site = a.site[i]
-#             type = a.type[i]
-#             # 2 actions per site (explore, open)
-#             return 1 + (site - 1) * 2 + type
-#         end
-#     end
-    
-#     return 1  # Default to do nothing
-# end
 
 # Helper functions for policy evaluation
 """
@@ -948,8 +778,7 @@ function expected_profit_site(P::LiPOMDP, s::State, i::Int)
     realistic_lifetime_demand = avg_demand_per_period * remaining_time
     realistic_sellable = min(max_possible_sellable, realistic_lifetime_demand)
     
-    # Calculate lifetime revenue using current price (simplified)
-    # In practice, you might want to use price forecasting like in other policies
+    # Lifetime revenue at the current price (no price forecast)
     lifetime_revenue = realistic_sellable * s.price
     
     # Calculate lifetime costs
@@ -991,10 +820,6 @@ function expected_emission_site(P::LiPOMDP, s::State, i::Int)
     variable_emissions_per_tonne = P.deposit_types[i] ? P.dle_CO2_emissions : P.mining_CO2_emissions
     lifetime_variable_emissions = realistic_sellable * variable_emissions_per_tonne
     
-    # Removed: No fixed emissions
-    # Removed: No startup emissions
-    # Emissions are ONLY based on production
-    
     # Total lifetime emissions (production only)
     total_lifetime_emissions = lifetime_variable_emissions  # t CO2
     
@@ -1003,16 +828,14 @@ end
 
 # Initial observation distribution
 function POMDPs.initialobs(P::LiPOMDP, s::State)
-    # Use the same observation model as regular observations
-    # Create a dummy action for initial observation
+    # Same observation model as `observation`, with a do-nothing action
     dummy_action = Action(site=[0, 0, 0, 0], type=[0, 0, 0, 0])
     return observation(P, s, dummy_action, s)
 end
 
 # Observation weight for POMCPOW
 function POMDPTools.obs_weight(P::LiPOMDP, s::State, a::Action, sp::State, o::Observation)
-    # Calculate the probability density of observation o given state sp
-    # Get the observation distribution
+    # Density of observation o given sp
     o_dist = observation(P, s, a, sp)
     
     # Create observation vector from Observation struct

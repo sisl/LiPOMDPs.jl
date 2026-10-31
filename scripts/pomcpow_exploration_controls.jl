@@ -64,7 +64,7 @@ end
 """
 Robust root criterion for irreversible actions. Take the MaxQ action; among tried root actions that
 open FEWER mines (explorations ignored) and whose Q is within `tol` (fraction of |Q|) of the best,
-prefer the one with the fewest opens (ties: higher Q). Motivation (2026-10-21 in-model tests): the
+prefer the one with the fewest opens (ties: higher Q). Motivation (in-model tests): the
 tree's Q gap between "open now" and "wait" is of the order of its own estimation noise, and opening is
 irreversible, so a yearly near-coin-flip ratchets into early opening; the heuristics never face this
 because they compare actions on common random numbers. `tol` = 0 reduces to MaxQ.

@@ -3,14 +3,14 @@
 """
 Train/Test Split Evaluation for LiPOMDP Policies — best POMCPOW configuration
 
-Copy of final_results_simulation_copy.jl with:
+Train/test evaluation with:
 - POMCPOW in its best measured configuration: TimingAwarePolicy rollout, 10,000 tree queries
   (30k performed the same at ~3× the cost). Other hyperparameters are POMCPOW defaults (tuning gave no gain).
 - Two OneStepLookahead variants, reported separately: OneStepLookahead_AlphaAware (AlphaAwareRolloutPolicy
   base policy) and OneStepLookahead_TimingAware (TimingAwarePolicy base policy, matching POMCPOW's rollout).
 - Configurations (policy × planning model × evaluation model × α) run in parallel:
   start Julia with threads, e.g. `julia --project=. -t 32 scripts/final_results_best_pomcpow.jl`.
-- The belief updater uses the planning model (UPDATER_MODEL below), as in the 2026-10-17 experiments.
+- The belief updater uses the planning model (UPDATER_MODEL below).
 
 This script implements proper train/test split evaluation to avoid overfitting.
 It separates training and testing phases with different random seeds and scenarios.
@@ -29,25 +29,12 @@ using POMDPs
 using POMDPTools
 using POMCPOW
 using POMCPOW: POMCPOWPlanner  # Import POMCPOWPlanner specifically
-using D3Trees
 
 # Import specific functions from pomdp.jl that aren't exported
 import LiPOMDPs: calculate_site_production, calculate_total_production, compute_costs, compute_emissions
 include(joinpath(@__DIR__, "pomcpow_components.jl"))   # mean_path_estimator, timing_first/timing_tree proposers
 
 
-
-# Create output directory for tree visualizations
-# TREE_DIR = "tree_visualizations"
-# if !isdir(TREE_DIR)
-#     mkdir(TREE_DIR)
-# end
-
-# function save_tree_html(path::AbstractString, dtree::D3Trees.D3Tree)
-#     open(path, "w") do io
-#         show(io, MIME"text/html"(), dtree)  # writes an interactive D3 page
-#     end
-# end
 
 # =============================================================================
 # POLICY CREATION FUNCTIONS
@@ -61,7 +48,7 @@ function create_policy(policy_type::String, pomdp::LiPOMDP)
         solver = POMCPOWSolver(
             tree_queries = 10_000,
             max_depth = 25,
-            criterion = MaxUCB(4.0),         # tuned 2026-10-20/21: c=4 best of {0.1,0.5,1,2,4,6,8,10,20}
+            criterion = MaxUCB(4.0),         # tuned: c=4 best of {0.1,0.5,1,2,4,6,8,10,20}
             enable_action_pw = true,         # large joint action space
             k_action = 5.0,
             alpha_action = 0.5,
@@ -225,10 +212,6 @@ function evaluate_policy_train_test_split(planning_pomdp::LiPOMDP, evaluation_po
                 a, info = action_info(policy, b; tree_in_info=false)
                 
                 # if haskey(info, :tree)
-                #     dtree = D3Trees.D3Tree(info[:tree])
-                #     fname = joinpath(TREE_DIR, "train_tree_a$(round(planning_pomdp.alpha, digits=2))_sim$(i)_t$(t).html")
-                #     save_tree_html(fname, dtree)
-                # end
             else
                 a = action(policy, b)
             end
@@ -391,10 +374,6 @@ function evaluate_policy_train_test_split(planning_pomdp::LiPOMDP, evaluation_po
                 a, info = action_info(policy, b; tree_in_info=true)
                 
                 # if haskey(info, :tree)
-                #     dtree = D3Trees.D3Tree(info[:tree])
-                #     fname = joinpath(TREE_DIR, "test_tree_a$(round(planning_pomdp.alpha, digits=2))_sim$(i)_t$(t).html")
-                #     save_tree_html(fname, dtree)
-                # end
             else
                 a = action(policy, b)
             end
@@ -850,7 +829,7 @@ println("")
 planning_str = join(planning_price_models, "_")
 evaluation_str = join(evaluation_price_models, "_")
 alpha_str = join(alphas, "-")
-output_file = "outputs/test_train_final_results/results_p$(planning_str)_e$(evaluation_str)_a$(alpha_str)_best_pomcpow_q10k_timing_4ucb_rec20-25_osl5_recexp15.csv"   # rec20-25: recovery_uncertainty [0.20,0.20,0.25,0.25]; osl5: OneStepLookahead 5 rollouts; recexp15: σ_obs_recovery_explore 0.15 (2026-10-22)
+output_file = "outputs/test_train_final_results/results_p$(planning_str)_e$(evaluation_str)_a$(alpha_str)_best_pomcpow_q10k_timing_4ucb_rec20-25_osl5_recexp15.csv"   # rec20-25: recovery_uncertainty [0.20,0.20,0.25,0.25]; osl5: OneStepLookahead 5 rollouts; recexp15: σ_obs_recovery_explore 0.15
 
 # Run the evaluation
 results = run_train_test_evaluation(

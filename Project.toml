@@ -4,13 +4,7 @@ version = "1.0.0-DEV"
 authors = ["Mansur Arief, Anna Edmonds"]
 
 [deps]
-BasicPOMCP = "d721219e-3fc6-5570-a8ef-e5402f47c49e"
-CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
-D3Trees = "e3df1716-f71e-5df9-9e2d-98e193103c45"
-DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
-Flux = "587475ba-b771-5e3f-ad9e-33799f191a9c"
-JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
 PGFPlots = "3b7a836e-365b-5785-a47d-02c71176b4aa"
 PGFPlotsX = "8314cec4-20b6-5062-9cdb-752b83310925"
 POMCPOW = "4c53ee00-974c-466f-8fa5-8dd73959bbab"
@@ -19,18 +13,13 @@ POMDPs = "a93abf59-7444-517b-a68a-c42f96afdd7d"
 Parameters = "d96e819e-fc66-5662-9728-84c9c7592b0a"
 Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
 Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
-Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
 Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
 
 [compat]
-julia = "1.10"
-CSV = "0.10"
-D3Trees = "0.3"
-DataFrames = "1"
 PGFPlots = "3"
 PGFPlotsX = "1"
 Plots = "1"
-Revise = "3"
+julia = "1.10"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"

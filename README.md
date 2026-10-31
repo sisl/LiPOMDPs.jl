@@ -2,16 +2,18 @@
 
 [![CI](https://github.com/sisl/LiPOMDPs.jl/actions/workflows/CI.yml/badge.svg)](https://github.com/sisl/LiPOMDPs.jl/actions/workflows/CI.yml)
 
-A Julia package for modeling lithium mining operations as a Partially Observable Markov Decision Process (POMDP). The framework simulates decision-making under uncertainty for lithium extraction using both Direct Lithium Extraction (DLE) and traditional mining methods.
+A Julia package for modeling lithium production decisions as a Partially Observable Markov Decision Process (POMDP). A firm decides, year by year from 1995 to 2025, which of four stylized deposits to explore, open or restore, two using direct lithium extraction (DLE) and two mineral ore, while deposit size, recovery, price and demand are uncertain. Emissions are priced at the social cost of carbon, and a single parameter α sets the weight on profit versus emissions.
+
+This repository accompanies the paper *Optimizing Lithium Production Decisions under Geological, Demand, and Pricing Uncertainties: A POMDP Framework for Multi-Objective Decision Making*.
 
 ## Features
 
-- **Multi-site mining decisions**: Model considers 4 deposit sites (2 DLE, 2 traditional)
-- **Automatic mine operation**: Once opened, mines produce automatically without explicit operate actions
-- **Environmental considerations**: Tracks CO2 emissions with different costs for DLE vs traditional mining
-- **Market dynamics**: Multiple pricing models (static, linear, exponential, GBM, historical)
-- **Uncertainty handling**: Manages uncertainty in deposit sizes, prices, and demand
-- **Policy optimization**: Uses POMCPOW for finding optimal mining strategies
+- **Multi-site decisions**: four deposits (sites 1–2 DLE, sites 3–4 mineral ore) acted on jointly each year, under a shared capital budget
+- **Automatic production**: an open mine produces up to its capacity and the firm's remaining demand, one year after opening
+- **Hidden geology**: deposit size and recovery are unobserved; exploration and production give noisy observations of them
+- **Price models**: static, linear, exponential, geometric Brownian motion and historical (1995–2025), fitted to the historical data
+- **Emissions**: production emissions per tonne LCE for each technology, monetized at $190/t CO₂
+- **Planner and baselines**: POMCPOW compared with rule-based heuristics, a one-step lookahead and a timing-aware optimal-stopping policy
 
 ## Installation
 
@@ -34,24 +36,27 @@ using LiPOMDPs
 using POMDPs
 using POMCPOW
 
-# Create POMDP instance
+# Create POMDP instance (defaults: static prices, 31-year horizon 1995–2025, alpha = 0.5)
 pomdp = LiPOMDP(
-    price_model_type=1,  # Static pricing (default: 1)
-    time_horizon=29,      # 29-year planning horizon (default: 29)
-    alpha=0.5             # Balance between profit and emissions (default: 0.5)
+    price_model_type=4,   # 1 static, 2 linear, 3 exponential, 4 GBM, 6 historical
+    alpha=0.5             # weight on profit; 1 - alpha weights monetized emissions
 )
 
-# Setup initial belief
-s0, initial_belief = create_initial_belief(pomdp)
+# Initial state and belief
+s0, b0 = create_initial_belief(pomdp)
+updater = LiBeliefUpdater(P=pomdp)
 
-# Create POMCPOW solver
+# POMCPOW in the configuration used in the paper
 solver = POMCPOWSolver(
-    tree_queries=1000,
-    max_depth=10,
-    criterion=MaxUCB(20.0)
+    tree_queries=10_000,
+    max_depth=25,
+    criterion=MaxUCB(4.0),
+    enable_action_pw=true, k_action=5.0, alpha_action=0.5,
+    k_observation=3.0, alpha_observation=0.3,
+    estimate_value=FORollout(TimingAwarePolicy(pomdp)),
 )
-
 policy = solve(solver, pomdp)
+a = action(policy, b0)
 ```
 
 ## State and Action Structure
@@ -59,63 +64,58 @@ policy = solve(solver, pomdp)
 ### State
 ```julia
 @with_kw mutable struct State
-    deposit::Vector{Float64}      # Remaining deposits at each site (in-situ Li in tonnes)
-    time::Float64                 # Current time step (year)
-    price::Float64                # Current market price ($/tonne LCE)
-    company_demand::Float64       # Company's target demand (tonnes LCE/year)
-    total_mined::Float64          # Cumulative sold LCE (tonnes)
-    have_opened::Vector{Bool}    # Which mines are opened (operate automatically)
-    is_depleted::Vector{Bool}     # Which mines are depleted
-    restored_mines::Vector{Bool}  # Which mines have been restored
+    deposit::Vector{Float64}      # in-situ Li at each site (t Li)
+    time::Float64                 # current time step (year, 1 = start_year)
+    price::Float64                # market price ($/t LCE)
+    company_demand::Float64       # company demand (t LCE / year)
+    total_mined::Float64          # cumulative sold LCE (t)
+    have_opened::Vector{Bool}     # which sites have been opened
+    is_depleted::Vector{Bool}     # which mines are depleted
+    restored_mines::Vector{Bool}  # which depleted mines have been restored
+    recovery::Vector{Float64}     # true recovery per site (hidden)
 end
 ```
 
 ### Action
 ```julia
 @with_kw mutable struct Action
-    site::Vector{Int64}   # Sites to act on (0=DoNothing, 1-4=site number)
-    type::Vector{Int64}   # Action types (0=DoNothing, 1=explore, 2=open, 3=restore)
+    site::Vector{Int64}   # site identifiers
+    type::Vector{Int64}   # per site: 0 = do nothing, 1 = explore, 2 = open, 3 = restore
 end
 ```
 
-Note: Mines operate automatically once opened - no explicit "operate" action needed. Depleted mines can be restored using action type 3.
+Open mines produce automatically; there is no operate action. A depleted mine can be restored (type 3).
 
-## Available Policies
+## Policies
 
-The package includes several heuristic policies for comparison:
+- **ProfitMaximizerPolicy** / **EmissionMinimizerPolicy**: open the best site by lifetime profit / emissions at the first time step only
+- **DynamicProfitMaximizerPolicy** / **DynamicEmissionMinimizerPolicy**: re-evaluate every step
+- **ExploreOnlyPolicy**: explores every unopened site, never opens
+- **RandomHeuristicPolicy**: random baseline
+- **TimingAwarePolicy**: optimal stopping on the planning model's expected price and demand path; POMCPOW's rollout policy
+- **OneStepLookaheadPolicy**: evaluates every feasible action with rollouts of a base policy (TimingAware or AlphaAwareRolloutPolicy)
+- **AlphaAwareRolloutPolicy**: DynamicProfitMaximizer ranked by the α-weighted reward
 
-- **ProfitMaximizerPolicy**: Maximizes expected profit by selecting the most profitable mine to open
-- **EmissionMinimizerPolicy**: Minimizes emissions by selecting mines with lowest emission costs
-- **ExploreOnlyPolicy**: Prioritizes exploration to gather information before opening mines
-- **RandomHeuristicPolicy**: Random baseline for comparison
-- **DynamicProfitMaximizerPolicy**: Dynamically evaluates and selects the most profitable action at each step
-- **DynamicEmissionMinimizerPolicy**: Dynamically evaluates and selects actions to minimize emissions
-- **OneStepLookaheadPolicy**: Uses one-step lookahead with rollouts to evaluate actions
-- **AlphaAwareRolloutPolicy**: Rollout policy that balances profit and emissions based on alpha parameter
+## Reproducing the paper
 
-## Running Experiments
+All scripts are run from the repository root with `julia --project=.`; the evaluation scripts are multithreaded (`-t <threads>`).
 
-The package includes several scripts for running experiments and generating visualizations:
+| Script | Produces |
+|---|---|
+| `scripts/final_results_best_pomcpow.jl <planning_model> [alphas]` | Policy comparison tables (train 25 / test 50 scenarios), planned under one price model and evaluated on historical prices → `outputs/test_train_final_results/` |
+| `scripts/sensitivity_analysis.jl <n_seeds> <alpha> <planning_model> <queries> [core\|appendix] [uncert]` | One-at-a-time sensitivity tables → `outputs/sensitivity/` |
+| `scripts/plot_belief_uncertainty.jl` | Belief-uncertainty-over-time figure |
+| `scripts/policy_belief_action_timeline.jl [planning_models]` | Belief and action timeline figure → `outputs/belief_timeline/` |
+| `scripts/fit_gbm.jl` | GBM drift and volatility fitted to the historical prices |
 
-- **`scripts/running_policy_tests.jl`**: Comprehensive policy comparison across multiple price models and alpha values
-- **`scripts/simple_policy_test.jl`**: Simplified policy testing framework
-- **`scripts/final_results_simulation.jl`**: Full simulation with train/test split for robust evaluation
-- **`scripts/price_model_comparison.jl`**: Compare policies across different price model combinations
-- **`scripts/plot_belief_uncertainty.jl`**: Generate plots showing belief uncertainty evolution over time
-- **`scripts/policy_belief_action_timeline.jl`**: Create timeline visualizations of beliefs and actions
+`scripts/pomcpow_tuning_harness.jl`, `pomcpow_components.jl` and `pomcpow_exploration_controls.jl` are shared helpers (paired-seed evaluation and POMCPOW construction) included by the scripts above.
 
-These scripts provide:
-- Mean rewards and discounted rewards for each policy
-- Statistical analysis (std dev, min/max, median)
-- Profit vs. emissions Pareto curves
-- Belief uncertainty evolution over time
-- Action timeline comparisons
+`outputs/` holds the result files behind the paper's tables and figures: the final policy-comparison CSVs, the sensitivity CSVs and their LaTeX tables, the Pareto-curve TikZ source, and the belief/action timeline figures.
 
 ## Pricing Models
 
-The package supports multiple pricing models:
-- **Type 1**: Static pricing - constant price with small random variations
-- **Type 2**: Linear pricing - price increases linearly over time
-- **Type 3**: Exponential pricing - price grows exponentially over time
-- **Type 4**: GBM (Geometric Brownian Motion) - stochastic price evolution with drift and volatility
-- **Type 6**: Historical pricing - uses actual historical lithium price data from 1995-2024
+- **1 static**: constant price with 10% noise
+- **2 linear**: linear trend with price-proportional noise
+- **3 exponential**: exponential growth with price-proportional noise
+- **4 GBM**: geometric Brownian motion, drift and volatility fitted to 1995–2025 log-returns
+- **6 historical**: the observed 1995–2025 price series

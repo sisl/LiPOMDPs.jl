@@ -1,5 +1,4 @@
 
-#TODO-Mansur where should I put the hisotrical data
 # Historical data access functions
 function get_historical_price(pomdp::LiPOMDP, year::Int64)
     if haskey(pomdp.hist_data, year)
@@ -11,7 +10,7 @@ function get_historical_price(pomdp::LiPOMDP, year::Int64)
 end
 
 function get_historical_demand(pomdp::LiPOMDP, year::Int64)
-    # Note: Returns production data since we use production as demand basis
+    # Global production is the basis for company demand
     if haskey(pomdp.hist_data, year)
         return pomdp.hist_data[year][1]  # production (used as demand basis)
     else
@@ -22,7 +21,7 @@ end
 
 function get_historical_production(pomdp::LiPOMDP, year::Int64)
     if haskey(pomdp.hist_data, year)
-        return pomdp.hist_data[year][1]  # production (now in position 1)
+        return pomdp.hist_data[year][1]  # production (t Li)
     elseif year > maximum(keys(pomdp.hist_data))
         # Only reached for the terminal state's next-year demand; hold the last observed year
         return pomdp.hist_data[maximum(keys(pomdp.hist_data))][1]
@@ -54,7 +53,7 @@ function total_mined_so_far(P::LiPOMDP, initial_state::State, current_state::Sta
     total = 0.0
     for site in 1:P.n_deposits
         mined_raw = initial_state.deposit[site] - current_state.deposit[site]
-        total += mined_raw * P.recovery[site]  # Apply recovery factor
+        total += mined_raw * P.recovery[site]  # nominal recovery
     end
     return total
 end

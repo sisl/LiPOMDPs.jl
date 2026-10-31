@@ -130,7 +130,7 @@ using POMDPs
             rng = MT(1)
             mean(LiPOMDPs.update_price(P, s, a; rng = rng) for _ in 1:20_000)
         end
-        # E[S(t+1)] = S(t)·exp(μ); the old code used p₀ instead of S(t), so 20k and 10k gave the same mean
+        # E[S(t+1)] = S(t)·exp(μ): the mean scales with the current price, not p₀
         @test isapprox(step_mean(10_000.0), 10_000.0 * exp(P.gbm_drift), rtol = 0.02)
         @test isapprox(step_mean(20_000.0), 20_000.0 * exp(P.gbm_drift), rtol = 0.02)
     end
@@ -198,7 +198,7 @@ using POMDPs
             s = sp
         end
         @test P.start_year + P.time_horizon - 1 == 2025
-        @test data[2025] == (292_301.0, 9_000.0)        # 2025 production revised 2026-10-19
+        @test data[2025] == (292_301.0, 9_000.0)
     end
 
     @testset "Opening year is construction: every tonne extracted is paid for" begin
@@ -237,7 +237,7 @@ using POMDPs
         @test length(o.recoveries) == P.n_deposits
         @test std(b2.recovery_distribution[1]) < std(b.recovery_distribution[1])   # explored site learns
         @test std(b2.recovery_distribution[2]) ≈ std(b.recovery_distribution[2])   # others unchanged
-        # Known recovery (no uncertainty) keeps the old observation layout
+        # Known recovery (no uncertainty): no recovery entries in the observation
         Pk = LiPOMDP(recovery_uncertainty = zeros(4))
         sk, bk = create_initial_belief(Pk)
         @test isempty(sk.recovery) && isempty(bk.recovery_distribution)
@@ -258,7 +258,7 @@ using POMDPs
     end
 
     @testset "Capital budget: opens beyond the budget are dropped everywhere" begin
-        P = LiPOMDP(capital_budget = 2.5e9)    # DLE 1.23B, hard rock 1.512B
+        P = LiPOMDP(capital_budget = 2.5e9)    # DLE 1.23B, hard rock 1.661B
         Random.seed!(31)
         s, b = create_initial_belief(P)
         open_all = Action(site = [1, 2, 3, 4], type = [2, 2, 2, 2])

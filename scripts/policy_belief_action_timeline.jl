@@ -19,7 +19,7 @@ const OUTPUT_DIR = "outputs/belief_timeline"
 const N_STEPS = TIME_HORIZON
 const HEURISTIC = "DynamicProfitMaximizer" # e.g. "ExploreOnly", "RandomHeuristicPolicy", "OneStepLookahead"
 
-# Match final_results_simulation.jl seed scheme:
+# Match final_results_best_pomcpow.jl seed scheme:
 # train seeds = 1001.., test seeds = 2001..
 const SEED_MODE = "test" # "train", "test", or "custom"
 const SEED_INDEX = 1     # i in (i + 1000) or (i + 2000)

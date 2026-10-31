@@ -1,9 +1,7 @@
 """
 Shared harness for small POMCPOW-vs-OneStepLookahead tuning experiments.
 
-Included by:
-  scripts/test_pomcpow_rollout_combos.jl
-  scripts/test_pomcpow_hypertune.jl
+Included by scripts/sensitivity_analysis.jl.
 
 Design
 - Paired scenarios: every policy sees the same initial state and the same
@@ -11,7 +9,7 @@ Design
   before each environment step, because update_price / update_demand /
   observation draw from the global RNG (common random numbers).
 - Planning POMDP drives the policy; evaluation POMDP drives transitions,
-  rewards, costs and emissions (same split as final_results_simulation.jl).
+  rewards, costs and emissions (same split as final_results_best_pomcpow.jl).
 - Metrics per scenario: discounted reward, profit (USD), emission cost (USD),
   CO2 tonnes, met-demand %, mines opened, capex (USD).
 """
@@ -27,7 +25,7 @@ using POMCPOW: POMCPOWPlanner
 import LiPOMDPs: calculate_total_production, compute_costs, compute_emissions
 
 # -----------------------------------------------------------------------------
-# Original POMCPOW settings from final_results_simulation_copy.jl (lines 51-64)
+# Original POMCPOW settings (before tuning)
 # -----------------------------------------------------------------------------
 const ORIGINAL_POMCPOW = (
     tree_queries      = 10000,
