@@ -104,7 +104,7 @@ All scripts are run from the repository root with `julia --project=.`; the evalu
 |---|---|
 | `scripts/final_results_best_pomcpow.jl <planning_model> [alphas]` | Policy comparison tables (train 25 / test 50 scenarios), planned under one price model and evaluated on historical prices → `outputs/test_train_final_results/` |
 | `scripts/sensitivity_analysis.jl <n_seeds> <alpha> <planning_model> <queries> [core\|appendix] [uncert]` | One-at-a-time sensitivity tables → `outputs/sensitivity/` |
-| `scripts/plot_belief_uncertainty.jl` | Belief-uncertainty-over-time figure |
+| `scripts/plot_belief_uncertainty.jl [planning_model] [n_sims]` | Belief-uncertainty-over-time figure, planned under one price model and evaluated on historical prices → `outputs/belief_uncertainty/` |
 | `scripts/policy_belief_action_timeline.jl [planning_models]` | Belief and action timeline figure → `outputs/belief_timeline/` |
 | `scripts/fit_gbm.jl` | GBM drift and volatility fitted to the historical prices |
 
